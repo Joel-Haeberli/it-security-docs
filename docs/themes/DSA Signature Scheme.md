@@ -46,5 +46,17 @@ Let $(G_q,\times,−1 ,1)$ be a group of order $q$ and $g \in G_q$ a generator
 	* ̈The combination of 3072/256 bits for $p$ and $q$ corresponds to security strength $s = 128$
 	* Note that 256 bits for $q$ fits well with SHA-256
 
+## ECDSA vs EdDSA vs Ed25519
+
+- **ECDSA** stands for "Elliptic Curve Digital Signature Algorithm".
+
+> ECDSA is an elliptic curve implementation of DSA. Functionally, where RSA and DSA require key lengths of 3072 bits to provide 128 bits of security, ECDSA can accomplish the same with only 256-bit keys. However, ECDSA relies on the same level of randomness as DSA, so the only gain is speed and length, **not security**!
+
+- **EdDSA** stands for "Edwards-curve Digital Signature Algorithm" and is a variant of [[Schnorr Signatures]] based on twisted Edward curves.
+
+> EdDSA solves the same discrete log problem as DSA/ECDSA, but uses a different family of elliptic curves, the twisted Edward curves. While offering slight advantages in speed over ECDSA, its popularity comes from an improvement in security. Instead of relying on a random number for the nonce value, EdDSA generates a nonce deterministically as a hash making it collision resistant.
+
+- **Ed25519** is the EdDSA signature scheme using the Curve25519.
+
 ---
 links: [[205 AC2 TOC - Digital Signatures|AC2 TOC - Digital Signatures]] - [[themes/000 Index|Index]]

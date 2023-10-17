@@ -1,4 +1,4 @@
-tags: #symmetric #secure-channel #repudiation #non-repudiation #OTR #off-the-record #forward-secrecy
+tags: #symmetric #secure-channel #repudiation #non-repudiation #OTR #off-the-record #forward-secrecy #ibex
 
 # Secure Channels
 
@@ -96,6 +96,18 @@ see [Simplifying OTR Deniability](https://signal.org/blog/simplifying-otr-deniab
 If Alice's private key $(a, T_a)$ is compromised in the 3DH protocol, the attacker could not only decrypt messages meant for Alice, but could also impersonate Alice in her communications. This is because Alice's private key is used both to decrypt messages sent to her and to create a digital signature that verifies her identity. If an attacker has access to Alice's private key, they can forge this digital signature and send messages that appear to be from Alice.
 
 Compromising Alice's private key would not allow an attacker to decrypt past session keys, because 3DH provides forward secrecy. **Forward secrecy** is a feature of specific key agreement protocols that ensures that even if the private key is compromised, past session keys will not be compromised. Each session key is generated independently with a unique ephemeral key pair, so even if Alice's long-term private key is compromised, the session keys used for past secure communications would remain secure.
+
+# Threemas Ibex Protocol
+Threema, a swiss company implementing the Threema messenger applications ([Opensource](https://github.com/threema-ch/)), implements their own cryptographic protocol called *Ibex*. Ibex is built on the Gap-Diffie-Hellman which is assumed a hard problem according to the authors of the cryptographic analysis of the protocol:
+
+*"More specifically, we show that an efficient attacker capable of breaking one of
+the security properties of the Ibex protocol would also break the Gap-Diffie-
+Hellman (GDH) problem. Since it is assumed that the GDH problem is hard,
+which means it cannot be broken by any adversary in polynomial time, there
+can be no efficient adversary against Ibex"*, [Paul Gerhart, Paul Rösler & Dominique Schröder](https://threema.ch/press-files/2_documentation/security_analysis_ibex_2023.pdf)
+The protocol also implements a secure channel and therefore is interesting for this subject.
+
+Threema's Blogpost: [https://threema.ch/en/blog/posts/security-proof-ibex](https://threema.ch/en/blog/posts/security-proof-ibex)
 
 ---
 links: [[107 AC1 TOC - Secure Channels|AC1 TOC - From Symmetric Encryption to Secure Channels]] - [[themes/000 Index|Index]]

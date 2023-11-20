@@ -220,5 +220,9 @@ links: [[themes/000 Index|Index]]
 * [[GNU Taler Details#Double Spending Problem|Double Spending Problem]]
 * [[Payto]] (Similar to mailto)
 
+**Offtopic**
+
+- [[Two Generals Problem]]
+
 ---
 links: [[themes/000 Index|Index]]

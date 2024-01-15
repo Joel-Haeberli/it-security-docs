@@ -1,4 +1,4 @@
-tags: #AC1 #symmetric #StreamCipher #EAV #ComputationalSecurity #private-key
+tags: #AC1 #symmetric #stream-cipher #EAV #computational-security #private-key
 
 # Private Key Encryption
 

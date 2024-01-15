@@ -1,4 +1,4 @@
-tags: #symmetric #Randomness 
+tags: #symmetric #randomness 
 
 # Randomness
 

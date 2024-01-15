@@ -1,4 +1,4 @@
-tags: #asymmetric #TOFU #WebOfTrust
+tags: #asymmetric #TOFU #web-of-trust
 
 # Trust Model
 

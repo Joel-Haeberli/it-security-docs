@@ -1,4 +1,4 @@
-tags: #recap #DNS #networking #name-system #for-dummies
+tags: #recap #DNS #network #name-system #for-dummies
 
 # DNS Recap
 

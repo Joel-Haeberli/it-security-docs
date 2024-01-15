@@ -1,4 +1,4 @@
-tags: #symmetric #kdf #key-derivation #high-high-entropy
+tags: #symmetric #KDF #key-derivation #high-high-entropy
 
 # Key Derivation Function
 

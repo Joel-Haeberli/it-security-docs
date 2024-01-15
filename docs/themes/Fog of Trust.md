@@ -1,4 +1,4 @@
-tags: #asymmetric #WebOfTrust #FogOfTrust
+tags: #asymmetric #web-of-trust #fog-of-trust
 
 # Fog of Trust
 

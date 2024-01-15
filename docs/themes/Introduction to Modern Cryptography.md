@@ -1,4 +1,4 @@
-tags: #symmetric #kerckhoff #historicalCiphers
+tags: #symmetric #kerckhoff #historical-ciphers
 
 # Introduction to Modern Cryptography
 

@@ -1,4 +1,4 @@
-tags: #symmetric #cca #attack #attacker-model 
+tags: #symmetric #CCA #attack #attacker-model 
 
 # CCA-Security
 

@@ -1,4 +1,4 @@
-tags: #distributedsystems
+tags: #distributed-systems
 # Two Generals Problem
 
 links: [[002 Terms|Terms]] - [[themes/000 Index|Index]]

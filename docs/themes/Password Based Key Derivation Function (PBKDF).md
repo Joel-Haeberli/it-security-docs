@@ -1,4 +1,4 @@
-tags: #symmetric #kdf #key-derivation #pbkdf #password #password-based-key-derivation #low-high-entropy
+tags: #symmetric #KDF  #key-derivation #PBKDF #password #password-based-key-derivation #low-high-entropy
 
 # Password Based Key Derivation Function (PBKDF)
 

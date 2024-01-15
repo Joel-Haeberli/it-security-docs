@@ -1,4 +1,4 @@
-tags: #symmetric #ascon #aead #sponge-construction
+tags: #symmetric #AEAD 
 
 # Ascon
 

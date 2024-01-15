@@ -1,4 +1,4 @@
-tags: #asymmetric #ParingBasedCryptography
+tags: #asymmetric #paring-based-cryptography
 
 # Advanced Cryptographic Primitives
 

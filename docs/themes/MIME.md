@@ -1,4 +1,4 @@
-tags: #AC2 #smtp #mime
+tags: #AC2 #SMTP #MIME
 
 # MIME
 
@@ -69,9 +69,9 @@ S/MIME (Secure/Multipurpose Internet Mail Extensions) is a standard for public k
 1. **Encryption**: S/MIME allows for the encryption of messages, ensuring that only the intended recipient can read the message content. This is done by using the recipient's public key to encrypt the message.
 2. **Digital Signatures**: S/MIME supports the creation of digital signatures, providing a way to verify the authenticity of the sender and the integrity of the message. This is done by hashing the message content and encrypting the hash with the sender's private key.
 
-S/MIME uses [[PKCS]]#7/CMS structures to encapsulate the signed or encrypted MIME data, allowing for nested structures when both signing and encrypting are needed. The recipient can then use the corresponding keys to decrypt the message and verify the signature
+S/MIME uses [[PKCS]]\#7/CMS structures to encapsulate the signed or encrypted MIME data, allowing for nested structures when both signing and encrypting are needed. The recipient can then use the corresponding keys to decrypt the message and verify the signature
 
-> [[PKCS]]#7 has no type to do both sign and encrypt, so nesting is used (usually first sign, then encrypt $\rightarrow$ normally we do [[Authenticated Encryption#Authenticated Encryption Schemes|encryption first, then sign]]!)
+> [[PKCS]]\#7 has no type to do both sign and encrypt, so nesting is used (usually first sign, then encrypt $\rightarrow$ normally we do [[Authenticated Encryption#Authenticated Encryption Schemes|encryption first, then sign]]!)
 
 In summary, while MIME extends the capabilities of basic email to handle different types of content, S/MIME further enhances email communication by adding encryption and digital signatures to ensure confidentiality, authenticity, and integrity.
 

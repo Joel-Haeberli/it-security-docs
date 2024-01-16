@@ -1,4 +1,4 @@
-tags: #ModernCryptography
+tags: #symmetric #asymmetric 
 
 # Introduction to Modern Cryptography MOC
 

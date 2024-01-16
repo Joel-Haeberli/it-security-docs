@@ -1,4 +1,4 @@
-tags: #symmetric #mac #hash
+tags: #symmetric #MAC #hash
 
 # Hash-and-Mac
 

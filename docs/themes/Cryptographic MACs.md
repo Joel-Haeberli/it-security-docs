@@ -1,4 +1,4 @@
-tags: #symmetric #mac
+tags: #symmetric #MAC
 
 # Cryptographic MACs
 

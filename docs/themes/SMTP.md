@@ -1,4 +1,4 @@
-tags: #AC2 #smtp
+tags: #AC2 #SMTP
 
 # SMTP
 

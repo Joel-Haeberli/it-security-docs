@@ -1,4 +1,4 @@
-tags: #AC1 #symmetric #StreamCipher #Keccak #SHA-3
+tags: #AC1 #symmetric #stream-cipher #keccak #SHA-3
 
 # Keccak
 

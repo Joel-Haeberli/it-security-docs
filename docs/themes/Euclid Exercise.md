@@ -1,6 +1,6 @@
 tags: #AC2 #math #exercise 
 
-# AC2 - Math - Exercise 3
+# Euclid Exercise 3
 
 links: [[203 AC2 TOC - Number-Theoretic Algorithms and Hardness Assumptions|AC2 TOC - Number-Theoretic Algorithms and Hardness Assumptions]] - [[themes/000 Index|Index]]
 

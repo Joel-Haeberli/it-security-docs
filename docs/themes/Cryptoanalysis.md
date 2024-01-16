@@ -1,4 +1,4 @@
-tags: #symmetric #asymmetric #CPA #CCA #attacker #attacker-model
+tags: #symmetric #asymmetric #CPA #CCA #attacker-model
 
 # Cryptoanalysis
 

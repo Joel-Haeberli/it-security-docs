@@ -1,4 +1,4 @@
-tags: #symmetric #randomOracle
+tags: #symmetric #random-oracle
 
 # Random-Oracle Model
 

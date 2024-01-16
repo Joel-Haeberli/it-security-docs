@@ -1,4 +1,4 @@
-tags: #AC1 #Randomness #symmetric #Pseudorandom
+tags: #AC1 #randomness #symmetric #pseudorandom
 
 # Pseudorandom Number Generator (PRNG)
 

@@ -51,6 +51,45 @@ nav:
       - 'Additional Applications of Hash Functions': 'themes/Additional Applications of Hash Functions.md'
       - 'Cryptographic Hash Functions': 'themes/Cryptographic Hash Functions.md'
       - 'Hash-and-Mac': 'themes/Hash-and-Mac.md'
+    - 'Distributed Systems Security':
+      - 'Index': 'themes/400 DSS MOC.md'
+      - 'Introduction to Cryptocurrencies': 'themes/401 DSS TOC - Intro.md'
+      - 'Cryptographic Preliminaries': 'themes/402 DSS TOC - Preliminaries.md'
+      - 'Decentralization': 'themes/403 DSS TOC - Decentralization.md'
+      - 'Bitcoin': 'themes/404 DSS TOC - Bitcoin.md'
+      - 'Evolving the Protocol': 'themes/405 DSS TOC - Evolving the Protocol.md'
+      - 'Scaling': 'themes/406 DSS TOC - Scaling.md'
+    - 'Web Security':
+      - 'Index': 'themes/500 WS MOC.md'
+      - 'Injections': 'themes/501 WS TOC - Injections.md'
+      - 'Broken Access Control': 'themes/502 WS TOC - Broken Access Control.md'
+      - 'Broken Authentication': 'themes/503 WS TOC - Broken Authentication.md'
+      - 'Crypto Failures': 'themes/504 WS TOC - Crypto Failures.md'
+      - 'Cross-Site Scripting (XSS)': 'themes/505 WS TOC - XSS.md'
+      - 'OWASP and CSRF': 'themes/506 WS TOC - OWASP & CSRF.md'
+      - 'Testing': 'themes/507 WS TOC - Testing.md'
+    - 'Security Protocols and Applications':
+      - 'Index': 'themes/600 SPA MOC.md'
+      - 'Part 1':
+        - 'Information Security': 'themes/601 SPA TOC - Information Security.md'
+        - 'Internet Security': 'themes/602 SPA TOC - Internet Security.md'
+        - 'Hacking Basics': 'themes/603 SPA TOC - Hacking Basics.md'
+        - 'Layered Security': 'themes/604 SPA TOC - Layered Security.md'
+        - 'Host & Network Security': 'themes/605 SPA TOC - Host & Network Security.md'
+        - 'Linux Firewall': 'themes/606 SPA TOC - Linux Firewall.md'
+        - 'DNS Security': 'themes/607 SPA TOC - DNS Security.md'
+        - 'Security Tools': 'themes/608 SPA TOC - Security Tools.md'
+        - 'Lab': 'themes/609 SPA TOC - Lab.md'
+      - 'Part 2':
+        - 'Transport Layer Security': 'themes/610 SPA TOC - TLS.md'
+        - 'Certificates and PKI': 'themes/611 SPA TOC - Certificates and PKI.md'
+        - 'Identification Authentication': 'themes/612 SPA TOC - Identification Authentication.md'
+        - 'Secure Email': 'themes/613 SPA TOC - Secure Email.md'
+        - 'Secure Shell': 'themes/614 SPA TOC - Secure Shell.md'
+        - 'YubiKey': 'themes/615 SPA TOC - YubiKey.md'
+        - 'VPN': 'themes/616 SPA TOC - VPN.md'
+        - 'Wireless Security': 'themes/617 SPA TOC - Wireless Security.md'
+
 
 theme:
   name: 'material'

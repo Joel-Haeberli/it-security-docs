@@ -23,14 +23,14 @@ The **Proof of Work** scheme looks as follows:
 	- f for function: The function which defines the problem to be solved.
 
 Given this scheme we can say that:
-$True = verify(p,d,solve(p,d,f),f),\ iff\ f\ solves\ the\ problem\ such\ that\ given\ p\ and\ s\ as\ input\ result\ in\ d$
+$verify(p,d,solve(p,d,f),f) = True$, iff $f$ solves the problem such that given $p$ and $s$ as input result in $d$
 The PoW therefore lies in finding a solution $s$ which as parameter of the function $f$ results in a definable difficulty $d$ when combined with puzzle $p$.
 
 ## Hashcash
 
 Hashcash was the first implementation of a PoW which works as follows:
 
-$f$ = SHA-256($p$ | $s$), | is the concatenation operation
+$f$ = SHA-256($p$ | $s$), (| is the concatenation operation)
 $p$ = bit string
 $d$ = number of leading zero bits in solution
 
@@ -41,11 +41,11 @@ p = 01001100011
 
 we would try to find a solution $s$, so that:
 
-00X... = SHA-256(01001100011 | $s$)
+001... = SHA-256(01001100011 | $s$)
 
 ## Puzzle-Friendliness
 
-The PoW is predestinated to use hash functions. Especially if the hash function is puzzle-friendly. A hash function is puzzle-friendly if there is no better way of solving the puzzle $d = hash(p | s)$, than just randomly trying.
+The PoW is predestinated to use hash functions. Especially if the hash function is puzzle-friendly. A hash function is puzzle-friendly if there is no better way of solving the puzzle $d = hash(p | s)$, than just randomly trying. This comes because a hash is easy to calculate but hard (or impossible) to invert. This makes verification easy but solving the puzzle hard.
 
 ---
 links: [[402 DSS TOC - Preliminaries]] - [[400 DSS MOC]] - [[themes/000 Index|Index]]

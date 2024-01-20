@@ -1,6 +1,6 @@
 tags: #DSS #Blockchain
 
-# DSS TOC - Distributed Systems Security
+# 401 DSS TOC - Intro
 
 links: [[400 DSS MOC]] - [[index|Index]]
 

@@ -1,6 +1,6 @@
 tags: #cryptocurrency #bitcoin #symmetric #asymmetric 
 
-# Distributed Systems Security MOC
+# 402 DSS TOC - Preliminaries
 
 links: [[400 DSS MOC]] - [[themes/000 Index|Index]]
 

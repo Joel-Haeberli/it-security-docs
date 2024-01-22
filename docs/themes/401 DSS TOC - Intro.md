@@ -6,7 +6,7 @@ links: [[400 DSS MOC|DSS MOC]] - [[themes/000 Index|Index]]
 
 ---
 
-- [[What is Bitcoin?]]
+- [[What is Bitcoin]]
 * [[Problems of Centralization]]
 
 ---

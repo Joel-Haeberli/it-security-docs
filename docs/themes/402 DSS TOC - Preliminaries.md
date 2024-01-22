@@ -2,7 +2,7 @@ tags: #cryptocurrency #bitcoin #symmetric #asymmetric
 
 # 402 DSS TOC - Preliminaries
 
-links: [[400 DSS MOC]] - [[themes/000 Index|Index]]
+links: [[400 DSS MOC|DSS MOC]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -13,4 +13,4 @@ links: [[400 DSS MOC]] - [[themes/000 Index|Index]]
 - [[Authenticated Data Structures]]
 
 ---
-links: [[400 DSS MOC]] - [[themes/000 Index|Index]]
+links: [[400 DSS MOC|DSS MOC]] - [[themes/000 Index|Index]]

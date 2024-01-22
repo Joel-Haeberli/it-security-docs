@@ -2,7 +2,7 @@ tags: #cryptocurrency #decentralization
 
 # 403 DSS TOC - Decentralization
 
-links: [[400 DSS MOC]] - [[themes/000 Index|Index]]
+links: [[400 DSS MOC|DSS MOC]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -12,4 +12,4 @@ links: [[400 DSS MOC]] - [[themes/000 Index|Index]]
 - [[Double Spending Attack]]
 
 ---
-links: [[400 DSS MOC]] - [[themes/000 Index|Index]]
+links: [[400 DSS MOC|DSS MOC]] - [[themes/000 Index|Index]]

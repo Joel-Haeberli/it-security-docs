@@ -1,6 +1,6 @@
 site_name: IT-Security Docs
 # fix 404 error
-site_url: https://docs.jf1.ch
+site_url: https://docs.jf1.ch/
 
 nav:
   - 'Index': 'themes/000 Index.md'
@@ -133,8 +133,8 @@ markdown_extensions:
   # - pymdownx.details
   # - pymdownx.magiclink
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.tasklist:
       custom_checkbox: true
   - def_list

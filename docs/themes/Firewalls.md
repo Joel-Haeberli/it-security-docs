@@ -228,6 +228,12 @@ See [[IDS & IPS]]
 
 ![[security-zones-with-firewall-and-ids.png]]
 
+**Security-Zones with Firewalls, IDS/IPS and SIEM**
+
+See [[SIEM]]
+
+![[security-zones-with-siem.png]]
+
 **Firewalls for Virtual Infrastructure**
 
 - a physical firewall is not able to control traffic between virtual hosts (not leaving the Hypervisor)

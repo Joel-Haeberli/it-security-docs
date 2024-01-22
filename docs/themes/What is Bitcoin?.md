@@ -1,4 +1,4 @@
-tags: #DSS #Blockchain #Bitcoin #Intro
+tags: #distributed-systems-security #blockchain #bitcoin 
 
 # What is Bitcoin?
 

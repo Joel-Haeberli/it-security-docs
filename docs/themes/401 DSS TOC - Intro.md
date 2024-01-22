@@ -1,8 +1,8 @@
-tags: #DSS #Blockchain
+tags: #distributed-systems-security  #blockchain
 
 # 401 DSS TOC - Intro
 
-links: [[400 DSS MOC]] - [[index|Index]]
+links: [[400 DSS MOC|DSS MOC]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -10,4 +10,4 @@ links: [[400 DSS MOC]] - [[index|Index]]
 * [[Problems of Centralization]]
 
 ---
-links: [[400 DSS MOC]] - [[index|Index]]
+links: [[400 DSS MOC|DSS MOC]] - [[themes/000 Index|Index]]

@@ -6,9 +6,11 @@ links: [[403 DSS TOC - Decentralization]] - [[400 DSS MOC]] - [[themes/000 Index
 ---
 
 ## Getting rid of the bank
+
 The step from a centralized to a decentralized payment and currency system is just getting rid of the bank as trusted third party. As we learned Bitcoin is a peer to peer network, which means transactions happen directly between participants of the network and not over some intermediate party. The process of decentralization is the process of making banks unnecessary. This process comes with multiple steps.
 
 ## BankCoin
+
 The BankCoin represents the current situation where a bank has a ledger (centralized) and accepts transactions. We trust the bank to perform the transactions right and keep the ledger in good state.
 
 **Problems** with the BankCoin:
@@ -18,7 +20,8 @@ The BankCoin represents the current situation where a bank has a ledger (central
 
 ![BankCoin](bankcoin.png)
 ## NaiveCoin
-*Predecessor: BankCoin*
+
+*Predecessor:  [[From BankCoin to IncentiveCoin#BankCoin|BankCoin]]*
 
 The NaiveCoin works as follows:
 
@@ -35,7 +38,8 @@ The NaiveCoin works as follows:
 
 ![BankCoin](naivecoin.png)
 ## SerialNumberCoin
-*Predecessor: NaiveCoin*
+
+*Predecessor:  [[From BankCoin to IncentiveCoin#NaiveCoin|NaiveCoin]]*
 
 In order to prevent replay attacks, we add a serial number to each coin. A serial number is unique by definition and therefore no two coins in a ledger can have the same serial number. Otherwise this would be detected by the system and the transaction would be aborted. Instead of a balance, the ledger know holds a list of serial numbers attached to the account.
 
@@ -49,7 +53,8 @@ In order to prevent replay attacks, we add a serial number to each coin. A seria
 
 ![SerialNumberCoin](serialnumbercoin.png)
 ## TransactionCoin
-*Predecessor: SerialNumberCoin*
+
+*Predecessor:  [[From BankCoin to IncentiveCoin#SerialNumberCoin|SerialNumberCoin]]*
 
 Now the ledger does not store the serial number of the coin anymore, but instead saves the transaction which transferred the coin. So the coin is represented by the transaction which made the coin to occur in the wallet.
 
@@ -67,6 +72,7 @@ This image only illustrates the process of the transaction being emitted on the 
 ![TransactionCoin send](transactioncoin_2.png)
 You could denote $x_0$ = "Alice owns 1 coin", which will then become $x_1$ = "Alice sends $x_0$ to Bob" = "Alice sends (Alice owns 1 coin) to Bob" through the transaction. Chaining arbitrary amount of transactions like this makes it obvious, that even if a coin gets back to its originator, the representation (value) will not be the same and therefore the replay attack cannot be done anymore.
 ## PublicAnnouncementCoin
+
 *Predecessor: TransactionCoin*
 
 The PublicAnnouncementCoin resolves the double spending attack by introducing a public announcement which means that each node only accepts transactions which were publicly announced. Like this Alice can no longer send the same transaction with different receivers to the network.
@@ -80,7 +86,8 @@ The PublicAnnouncementCoin resolves the double spending attack by introducing a 
 - How can we publicly announce something on the internet?
 
 ## ElectionCoin
-*Predecessor: TransactionCoin*
+
+*Predecessor:  [[From BankCoin to IncentiveCoin#TransactionCoin|TransactionCoin]]*
 
 The election coin does not write transaction immediately if they arrive but creates a transaction pool of so called *unconfirmed* transactions. Participants of the network periodically randomly *elect* a leader among themselves. The leader then broadcasts his transaction pool which is then taken as new transaction pool by all other participants.
 
@@ -93,7 +100,8 @@ The election coin does not write transaction immediately if they arrive but crea
 - Sybil Attack (Take over a network by creating a lot of identities on the respective network)
 
 ## ProofOfWorkCoin
-*Predecessor: ElectionCoin*
+
+*Predecessor:  [[From BankCoin to IncentiveCoin#ElectionCoin|ElectionCoin]]*
 
 ProofOfWorkCoin implements a leader election algorithm leveraging a proof of work scheme allowing leader election building on the ElectionCoin. Therefore all nodes solve a puzzle and the first node to solve the puzzle becomes the new leader. Additionally each node given the new transaction pool, will first verify the solution given by the leader.
 
@@ -107,7 +115,8 @@ ProofOfWorkCoin implements a leader election algorithm leveraging a proof of wor
 - Two nodes find the solution at the same time
 
 ## BlockchainCoin
-*Predecessor: ProofOfWorkCoin*
+
+*Predecessor:  [[From BankCoin to IncentiveCoin#ProofOfWorkCoin|ProofOfWorkCoin]]*
 
 The BlockchainCoin works like the ProofOfWorkCoin but instead of the transaction pool broadcasts a **block** which contains:
 
@@ -138,7 +147,8 @@ The difficulty consists in the number of leading zeros in the result of the hash
 ![BlockchainCoin](blockchaincoin.png)
 
 ## IncentiveCoin
-*Predecessor: BlockchainCoin*
+
+*Predecessor:  [[From BankCoin to IncentiveCoin#BlockchainCoin|BlockchainCoin]]*
 
 The IncentiveCoin adds incentivation to the blockchain, by adding a **coinbase transaction** which creates new coins. These coins are also called **block reward**. It's the only way of creating new money in the system. The block reward decreases over time which means that in 2140, the last bitcoin will be rewarded. Now we have the problem, that the reserve of coins is limited. Therefore a **transaction fee** *can* be attached to a transaction. In addition to the block reward, the coinbase transaction is allowed to pay out also the coins contained in the transaction fees.
 

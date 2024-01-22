@@ -2,7 +2,7 @@ tags: #firewall #host-security #network-security
 
 # Firewalls
 
-links: [[605 SPA TOC - Host & Network Security|SPA TPC - Host & Network Security]] - [[themes/000 Index|Index]]
+links: [[605 SPA TOC - Host & Network Security|SPA TOC - Host & Network Security]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -242,4 +242,4 @@ See [[SIEM]]
 ![[virtual-firewall.png]]
 
 ---
-links: [[605 SPA TOC - Host & Network Security|SPA TPC - Host & Network Security]] - [[themes/000 Index|Index]]
+links: [[605 SPA TOC - Host & Network Security|SPA TOC - Host & Network Security]] - [[themes/000 Index|Index]]

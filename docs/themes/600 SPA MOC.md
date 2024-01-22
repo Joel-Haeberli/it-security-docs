@@ -29,6 +29,10 @@ links: [[themes/000 Index|Index]]
 * **Topic 17**: [[themes/617 SPA TOC - Wireless Security|Wireless Security]]
 * ToDo: Exercises integrated into topics or own topic?
 
+**Exam questions**
+
+* **Topic 17**: [[themes/618 SPA TOC - Exam Questions|Exam Questions]]
+
 Part 2 according to this structure:
 
 ![[structure.png]]

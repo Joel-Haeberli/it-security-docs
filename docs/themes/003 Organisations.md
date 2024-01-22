@@ -22,6 +22,9 @@ links: [[themes/000 Index|Index]]
 	* Verisign, NASA, US Department of Defence, US Army, RIPE NCC, ICANN...
 * Big Certification Authorities
 	* DigiCert, GlobalSign, Let's Encrypt, GoDaddy...
+* **IAB**  (Internet Architecture Board)
+	* Architectural oversight of IETF activities, Internet Standards Process oversight and appeal, and the appointment of the RFC Editor.
+* 
 
 ---
 links: [[themes/000 Index|Index]]

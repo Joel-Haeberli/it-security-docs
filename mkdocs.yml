@@ -1,6 +1,6 @@
 site_name: IT-Security Docs
 # fix 404 error
-site_url: https://docs.jf1.ch/
+site_url: https://docs.jf1.ch/it-security-docs
 
 nav:
   - 'Index': 'themes/000 Index.md'

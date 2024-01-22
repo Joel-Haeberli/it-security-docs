@@ -6,7 +6,7 @@ This repository contains a summary of our topics in the IT security specializati
 
 ## Browse docs online
 
-- open the link: [janfuhrer.github.io/it-security-docs](https://janfuhrer.github.io/it-security-docs/)
+- open the link: [docs.jf1.ch](https://docs.jf1.ch)
 
 
 The documentation is automatically generated each time new changes are merged into the `main` branch. The workflow is based on [MkDocs](https://www.mkdocs.org/) with the [Material](https://squidfunk.github.io/mkdocs-material/) theme and then published by [Github-Pages](https://pages.github.com/)

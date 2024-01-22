@@ -10,6 +10,7 @@ Builds up on decentralization: [[From BankCoin to IncentiveCoin]]
 
 [[From BankCoin to IncentiveCoin#IncentiveCoin|IncentiveCoin]] solves the decentralization problem. With the process from [[From BankCoin to IncentiveCoin#IncentiveCoin|IncentiveCoin]] to Bitcoin we solve the problems remaining for Bitcoin to be a usable currency.
 ## DifficultyAdjustmentCoin
+
 *Predecessor: [[From BankCoin to IncentiveCoin#IncentiveCoin|IncentiveCoin]]*
 
 The [[From BankCoin to IncentiveCoin#IncentiveCoin|IncentiveCoin]] finally solved the centralization problem of the bank by implementing a sequence of mechanisms which allow to have a distributed ledger in an eventually consistent state. The problem that comes with the [[From BankCoin to IncentiveCoin#IncentiveCoin|IncentiveCoin]] is that the computing power changes (increases). Like this, the puzzle which shall prevent 51% attacks becomes easier again until it's possible that it might happen (Inter-Block-Time gets smaller and smaller - [[Eventual Consistency]]). So what we need is a possibility to adjust the difficulty of the puzzle (as described in [[Proof-of-Work (PoW)#Concept|Proof-of-Work]]). This is done by the DifficultyAdjustmentCoin. This coin makes it possible to adjust the difficulty, so that the inter-block time is constant (e.g. 10 minutes). Besides the properties of the IncentiveCoin, the **DifficultyAdjustmentCoin, now also contains a timestamp. With the timestamp we are now able to measure the computational power of the network**.
@@ -45,6 +46,7 @@ The **retarget** flow works like this:
 - We are only able to transfer one coin per transaction which is bit nasty.
 
 ## InputOutputCoin
+
 *Predecessor: [[From BankCoin to IncentiveCoin#TransactionCoin|TransactionCoin]]*
 
 At the moment we still have the design of the [[From BankCoin to IncentiveCoin#TransactionCoin|TransactionCoin]] for the transactions. The problem is that this only allows us to send one coin per transaction (because the coin *is* the transaction. What we want is...
@@ -78,6 +80,7 @@ With this we are able to validate transactions following this process:
 - We can only send money to public keys.
 
 ## ScriptCoin
+
 *Predecessor: [[From IncentiveCoin to Bitcoin#InputOutputCoin|InputOutputCoin]]*
 
 Currently we are able to send money to one public key at a time. This is good but we want to build more complex cases. The cases are:
@@ -110,6 +113,7 @@ Remark: **do not chain the scripts all together**
 - The problem that remains is that the verification of the payment is hard.
 
 ## SimplifiedPaymentVerificationCoin / SPVCoin
+
 *Predecessor: [[From IncentiveCoin to Bitcoin#ScriptCoin|ScriptCoin]]*
 
 The SimplifiedPaymentVerificationCoin (also SPVCoin) solves the problem that verification of payments is hard in [[From IncentiveCoin to Bitcoin#ScriptCoin|ScriptCoin]] (due to the fact, that each node must have the entire chain, which is bigger than 500GB, to validate a payment). Therefore it introduces *SPV nodes* who do not store the entire chain but instead only the headers of the blocks containing metadata needed to still verify payments but stripped of the transactions, which are not needed for this purpose. Therefore a block is split into *block header* and *block body*. Nodes who carry the entire chain are now called *full nodes*. A *block header* is only 80 bytes which leads to a size around 60MB (2022). The *block headers* store the root hash of the transaction if they were put into a [[Authenticated Data Structures#Merkle Tree|Merkle Tree]]. The *SPV nodes* then call *full nodes* for [[Authenticated Data Structures#Merkle Proof|Merkle Proofs]] to verify payments. *SPV nodes* rely on trustworthy *full nodes*. If *full nodes* do not good at their job of validating transactions properly, the construct breaks. *SPV nodes* accept Security and Privacy Tradeoffs.
@@ -119,6 +123,7 @@ The SimplifiedPaymentVerificationCoin (also SPVCoin) solves the problem that ver
 - SPVCoin solves the problem that payment verification is hard due to the size of the blockchain.
 
 ## Bitcoin
+
 *Predecessor: [[From IncentiveCoin to Bitcoin#SimplifiedPaymentVerificationCoin / SPVCoin|SimplifiedPaymentVerificationCoin / SPVCoin]]*
 
 Finally we arrive in the eden of happiness, equality, freedom and peace (so exciting!)! I present: THE BITCOIN (yeah, it's a bit polemic...)

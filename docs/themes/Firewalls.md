@@ -222,6 +222,12 @@ Can perform multiple security functions within one single appliance:
 
 ![[security-zones-multiple-firewalls.png]]
 
+**Security-Zones with Firewalls and IDS/IPS**
+
+See [[IDS & IPS]]
+
+![[security-zones-with-firewall-and-ids.png]]
+
 **Firewalls for Virtual Infrastructure**
 
 - a physical firewall is not able to control traffic between virtual hosts (not leaving the Hypervisor)

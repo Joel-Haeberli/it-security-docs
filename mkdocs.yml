@@ -1,6 +1,6 @@
 site_name: IT-Security Docs
 # fix 404 error
-site_url: https://janfuhrer.github.io/it-security-docs/
+site_url: https://docs.jf1.ch
 
 nav:
   - 'Index': 'themes/000 Index.md'

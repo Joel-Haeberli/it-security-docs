@@ -31,7 +31,8 @@ links: [[themes/000 Index|Index]]
 
 **Exam questions**
 
-* **Topic 17**: [[themes/618 SPA TOC - Exam Questions|Exam Questions]]
+* **Topic 18**: [[themes/618 SPA TOC - Exam Questions|Exam Questions]]
+* **Topic 19**: [[themes/619 SPA TOC - Exam Questions with Answers|Exam Questions with Answers]]
 
 Part 2 according to this structure:
 

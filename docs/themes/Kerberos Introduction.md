@@ -17,7 +17,7 @@ links: [[620 SPA TOC - Kerberos|SPA TOC - Kerberos]] - [[themes/000 Index|Index]
 
 - Kerberos implementation name: MS-KILE
 - Kerberos is default authentication
-- Replaces NTLM, however NTLM is still widely used
+- Replaces [NTLM](https://en.wikipedia.org/wiki/NTLM), however NTLM is still widely used
 - Used for single sign on (SSO) -> show credentials to kerberos once and receive TGT to prove identity
 - Services need to register a SPN (Service Principal Name)
 - Only works with FQDN / NetBIOS names, not with IPs

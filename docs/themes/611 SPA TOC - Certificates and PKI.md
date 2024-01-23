@@ -13,6 +13,7 @@ PKI guest lecture still missing here.
 - [[X.509v3]]
 - [[PKI]]
 - [[ZertES]]
+- [[PKCS|PKCS Overview]]
 
 ---
 links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]

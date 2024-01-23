@@ -143,24 +143,25 @@ Command-line packet analyzer
 tcpdump <options> <filter>
 ```
 
-options:
--n no dns resolution
--i interface to listen on
--s snaplen
--w write out to file
--v verbose
--Z drop privilages to user
--D available network interfaces
--e print link-level header
--F use file as input to filter expression
--p Dont put interface into "promiscous" mode
+options: <br>
+-n no dns resolution<br>
+-i interface to listen on<br>
+-s snaplen<br>
+-w write out to file<br>
+-v verbose<br>
+-Z drop privilages to user<br>
+-D available network interfaces<br>
+-e print link-level header<br>
+-F use file as input to filter expression<br>
+-p Dont put interface into "promiscous" mode<br>
 -r Read packets from file
 
-**filter** = pcap filtering language
-**filter expressions** = consists of one or more primitives
-**primitives** = consists of an id (name or number) and one or more qualifiers. Special primitives = gateway, broadcast, less, greater
-**qualifiers**: 
+**filter** = pcap filtering language <br>
+**filter expressions** = consists of one or more primitives<br>
+**primitives** = consists of an id (name or number) and one or more qualifiers. Special primitives = gateway, broadcast, less, greater<br>
+**qualifiers**: <br>
 one of... 
+
 - type
 	- qualifiers say what kind the id refers to (host, net, port, portrange)
 - dir(direction) 
@@ -245,8 +246,6 @@ Options:
 
 - Pendant to Nessus but open-source
 - Part of the Greenbone Security manager (GSM)
-
-**GFI Languard**
 
 ## Honorable mentions
 

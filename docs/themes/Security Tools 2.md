@@ -189,6 +189,7 @@ Internet Protocol Flow Information Export (IPFIX)
 ### Network flow capturing
 
 There are 3 variants of Flow capturing:
+
 - **full** 
 	- can have performance impacts
 	- directed attacks possible
@@ -216,27 +217,32 @@ The following software exist for network flow capturing/ IPFIX:
 The following tools can be used for host security:
 
 **File integrity monitoring**
+
 - tripwire
 - samhain
 - AIDE
 - and many more...
 
 **Antivirus (AV)**
+
 - ClamAV
 - Virustotal
 - and many more...
 
 **Rootkit detector**
+
 - Zeppoo, chkrootkit, rkhunter, OSSEC (Linux)
 - MS RootkitRevealer, Sophos Anti-Rootkit, GMER (Windows)
 
 **Malware scanner/removal tools**
+
 - MS malicious software removal tool
 - Malwarebytes Anti-Malware
 - Spybot antispyware and AV
 - ComboFix
 
 **Distribution**
+
 - Security Onion
 	- Free/open-source Linux distro
 	- network and host intrusion detection

@@ -164,9 +164,10 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 14. How is the master secret derived for the pre-master secret?  
 15. Describe how a HMAC function works.
 16. What is meant with «Authenticated Encryption» (AE)?  
-17. What is the difference between AE and AEAD (Authenticated Encryption Associated Data)? Describe a «Padding Oracle Attack».  
-18. Describe a «Padding Oracle On DOwngradeD Legacy Encryption» (POODLE) attack. 
-19. Describe the changes between TLS 1.2 and TLS 1.3 in respect of:
+17. What is the difference between AE and AEAD (Authenticated Encryption Associated Data)?
+18. Describe a «Padding Oracle Attack».  
+19. Describe a «Padding Oracle On DOwngradeD Legacy Encryption» (POODLE) attack. 
+20. Describe the changes between TLS 1.2 and TLS 1.3 in respect of:
 	* Key exchange  
 	* Cipher suites  
 	* Round trip time 

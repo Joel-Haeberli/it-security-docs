@@ -157,32 +157,93 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 	Kali Linux was used, which is a distribution designed for digital forensics and penetration testing. It comes with numerous tools for network analysis, vulnerability scanning, and security auditing. Its main focus is to provide a comprehensive suite for cybersecurity professionals to test network defenses and security measures.
 ## Part 2
 
-### TLS
+### ✅ TLS
 
-1. Name 5 protocols based on TLS.
-2. What is meant with «Opportunistic TLS»? What is meant with «implicit TLS»? What kind of risks / attacks do you know?
-3. What does «HTTP Strict Transport Security» (HSTS) stands for? How is it supposed to work? Describe the OSI layer in general and where the TLS communication takes place.
-4. TLS is composed of the handshake protocol and the record protocol. Describe what happens on each layer?
-5. What information do we find in a «Client Hello» message?
-6. What information contains the CipherSuite such as TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (128-bit AES encryption with SHA-256 message authentication and ephemeral ECDH key exchange signed with an RSA certificate)?
-7. How does a TLS mutual authentication works? Which additional handshake messages are exchanged?
-8. How does a TLS resume session looks like. What are the prerequisites? What is a anonymous TLS session such as TLS_ECDH_anon?
-9. What does the term Forward Secrecy stands for. What has to be done to get perfect forward secrecy (PFS)?
-10. What do you have to do respectively think off to implement a TLS reverse proxy for a company?
-11. What is a bit flipping attack? Which ciphers are vulnerable?
-12. What information do you need to inspect and decipher all TLS packets e.g. with wireshark (TLS private key corresponding to the server certificate, pre-master key, master key)?
-13. What information is exchanged with Diffie-Hellman key exchange in a TLS session? Describe which information is used for a JA3 fingerprint?  
-14. How is the master secret derived for the pre-master secret?  
-15. Describe how a HMAC function works.
-16. What is meant with «Authenticated Encryption» (AE)?  
-17. What is the difference between AE and AEAD (Authenticated Encryption Associated Data)? Describe a «Padding Oracle Attack».  
-18. Describe a «Padding Oracle On DOwngradeD Legacy Encryption» (POODLE) attack. 
-19. Describe the changes between TLS 1.2 and TLS 1.3 in respect of:
-	* Key exchange  
-	* Cipher suites  
-	* Round trip time 
-	* Authenticated Encryption 
-	* Authentication / Signature
+1. **Name 5 protocols based on TLS.**
+   HTTPS, FTPS, SMTPS, LDAPS, DTLS
+   
+2. **What is meant with «Opportunistic TLS»? What is meant with «implicit TLS»? What kind of risks / attacks do you know?**
+   Opportunistic TLS: Refers to a system that uses TLS encryption if available but can fall back to an unencrypted connection if TLS isn’t supported by the other party. It's often used in email transmission. The risk is that it can be subject to downgrade attacks, where an attacker forces the connection to revert to an unencrypted state.
+   
+   Implicit TLS: In this mode, TLS is a mandatory part of the connection from the start (as opposed to being negotiated with STARTTLS). The connection starts with the TLS handshake, and no unencrypted communication is permitted. It is considered more secure than opportunistic TLS as it doesn’t allow falling back to an unencrypted connection.
+
+3. **What does «HTTP Strict Transport Security» (HSTS) stands for? How is it supposed to work? Describe the OSI layer in general and where the TLS communication takes place.**
+   HSTS is a web security policy mechanism that helps to protect websites against protocol downgrade attacks and cookie hijacking. It allows web servers to declare that web browsers (or other complying user agents) should only interact with it using secure HTTPS connections, and never via the insecure HTTP protocol.
+   
+   In the OSI model, HSTS operates at the application layer (Layer 7), where it instructs the browser on how to handle connections to the server. The TLS communication itself occurs at the session layer (Layer 5) and the presentation layer (Layer 6), where it provides privacy and data integrity between two communicating applications.
+   
+4. **TLS is composed of the handshake protocol and the record protocol. Describe what happens on each layer?**
+   Handshake Protocol: This part of TLS is responsible for the initial negotiation between client and server. It establishes which cryptographic algorithms will be used, authenticates the server (and optionally the client), and sets up a secure encryption key.
+   
+   Record Protocol: Once the handshake is complete, the Record Protocol is used to secure the actual data being transmitted. It uses the encryption key established during the handshake to encrypt the data and ensures that it is transmitted securely and intact.
+
+5. **What information do we find in a «Client Hello» message?**
+	- Protocol Version: The highest TLS version supported by the client.
+	- Random: A client-generated random string used for key generation.
+	- Session ID: An identifier to resume previous sessions for faster handshakes.
+	- Cipher Suites: A list of cryptographic algorithms supported by the client.
+	- Compression Methods: Information about the compression methods available.
+	- Extensions: Optional additional features like server name indication (SNI) or maximum segment size.
+
+6. **What information contains the CipherSuite such as TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (128-bit AES encryption with SHA-256 message authentication and ephemeral ECDH key exchange signed with an RSA certificate)?**
+	- TLS: Indicates the protocol is TLS.
+	- ECDHE (Elliptic Curve Diffie-Hellman Ephemeral): Specifies the key exchange mechanism using ephemeral keys with Elliptic Curve cryptography for secure key agreement.
+	- RSA: Indicates the use of RSA for digital signatures and certificate verification.
+	- AES_128_CBC: Specifies the encryption algorithm (AES) with a 128-bit key size, using Cipher Block Chaining (CBC) mode.
+	- SHA256: Indicates the use of the SHA-256 algorithm for message authentication and integrity verification.
+	  
+7. **How does a TLS mutual authentication works? Which additional handshake messages are exchanged?**
+   In TLS mutual authentication, both client and server authenticate each other. This is usually done in environments where security requirements are higher.
+   
+   Additional Handshake Messages: In addition to the standard TLS handshake messages, both the client and server present certificates. After the server sends its certificate, the server requests the client's certificate (CertificateRequest), and the client responds with its certificate (Certificate). The client then sends a CertificateVerify message to prove ownership of the private key associated with the certificate.
+   
+8. . **How does a TLS resume session looks like. What are the prerequisites? What is a anonymous TLS session such as TLS_ECDH_anon?**
+   TLS session resumption is a mechanism to speed up repeated TLS connections between the same client and server. Prerequisites: A previously established TLS session with agreed-upon session keys and a session ID or session ticket. In a resumed session, the client and server use the session ID or session ticket from a previous session to skip the full handshake and quickly re-establish encryption keys. Anonymous TLS Session (e.g., TLS_ECDH_anon): These are TLS sessions that do not authenticate one or both parties. They use ECDH for key exchange without RSA or other certificate-based methods. These sessions are vulnerable to man-in-the-middle attacks as they lack authentication.
+   
+9. **What does the term Forward Secrecy stands for. What has to be done to get perfect forward secrecy (PFS)?**
+   Forward Secrecy (FS), or Perfect Forward Secrecy (PFS), refers to a property of secure communication protocols where session keys cannot be compromised even if the private key of the server is compromised in the future.
+   
+   Achieving PFS: This is typically done by using ephemeral key exchange mechanisms (like Diffie-Hellman or ECDHE) where a new key pair is generated for each session and not based on a static server key.
+
+10. **What do you have to do respectively think off to implement a TLS reverse proxy for a company?**
+    
+    Certificate Management for the proxy, protocol and cipher configurations for TLS, secure communication between the proxy and internal servers, logging and monitoring and compliance and policy enforcement.
+    
+11. **What is a bit flipping attack? Which ciphers are vulnerable?**
+    A bit flipping attack is a form of cryptographic attack where the attacker changes bits in the encrypted message in a predictable way to manipulate the decrypted plaintext. This type of attack is typically used against cipher modes like CBC (Cipher Block Chaining) where alterations in one block can predictably affect the decryption of subsequent blocks.
+    
+    Ciphers Vulnerable: Cipher modes that do not authenticate message integrity, such as CBC, are particularly vulnerable to this attack. This vulnerability led to the development of authenticated encryption modes like GCM (Galois/Counter Mode) that combine encryption and message authentication.
+    
+12. **What information do you need to inspect and decipher all TLS packets e.g. with wireshark (TLS private key corresponding to the server certificate, pre-master key, master key)?**
+    If using traditional RSA key exchange, having the server's private key allows you to decrypt the session. For sessions using Diffie-Hellman key exchange, you need the pre-master key or master key, as these sessions cannot be decrypted using just the server's private key.
+    
+13. **What information is exchanged with Diffie-Hellman key exchange in a TLS session? Describe which information is used for a JA3 fingerprint?**
+    This exchange involves each party sending a public value (computed from their private value and a common base) and then combining their private value with the received public value to compute a shared secret. JA3 Fingerprint: It's a method to fingerprint SSL/TLS clients based on specific details of their TLS handshake process. This includes the TLS version, accepted cipher suites, list of extensions, elliptic curves, and elliptic curve point formats.
+    
+14. **How is the master secret derived for the pre-master secret?**
+    In a TLS handshake, the master secret is derived from the pre-master secret through a secure hashing process. This involves using a pseudo-random function (PRF) that combines the pre-master secret with nonces (random numbers) from both client and server, plus a string literal. The result is a master secret that is then used to generate encryption keys, MAC (Message Authentication Code) keys, and initialization vectors.
+    
+15. **Describe how a HMAC function works.**
+    HMAC is a type of message authentication code (MAC) that uses a cryptographic hash function (like SHA-256) combined with a secret key. It works by applying the hash function in two steps: The key is combined with the message and hashed. The hash output is then combined with the key again and re-hashed. This process provides both data integrity and authentication of the message. HMAC ensures that the message has not been altered and that it was sent by a holder of the secret key.
+    
+16. **What is meant with «Authenticated Encryption» (AE)?**  
+    Authenticated Encryption refers to encryption methods that ensure both confidentiality and integrity of the data.
+    
+17. **What is the difference between AE and AEAD (Authenticated Encryption Associated Data)?** 
+    While Authenticated Encryption (AE) ensures data confidentiality and integrity, Authenticated Encryption with Associated Data (AEAD) goes a step further by also protecting additional associated data's integrity (but not its confidentiality). This associated data is typically header or other metadata.
+    
+18. **Describe a «Padding Oracle Attack».**
+    This is an attack method on cryptographic systems where the attacker makes use of a 'padding oracle' - a side channel giving them hints about whether a given decryption attempt was correct based on the padding's validity. The attacker can iteratively guess and decrypt data, exploiting the way some encryption algorithms handle padding.
+    
+19. **Describe a «Padding Oracle On DOwngradeD Legacy Encryption» (POODLE) attack.** 
+    Padding Oracle On Downgraded Legacy Encryption (POODLE) is a security vulnerability that exploits the fall-back to SSL 3.0 in TLS. When a secure connection attempt fails, a server might fall back to older protocols like SSL 3.0. POODLE can force this downgrade and then use padding oracle attacks (exploiting SSL 3.0's vulnerabilities) to decrypt sensitive data like cookies.
+    
+20. **Describe the changes between TLS 1.2 and TLS 1.3 in respect of: Key exchange, Cipher suites, Round trip time, Authenticated Encryption , Authentication / Signature**
+    - Key Exchange: TLS 1.3 removes RSA key exchange for forward secrecy, focusing on Diffie-Hellman and ECDH (Elliptic Curve Diffie-Hellman) instead.
+	- Cipher Suites: TLS 1.3 streamlines cipher suite negotiation, supporting only AEAD cipher suites. It removes many older cipher suites and hashing algorithms, increasing overall security.
+	- Round Trip Time: TLS 1.3 reduces the number of round trips (handshake messages exchanged between client and server) needed to establish a secure connection, making the handshake process faster.
+	- Authenticated Encryption: TLS 1.3 mandates the use of AEAD ciphers for encrypting and authenticating all data, ensuring better security and efficiency.
+	- Authentication/Signature: TLS 1.3 improves the way certificates are authenticated and signed, requiring digital signatures even when a previous session is resumed. This enhances the overall security of the authentication process.
 
 ### Certificates and PKI
 

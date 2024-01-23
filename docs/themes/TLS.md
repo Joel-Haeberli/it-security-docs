@@ -68,7 +68,7 @@ TLS 1.3 is trying to break away from the attack-patch-attack-patch design cycle 
 
 ![[Abbreviated-Handshake.png]]
 
-- **TLS 1.3 0-RTT Handshake**: The 0-RTT handshake allows the client to send data to the server in the very first message of the handshake, without waiting for the server to respond. This data is encrypted with keys derived from a PSK from a previous session. This reduces the latency of the handshake even further, but it has additional security considerations because the data could potentially be replayed by an attacker. As a result, 0-RTT should be used carefully and only in situations where replay attacks can be effectively mitigated.
+- **TLS 1.3 0-RTT Handshake**: The 0-RTT handshake allows the client to send data to the server in the very first message of the handshake, without waiting for the server to respond. This data is encrypted with keys derived from a PSK from a previous session. This reduces the latency of the handshake even further, but it has additional security considerations because the data could potentially be replayed by an attacker. As a result, 0-RTT should be used carefully and only in situations where replay attacks can be effectively mitigated. ^e1701a
 
 ![[0.5-RTT-Handshake.png]]
 

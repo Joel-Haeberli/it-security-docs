@@ -73,7 +73,7 @@ To request a TGT the user must pre-authenticate
 2. KDC decrypts and verifies the timestamp to confirm that the user has used the correct password and the message is not a replay attack
 3. KDC responds with a TGT + encrypted part with session keys and details to communicate with TGS
 
-Pre-authentication is enabled by default but can be disabled. This way an attacker could request a TGT from the TGS without first having to prove that he knows the password. This would allow an attacker to try to brute force the password (ASREP-Roasting)
+Pre-authentication is enabled by default but can be disabled. This way an attacker could request a TGT from the TGS without first having to prove that he knows the password. This would allow an attacker to try to brute force the password ([[ASREP Roasting]])
 
 ### Complete process in detail
 

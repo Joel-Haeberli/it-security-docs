@@ -67,7 +67,7 @@ links: [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Ind
 	- Restrict access to network to devices with approved MAC addresses
 	- Counters CAM table overflow attack
 - Do not use VLAN assignments to enforce secure design
-	- to achieve secure isolation the networks should be physically isolated with policy engines (firewalls) inbetween
+	- to achieve secure isolation the networks should be physically isolated with policy engines (firewalls) in between
 	- Mitigates VLAN hopping attack
 - Use security enhanced network devices
 	- IEEE 802.1X-2010 with port-based network access control

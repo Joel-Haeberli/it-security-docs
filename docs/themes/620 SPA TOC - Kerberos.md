@@ -1,14 +1,14 @@
-tags: #yubikey
+tags: #auth
 
-# 615 SPA TOC - YubiKey
+# 620 SPA TOC - Kerberos
 
 links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 
 ---
 
-Slides: Yubikit, PKCS11, GPG
+Slides: Kerberos_Introduction, Kerberoasting, Kerberos_Delegation
 
-* 
+- 
 
 ---
 links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]

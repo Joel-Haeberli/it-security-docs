@@ -5,6 +5,9 @@ tags: #certificates #SPA
 links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 
 ---
+
+PKI guest lecture still missing here.
+
 - [[Intro Certificates]]
 - [[Trustmodel]]
 - [[X.509v3]]

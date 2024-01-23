@@ -6,6 +6,8 @@ links: [[themes/000 Index|Index]]
 
 ---
 
+**Validate your input!**
+
 - **Topic 01**: [[themes/501 WS TOC - Injections|Injections]]
 - **Topic 02**: [[themes/502 WS TOC - Broken Access Control|Broken Access Control]]
 - **Topic 03**: [[themes/503 WS TOC - Broken Authentication|Broken Authentication]]

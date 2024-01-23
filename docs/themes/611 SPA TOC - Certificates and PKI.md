@@ -1,12 +1,15 @@
-tags: #asymmetric
+tags: #certificates #SPA 
 
 # 611 SPA TOC - Certificates and PKI
 
 links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 
 ---
-
-* 
+- [[Intro Certificates]]
+- [[Trustmodel]]
+- [[X.509v3]]
+- [[PKI]]
+- [[ZertES]]
 
 ---
 links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]

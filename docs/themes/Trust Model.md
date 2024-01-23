@@ -19,7 +19,7 @@ links: [[211 AC2 TOC - DPKI|AC2 TOC DPKI]] - [[themes/000 Index|Index]]
 - Alice has **not** yet certified Bob, but wants to securely communicate with him
 - **Web of Trust**: find paths in the certification graph
 
-![[web-of-trust.png]]
+![[themes/_media/slides/web-of-trust.png]]
 
 ## Certificate Trust Models
 

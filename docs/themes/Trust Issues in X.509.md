@@ -77,13 +77,24 @@ What is a CA liable for?
 
 CA must maintain and publish a list of all revoked (but not expired) certificates.
 
-Revocation reasons
+**Revocation reasons:**
 
-- Users private key was compromised
-- Content of certificate has changed
+- unspecified (0)
+- keyCompromise (1)
+- cACompromise (2)
+- affiliationChanged (3)
+- superseded (4)
+- cessationOfOperation (5)
+- certificateHold (6)
+- removeFromCRL (8)
+- privilegeWithdrawn (9)
+- aACompromise (10)
 
 ![[Certificate-Revocation-Lists.png]]
 
+**Example**
+
+![[certificate-revocation-list.png]]
 
 ## Online Certificate Status Protocol (OCSP)
 

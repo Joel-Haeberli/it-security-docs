@@ -11,7 +11,7 @@ This chapter provides a general overview of information security, focusing on th
 ## Motivation
 
 Preservation of **confidentiality**, **integrity**, **availability**
-And in addition **authenticity**, **accountability**(**non-repudiation**), **reliability**
+And in addition **authenticity**, **accountability**(**non-repudiation**), **auditability**
 Also known as CIA & AAA
 
 ## Information

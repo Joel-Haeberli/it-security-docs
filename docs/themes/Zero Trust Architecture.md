@@ -2,7 +2,7 @@ tags: #zta
 
 # Zero Trust Architecture
 
-links: [[605 SPA TOC - Host & Network Security|SPA TPC - Host & Network Security]] - [[themes/000 Index|Index]]
+links: [[605 SPA TOC - Host & Network Security|SPA TOC - Host & Network Security]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -74,4 +74,4 @@ A subject needs access to an enterprise resource:
 
 ---
 
-links: [[605 SPA TOC - Host & Network Security|SPA TPC - Host & Network Security]] - [[themes/000 Index|Index]]
+links: [[605 SPA TOC - Host & Network Security|SPA TOC - Host & Network Security]] - [[themes/000 Index|Index]]

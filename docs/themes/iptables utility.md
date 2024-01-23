@@ -58,7 +58,7 @@ iptables -t mangle -E test work # rename chain "test" to "work" in mangle table
 
 ## Flush chains, reset counters
 
-- use `-F`(Flush) to flush a chain (clear all custom rules from the chain and set to default state!)
+- use `-F` (Flush) to flush a chain (clear all custom rules from the chain and set to default state!)
 - use `-Z` (Zero) to set all counters of a chain to zero
 
 ```bash

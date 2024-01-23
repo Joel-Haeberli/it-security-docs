@@ -59,15 +59,6 @@ nft delete chain ip myfilter myinput
 # flush a chain (clear all rules)
 nft flush chain myfilter myinput
 ```
-
-## IPv4-filter example
-
-- the `ipv4-filter` and `ipv4-nat` of the nftables distribution provides an iptables-like filtering/nat structure
-
-![[nftables-ipv4-filter-example.png]]
-
-![[nftables-ipv4-nat-example.png]]
-
 ## Rules
 
 To add new rules, the table and the chain must be specified
@@ -112,27 +103,102 @@ nft flush table myfilter
 
 ### Expressions
 
-- x
+nftables provides the following built-in operations:
 
-### Ruleset
-
-- see [[IP sets]]
+- `ne`, `!=`: not equal
+- `lt`, `<`: less than
+- `gt`, `>`: greater than
+- `le`, `<=`: less or equal than
+- `ge`, `>=`: greater or equal than
 
 ```bash
-
+nft add rule myfilter myinput tcp dport != 22
+nft add rule myfilter myinput tcp dport >= 1024
 ```
 
-### Save and restore rules
+### Selectors
+
+- supported selectors for packet matching:
+	- meta information: incoming/outgoing interface name/index/type, packet length, ...
+	- header fields: layer 2 up to layer 4
+	- connection tracking: conntrack
+	- routing information
+	- rate limiting matchings: per packet/byte or burst
+
+### Actions
+
+- Possible actions on packets:
+	- **accepting and dropping** packets
+	- **rejecting** trafic
+	- **jumping to chain**
+	- **counters**
+	- **logging** traffic
+	- performing **NAT**
+	- setting packet/connection tracking meta information
+	- mangling packet headers
+	- duplicating packets
+	- load balancing
+	- queueing to userspace
+
+Unlike iptables **multiple actions** may be performed in one single rule
+
+## Advanced data structures
+
+There are advanced data structures for **performance packet classification** (e.g. intervals, quotas, limits, timeout policies, ...)
+
+## Backup & Restore
+### Save Ruleset
+
+- a ruleset is essentially **a collection of all the rules, chains and tables** that have been configured in nftables
+- the first line in the backup file has to be a flush command (see example below)
+
+```bash
+nft list ruleset             # list completet ruleset
+nft list ruleset arp|ip|...  # list ruleset per address family
+nft flush ruleset            # flush the complete ruleset
+nft flush ruleset arp|ip|... # flush ruleset per address family
+
+echo "nft flush ruleset" > backup.nft  # add a flush to the ruleset entry
+nft list ruleset >> backup.nft         # append the ruleset to save/restore
+nft -f backup.nft                      # restore the ruleset from file
+nft -j list [| json_pp] > ruleset.json # export in json format
+```
+
+### Save specific tables
 
 - to (atomically) replace a rule set a `flush table myfilter` line must be added at the beginning of the file `myfilter-table`
 
 ```bash
-# save rules to file
-nft list table myfilter > myfilter-table
+# backup
+echo "nft flush table myfilter" > myfilter-table
+nft list table myfilter >> myfilter-table # add rules of table to file
 
-# atomically update rule set from a file
+# restore: atomically update rule set from a file
 nft -f myfilter-table
 ```
+
+## Examples
+
+### IPv4 table examples
+
+- the `ipv4-filter` and `ipv4-nat` of the nftables distribution provides an iptables-like filtering/nat structure
+
+![[nftables-ipv4-filter-example.png]]
+
+![[nftables-ipv4-nat-example.png]]
+### Host firewall
+
+**IPv4**
+
+![[nftables-example-ip.png]]
+
+**IPv6**
+
+![[nftables-example-ip6.png]]
+
+**inet**
+
+![[nftables-example-inet.png]]
 
 ---
 links: [[606 SPA TOC - Linux Firewall|SPA TOC - Linux Firewall]] - [[themes/000 Index|Index]]

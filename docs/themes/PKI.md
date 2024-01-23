@@ -6,7 +6,7 @@ links: [[611 SPA TOC - Certificates and PKI|SPA TOC - Certificates and PKI]] - [
 
 ---
 
-This topic was already handled in [[208 AC2 TOC - Centralized public-key infrastructures|AC2 TOC - Centralized public-key infrastructures]]. This document adds some redundancy but summarizes the talking points discussed in the module SPA. 
+This topic was already handled in [[Public Key Infrastructure|AC2 - Public Key Infrastructure]]. This document adds some redundancy but summarizes the talking points discussed in the module SPA. 
 
 ## PKI Componets
 
@@ -15,9 +15,11 @@ This topic was already handled in [[208 AC2 TOC - Centralized public-key infrast
 - Validation Authority ([[Public Key Infrastructure#Validation Authority (VA)|VA]])
 - End Entitiy ([[Public Key Infrastructure#End Entity (EE)|EE]])
 - [[Public Key Infrastructure#Repository|Repository]]
-## PKI Overview
+## PKI Architecture
 
 ![[PKI-Overview.png]]
+
+![[pki-architecture.png]]
 
 ## Certificate Request (PKCS#10)
 
@@ -47,6 +49,10 @@ Certificate Request:
 		11:81:c3:64:19:22:bf:bb:10:5b:
 		...
 ```
+
+## How a certificate is created
+
+![[certificate-creation.png]]
 
 
 ---

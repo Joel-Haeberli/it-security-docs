@@ -8,8 +8,8 @@ links: [[606 SPA TOC - Linux Firewall|SPA TOC - Linux Firewall]] - [[themes/000 
 
 ## Overview
 
-- netfilter and [[iptables]] are components of a **packet filtering framework** inside the **Linux Kernel** since version 2.4
-- [[nftables]] is a newer alternative to [[iptables]] integrated into the Linux Kernel since version 3.13
+- netfilter, [[iptables]] and [[nftables]] are components of a **packet filtering framework** inside the **Linux Kernel**
+- [[nftables]] is a newer alternative to [[iptables]]
 
 ## Packet filtering framework
 

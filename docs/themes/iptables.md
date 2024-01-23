@@ -48,7 +48,7 @@ See all tables: [[iptables table architecture]]
 - `QUEUE`: packet is passed to the user space
 - `RETURN`: means stop traversing this chain and resume at the next rule in the previous/calling chain
 - call of a user-defined chain
-- iptables can use **extended target modules** (e.g. `AUDIT`, `DNAT`, ...)
+- iptables can use **extended target modules** (e.g. `AUDIT`, `DNAT`, `CT`, ...)
 
 ![[iptables-user-chain-return.png]]
 

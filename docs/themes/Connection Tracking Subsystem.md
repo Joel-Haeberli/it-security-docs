@@ -8,7 +8,7 @@ links: [[606 SPA TOC - Linux Firewall|SPA TOC - Linux Firewall]] - [[themes/000 
 
 ## Overview
 
-- the **Connection tracking subsystem** of [[netfilter]]/[[iptables]] enables the **tracking of state information of connections** in a kernel table (connection tracking table)
+- the **Connection tracking subsystem** of [[netfilter]] enables the **tracking of state information of connections** in a kernel table (connection tracking table)
 - this allows the build of [[Firewalls#Stateful Packet Filter|stateful packet filtering firewalls]]
 - on older systems the table was overlaid to `/proc/net/nf_conntrack`, on more recent systems there is an API which can be used to query/modify the table
 - the utility IP tables state `ipstate` can be used to query and display the table

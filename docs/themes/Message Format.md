@@ -127,16 +127,19 @@ See documentation [[MIME#S/MIME|S/MIME AC2]]
 
 ![[structure-signing.png]]
 
-**envelopedData**
+**envelopedData & multiple Recipients**
+
+- there is a separate `recipientinfo` for each recipient which also holds the symmetric key encrypted with the recipients public key
 
 ![[structure-envelope-data.png]]
 ### Encrypted Message With Multiple Recipients
 
+- generate a single symmetric key to encrypt the data
+- encrypt the symmetric key with each recipient's public key
+
 
 
 ![[encrypted-message-multiple-recipients.png]]
-
-
 
 ---
 links: [[613 SPA TOC - Secure Email|SPA TOC - Secure Email]] - [[themes/000 Index|Index]]

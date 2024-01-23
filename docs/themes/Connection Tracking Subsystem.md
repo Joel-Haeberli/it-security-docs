@@ -1,4 +1,4 @@
-tags: #netfilter #iptables
+tags: #netfilter #iptables #nftables
 
 # Connection Tracking Subsystem
 

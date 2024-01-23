@@ -1,1 +1,0 @@
-Go to [[000 Index|Index]].

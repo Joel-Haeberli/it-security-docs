@@ -8,6 +8,7 @@ links: [[607 SPA TOC - DNS Security|SPA TOC - DNS Security]] - [[themes/000 Inde
 ## Overview
 
 More information can be found in this [blog](https://www.cloudflare.com/dns/dnssec/how-dnssec-works/) by Cloudflare.
+Get an overview [[X.509 CA Alternatives#DNSSEC|here]].
 ### Features
 
 * Protects the Internet from attacks against the Domain Name System.
@@ -114,7 +115,7 @@ Advanced error codes and policies are still needed in the future.
 
 * DNSSEC signed zones can be used to "Securely Publish Secure Shell (SSH) Key Fingerprints"
 	* Add SSHFP records to the zone and validate on connection
-* DNS-based Authentication of Named Entities (DANE)
+* DNS-based Authentication of Named Entities ([[X.509 CA Alternatives#DANE (DNS-based Authentication of Named Entities)|DANE]])
 	* DANE provides a way to reduce the dependence on CAs. It allows the domain owner to specify the TLS certificates or public keys that should be accepted by users directly within the DNS records of the domain, using a new type of DNS record called TLSA.
 	* DNSSEC Requirement: For DANE to work securely, it requires that the DNS records be secured using DNSSEC. DNSSEC prevents tampering with DNS records, ensuring that the TLSA records retrieved are authentic and haven't been altered in transit.
 

@@ -28,7 +28,6 @@ links: [[themes/000 Index|Index]]
 * **Topic 15**: [[themes/615 SPA TOC - YubiKey|YubiKey]]
 * **Topic 16**: [[themes/616 SPA TOC - VPN|VPN]]
 * **Topic 17**: [[themes/617 SPA TOC - Wireless Security|Wireless Security]]
-* ToDo: Exercises integrated into topics or own topic?
 
 **Exam questions**
 

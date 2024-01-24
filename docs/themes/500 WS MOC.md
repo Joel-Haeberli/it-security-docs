@@ -15,7 +15,6 @@ links: [[themes/000 Index|Index]]
 - **Topic 05**: [[themes/505 WS TOC - XSS|Cross-Site Scripting (XSS)]]
 - **Topic 06**: [[themes/506 WS TOC - OWASP & CSRF|OWASP and CSRF]]
 - **Topic 07**: [[themes/507 WS TOC - Testing|Testing]]
-- ToDo: Exercises integrated into topics or own topic?
 
 ---
 links: [[themes/000 Index|Index]]

@@ -11,7 +11,7 @@ links: [[615 SPA TOC - YubiKey|SPA TOC - YubiKey]] - [[themes/000 Index|Index]]
 - The `scdaemon` manages the access to OpenPGP compliant smart cards such as the YubiKey. The low-level communication is via APDU’s.
 - The token needs an app installed, which is compliant to OpenPGP smart cards.
 
-![[Pasted image 20240124125054.png]]
+![[gpg_stack.png]]
 
 ## Some usage details
 

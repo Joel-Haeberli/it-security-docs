@@ -2,7 +2,7 @@ tags: #distributed-systems-security #blockchain #bitcoin
 
 # Problems with centralization?
 
-links: [[401 DSS TOC - Intro]] - [[400 DSS MOC]] - [[index 1|Index]]
+links: [[401 DSS TOC - Intro|DSS TOC - Intro]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -26,4 +26,4 @@ links: [[401 DSS TOC - Intro]] - [[400 DSS MOC]] - [[index 1|Index]]
 	- Since the currency can be printed by controlling authorities, centralized currencies suffer of an inflation problem.
 
 ---
-links: [[401 DSS TOC - Intro]] - [[400 DSS MOC]] - [[index 1|Index]]
+links: [[401 DSS TOC - Intro|DSS TOC - Intro]] - [[themes/000 Index|Index]]

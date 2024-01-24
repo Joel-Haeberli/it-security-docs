@@ -119,6 +119,5 @@ Advanced error codes and policies are still needed in the future.
 	* DANE provides a way to reduce the dependence on CAs. It allows the domain owner to specify the TLS certificates or public keys that should be accepted by users directly within the DNS records of the domain, using a new type of DNS record called TLSA.
 	* DNSSEC Requirement: For DANE to work securely, it requires that the DNS records be secured using DNSSEC. DNSSEC prevents tampering with DNS records, ensuring that the TLSA records retrieved are authentic and haven't been altered in transit.
 
-
 ---
 links: [[607 SPA TOC - DNS Security|SPA TOC - DNS Security]] - [[themes/000 Index|Index]]

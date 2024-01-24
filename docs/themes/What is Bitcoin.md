@@ -2,7 +2,7 @@ tags: #distributed-systems-security #blockchain #bitcoin
 
 # What is Bitcoin?
 
-links: [[401 DSS TOC - Intro]] - [[400 DSS MOC]] - [[index 1|Index]]
+links: [[401 DSS TOC - Intro|DSS TOC - Intro]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -12,4 +12,4 @@ links: [[401 DSS TOC - Intro]] - [[400 DSS MOC]] - [[index 1|Index]]
 - Bitcoin is a **decentralized** currency
 
 ---
-links: [[401 DSS TOC - Intro]] - [[400 DSS MOC]] - [[index 1|Index]]
+links: [[401 DSS TOC - Intro|DSS TOC - Intro]] - [[themes/000 Index|Index]]

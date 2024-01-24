@@ -2,7 +2,7 @@ tags: #cryptocurrency #decentralization
 
 # Eventual Consistency
 
-links: [[403 DSS TOC - Decentralization]] - [[400 DSS MOC]] - [[themes/000 Index|Index]]
+links: [[403 DSS TOC - Decentralization|DSS TOC - Decentralization]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -30,4 +30,4 @@ So it is a question of probability how fast a chain will become consistent after
 An indicator of how sure you can be that a certain transaction is permanently written to the blockchain (and therefore consistent) can be the number of [[Transaction Confirmation|Transaction Confirmations]].
 
 ---
-links: [[403 DSS TOC - Decentralization]] - [[400 DSS MOC]] - [[themes/000 Index|Index]]
+links: [[403 DSS TOC - Decentralization|DSS TOC - Decentralization]] - [[themes/000 Index|Index]]

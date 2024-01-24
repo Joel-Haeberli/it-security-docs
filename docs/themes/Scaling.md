@@ -2,11 +2,12 @@ tags: #cryptocurrency #scaling
 
 # Scaling
 
-links: [[406 DSS TOC - Scaling]] - [[400 DSS MOC]] - [[themes/000 Index|Index]]
+links: [[406 DSS TOC - Scaling|DSS TOC - Scaling]] - [[themes/000 Index|Index]]
 
 ---
 
 **Challenge**:
+
 The more participants take part in the network, the more transactions and therefore more validation operations must be executed. Therefore, the network must be capable of *scaling*.
 The question therefore arises how the validation effort of the network changes by an increasing number of participants.
 
@@ -24,4 +25,4 @@ On-Chain transactions are expensive, because every participant needs to validate
 [[Transaction Replacement]] tries to mitigate these problems.
  
 ---
-links: [[406 DSS TOC - Scaling]] - [[400 DSS MOC]] - [[themes/000 Index|Index]]
+links: [[406 DSS TOC - Scaling|DSS TOC - Scaling]] - [[themes/000 Index|Index]]

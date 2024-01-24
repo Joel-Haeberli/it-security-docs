@@ -2,7 +2,7 @@ tags: #osi
 
 # Physical Layer
 
-links: [[604 SPA TOC - Layered Security]] - [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Index]]
+links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Index|Index]]
 
 ---
 
@@ -37,6 +37,7 @@ The physical layer sends and receives bits between adjacent stations on the link
 - disconnection of physical data links
 - undetectable interception of data -> scanning electromagnetic radiation, [Van-Eck-Phreaking](https://de.wikipedia.org/wiki/Van-Eck-Phreaking)
 - key logging
+
 ![[physical-layer-vulnerability.png]]
 
 ### Controls
@@ -53,4 +54,4 @@ The physical layer sends and receives bits between adjacent stations on the link
 	- video & audio surveillance
 
 ---
-links: [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Index]]
+links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Index|Index]]

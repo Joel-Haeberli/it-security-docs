@@ -2,7 +2,7 @@ tags: #osi
 
 # Presentation Layer
 
-links: [[604 SPA TOC - Layered Security]] - [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Index]]
+links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Index|Index]]
 
 ---
 
@@ -49,4 +49,4 @@ links: [[604 SPA TOC - Layered Security]] - [[600 SPA MOC|Security Protocols and
 	- Updating TLS to the latest version
 
 ---
-links: [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Index]]
+links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Index|Index]]

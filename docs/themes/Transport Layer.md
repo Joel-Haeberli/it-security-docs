@@ -2,7 +2,7 @@ tags: #osi
 
 # Transport Layer
 
-links: [[604 SPA TOC - Layered Security]] - [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Index]]
+links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Index|Index]]
 
 ---
 
@@ -56,4 +56,4 @@ links: [[604 SPA TOC - Layered Security]] - [[600 SPA MOC|Security Protocols and
 	- Use mutual TLS where both the client and server authenticate each other before a connection is established
 
 ---
-links: [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Index]]
+links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Index|Index]]

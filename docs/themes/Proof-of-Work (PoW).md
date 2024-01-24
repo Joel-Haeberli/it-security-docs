@@ -2,7 +2,7 @@ tags: #cryptocurrency #bitcoin #pow #consens #proof-of-work
 
 # Proof-of-Work (PoW)
 
-links: [[402 DSS TOC - Preliminaries]] - [[400 DSS MOC]] - [[themes/000 Index|Index]]
+links: [[402 DSS TOC - Preliminaries|DSS TOC - Preliminaries]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -12,11 +12,11 @@ The idea of a **Proof of Work** (PoW) is to be able to proof that some work has 
 
 The **Proof of Work** scheme looks as follows:
 
-- solve(p,d,f) -> s:
+- solve(p,d,f) $\rightarrow$ s:
 	- p for puzzle: This is the problem to be solved which shall demonstrate that work was done.
 	- d for difficulty: The problems difficulty must be adjustable, so that the PoW remains usable in the future. It's a requirement regarding the solution.
 	- f for function: The underlying function of the puzzle which helps to solve it. f must take the puzzle and the solution as input. The result must be equal to the difficulty d.
-- verify(p,d,s,f) -> True | False:
+- verify(p,d,s,f) $\rightarrow$ True | False:
 	- p for puzzle: The puzzle which was to be solved.
 	- d for difficulty: The problems difficulty.
 	- s for solution: The solution obtained by solve.
@@ -48,4 +48,4 @@ we would try to find a solution $s$, so that:
 The PoW is predestinated to use hash functions. Especially if the hash function is puzzle-friendly. A hash function is puzzle-friendly if there is no better way of solving the puzzle $d = hash(p | s)$, than just randomly trying. This comes because a hash is easy to calculate but hard (or impossible) to invert. This makes verification easy but solving the puzzle hard.
 
 ---
-links: [[402 DSS TOC - Preliminaries]] - [[400 DSS MOC]] - [[themes/000 Index|Index]]
+links: [[402 DSS TOC - Preliminaries|DSS TOC - Preliminaries]] - [[themes/000 Index|Index]]

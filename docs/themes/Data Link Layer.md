@@ -2,7 +2,7 @@ tags: #osi
 
 # Data Link Layer
 
-links: [[604 SPA TOC - Layered Security]] - [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Index]]
+links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Index|Index]]
 
 ---
 
@@ -80,4 +80,4 @@ links: [[604 SPA TOC - Layered Security]] - [[600 SPA MOC|Security Protocols and
 - Use IPv6 [secure neighbor discovery (SEND)](https://en.wikipedia.org/wiki/Secure_Neighbor_Discovery)
 
 ---
-links: [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Index]]
+links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Index|Index]]

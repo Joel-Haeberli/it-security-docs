@@ -6,8 +6,8 @@ links: [[400 DSS MOC|DSS MOC]] - [[themes/000 Index|Index]]
 
 ---
 
-- [[Hash Functions]]
-- [[Digital Signatures]]
+- [[Hash Functions|AC1 Hash Functions]]
+- [[Digital Signatures|AC2 Digital Signatures]]
 - [[Timestamping]]
 - [[Proof-of-Work (PoW)]]
 - [[Authenticated Data Structures]]

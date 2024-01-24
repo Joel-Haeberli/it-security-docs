@@ -30,3 +30,6 @@ DNS entries follow a specific form specified in the [RFC-1035](https://www.rfc-e
 ## Reverse lookup
 
 DNS also supports reverse lookups. This means, that for a given address a human readable domain can be looked up. For this purpose also RR must be created in the DNS config which map addresses to domains. Then you can do a normal lookup.
+
+---
+links: [[211 AC2 TOC - DPKI|AC2 TOC DPKI]] - [[themes/000 Index|Index]]

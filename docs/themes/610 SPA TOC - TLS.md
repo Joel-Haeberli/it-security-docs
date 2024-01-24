@@ -6,7 +6,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 
 ---
 
-* [[TLS|TLS Overview from AC1]]
+* [[TLS|AC1 TLS Overview]]
 * [[TLS Protocol Details]]
 
 ---

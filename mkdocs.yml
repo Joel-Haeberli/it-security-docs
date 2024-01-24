@@ -69,7 +69,7 @@ nav:
     - 'Cross-Site Scripting (XSS)': 'themes/505 WS TOC - XSS.md'
     - 'OWASP and CSRF': 'themes/506 WS TOC - OWASP & CSRF.md'
     - 'Testing': 'themes/507 WS TOC - Testing.md'
-    - 'Exercises': 'themes/508 WS TOC - Exercises.md
+    - 'Exercises': 'themes/508 WS TOC - Exercises.md'
   - 'Security Protocols and Applications':
     - 'Index': 'themes/600 SPA MOC.md'
     - 'Part 1':

@@ -1,4 +1,4 @@
-tags: #linux #
+tags: #linux #iptable #netfilter #linux-firewall
 
 # 606 SPA TOC - Linux Firewall
 
@@ -20,7 +20,8 @@ Following default Tables exist:
 - Filter: Table used for packets being forwarded on the system
 - NAT: Table used during NAT
 - Mangle: Table used to modify IP packets
-- Raw: 
+- Raw: *GPT: Now, the Raw table is used for configuring rules that are not connection-tracking related. It is mainly used for configuring exemptions from connection tracking. For example, if you want to exclude certain packets from being tracked by the connection tracking system, you might use the Raw table.*
+
 ## Chains
 
 WHEN is a rule to be processed?
@@ -34,7 +35,10 @@ WHAT is checked for in a package?
 The rule describes, what is to be done with the packet. This can either result in accepting, dropping or changing the packet in some way. A rule defines a target. The target is the decision or what should happen with the packet according to the rule.
 
 [Baeldung on iptables and how packets traverse the chains](https://www.baeldung.com/linux/iptables-chains-tables-traversal)
+
 [Good video explaining basic usage of iptables](https://www.youtube.com/watch?v=6Ra17Qpj68c)
+
+[Setting up Linux Firewall using iptables](https://www.youtube.com/watch?v=qPEA6J9pjG8)
 
 For a deeper introduction to [[netfilter]] and [[iptables]], refer to the respective [[606 SPA TOC - Linux Firewall|Linux Firewall topic]].
 

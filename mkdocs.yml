@@ -84,12 +84,13 @@ nav:
       - 'Transport Layer Security': 'themes/610 SPA TOC - TLS.md'
       - 'Certificates and PKI': 'themes/611 SPA TOC - Certificates and PKI.md'
       - 'Identification Authentication': 'themes/612 SPA TOC - Identification Authentication.md'
+      - 'Kerberos': 'themes/620 SPA TOC - Kerberos.md'
       - 'Secure Email': 'themes/613 SPA TOC - Secure Email.md'
       - 'Secure Shell': 'themes/614 SPA TOC - Secure Shell.md'
       - 'YubiKey': 'themes/615 SPA TOC - YubiKey.md'
       - 'VPN': 'themes/616 SPA TOC - VPN.md'
       - 'Wireless Security': 'themes/617 SPA TOC - Wireless Security.md'
-
+    - 'Exam Questions with Answers': 'themes/619 SPA TOC - Exam Questions with Answers'
 
 theme:
   name: 'material'

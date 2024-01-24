@@ -41,7 +41,7 @@ links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Ind
 - [[#Vulnerabilities|Routing attack]]
 - IPv6 neighbour discover attack / spoofing
 	- Similar to ARP-spoofing
-- [[ICMP]] Attack
+- ICMP Attack
 	- ICMP is used to send one-way informational messages to hosts (no authentication)
 	- Sending forged ICMP "Time exceeded" or "Destination unreachable" to a host
 		- Goal: Break communication between two hosts -> DoS

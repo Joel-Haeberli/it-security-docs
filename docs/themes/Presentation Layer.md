@@ -27,12 +27,12 @@ links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Ind
 	- Older versions of IIS web server interpreted directory traversal sequences like "../" as illegal
 	- This rule didn't not trigger when the "/" was provided as unicode encoded version "%c0%af"
 	- This allowed attackers to traverse directories
-	- [Apache UTF-8 directory traversal](- https://www.cvedetails.com/cve-details.php?cve_id=CVE-2008-2938)
-	- [Windows Vista filename spoofing](0. https://heise.de/-178566)
-	- [Other unicode vulnerabilities](- https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=Unicode)
+	- [Apache UTF-8 directory traversal](https://www.cvedetails.com/cve-details.php?cve_id=CVE-2008-2938)
+	- [Windows Vista filename spoofing](https://heise.de/-178566)
+	- [Other unicode vulnerabilities](https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=Unicode)
 - [DNS IDN spoofing](https://heise.de/-132814)
 	- Using special characters in domain names
-	- http://www.pаypal.com/ -> http://www.xn--pypal-4ve.com
+	- http://www.pаypal.com/ $\rightarrow$ http://www.xn--pypal-4ve.com
 - [.zip TLD](https://www.digitec.ch/de/page/neue-zip-domain-wird-bereits-von-cyberkriminellen-missbraucht-27828)
 
 ### Controls

@@ -1,4 +1,4 @@
-tags: #SPA #certificates
+tags: #SPA #ssh
  
 # SSH
 

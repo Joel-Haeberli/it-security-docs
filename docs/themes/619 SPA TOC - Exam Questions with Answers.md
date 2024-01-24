@@ -7,25 +7,65 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 ---
 ## Part 1
 
-### Topic 1: Information Security
+### ✅ Topic 1: Information Security
 
 1. What is meant with Information Security?
+   Information Security refers to the protection of information and information systems from unauthorized access, use, disclosure, disruption, modification, or destruction, in order to ensure confidentiality, integrity, and availability.
 2. What are the goals of Information Security?
+   Preservation of confidentiality, integrity, availability and in addition authenticity (non-repudiation), accountability and auditability
 3. What are older terms for Information Security?
+   Computer security, data security and IT security
 4. Whats an information asset?
+   In a nutshell, an **information asset** is an atomic piece of information that has meaning/value to an organization or individual. Information assets have manageable and recognizable value, risk, content and life-cycles. Examples: Database with contacts of the organization, all financial records of a company
 5. Who is responsible to protect information assets?
+   In many organizations one of these departments (depending on size): IT department, Information security department or Information risk management department.
+   Additionally in many bigger organizations the Chief Information Security Officer (CISO) is the main responsible.
 6. What is an ISMS?
+   The Information Security Management System (ISMS) is the basis for the development of the information security program. It involves the 4 Ps (People, Process, Products and technology, Partners and suppliers)
 7. Do you now Information Security Standards? Which?
+   NIST 800 Series, ISO/IEC 27000 group of standards (ISO/IEC 27001 is the certification), BSI Grundschutz, CIS Controls
 8. What are Risks?
+   A risk is the potential for loss or damage when a threat exploits a vulnerability in information systems or processes, resulting in an impact on the confidentiality, integrity, or availability of Information and information systems. Risks can be calculated: risk = costs of potential damage * probability of this damage occurring
 9. What are Security Controls?
+   Security controls in information security are measures implemented to reduce risks to an organization's information assets. They encompass a mix of technical, administrative, and physical safeguards designed to protect against threats, prevent vulnerabilities, and ensure the confidentiality, integrity, and availability of data. These controls can be preventative, detective, or responsive in nature.
 10. Do you know some important Security Controls? Explain them.
+    1. **Data Encryption**: Encrypting data at rest and in transit to protect its confidentiality and integrity. This prevents unauthorized access to sensitive information.
+    2. **Access Controls**: Implementing mechanisms like user authentication and authorization to restrict access to information based on user roles and privileges.
+    3. **Audit Logs**: Keeping detailed records of system activities, enabling the monitoring and analysis of security events and potential breaches.
+    4. **Antivirus and Anti-malware Software**: Protecting systems from malicious software, including viruses, worms, and ransomware, through detection, prevention, and removal.
+    5. **Security Incident Response Plan**: A predefined plan for managing information security incidents, ensuring a prompt and effective response to minimize impact.
+    6. **Network Security Controls**: Implementing measures like firewalls, intrusion detection and prevention systems (IDS/IPS), and secure VPNs to protect network infrastructure.
+    7. **Regular Patch Management**: Keeping software and systems updated with the latest security patches to address vulnerabilities and reduce the risk of exploitation.
+    8. **Data Backup and Recovery Procedures**: Ensuring that critical data is regularly backed up and can be recovered quickly in the event of data loss, corruption, or a security breach.
+    9. **User Training and Awareness**: Educating employees about information security risks and best practices to foster a security-aware culture.
+    10. **Physical Security Measures**: Protecting physical access to information systems and data storage areas to prevent unauthorized access, damage, or theft.
 11. What's the job of a Security Professional?
-12. Which Security Controls should be implemented immediate if no other controls are in function (e.g., according to the NSA)?
+	1. Understand the requirements of business (for information asset protection)
+	2. Understand the risk for the particular information asset
+	3. devise and understand the countermeasures for risks
+	4. Protecting information assets by implementing security controls
+12. Which Security Controls should be implemented immediate if no other controls are in function (e.g., according to the NSA)? 
+    Malware defenses, Data recovery capability, Security skills assessment and appropriate training to fill the gaps
 13. What do the acronyms CIA and AAA in connection with Information Security mean?
+    **C**onfidentiality **I**ntegrity **A**vailability **A**uthenticity (non-repudiation) **A**ccountability **A**uditability
 14. Are you able to explain the meaning of the abbreviated words?
+    **Confidentiality** = Ensuring information is not disclosed to unauthorized individuals or systems.
+    **Integrity** = Maintaining and assuring the accuracy and completeness of data over its lifecycle.
+    **Availability** = Ensuring that information is accessible and usable upon demand by an authorized entity.
+    **Authenticity (Non-repudiation)** = Verifying the identity of users and the origin of data, ensuring that actions or communications cannot be denied later.
+    **Accountability** = Holding individuals or systems responsible for their actions, typically enforced through traceable and auditable processes.
+    **Auditability** = The ability to track and document system activities and changes, crucial for detecting security violations or operational issues.
 15. What is an "information security incident"?
+    Is a information security event (breach of information security or failure of controls) that can harm an asset or compromise operations.
 16. What is the difference between an "information security event" and an "information security incident"?
+    An information security event is a **possible** breach of information security or failure of controls. On the other hand an information security incident is an information security event that can harm an asset or compromise operations.
 17. What are the goals of "security incident management"?
+	1. Minimize damage of information security incidents
+	2. Detection/dealing with information security vulnerabilities
+	3. Detection/dealing with information security events
+	4. Information security incidents are assessed and responded
+	5. Escalation process is established
+	6. Lessons are learnt
 
 ### Topic 2: Hacking Basics
 

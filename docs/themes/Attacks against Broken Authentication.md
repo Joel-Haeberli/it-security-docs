@@ -9,7 +9,7 @@ links: [[503 WS TOC - Broken Authentication|WS TOC - Broken Authentication]] - [
 Attacks against the authentication abuse weaknesses in the authentication mechanism such as: 
 
 - Logout
-- Password Managment
+- Password Management
 - Timeout
 - "Remember Me" functionality
 - and others. 

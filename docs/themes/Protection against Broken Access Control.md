@@ -23,7 +23,7 @@ In order to prevent the application from running files on behalf of the attacker
 - XML or XSLT
 - Scripts
 
-Additionally the application should not have firewall rules preventing outbound requests. **Validate your input**. This means for filenames to have a certain format or to be placed in a certain location. Prevent path traversal by checking that the file does lie within a defined boundary. Implement some sandbox functionality to run the application, which forces it to stay within the boundaries of the sandbox.
+Additionally the application should have firewall rules preventing outbound requests. **Validate your input**. This means for filenames to have a certain format or to be placed in a certain location. Prevent path traversal by checking that the file does lie within a defined boundary. Implement some sandbox functionality to run the application, which forces it to stay within the boundaries of the sandbox.
 
 ## Conclusion
 

@@ -45,7 +45,7 @@ In order to use programs vulnerability for SQL injection, we could use following
 
 Avoid using the interpreter. Which means keeping data separate form commands and queries.
 
-Use safe API such as Strongly typed parameterized queries (Prepared Statements) or an ORM (Object Relational Mapping). Remember to still to do some validation because these technics do only handle data escaping.
+Use safe API such as Strongly typed parameterized queries (Prepared Statements) or an ORM (Object Relational Mapping). Remember to still do some validation because these technics do only handle data escaping.
 
 If you cannot avoid using an interpreter directly take care and be reminded of following technics:
 

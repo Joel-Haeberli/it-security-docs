@@ -8,7 +8,7 @@ links: [[501 WS TOC - Injections|WS TOC - Injections]] - [[themes/000 Index|Inde
 
 # What is an injection attack?
 
-An injection attack aims to execute code on the system of the victim through a vulnerable system of the victim. The injection uses badly implemented software to somehow gain control over the executor and executing code through this peace of sotfware. In Python that is the Python Interpreter and in SQL it is the SQL Interpreter.
+An injection attack aims to execute code on the system of the victim through a vulnerable system of the victim. The injection uses badly implemented software to somehow gain control over the executor and executing code through this piece of software. In Python that is the Python Interpreter and in SQL it is the SQL Interpreter.
 
 ## OWASP Top 10
 

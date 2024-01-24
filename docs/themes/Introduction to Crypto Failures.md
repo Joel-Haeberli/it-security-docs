@@ -18,7 +18,7 @@ Once a vulnerability exists, its exploitation can cause severe damage because se
 
 ## History and examples
 
-[**Wikileaks**](https://wikileaks.org/) showed that NSA was spying on google mail and tons of emails were readable by then. Therefore the NSA listened on communication between the datacenters. Google, after Wikileaks published it, strengthtened their systems by using TLS (HTTPS) for all their clients of gmail. Data was encrypted in transit and when stored on disk.
+[**Wikileaks**](https://wikileaks.org/) showed that NSA was spying on google mail and tons of emails were readable by then. Therefore the NSA listened on communication between the datacenters. Google, after Wikileaks published it, strengthened their systems by using TLS (HTTPS) for all their clients of gmail. Data was encrypted in transit and when stored on disk.
 
 **Heartbleed** was a security flaw within the OpenSSL library discovered in 2014 which made it possible for attackers to read out memory of machines which might include private keys and other sensitive data:
 
@@ -26,7 +26,7 @@ Once a vulnerability exists, its exploitation can cause severe damage because se
 - [Bruce Schneier on Heartbleed](https://www.schneier.com/blog/archives/2014/04/heartbleed.html)
 - [EFF on Heartbleed](https://www.eff.org/deeplinks/2014/04/wild-heart-were-intelligence-agencies-using-heartbleed-november-2013)
 
-To prevent such attacks and other, you must [[Defining your Assets|define you assets]] in order to know needs to be done to secure them.
+To prevent such attacks and other, you must [[Defining your Assets|define your assets]] in order to know needs to be done to secure them.
 
 ---
 links: [[504 WS TOC - Crypto Failures|WS TOC - Crypto Failures]] - [[themes/000 Index|Index]]

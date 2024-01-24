@@ -11,9 +11,9 @@ There are tons of measures that can be implemented in order to be secure:
 - Prohibit brute force
 	- set a maximum number of retries to login
 - Authentication relies on secure communication and credential storage
-- TLS should be used on all pages authenticated pages (just use it everywhere and give eavesdropper no chances)
+- TLS should be used on all authenticated pages (just use it everywhere and give eavesdropper no chances)
 - Store passwords hashed, using [[Password Based Key Derivation Function (PBKDF)]]
-- Use well known session management and SSO solutions. Don't build your own. It's hard and you will most probably fuck it up
+- Use well known session management and SSO solutions. Don't build your own. It's hard and you will most likely fuck it up
 - Use one authentication mechanism and not more.
 - Make the mechanism as easy as possible and as complex as needed.
 - Force TLS (especially on login etc.)

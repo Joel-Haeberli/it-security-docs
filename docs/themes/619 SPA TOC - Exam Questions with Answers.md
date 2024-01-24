@@ -43,32 +43,85 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 2. Can you explain countermeasures?
 3. Which vulnerability is the most critical?
 
-### Topic 4: Host and Network Security
+### ✅ Topic 4: Host and Network Security
 
-1. What are well known computer-based security mechanisms (Host-based security mechanisms)?
-2. What are well-known network-based security mechanisms?
-3. What are capabilities of network firewalls?
-4. What are limitations of network firewalls?
-5. Which other terms are used for network layer firewalls?
-6. Explain briefly the operation of network layer firewalls.
-7. Which protocol header fields are usually evaluated by a packet filter?
-8. What is a stateful inspection firewall?
-9. What is meant by "deep inspection"?
-10. What are the features of a "Next Generation Firewall"?
-11. Explain the term "Unified Threat Management UTM"
-12. What's the intention of threat protection firewalls? How do they work?
-13. What's an advanced persistent threat (APT)?
-14. What is an application layer firewall? How does it work?
-15. How do proxy servers work, what are non-/transparent proxy servers?
-16. What are "Web Application Firewalls" for?
-17. Which basic firewall architectures do you know?
-18. What are scurity zones?
-19. You enable the access to an internal web server through your home router / firewall via port forwarding.
-20. Which firewall architecture corresponds to this setup? What dangers does it offer?
-21. What are advantages/disadvantages of a IDS/IPS?
-22. Explain the term "endpoint security"
-23. What's the function of an SIEM?
-24. Explain the "Zero Trust" approach to improve network security
+1. **What are well known computer-based security mechanisms (Host-based security mechanisms)?**
+	os hardening/updating, host firewall, host IDS/IPS, virus scanner, endpoint security, SIEM
+2. **What are well-known network-based security mechanisms?**
+	- network firewalls (subnets, segments, zones) against external attackers
+	- access control against internal attackers (network IDS/IPS, network access control)
+	- SIEM
+3. **What are capabilities of network firewalls?**
+	- connect two or more network segments
+	- control, log, modify (mangle), filter packages
+4. **What are limitations of network firewalls?**
+	- cannot protect against internal attackers
+	- malware which came in through applications
+	- secured/tunneling connections (IPsec, SSH, TLS)
+5. **Which other terms are used for network layer firewalls?**
+	packet filters
+6. **Explain briefly the operation of network layer firewalls.**
+	checking of header entries (L2, L3, L4), has to reassembling fragmented packages to analyse all headers
+7. **Which protocol header fields are usually evaluated by a packet filter?**
+	- L2 (MAC): source/destination, ethertype (`0x0800` IPv4, `0x0806` ARP, `0x086DD` IPv6, `0x8100` VLAN), tag protocol identifier (VLAN 802.1Q) 
+	- L3 (IP): source/destination, protocol/next header (`1` ICMP, `6` TCP, `17` UDP)
+	- L4 (ICMP): control messages (`0/0` Echo Reply, `3/X` Destination unreachable, `8/0` Echo Request, `11/X` Time Exceeded)
+	- L4 (TCP): source/destination port, sequence number, connection establishment (`SYN`, `SYN-ACK`, `ACK`, `FIN`, `RST`, ...)
+	- L4 (UDP): source port/destination
+8. **What is a stateful inspection firewall?**
+	Recording state information of connections and modify filter rules dynamically to accept expected answer packets
+9. **What is meant by "deep inspection"?**
+	do stateful packet inspection (SPI) by analyzing and modifying the application layer content $\rightarrow$ no only inspecting basic header fields, inspecting actual data payload. important for identifying malware or application-layer attacks
+10. **What are the features of a "Next Generation Firewall"?**
+	- can apply configuration modifications without interruptions
+	- has an integrated IPS
+	- provide application intelligence
+	- can consider external sources in rules (e.g. allow-/blocklists of IP addresses)
+11. **Explain the term "Unified Threat Management UTM"**
+	- Can perform multiple security functions within one single appliance:
+		- firewall
+		- IDS/IPS
+		- antivirus
+		- anti-spam
+		- content-filtering
+		- VPN
+12. **What's the intention of threat protection firewalls? How do they work?**
+	- Enhancement of Next Generation Firewall
+	- Can detect malicious content/code (executing content in sandbox environment, behavioral analysis)
+	- Protection against APTs
+13. **What's an advanced persistent threat (APT)?**
+	An Advanced Persistent Threat (APT) is a highly sophisticated and targeted cyberattack in which malicious actors gain unauthorized access to a network or system and remain undetected for an extended period. APTs are characterized by their persistence, often involving well-funded and organized attackers, making them difficult to detect and mitigate.
+14. **What is an application layer firewall? How does it work?**
+	- Unpack an analyze the content of the application layer protocol
+	- act as a relay station or proxy between sender and recipient
+	- allow authentication and authorization on user level
+	- referred to as application layer gateway, proxy server, application firewall
+15. **How do proxy servers work, what are non-/transparent proxy servers?**
+	- MITM for protocol specific traffic (HTTP, DNS, ...)
+	- *Non-Transparent proxy servers*: sender must send the packets directly to the proxy server, configuration inside the application/host system
+	-  Transparent proxy servers: transparent for client, no configuration needed
+16. **What are "Web Application Firewalls" for?**
+	- special case of an application layer firewall
+	- protect web applications against attacks over HTTP/S (Injection, tampering, cookie poisoning, buffer overflow attack, unauthorized access)
+17. **Which basic firewall architectures do you know?**
+	- Screened Host: Access from Internet only to services on one host. Host has access to intranet (be aware!)
+	- Screened Subnet: Firewall $\leftrightarrow$ Host $\leftrightarrow$ Firewall $\leftarrow$ Internet access (additional firewall before Intranet)
+	- Dual Homed Host: "All in one firewall" instead of two firewalls
+	- Tri- & Multi Homed Host: multiple network zones with one firewall (DMZ)
+18. **What are scurity zones?**
+	tbd
+19. **You enable the access to an internal web server through your home router / firewall via port forwarding.**
+	tbd
+20. **Which firewall architecture corresponds to this setup? What dangers does it offer?**
+	tbd
+21. **What are advantages/disadvantages of a IDS/IPS?**
+	tbd
+22. **Explain the term "endpoint security"**
+	tbd
+23. **What's the function of an SIEM?**
+	tbd
+24. **Explain the "Zero Trust" approach to improve network security**
+	tbd
 
 ### Topic 5: Linux firewall (netfilter / iptables / nftables)
 

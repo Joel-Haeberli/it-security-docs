@@ -2,7 +2,7 @@ tags: #web-security #crypto-failures
 
 # PCI Data Security Standard (PCI DSS)
 
-links: [[504 WS TOC - Crypto Failures]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[504 WS TOC - Crypto Failures|WS TOC - Crypto Failures]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -37,4 +37,4 @@ Data that is **never** to be stored includes
 A data retention and disposal policy must be implemented which handles the process of deleting stored data after a defined amount of time.
 
 ---
-links: [[504 WS TOC - Crypto Failures]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[504 WS TOC - Crypto Failures|WS TOC - Crypto Failures]] - [[themes/000 Index|Index]]

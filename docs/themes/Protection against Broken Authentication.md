@@ -2,7 +2,7 @@ tags: #web-security #broken-authentication
 
 # Protection against Broken Authentication
 
-links: [[503 WS TOC - Broken Authentication]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[503 WS TOC - Broken Authentication|WS TOC - Broken Authentication]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -27,4 +27,4 @@ There are tons of measures that can be implemented in order to be secure:
 
 
 ---
-links: [[503 WS TOC - Broken Authentication]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[503 WS TOC - Broken Authentication|WS TOC - Broken Authentication]] - [[themes/000 Index|Index]]

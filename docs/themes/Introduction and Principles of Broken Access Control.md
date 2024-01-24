@@ -2,7 +2,7 @@ tags: #web-security #broken-access-control
 
 # Introduction and Principles of Broken Access Control
 
-links: [[502 WS TOC - Broken Access Control]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[502 WS TOC - Broken Access Control|WS TOC - Broken Access Control]] - [[themes/000 Index|Index]]
 
 ---
 ## Introduction 
@@ -30,6 +30,7 @@ Broken Access Control is the **top vulnerability** according to the [OWASP Top 1
 Insecure Direct Object Reference appears when an exposed API directly links to artefacts which shall be protected by access control. So if an attacker can bypass the access control, he is capable of *directly referencing* the (un)protected artefact. This is also important when using identifiers as parameters. One should on each request check if the user has the right to read the object referenced by the given identifier. Otherwise horizontal escalation might be possible, if the user is able to change the identifier in the request.
 
 In the following request for example, each time the `id` must be matched by some authorization service and lookup if the logged in user is allowed to access the object referenced by `id`: `https://mydocs/private?id=123`
+
 ## Principles of the vulnerability
 
 In general the Broken Access Control vulnerability is caused...
@@ -57,4 +58,4 @@ Participants who could leverage broken access control are:
 
 
 ---
-links: [[502 WS TOC - Broken Access Control]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[502 WS TOC - Broken Access Control|WS TOC - Broken Access Control]] - [[themes/000 Index|Index]]

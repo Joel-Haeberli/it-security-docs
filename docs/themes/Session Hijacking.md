@@ -2,7 +2,7 @@ tags: #web-security #broken-authentication
 
 # Session Hijacking
 
-links: [[503 WS TOC - Broken Authentication]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[503 WS TOC - Broken Authentication|WS TOC - Broken Authentication]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -17,4 +17,4 @@ Since HTTP is session-less and identity and access rights might be bound to a se
 To make session hijacking harder, use real random session ID and expire session within a reasonable time.
 
 ---
-links: [[503 WS TOC - Broken Authentication]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[503 WS TOC - Broken Authentication|WS TOC - Broken Authentication]] - [[themes/000 Index|Index]]

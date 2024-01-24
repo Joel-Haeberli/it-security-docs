@@ -2,7 +2,7 @@ tags: #web-security #crypto-failures
 
 # Recommendations to prevent Crypto Failures
 
-links: [[504 WS TOC - Crypto Failures]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[504 WS TOC - Crypto Failures|WS TOC - Crypto Failures]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -48,4 +48,4 @@ There are a lot of recommendations that can be considered to prevent cryptograph
 - Maintain a lifecycle process specifying when and how keys are replaced and rolled over
 
 ---
-links: [[504 WS TOC - Crypto Failures]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[504 WS TOC - Crypto Failures|WS TOC - Crypto Failures]] - [[themes/000 Index|Index]]

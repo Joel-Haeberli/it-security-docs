@@ -2,7 +2,7 @@ tags: #web-security #crypto-failures
 
 # Defining your Assets
 
-links: [[504 WS TOC - Crypto Failures]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[504 WS TOC - Crypto Failures|WS TOC - Crypto Failures]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -23,4 +23,4 @@ Assets which need to be protected include:
 What technics can be used to protect data is described in [[Recommendations to prevent Crypto Failures]].
 
 ---
-links: [[504 WS TOC - Crypto Failures]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[504 WS TOC - Crypto Failures|WS TOC - Crypto Failures]] - [[themes/000 Index|Index]]

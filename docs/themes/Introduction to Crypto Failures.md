@@ -2,7 +2,7 @@ tags: #web-security #crypto-failures
 
 # Introduction to Crypto Failures
 
-links: [[504 WS TOC - Crypto Failures]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[504 WS TOC - Crypto Failures|WS TOC - Crypto Failures]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -29,4 +29,4 @@ Once a vulnerability exists, its exploitation can cause severe damage because se
 To prevent such attacks and other, you must [[Defining your Assets|define you assets]] in order to know needs to be done to secure them.
 
 ---
-links: [[504 WS TOC - Crypto Failures]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[504 WS TOC - Crypto Failures|WS TOC - Crypto Failures]] - [[themes/000 Index|Index]]

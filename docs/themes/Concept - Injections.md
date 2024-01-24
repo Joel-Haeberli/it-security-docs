@@ -2,7 +2,7 @@ tags: #web-security #injection
 
 # Concept - Injections
 
-links: [[501 WS TOC - Injections]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[501 WS TOC - Injections|WS TOC - Injections]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -15,4 +15,4 @@ An injection attack aims to execute code on the system of the victim through a v
 [Injection Flaws](https://owasp.org/www-community/Injection_Flaws) are still ranked as the third most common vulnerability of system in the [OWASP Top 10](https://owasp.org/www-project-top-ten/). They are on the list since a long time, which shows that a lot of systems still suffer from the problem and have problems implementing countermeasures.
 
 ---
-links: [[501 WS TOC - Injections]] - [[500 WS MOC]] - [[themes/000 Index|Index]]
+links: [[501 WS TOC - Injections|WS TOC - Injections]] - [[themes/000 Index|Index]]

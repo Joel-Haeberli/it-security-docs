@@ -2,7 +2,7 @@ tags: #web-security #injection
 
 # SQL-Injection
 
-links: [[501 WS TOC - Injections]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[501 WS TOC - Injections|WS TOC - Injections]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -11,6 +11,7 @@ links: [[501 WS TOC - Injections]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|
 SQL-Injection uses SQL statements to smuggle SQL into the interpreter which is not supposed to be run by the program. Like this the attacker can for example read out tables which he should not be able to or he could even delete the content of a table.
 
 Assume we have following query:
+
 ```
 SELECT * FROM users WHERE username = REPLACEME1 and password = REPLACEME2;
 ```
@@ -18,6 +19,7 @@ SELECT * FROM users WHERE username = REPLACEME1 and password = REPLACEME2;
 If now an attacker somehow finds out how to replace the content of REPLACEME1 or REPLACEME2 in his favor, he can execute his own SQL on the system of the victim.
 
 For example the attacker could gain control over parameter REPLACEME1 and replace it with `"hans"; #`. This would search for all users named 'hans' and not check the password in parameter REPLACEME2, because after giving the name the statement is terminated and the rest of the statement is commented out with the SQL comment char '#'.
+
 ## Risks
 
 SQL Injections pose risks because:
@@ -62,11 +64,13 @@ Prepared statements are the solution to the problem of SQL-Injection. They are p
 Be sure to escape string parameters using quotes. Otherwise an attacker might smuggle his SQL statements into the execution:
 
 Assume our prepared statement is:
+
 ```
 UPDATE users SET name = :name WHERE id = :id;
 ```
 
 This allows the attacke to inject anything in the `:name`-parameter, because it's a string param and it is not escaped using quotes. The better prepared statement is:
+
 ```
 UPDATE users SET name = ':name' WHERE id = :id
 ```
@@ -74,4 +78,4 @@ UPDATE users SET name = ':name' WHERE id = :id
 Take care that the library you use, is binding parameters after validating them for type. Otherwise this query could still introduce a vulnerability with the `:id`-parameter. 
 
 ---
-links: [[501 WS TOC - Injections]] - [[500 WS MOC]] - [[themes/000 Index|Index]]
+links: [[501 WS TOC - Injections|WS TOC - Injections]] - [[themes/000 Index|Index]]

@@ -2,7 +2,7 @@ tags: #web-security #broken-authentication
 
 # Session Expiration
 
-links: [[503 WS TOC - Broken Authentication]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[503 WS TOC - Broken Authentication|WS TOC - Broken Authentication]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -17,4 +17,4 @@ The attacker can access the browser of the victim and goes through the browser h
 To prevent this attack, let sessions expire after some rather short time.
 
 ---
-links: [[503 WS TOC - Broken Authentication]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[503 WS TOC - Broken Authentication|WS TOC - Broken Authentication]] - [[themes/000 Index|Index]]

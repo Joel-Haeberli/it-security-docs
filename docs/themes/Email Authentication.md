@@ -9,14 +9,15 @@ links: [[613 SPA TOC - Secure Email|SPA TOC - Secure Email]] - [[themes/000 Inde
 ## Overview
 
 - Authentication and Verification is mostly hidden for the end-users
-- can be found in the *Mail Header*
+- can be found in the Mail Header (RFC5322)
 
 ## SPF
 
 - **Sender Policy Framework** specify **which servers are allowed to send Emails** for the domain
 - the IP addresses of authorized hosts are published in DNS records
-- indirect mailflows (forwarders, mailing lists) cause SPF to either fail or lookup against a rewritten `MailFrom`
-- Mail receivers declined to filter mail based solely on SPF
+- indirect mailflows (forwarders, mailing lists) cause SPF to either fail or lookup against a rewritten RFC5321.MailFrom (SMTP Envelope)`
+- No link required between RFC5321.MailFrom (SMTP Envelope) and RFC5322.From (Mail Header)
+- Mail receivers declined to filter mail based solely on SPF since it has the above drawbacks
 
 ### Matchers
 
@@ -54,7 +55,7 @@ dig TXT _spf.bfh.ch
 ### Limitations
 
 - SPF typically fails after the first relay or "hop" (forwarding, mailing lists, etc.)
-- Mailing lists and other indirect flows can rewrite the RFC5321.MailFrom to generate an SPF pass $\rightarrow$ spammers do this too
+- Mailing lists and other indirect flows can rewrite the RFC5321.MailFrom (SMTP Envelope) to generate an SPF pass $\rightarrow$ spammers do this too
 - Many receivers do not act on SPF's policy assertions (due to misconfiguration historically & present, what to do with a "softfail"?, ...)
 
 ![[spf-limits-1.png]]
@@ -66,12 +67,12 @@ dig TXT _spf.bfh.ch
 - **Domain Keys Identified Message** uses a **digital signature** based on public key cryptography
 - The sending organization uses its private company key to **sign outbound messages at the gateway** to the internet
 - Receiver can **retrieve the corresponding public key via DNS** to verify the signature
-- The signing domain does not have to have any relationship to the domains in the `From` (Mail Header) or `Mail From` (SMTP Envelope)
+- The signing domain does not have to have any relationship to the domains in the RFC5322.From (Mail Header) or RFC5321.Mail From (SMTP Envelope)
 
 ### Limitations
 
 - **more complicated** to deploy than SPF
-- does not verify if the signed parts of the message are altered (which unfortunately happens often):
+- does not verify if the signed parts of the message are altered (which unfortunately happens often, so the verification won't work there):
 	- mailing lists modifying Subject header
 	- Corporate gateways adding a disclaimer/footer
 	- Filtering services exchanging links/ removing images or MIME parts
@@ -123,8 +124,52 @@ dig TXT selector1-bernerfachhochschule-onmicrosoft-com._domainkey.bernerfachhoch
 ## DMARC
 
 - **Domain-based Message Authentication, Reporting and Conformance**
-- developed 
+- developed to stop abuse of DomainKeys
+- High-level principles:
+	- Sender can opt-in by publishing DMARC policy rules
+	- Receivers provide feedback to senders
+	- Senders increase level of authenticated email
+	- Receivers can identify and block unauthenticated email
 
+### Identifier Alignment
+
+- DMARC operates on RFC5322.From address (Mail Header). This domain drives all DMARC policy lookups:
+	- DKIM: `d=` domain must match RFC5322.From (Mail Header) domain
+	- SPF: `smtp.mfrom` domain must match RFC5322.From (Mail Header) domain
+- For a DKIM or SPF "pass" to generate a DMARC "pass", the identifiers must meet this alignment requirement
+- There are two modes:
+	- **strict**: requires an exact match between the two domains
+	- **relaxed**: requires that the two Organizational Domains match (`[...].example.com`)
+
+### Example
+
+![[dmarc-example.png]]
+### Reporting
+
+- **Aggregate Reports**
+	- Report from a Mail Receiver of all traffic of a given domain (RFC5322.From), from any source
+	- Message counts broken out by: Sending IP address, Authentication result, Disposition
+	- Generally sent daily
+	- XML format
+- **Failure Reports**
+	- Report from a Mail Receiver from a specific message that failed to authenticate
+	- Generally includes header information needed to debug authentication failures
+	- Not all Mail Receivers will generate these
+
+### DNS Records
+
+- published with subdomain label `_dmarc`
+
+![[dmarc-dns-record.png]]
+
+### DMARC Policies
+
+- Three policies can be requested for unauthenticated email:
+	- **None**: take no action (monitor mode)
+	- **Quarantine**: Deliver to quarantine or spam folder
+	- **Reject**: Don't deliver the message
+- Receivers will apply these policy (always has exceptions for "known forwarders", mailing lists, ...)
+- The `pct=` tag intended for gradual rollout $\rightarrow$ `pct=50` Mail Receiver applies requested policy to half of unauthenticated messages
 
 ---
 links: [[613 SPA TOC - Secure Email|SPA TOC - Secure Email]] - [[themes/000 Index|Index]]

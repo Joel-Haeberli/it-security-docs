@@ -46,6 +46,5 @@ Firstly, you need a good antenna. Second, there are two basic ways to sniff:
 - **Promiscuous Mode**: captures all packets on a connected network, regardless of the intended destination MAC address. You will see only packet if you are connected to a station and only packets inside the same network.
 - **Monitor Mode**: captures all wireless traffic within its range, including packets not addressed to it, allowing analysis of all Wi-Fi communications in the vicinity (including beacons and data form any wireless networks in the area).
 
-
 ---
 links: [[617 SPA TOC - Wireless Security|SPA TOC - Wireless Security]] - [[themes/000 Index|Index]]

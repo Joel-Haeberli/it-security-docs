@@ -111,6 +111,7 @@ If the DNSSEC OK (DO) EDNS header bit is set in a query, the querying resolver i
 When DNSSEC signatures cannot be validated, the response containing the Resource Records (RRs) should be deemed invalid. In cases where a name server is performing validation for a recursive query and none of the RRSIGs (Resource Record Signatures) validate successfully, it must return an RCODE 2 (server failure) to the client that initiated the query. However, if the original query had the Checking Disabled (CD) bit set, the name server should return the full response, including RRs that couldn't be validated. In practice, actual resolvers often validate RRs using DNSSEC but still send back all RRs, regardless of whether they could be validated or not. To differentiate between validated and non-validated RRs, the Authentic Data (AD) flag is used in the DNS response.
 
 Advanced error codes and policies are still needed in the future.
+
 ## Use Cases
 
 * DNSSEC signed zones can be used to "Securely Publish Secure Shell (SSH) Key Fingerprints"

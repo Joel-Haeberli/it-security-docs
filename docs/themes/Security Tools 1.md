@@ -13,7 +13,7 @@ links: [[608 SPA TOC - Security Tools|SPA TOC - Security Tools]] - [[themes/000 
 - Syslog protocol is Client <--> Server 
 - Default port: UDP 514
 
-### Layers
+### Syslog Layers
 
 - **syslog content** (message)
 	- The management information contained in a syslog messages
@@ -22,15 +22,15 @@ links: [[608 SPA TOC - Security Tools|SPA TOC - Security Tools]] - [[themes/000 
 - **syslog transport**
 	- Responsible for transporting the messages
 
-### Components
+### Syslog Components
 
 **Originator** = Client --> sends the message
 **Relay** = Receives the message --> processes it --> forwards it (All according to its configuration)
 **Collector** = Server --Z write the message to the file/DB/... 
 
-### Header
+### Syslog Header
 
-**PRI** (must):
+**PRI** (for Priority) (must):
 
 PRI is a calculated value $$PRI=Facility \cdot 8 + Severity$$
 Example: MAIL.INFO = $2\cdot8+6$
@@ -56,9 +56,9 @@ PRI - Facility
 | 14 | log alert |
 | 15 | clock daemon |
 | 16 - 23 | local use 0 - 7 (local0 - local7) |
-PRI - Severty
+PRI - Severity
 
-| Numerical Code | Severty |
+| Numerical Code | Severity |
 | ---- | ---- |
 | 0 | Emergency: system is unusable |
 | 1 | Alert: action must be taken immediatley |
@@ -91,7 +91,7 @@ Numerical value representing the PID (normally) of the application gathering the
 **Message ID** (should)
 Message type to identify the message
 
-### MSG/Message
+### Syslog MSG/Message
 
 > Anything can be a syslog message
 
@@ -99,7 +99,7 @@ UTF-8 for data and messages text
 
 Syslog message up to 480 Octets must be accepted but 2048 should be accepted
 
-### Implementations
+### Syslog implementations
 
 **UNIX/LINUX**
 
@@ -107,7 +107,7 @@ Syslog message up to 480 Octets must be accepted but 2048 should be accepted
 - rsyslog
 - sysklogd
 - systemd (journald)
-	- Default journal service of Linux systems (witch using systemd)
+	- Default journal service of Linux systems (which uses systemd)
 	- Replacement for rsyslog
 	- Received from variety of sources:
 		- Kernel log messages (kmsg)
@@ -116,7 +116,7 @@ Syslog message up to 480 Octets must be accepted but 2048 should be accepted
 		- standard output and standard error of service units
 		- audit records
 	- can be queried with journalctl
-	- stored id /var/log/journal
+	- stored in `/var/log/journal`
 	- can be sent to remote server using systemd-journal-upload
 
 **Windows**
@@ -156,7 +156,7 @@ options: <br>
 -p Dont put interface into "promiscous" mode<br>
 -r Read packets from file
 
-**filter** = pcap filtering language <br>
+**filter** = pcap filtering language using<br>
 **filter expressions** = consists of one or more primitives<br>
 **primitives** = consists of an id (name or number) and one or more qualifiers. Special primitives = gateway, broadcast, less, greater<br>
 **qualifiers**: <br>

@@ -30,7 +30,6 @@ With this we can perform various attacks:
 - [[505 WS TOC - XSS|XSS (Cross Site Scripting)]]
 - [XXE (External Entity)](https://portswigger.net/web-security/xxe): with this we are for example able to read data from files (also from outside the servers network)
 - Tag Injection
-- 
 ## Protect
 
 Validate incoming XML. Deny XML documents containing unwanted or unknown content. Validate fields reading from the XML structure, escaping metacharacters. **Validate your inputs :)**

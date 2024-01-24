@@ -157,7 +157,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 	Kali Linux was used, which is a distribution designed for digital forensics and penetration testing. It comes with numerous tools for network analysis, vulnerability scanning, and security auditing. Its main focus is to provide a comprehensive suite for cybersecurity professionals to test network defenses and security measures.
 ## Part 2
 
-### ✅ TLS
+### ✅  TLS
 
 1. **Name 5 protocols based on TLS.**
    HTTPS, FTPS, SMTPS, LDAPS, DTLS
@@ -273,45 +273,88 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 12. FIDO2 consists of the standards WebAuthn and CTAP. Describe the function of the two standards.
 13. What is meant with attestation?
 14. What information / LoA do we get with a FIDO2 registration with a YubiKey? 
-15. 
-16. What does the Relying Party (RP) need for verifying the attestation?
-17. What communication protocols are supported by CTAP? What options are displayed when resisting on a FIDO2 page with an Android device?
-18. What is needed to access resources over OAuth from a «Resource Server»?
-19. What is a «bearer token»?
-20. Describe the trust relations between the 4 parties: resource holder, client, authentication server and resource server.
-21. What kind of CSRF attack would be possible if the client would not check the session state? 
-22. How can a resource holder revoke his consent?
-23. Outline how you can use «OpenID Connect» as authentication layer. What is the benefit. How are the trust relations?
-24. Outline how you can leverage OAuth as Identity Provider interface. 
-25. On what security mechanism is OAuth relying on?
+15. What does the Relying Party (RP) need for verifying the attestation?
+16. What communication protocols are supported by CTAP? What options are displayed when resisting on a FIDO2 page with an Android device?
+17. What is needed to access resources over OAuth from a «Resource Server»?
+18. What is a «bearer token»?
+19. Describe the trust relations between the 4 parties: resource holder, client, authentication server and resource server.
+20. What kind of CSRF attack would be possible if the client would not check the session state? 
+21. How can a resource holder revoke his consent?
+22. Outline how you can use «OpenID Connect» as authentication layer. What is the benefit. How are the trust relations?
+23. Outline how you can leverage OAuth as Identity Provider interface. 
+24. On what security mechanism is OAuth relying on?
 
-### Secure Email
+### ✅  Secure Email
 
-1. How does the email routing works?  
-2. RFC 8314 introduces Transport Layer Security (TLS) for Email Submission and Access. What security concerns are addressed?  
-3. Explain what information the «Email envelop» contains (RFC 5321) and what information «Internet Message Format» (RFC 5322) contains?  
-4. What information can be found in the «mail header» which fields are mandatory?  
-5. SMTP originally (RFC821) only allowed 7-bit encoding. What encodings do you know to circumvent this limitation?  
-6. How can you sent signed and encrypted emails (PKCS#7)?  
-7. What is the difference between a «Detached Signatures» (application/pkcs7-signature) and a regular PKCS#7 signature (application/pkcs7-mime)?  
-8. Describe how a PKCS#7 message is encrypted for a group of recipients. How is the PKCS#7 encrypted data (pkcs7-envelopedData) structured?  
-9. How can you authenticate the origin of an email message (SPF, DKIM, DMARC)?  
-10. What problems tries the Sender Policy Framework (SPF) to address? On what address (RFC5321.MailFrom) is the policy based on?  
-11. Describe a typical SPF entry (e.g. from bfh.ch). Where do we find the entry and what information does it contain?  
-12. Describe problem cases respectively scenarios where SPF will fail.
-13. Which problem addresses the Domain Keys Identified Messages (DKIM) standard?  
-14. How is DKIM designed. What do you need for implementing DKIM?  
-15. Describe a typical DKIM entry found in the mail header. What information does it contain? 
-16. Where do we find the DKIM key? What types / formats of keys are used?
-17. Describe the relationships of DKIM key location (domain), RFC5322.From, RFC5321.MailFrom to DKIM.
-18. Which steps are involved verifying a DKIM signature? What can go wrong?
-19. Describe the functions of ARC-Authentication-Results (AAR), ARC-Message-Signature (AMS) and ARC-Seal (AS)? Who is adding these mail headers?
-20. What problems is DMARC addressing?
-21. Describe a typical DMARC entry (e.g. from ubs.com). Where do we find the entry and what information does it contain?
-22. On what address is DMARC based on (RFC5322.From)? 
-23. What is the alignment to the DKIM and SPF record?
-24. Where is DMARC policies verification enforced? How can you check the effect of your DMARC policies?
-25. What are the options if the DMARC verification fails?
+1. **How does the email routing works?**
+	Mails are sent via SMTP, the MX record specifies the mail server responsible for a domain name. By sending a mail, the MTA queries DNS for the MX record for the recipient's domain name (lowest-numbered records are the most preferred).
+	MUA $\rightarrow$ MSA $\rightarrow$ Sender's MTA $\rightarrow$ Receiving MTA $\rightarrow$ (multiple hops) $\rightarrow$ MDA $\leftarrow$ only authenticated MUAs can access emails via POP3 or IMAP.
+2. **RFC 8314 introduces Transport Layer Security (TLS) for Email Submission and Access. What security concerns are addressed?**
+	Confidentiality and integrity of email content during transit (no E2E encryption!), protects user credentials from eavesdropping when clients authenticate to email servers, mitigates MITM attacks by authentication email servers to client
+3. **Explain what information the «Email envelop» contains (RFC 5321) and what information «Internet Message Format» (RFC 5322) contains?**
+	- SMTP envelope: Sender and recipient information used for routing and delivery (MAIL FROM, RCPT TO)
+	- Internet Message Format:
+		- Mail Header (From, To, Subject, Date, DKIM, ...)
+		- Mail Body
+4. **What information can be found in the «mail header» which fields are mandatory?**
+	- Required: origination date field (Date) and the originator from (From)
+	- Common: To, Subject, Message-ID, CC, BCC, Received (trace fields), ...
+5. **SMTP originally (RFC821) only allowed 7-bit encoding. What encodings do you know to circumvent this limitation?**
+	- MIME supports Base64 and Quoted-Printable encoding
+6. **How can you sent signed and encrypted emails (PKCS#7)?**
+	Use MIME type `application/pkcs7-mime` and sign or encrypt mail with certificates (pk infrastructure)
+7. **What is the difference between a «Detached Signatures» (application/pkcs7-signature) and a regular PKCS#7 signature (application/pkcs7-mime)?**
+	- *Detached Signature*: The signature is stored separately from the original data. This allows recipients to verify the signature without altering the original message format $\rightarrow$ if a mailing list modify email parts, the signature isn't valid anymore.
+	- *Regular PKCS#7 Signature: The signature and the original data are bundled together in a single file. This is more convenient for ensuring both the data and its integrity are preserved together, but it alters the original message format.
+8. **Describe how a PKCS#7 message is encrypted for a group of recipients. How is the PKCS#7 encrypted data (pkcs7-envelopedData) structured?**
+	- The message is encrypted once using a symmetric key.
+	- Each recipient's public key encrypts the symmetric key.
+	- The PKCS#7 structure contains the encrypted message, a per-recipient encrypted symmetric key, and encryption algorithm details.
+9. **How can you authenticate the origin of an email message (SPF, DKIM, DMARC)?**
+	- SPF: erifies the sender's IP address against the domain's published SPF record in DNS.
+	- DKIM: Uses a digital signature, linked to the sender's domain, that is verified against a public key in the domain's DNS records.
+	- DMARC: Leverages SPF and DKIM authentication results, specifying how receivers should handle failed emails and providing reports on email sources and failures.
+10. **What problems tries the Sender Policy Framework (SPF) to address? On what address (RFC5321.MailFrom) is the policy based on?**
+	SPF addresses Email Spoofing (unauthorized senders) and Spam/Phishing (verify sender authenticity). SPF policy is only based on the RFC5321.MailFrom (SMTP envelope) and thus can be bypassed by Spammers.
+11. **Describe a typical SPF entry (e.g. from bfh.ch). Where do we find the entry and what information does it contain?**  
+	The SPF record can be found in DNS as TXT record (`dig bfh.ch TXT`), for an example see [[Email Authentication#Examples|here]]
+12. **Describe problem cases respectively scenarios where SPF will fail.**
+	- *Email Forwarding*: if an email is forwarded by an intermediate server, the sender's IP may no longer match the SPF record (e.g. Mailing list)
+	- RFC5321.MailFrom (SMTP envelope) can be overwritten by a Mailing list or Spamer to generate an SPF pass
+	- Many receivers do not act on SPF's policy assertion (misconfiguration, unclear implementation like "softfail")
+13. **Which problem addresses the Domain Keys Identified Messages (DKIM) standard?**
+	DKIM addresses the problem of email tampering and sender identity verification. It ensures that an email's content and sender can be authenticated and have not been altered or forged during transit.
+14. **How is DKIM designed. What do you need for implementing DKIM?**
+	- *Digital Signatures*: the email gateway sign all outgoing emails with a private key
+	- *Public Key in DNS*: the public key is published as an DNS TXT record
+15. **Describe a typical DKIM entry found in the mail header. What information does it contain?**
+	- Version (v=1), Algorithm (rsa-sha256), Domain (d=example.com), Selector (s=selector1, specific public key), Signature Data (b=signature), Signed Headers (h=from:to:date)
+16. **Where do we find the DKIM key? What types / formats of keys are used?**
+	The key is in the sender's domain DNS record. RSA is mostly used ed25519 is supported too.
+17. **Describe the relationships of DKIM key location (domain), RFC5322.From, RFC5321.MailFrom to DKIM.**
+	The signing domain does not have to have any relationship to the domains in the RFC5322.From (Mail Header) or RFC5321.Mail From (SMTP Envelope)
+18. **Which steps are involved verifying a DKIM signature? What can go wrong?**
+	- more complicated to deploy than SPF
+	- does not verify if the signed parts of the message are altered (which happens often, e.g. mailing lists, corporate gateways adding a header, etc.)
+	- crypto concerns need to be tracked (key length, hashing algorithms)
+19. **Describe the functions of ARC-Authentication-Results (AAR), ARC-Message-Signature (AMS) and ARC-Seal (AS)? Who is adding these mail headers?**
+	- ARC headers are added by intermediate email servers to solve altering headers and provide valid signatures
+	- *AAR*: checks for SPF, DKIM, DMARC
+	- *AMS*: added by the server that performs the ARC signing, signature of entire message except for the ARC-Seal headers
+	- *AS*: signature of the previous ARC-Seal headers, validity of the prior ARC entries
+20. **What problems is DMARC addressing?**
+	DMARC addresses email spoofing, fraud, and unauthorized domain use by allowing domain owners to specify authorized email sources and policies for handling failed emails. It provides visibility through reporting on email authentication.
+21. **Describe a typical DMARC entry (e.g. from ubs.com). Where do we find the entry and what information does it contain?**
+	- DMARC entries are published in DNS TXT records
+	- Version, Policy (p=reject/quarantine/none), Alignment (adkim=strict/relaxed), Reporting (rua=mailto:dmarc@example.com)
+22. **On what address is DMARC based on (RFC5322.From)?**
+	DMARC operates on RFC5322.From address (Mail Header)
+23. **What is the alignment to the DKIM and SPF record?**
+	Alignment in DMARC can be strict or relaxed, and it checks whether the domains in DKIM signatures or SPF records match the RFC5322.From domain. Strict alignment requires an exact match, while relaxed alignment allows for subdomain matches.
+24. **Where is DMARC policies verification enforced? How can you check the effect of your DMARC policies?**
+	DMARC policies are enforced by email receivers (servers) that validate incoming emails against the policies set by the sending domain. To check the effect of your DMARC policies, send test emails to services like Gmail and configure your DMARC record to receive reports.
+25. **What are the options if the DMARC verification fails?**
+	None (monitor), Quarantine (move mails in quarantine or spam folders), Reject (reject email)
 
 ### Kerberos
 

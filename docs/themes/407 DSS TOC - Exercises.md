@@ -31,11 +31,15 @@ If you mistakenly download a Trojan horse masquerading as the Bitcoin client, se
 
 ## Exercise 2 - Hashing
 
+[[ex2-solution.pdf]]
+
 ![[ex2-solution.pdf]]
 
 
 
 ## Exercise 3 - Proof of Work
+
+[[ex3-solution.pdf]]
 
 ![[ex3-solution.pdf]]
 
@@ -44,10 +48,14 @@ If you mistakenly download a Trojan horse masquerading as the Bitcoin client, se
 
 ## Exercise 4 - Merkle Trees
 
+[[ex4-solution.pdf]]
+
 ![[ex4-solution.pdf]]
 
 
 ## Exercise 5 - Merkle Trees Part 2
+
+[[ex5-solution.pdf]]
 
 ![[ex5-solution.pdf]]
 
@@ -87,22 +95,30 @@ If you mistakenly download a Trojan horse masquerading as the Bitcoin client, se
     - **Feasibility**: Possible, but you can notice.
     - **Explanation**: The provider could theoretically hide transactions or blocks from you, but this would be noticeable. The Bitcoin client can detect inconsistencies in the blockchain it receives, such as missing blocks or transactions that don't add up. You might not see the latest transactions, but you would likely notice the discrepancy, especially if you're expecting certain transactions or regularly monitoring your balance and the blockchain.
 
+[[ex7-solution.pdf]]
+
 ![[ex7-solution.pdf]]
 
 
 
 ## Exercise 8 - InputOutputCoin
 
+[[ex8-solution.pdf]]
+
 ![[ex8-solution.pdf]]
 
 
 ## Exercise 9 - Script
+
+[[ex9-solution.pdf]]
 
 ![[ex9-solution.pdf]]
 
 
 
 ## Exercise 10 - Bitcoin Script
+
+[[ex10-solution.pdf]]
 
 ![[ex10-solution.pdf]]
 

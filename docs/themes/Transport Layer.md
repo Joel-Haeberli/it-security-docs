@@ -2,7 +2,7 @@ tags: #osi
 
 # Transport Layer
 
-links: [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Index]]
+links: [[604 SPA TOC - Layered Security]] - [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Index]]
 
 ---
 
@@ -19,7 +19,7 @@ links: [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Ind
 	- Different OS implement TCP/IP, UDP slightly different
 	- Nmap can send various TCP/UDP packets and analyse the response to infer the OS
 - Overloading of transport-layer mechanisms such as port numbers to effectively filter and qualify traffic
-	- *GPT: If a server is running too many services accessible through different ports, it can become difficult to manage and secure all these ports. For instance, if a server is running HTTP on port 80, HTTPS on port 443, FTP on port 21, and several other services on other ports, it may not have the capacity to filter and monitor all the traffic effectively. An attacker might exploit a less secure service to gain unauthorized access to the server.*
+	- *GPT: If a server is running too many services a	- Sending ICMP Echo request packet that is larger than the maximum IP packet size accessible through different ports, it can become difficult to manage and secure all these ports. For instance, if a server is running HTTP on port 80, HTTPS on port 443, FTP on port 21, and several other services on other ports, it may not have the capacity to filter and monitor all the traffic effectively. An attacker might exploit a less secure service to gain unauthorized access to the server.*
 - Transmission mechanisms can be subject to spoofing and attacks based on crafted packets and the educated guessing of flow and transmission values, allowing the disruption or seizure of control of communications
 	- Example: SYN flooding
 	- Goal: DoS, making system unresponsive to legitimate traffic because it's handing all the SYN requests

@@ -2,7 +2,7 @@ tags: #osi
 
 # Network Layer
 
-links: [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Index]]
+links: [[604 SPA TOC - Layered Security]] - [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Index]]
 
 ---
 
@@ -17,7 +17,7 @@ links: [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Ind
 
 - Route spoofing / DoS
 	- Propagation of false network topology using [RIP](https://en.wikipedia.org/wiki/Routing_Information_Protocol)
-	- Goal: Route data through attacker controlled router or create
+	- Goal: Route data through attacker controlled router
 	- Goal: Create loop
 	- Goal: Impersonate specific host
 - IP address spoofing
@@ -32,7 +32,7 @@ links: [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Ind
 		- Set attacker as router -> Man-in-the-middle attack
 		- Set wrong IP as router -> Network DoS
 	- Attacker creates virtual interfaces to generate large number of IPv6 address configuration requests
-		- Overload router or DHCPv6 server capacity to track devices
+		- Overload roxuter or DHCPv6 server capacity to track devices
 		- Legitimate devices can't obtain IP anymore -> starvation, DoS
 
 ### Attacks
@@ -44,11 +44,11 @@ links: [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Ind
 - [[ICMP]] Attack
 	- ICMP is used to send one-way informational messages to hosts (no authentication)
 	- Sending forged ICMP "Time exceeded" or "Destination unreachable" to a host
-	- Goal: Break communication between two hosts -> DoS
+		- Goal: Break communication between two hosts -> DoS
 	- Sending ICMP "Redirect" 
-	- Goal: Attacked host sends certain packets through attackers host
-- PING Flood (ICMP Flood)
-	- Goal: Crash or slow down attacked host
+		- Goal: Attacked host sends certain packets through attackers host
+	- PING Flood (ICMP Flood)
+		- Goal: Crash or slow down attacked host
 - [Ping of death attack](https://en.wikipedia.org/wiki/Ping_of_death)
 	- Sending ICMP Echo request packet that is larger than the maximum IP packet size
 	- Attacked host can't reassemble the packet

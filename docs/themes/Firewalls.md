@@ -70,12 +70,12 @@ A better **information system security** can be achieved with:
 		- ICMP message types & code: `0, 3/0, 8, 11/1, ...`
 - packet fragmentation/reassembling
 	- fragments of IP-packets must be reassembled before a reason check of the layer 4 headers can be done
-	- reassembling usesadditional resources which is a target for **DoS attacks**
+	- reassembling uses additional resources which is a target for **DoS attacks**
 
 ### Stateless Packet Filter
 
 - not recording state information of connections and only filter according to **predefined filter rules**
-- less secure but more efficient then stateful packet filters
+- less secure but more efficient than stateful packet filters
 - **disadvantages**: outdated, difficult configuration, packets cannot be modified
 
 *Example for SSH Filter Rules*
@@ -89,7 +89,7 @@ A better **information system security** can be achieved with:
 - checking packets using **predefined filter rules**
 - recording state information of connections and **modify filter rules dynamically** to accept expected answer packets
 - more efficient than application layer firewalls
-- every connection requires a buffer place, inactive connections are released $\rightarrow$ acccientally disconnected connections can be prevented with "keep alive" packets (e.g. configure keep alive packets in Putty)
+- every connection requires a buffer place, inactive connections are released $\rightarrow$ accidentally disconnected connections can be prevented with "keep alive" packets (e.g. configure keep alive packets in Putty)
 
 ![[stateful-rule.png]]
 
@@ -114,7 +114,7 @@ Definition in 2003 from *Gartner*
 
 - can apply **configuration modifications without interruptions**
 - has an **integrated intrusion preventions system (IPS)**
-- provide **application intelligence**: applications and protocols can e securely identified in addition to port based only rules
+- provide **application intelligence**: applications and protocols can be securely identified in addition to port based only rules
 - can **consider external sources in rules**: user information out of directory services or allow-/block-lists of IP addreses
 - provide all features of traditional firewalls: packet filter, NAT, stateful inspection, VPN, ...
 - evolve into **Unified Threat Management (UTM)** firewalls
@@ -150,7 +150,7 @@ Can perform multiple security functions within one single appliance:
 - are often referred to as:
 	- **application layer/level gateway (ALG)**
 	- **proxy server**
-	- **application firewall**: additionally take the header information form layer 2 up to layer 7 into account (what the both other terms above don't do)
+	- **application firewall**: additionally take the header information from layer 2 up to layer 7 into account (what the both other terms above don't do)
 
 ### ALG/ Proxy Server Types
 

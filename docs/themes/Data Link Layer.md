@@ -2,7 +2,7 @@ tags: #osi
 
 # Data Link Layer
 
-links: [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Index]]
+links: [[604 SPA TOC - Layered Security]] - [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Index]]
 
 ---
 
@@ -31,7 +31,7 @@ links: [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Ind
 	- Configure NIC to tag traffic with a different VLAN ID to access different VLAN
 - Spanning tree errors
 	- Misconfiguration causing switch to be elected as root bridge leading to suboptimal traffic flow or loops
-- Free connection or weak authenticaion and encryption to access links
+- Free connection or weak authentication and encryption to access links
 	- Open wifi network allowing anyone to connect without password
 - Wrong behaviour of network devices in overload situations
 	- Switch dropping packets or providing inconsistent connectivity when at capacity

@@ -1,6 +1,6 @@
 tags: #cryptocurrency #protocol
 
-# 405 DSS TOC - Evolving the Protocol
+# DSS TOC - Evolving the Protocol
 
 links: [[400 DSS MOC|DSS MOC]] - [[themes/000 Index|Index]]
 

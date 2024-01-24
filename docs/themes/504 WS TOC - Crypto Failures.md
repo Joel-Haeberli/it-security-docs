@@ -1,6 +1,6 @@
 tags: #web-security #crypto-failures
 
-# 504 WS TOC - Crypto Failures
+# WS TOC - Crypto Failures
 
 links: [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
 

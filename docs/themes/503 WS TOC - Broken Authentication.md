@@ -1,6 +1,6 @@
 tags: #web-security #broken-authentication
 
-# 503 WS TOC - Broken Authentication
+# WS TOC - Broken Authentication
 
 links: [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
 

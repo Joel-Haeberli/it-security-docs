@@ -1,6 +1,6 @@
 tags: #cryptocurrency #scaling
 
-# 406 DSS TOC - Scaling
+# DSS TOC - Scaling
 
 links: [[400 DSS MOC|DSS MOC]] - [[themes/000 Index|Index]]
 

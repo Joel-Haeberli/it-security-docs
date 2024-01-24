@@ -1,6 +1,6 @@
 tags: #web-security #broken-access-control
 
-# 502 WS TOC - Broken Access Control
+# WS TOC - Broken Access Control
 
 links: [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
 

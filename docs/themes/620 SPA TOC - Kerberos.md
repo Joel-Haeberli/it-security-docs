@@ -1,6 +1,6 @@
 tags: #auth
 
-# 620 SPA TOC - Kerberos
+# SPA TOC - Kerberos
 
 links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 

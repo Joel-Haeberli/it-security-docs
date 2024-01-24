@@ -1,6 +1,6 @@
 tags: #web #network #security-tool #security-protocol   
 
-# 618 SPA TOC - Exam Questions
+# SPA TOC - Exam Questions
 
 links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 

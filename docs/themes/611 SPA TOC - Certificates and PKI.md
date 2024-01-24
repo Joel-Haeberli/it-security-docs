@@ -1,6 +1,6 @@
 tags: #certificates #SPA 
 
-# 611 SPA TOC - Certificates and PKI
+# SPA TOC - Certificates and PKI
 
 links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 

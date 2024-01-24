@@ -19,7 +19,7 @@ links: [[612 SPA TOC - Identification Authentication|SPA TOC - Identification Au
 
 ### Password entropy
 
-![[Pasted image 20240123133336.png]]
+![[passwords.png]]
 
 ### Measurements against offline attacks
 

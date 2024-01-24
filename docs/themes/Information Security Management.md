@@ -41,16 +41,16 @@ A simple approach can be the "traffic light" matrix:
 Each risk can be categorized using this matrix. Measures must be taken to at least mitigate the red risks.
 
 **Handling Risks**
-There exits 4 options to manage risks:
+There exist four options to manage risks:
 
 - Risk avoidance
 	- Change of the situation to avoid the risk
 	- Done during development of new services/processes
-	- Very const intensive
+	- Very cost intensive
 - Risk modification
-	- Minimize the probability of occurance and/or level of damage
+	- Minimize the probability of occurrence and/or level of damage
 - Sharing the responsibility
-	- Take out insurance or outsource service
+	- Close insurance policy or outsource service
 - Risk acceptance
 	- Accept and live with the risk and accept the potential damage
 
@@ -100,7 +100,7 @@ ISMS lifecycle according to ITIL:
 
 - An ISMS can archive an certification
 - Most common in Switzerland is the certification against ISO/IEC 27001
-	- ISO/IEC 27001 is the certification standard and belongs to the ISO/IEC 27000-series a series of information security standards. Only 27001 can be certified
+	- ISO/IEC 27001 is the certification standard and belongs to the ISO/IEC 27000-series, which is a series of information security standards. Only 27001 can be certified
 	- Contains best practice recommendations to maintain an ISMS
 	- The series consists of many standards over 30 standards are bundled under its name
 
@@ -135,7 +135,7 @@ CIS is a non-profit to safeguard private and public organizations against cyber 
 
 CIS provides:
 
-- Cybersecurity Best Practicies
+- Cybersecurity Best Practices
 - Cybersecurity Tools
 - Cybersecurity Threats
 - Controls to protect organizations from known cyber-attack vectors

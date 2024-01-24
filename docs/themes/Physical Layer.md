@@ -2,13 +2,14 @@ tags: #osi
 
 # Physical Layer
 
-links: [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Index]]
+links: [[604 SPA TOC - Layered Security]] - [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Index]]
 
 ---
 
 ## Physical Layer
 
 The physical layer sends and receives bits between adjacent stations on the link and handles the following specifications:
+
 - physical
 	- connectors
 	- type of medium

@@ -1,6 +1,6 @@
 tags: #cryptocurrency #decentralization
 
-# 403 DSS TOC - Decentralization
+# DSS TOC - Decentralization
 
 links: [[400 DSS MOC|DSS MOC]] - [[themes/000 Index|Index]]
 

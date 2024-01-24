@@ -1,6 +1,6 @@
 tags: #information-security #general
 
-# 601 SPA TOC - Information Security
+# SPA TOC - Information Security
 
 links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 

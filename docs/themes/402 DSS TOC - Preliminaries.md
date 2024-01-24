@@ -1,6 +1,6 @@
 tags: #cryptocurrency #bitcoin #symmetric #asymmetric 
 
-# 402 DSS TOC - Preliminaries
+# DSS TOC - Preliminaries
 
 links: [[400 DSS MOC|DSS MOC]] - [[themes/000 Index|Index]]
 

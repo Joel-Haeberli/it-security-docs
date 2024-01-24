@@ -133,17 +133,18 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 
 ### Topic 9: Lab Exercises
 
-1. **How can a centralized syslog be implemented?**
-2. **Explain how you tested arp spoofing, did it work?**
-3. **What does a specific "iptables" or "nftables" firewall rule do (see also the provided sample solutions)?**
-4. **How do you redirect traffic to a filtering proxy using "iptables" or "nftables"?**
-5. **Which criteria did you use for your filtering proxy?**
-6. **Which means do you know to explore networks?**
-7. **Which vulnerability scanner was used in the lab excercises?**
-8. **What data of your router can you analyze using "nfsen"?**
-9. **What ist "softflowd" and how can it be used to export flow data?**
-10. **Explain how "softflowd" and "nfcap/nfsen" interact.**
-11. **Which security distibutions where used in the lab? Explain their main focus.**
+1. How can a centralized syslog be implemented?
+2. Explain how you tested arp spoofing, did it work?
+3. What does a specific "iptables" or "nftables" firewall rule do (see also the provided sample solutions)?
+4. How do you redirect traffic to a filtering proxy using "iptables" or "nftables"?
+5. Which criteria did you use for your filtering proxy?
+6. Which means do you know to explore networks?
+7. Which vulnerability scanner was used in the lab excercises?
+8. What data of your router can you analyze using "nfsen"?
+9. What ist "softflowd" and how can it be used to export flow data?
+10. Explain how "softflowd" and "nfcap/nfsen" interact.
+11. Which security distibutions where used in the lab? Explain their main focus.
+
 ## Part 2
 
 ### TLS
@@ -202,17 +203,16 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 12. FIDO2 consists of the standards WebAuthn and CTAP. Describe the function of the two standards.
 13. What is meant with attestation?
 14. What information / LoA do we get with a FIDO2 registration with a YubiKey? 
-15. 
-16. What does the Relying Party (RP) need for verifying the attestation?
-17. What communication protocols are supported by CTAP? What options are displayed when resisting on a FIDO2 page with an Android device?
-18. What is needed to access resources over OAuth from a «Resource Server»?
-19. What is a «bearer token»?
-20. Describe the trust relations between the 4 parties: resource holder, client, authentication server and resource server.
-21. What kind of CSRF attack would be possible if the client would not check the session state? 
-22. How can a resource holder revoke his consent?
-23. Outline how you can use «OpenID Connect» as authentication layer. What is the benefit. How are the trust relations?
-24. Outline how you can leverage OAuth as Identity Provider interface. 
-25. On what security mechanism is OAuth relying on?
+15. What does the Relying Party (RP) need for verifying the attestation?
+16. What communication protocols are supported by CTAP? What options are displayed when resisting on a FIDO2 page with an Android device?
+17. What is needed to access resources over OAuth from a «Resource Server»?
+18. What is a «bearer token»?
+19. Describe the trust relations between the 4 parties: resource holder, client, authentication server and resource server.
+20. What kind of CSRF attack would be possible if the client would not check the session state? 
+21. How can a resource holder revoke his consent?
+22. Outline how you can use «OpenID Connect» as authentication layer. What is the benefit. How are the trust relations?
+23. Outline how you can leverage OAuth as Identity Provider interface. 
+24. On what security mechanism is OAuth relying on?
 
 ### Secure Email
 

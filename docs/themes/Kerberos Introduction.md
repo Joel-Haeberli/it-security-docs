@@ -43,11 +43,13 @@ links: [[620 SPA TOC - Kerberos|SPA TOC - Kerberos]] - [[themes/000 Index|Index]
 ### Secret & Session Keys
 
 **Secret keys**
+
 - Long-term shared secret between users / services and the KDC
 - Used to authenticate parties
 - Derived from the party's password using string-to-key function (user or SPN/service account)
 
 **Session keys**
+
 - Short-term shared secret between users and services
 - Used to secure communication
 - Generated randomly by the involved parties

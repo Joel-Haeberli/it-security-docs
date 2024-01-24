@@ -2,7 +2,7 @@ tags: #osi
 
 # Application Layer
 
-links: [[604 SPA TOC - Layered Security]] - [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Index]]
+links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Index|Index]]
 
 ---
 
@@ -58,4 +58,4 @@ links: [[604 SPA TOC - Layered Security]] - [[600 SPA MOC|Security Protocols and
 	- Define firewall rules to regulate traffic by application / port
 
 ---
-links: [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Index]]
+links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Index|Index]]

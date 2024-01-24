@@ -2,11 +2,12 @@ tags: #cryptocurrency #scaling
 
 # SIGHASH Types
 
-links: [[406 DSS TOC - Scaling]] - [[400 DSS MOC]] - [[themes/000 Index|Index]]
+links: [[406 DSS TOC - Scaling|DSS TOC - Scaling]] - [[themes/000 Index|Index]]
 
 ---
 
 **Challenge**:
+
 The problem with current signature verification process (OP_CHECKSIG) is that the signature is verified with the public key from the stack which means that, for each spending transaction only one key is able to sign the entire transaction by default. This denies collaborative creation of transactions. The SIGHASH Type works against this by allowing to specify another way of signing transactions. This type specifies which parts of the transaction are removed before the transaction is signed.
 
 This mainly concerns in- and outputs. Fields not in in- or outputs are never removed (locktime and version fields). Input scripts are always removed. The removed parts are unsigned and can thus be changed by other participants. This gives us the ability to collaboratively build transactions.
@@ -35,6 +36,5 @@ Using SIGHASH types for signature creation leads to following process (simplifie
 
 With this we are now able to partially sign transactions if we want to. This makes the transactions more flexible and allows other usecases.
 
-
 ---
-links: [[406 DSS TOC - Scaling]] - [[400 DSS MOC]] - [[themes/000 Index|Index]]
+links: [[406 DSS TOC - Scaling|DSS TOC - Scaling]] - [[themes/000 Index|Index]]

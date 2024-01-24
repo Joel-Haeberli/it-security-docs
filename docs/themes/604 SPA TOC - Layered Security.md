@@ -16,7 +16,9 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 - [[Human Layer]]
 
 ![[osi-layers.png]] 
+
 ![[internet-protocol-architecture.png]]
+
 ![[advanced-osi-model.png]]
 
 ---

@@ -1,7 +1,7 @@
 tags: #cryptocurrency #decentralization #bankcoin #naivecoin #serialnumbercoin #transactioncoin #electioncoin #proofofworkcoin #blockchaincoin #incentivecoin
 # From BankCoin to IncentiveCoin
 
-links: [[403 DSS TOC - Decentralization]] - [[400 DSS MOC]] - [[themes/000 Index|Index]]
+links: [[403 DSS TOC - Decentralization|DSS TOC - Decentralization]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -71,6 +71,7 @@ This image only illustrates the process of the transaction being emitted on the 
 
 ![TransactionCoin send](transactioncoin_2.png)
 You could denote $x_0$ = "Alice owns 1 coin", which will then become $x_1$ = "Alice sends $x_0$ to Bob" = "Alice sends (Alice owns 1 coin) to Bob" through the transaction. Chaining arbitrary amount of transactions like this makes it obvious, that even if a coin gets back to its originator, the representation (value) will not be the same and therefore the replay attack cannot be done anymore.
+
 ## PublicAnnouncementCoin
 
 *Predecessor: TransactionCoin*
@@ -87,11 +88,12 @@ The PublicAnnouncementCoin resolves the double spending attack by introducing a 
 
 ## ElectionCoin
 
-*Predecessor:  [[From BankCoin to IncentiveCoin#TransactionCoin|TransactionCoin]]*
+*Predecessor: [[From BankCoin to IncentiveCoin#TransactionCoin|TransactionCoin]]*
 
 The election coin does not write transaction immediately if they arrive but creates a transaction pool of so called *unconfirmed* transactions. Participants of the network periodically randomly *elect* a leader among themselves. The leader then broadcasts his transaction pool which is then taken as new transaction pool by all other participants.
 
-**ElectionCoin solves**: 
+**ElectionCoin solves**:
+
 - *if* leader is honest, ElectionCoin prevents double spending attack.
 
 **Problems** with the ElectionCoin:
@@ -101,7 +103,7 @@ The election coin does not write transaction immediately if they arrive but crea
 
 ## ProofOfWorkCoin
 
-*Predecessor:  [[From BankCoin to IncentiveCoin#ElectionCoin|ElectionCoin]]*
+*Predecessor: [[From BankCoin to IncentiveCoin#ElectionCoin|ElectionCoin]]*
 
 ProofOfWorkCoin implements a leader election algorithm leveraging a proof of work scheme allowing leader election building on the ElectionCoin. Therefore all nodes solve a puzzle and the first node to solve the puzzle becomes the new leader. Additionally each node given the new transaction pool, will first verify the solution given by the leader.
 
@@ -132,12 +134,14 @@ Additionally, each node:
 The stored blocks form a tree, where each block is linked to the previous block.
 
 The above leads to following [[Proof-of-Work (PoW)]]:
+
 $$difficulty = hash(prevhash | txp | nonce)$$
+
 The difficulty consists in the number of leading zeros in the result of the hash calculation, which takes the hash of the previous block, the transaction and a nonce as input. The nonce is the solution of the puzzle.
 
 **BlockchainCoin solves**: 
 
-- Two nodes finding solution to puzzle at the same time -> Consistency through [[Eventual Consistency]]
+- Two nodes finding solution to puzzle at the same time $\rightarrow$ Consistency through [[Eventual Consistency]]
 - Double Spending attacks are highly unlikely
 
 **Problems** with the BlockchainCoin:
@@ -162,4 +166,4 @@ The IncentiveCoin adds incentivation to the blockchain, by adding a **coinbase t
 - Computational power of the network changes
 
 ---
-links: [[403 DSS TOC - Decentralization]] - [[400 DSS MOC]] - [[themes/000 Index|Index]]
+links: [[403 DSS TOC - Decentralization|DSS TOC - Decentralization]] - [[themes/000 Index|Index]]

@@ -2,14 +2,14 @@ tags: #cryptocurrency #scaling
 
 # Conditionals
 
-links: [[406 DSS TOC - Scaling]] - [[400 DSS MOC]] - [[themes/000 Index|Index]]
+links: [[406 DSS TOC - Scaling|DSS TOC - Scaling]] - [[themes/000 Index|Index]]
 
 ---
 
 [[Scripts#Bitcoin Script|Bitcoin Script]] allows to define conditionals. These conditionals are built like:
 
 ```
-IF 
+IF
 	run on condition true
 ELSE
 	run on condition false
@@ -21,4 +21,4 @@ The IF operator reads a condition from the stack and enters the branch according
 Conditionals are useful in case of [escrow situations](https://www.investopedia.com/terms/e/escrowagreement.asp).
 
 ---
-links: [[406 DSS TOC - Scaling]] - [[400 DSS MOC]] - [[themes/000 Index|Index]]
+links: [[406 DSS TOC - Scaling|DSS TOC - Scaling]] - [[themes/000 Index|Index]]

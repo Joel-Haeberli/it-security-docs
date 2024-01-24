@@ -2,13 +2,14 @@ tags: #cryptocurrency #scaling
 
 # Transaction Replacement
 
-links: [[406 DSS TOC - Scaling]] - [[400 DSS MOC]] - [[themes/000 Index|Index]]
+links: [[406 DSS TOC - Scaling|DSS TOC - Scaling]] - [[themes/000 Index|Index]]
 
 ---
 
 ## Original Transaction Replacement
 
 In order to allow off-chain transactions, Nakamoto implemented a scheme for replacing transactions in the mempool. It allows counterparties to pay each other off-chain at high speed and low cost. Therefore transactions are marked as replaceable and a lock time and sequence number is added for each input. This feature allowed denail of service (DoS) attacks and was therefore deactivated by Nakamoto in 2010.
+
 ### Locktime
 
 The locktime defines a time which helps to check the consensus rule, that a transaction can not be included in a block before its locktime.
@@ -26,4 +27,4 @@ To fight the DoS problem in Transaction Replacement originally implemented, the 
 The Replacement-By-Fee transaction replacement makes Bitcoin an *incentive compatible* protocol. This means that no participant can improve their economic situation by deviating from the protocol.
 
 ---
-links: [[406 DSS TOC - Scaling]] - [[400 DSS MOC]] - [[themes/000 Index|Index]]
+links: [[406 DSS TOC - Scaling|DSS TOC - Scaling]] - [[themes/000 Index|Index]]

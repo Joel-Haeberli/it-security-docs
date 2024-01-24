@@ -2,13 +2,14 @@ tags: #cryptocurrency #bitcoin #difficultyadjustmentcoin #inputoutputcoin #simpl
 
 # From IncentiveCoin to Bitcoin
 
-links: [[404 DSS TOC - Bitcoin]] - [[400 DSS MOC]] - [[themes/000 Index|Index]]
+links: [[404 DSS TOC - Bitcoin|DSS TOC - Bitcoin]] - [[themes/000 Index|Index]]
 
 ---
 
 Builds up on decentralization: [[From BankCoin to IncentiveCoin]]
 
 [[From BankCoin to IncentiveCoin#IncentiveCoin|IncentiveCoin]] solves the decentralization problem. With the process from [[From BankCoin to IncentiveCoin#IncentiveCoin|IncentiveCoin]] to Bitcoin we solve the problems remaining for Bitcoin to be a usable currency.
+
 ## DifficultyAdjustmentCoin
 
 *Predecessor: [[From BankCoin to IncentiveCoin#IncentiveCoin|IncentiveCoin]]*
@@ -155,4 +156,4 @@ The first block of the chain is called the *genesis* block and is statically enc
 - Human... maybe if we get rid of the "human-problem", bitcoin might work... Looking at the world right now we are on a good track to reach this last goal to make bitcoin a great technology... so invest in bitcoin... when you are dead it will be worth a lot... probably ;)
 
 ---
-links: [[404 DSS TOC - Bitcoin]] - [[400 DSS MOC]] - [[themes/000 Index|Index]]
+links: [[404 DSS TOC - Bitcoin|DSS TOC - Bitcoin]] - [[themes/000 Index|Index]]

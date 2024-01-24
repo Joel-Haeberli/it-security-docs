@@ -2,7 +2,7 @@ tags: #lab
 
 # Lab 2 - SNMP, arpspoof, softflowd
 
-links: [[609 SPA TOC - Lab|SPA MOC - Lab]] - [[themes/000 Index|Index]]
+links: [[609 SPA TOC - Lab|SPA TOC - Lab]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -162,4 +162,4 @@ Top N Packets: `nfdump -r file.nfcap -o "fmt:%sS packets:%pkt" -s pkt`
 Top N Bytes: `nfdump -r file.nfcap -o "fmt:%tdst:%dst %pr dst-port:%tdport bytes:%byt" -s byt`
 
 ---
-links: [[609 SPA TOC - Lab|SPA MOC - Lab]] - [[themes/000 Index|Index]]
+links: [[609 SPA TOC - Lab|SPA TOC - Lab]] - [[themes/000 Index|Index]]

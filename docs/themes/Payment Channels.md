@@ -2,7 +2,7 @@ tags: #cryptocurrency #scaling
 
 # Payment Channels
 
-links: [[406 DSS TOC - Scaling]] - [[400 DSS MOC]] - [[themes/000 Index|Index]]
+links: [[406 DSS TOC - Scaling|DSS TOC - Scaling]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -45,9 +45,12 @@ Alice and Bob both choose a their respective secret $R_{A1}$ and $R_{B1}$ which 
 ##### 3. They exchange a commitment transaction
 
 As Alice or Bob want to pay their counter party, they create a commitment transaction which contains the new balances and the respective signatures.
+
 ![lightning_channel_commitment_transaction](lightning_channel_commitment_transaction.png)
+
 We see that Alice commitment transaction contains Bob's balance signed by himself. The balance of Alice is signed by her and a timelock of one day OR Bob and Alice's secret.
 On the other hand we have the same situation, that Bob has the balance of Alice signed by her and his balance signed by him and a timelock of one day OR Alice's signature and Bob's secret.
+
 ##### 4. They repeat step 2 and 3
 
 As long as the balance is high enough and they want to pay each other, they repeat step two and three. This means for each commitment transaction new secrets are generated. Important is that after creating the new commitment transaction with new secrets, they share the old secret with each other [preventing the other party broadcasting older transaction which favors them more](https://bitcoinmagazine.com/technical/understanding-the-lightning-network-part-building-a-bidirectional-payment-channel-1464710791)
@@ -55,4 +58,4 @@ As long as the balance is high enough and they want to pay each other, they repe
 The lightning payment channel can be leveraged to create a [[Lightning Network]].
 
 ---
-links: [[406 DSS TOC - Scaling]] - [[400 DSS MOC]] - [[themes/000 Index|Index]]
+links: [[406 DSS TOC - Scaling|DSS TOC - Scaling]] - [[themes/000 Index|Index]]

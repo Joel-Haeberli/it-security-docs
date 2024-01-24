@@ -2,7 +2,7 @@ tags: #lab
 
 # Lab 1 - Logging, tcpdump, nmap
 
-links: [[609 SPA TOC - Lab|SPA MOC - Lab]] - [[themes/000 Index|Index]]
+links: [[609 SPA TOC - Lab|SPA TOC - Lab]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -261,4 +261,4 @@ runuser -u _gvm -- gvmd --get-modify-scanner 08b69003-5fc2-4037-a479-93b440211c7
 ```
 
 ---
-links: [[609 SPA TOC - Lab|SPA MOC - Lab]] - [[themes/000 Index|Index]]
+links: [[609 SPA TOC - Lab|SPA TOC - Lab]] - [[themes/000 Index|Index]]

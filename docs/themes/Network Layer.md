@@ -2,7 +2,7 @@ tags: #osi
 
 # Network Layer
 
-links: [[604 SPA TOC - Layered Security]] - [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Index]]
+links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Index|Index]]
 
 ---
 
@@ -63,7 +63,6 @@ links: [[604 SPA TOC - Layered Security]] - [[600 SPA MOC|Security Protocols and
 - IPv6 fake router advertisements
 	- Similar to rogue DHCP server
 - Packet sniffing
-	- 
 
 ---
-links: [[600 SPA MOC|Security Protocols and Applications MOC]] - [[000 Index|Index]]
+links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Index|Index]]

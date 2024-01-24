@@ -67,7 +67,7 @@ arp reply 147.87.232.112 is-at 00:15:58:28:2a:bc
 IPv6 uses ICMPv6 based Neighbor Discovery Protocol (NDP) as a replacement for ARP. Unfortunately, The NDP has similar security problems:
 
 - Neighbor Discovery spoofing
-- Rougue IPv6 Router Advertisements
+- Rogue IPv6 Router Advertisements
 
 SEcure Neighbor Discovery (SEND) would fix this issue
 
@@ -130,7 +130,7 @@ There are many Network Monitoring, Host-Monitoring and Graphing Tools out there.
 
 ## Network Flow Capturing
 
-A network flow is a unidirectional sequence of packets sharing following attributes:
+A network flow is an unidirectional sequence of packets sharing following attributes:
 
 - Source and destination IP address
 - Source and destination port number

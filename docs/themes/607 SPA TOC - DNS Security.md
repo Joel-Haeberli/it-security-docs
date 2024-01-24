@@ -6,11 +6,10 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 
 ---
 
-ToDo I forgot DNS RPZ :(
-
 * [[DNS Recap]]
 - [[DNSSEC]]
 - [[DNS Privacy]]
+- [[DNS Response Policy Zones]]
 
 ---
 links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]

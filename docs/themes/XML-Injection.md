@@ -27,7 +27,7 @@ XML-Injection are caused by abusing metacharacters of XML. These include:
 
 With this we can perform various attacks:
 
-- [[505 WS TOC - XSS|XSS (Cross Site Scripting)]]
+- [[505 WS TOC - Cross Site Scripting (XSS)|XSS (Cross Site Scripting)]]
 - [XXE (External Entity)](https://portswigger.net/web-security/xxe): with this we are for example able to read data from files (also from outside the servers network)
 - Tag Injection
 ## Protect

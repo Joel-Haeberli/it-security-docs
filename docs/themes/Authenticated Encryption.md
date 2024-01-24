@@ -57,6 +57,7 @@ There is no reason to ever use a [[CCA-Security|CCA-secure]] scheme that is *not
 - follows the a*uthenticate-then-encrypt* approach with [[Block Cipher#Counter (CTR) mode|CTR mode]] as the underlying encryption scheme and [[MAC#CBC-MAC|CBC-MAC]] as the underlying message authentication code.
 - uses only one single key but is proven secure
 - **Drawback**: CCM is relatively slow and cannot be fully parallelized
+- *Used in [[WPA2]]*
 
 ### ChaCha20-Poly1305
 

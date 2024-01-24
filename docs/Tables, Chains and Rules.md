@@ -1,14 +1,15 @@
 tags: #linux #iptable #netfilter #linux-firewall
 
-# 606 SPA TOC - Linux Firewall
+# Tables, Chains and Rules
 
-links: [[606 SPA TOC - Linux Firewall]] - [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
+links: [[606 SPA TOC - Linux Firewall|SPA TOC - Linux Firewall]] - [[themes/000 Index|Index]]
 
 ---
 
 ## About
 
 To understand the linux firewall and [[netfilter]], [[iptables]], [[nftables]] or [[bpfilter]] it's a good idea to understand the basic building blocks of them. Therefore this page explains the terms `Tables`, `Chains` and `Rules` which shall help to understand how the linux firewall builds up on these constructs.
+
 ## Tables
 
 WHICH FUNCTIONALITY of the network stack is requested by in- or outgoing packet?
@@ -43,4 +44,4 @@ The rule describes, what is to be done with the packet. This can either result i
 For a deeper introduction to [[netfilter]] and [[iptables]], refer to the respective [[606 SPA TOC - Linux Firewall|Linux Firewall topic]].
 
 ---
-links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
+links: [[606 SPA TOC - Linux Firewall|SPA TOC - Linux Firewall]] - [[themes/000 Index|Index]]

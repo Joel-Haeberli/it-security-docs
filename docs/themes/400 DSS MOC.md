@@ -12,6 +12,7 @@ links: [[themes/000 Index|Index]]
 - **Topic 04**: [[themes/404 DSS TOC - Bitcoin|Bitcoin]]
 - **Topic 05**: [[themes/405 DSS TOC - Evolving the Protocol|Evolving the Protocol]]
 - **Topic 06**: [[themes/406 DSS TOC - Scaling|Scaling]]
+- **Topic 07**: [[themes/Exercises - Distributed Systems Security|Exercises]]
 
 ---
 links: [[themes/000 Index|Index]]

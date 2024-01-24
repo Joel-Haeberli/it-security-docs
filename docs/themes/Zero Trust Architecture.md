@@ -26,7 +26,7 @@ links: [[605 SPA TOC - Host & Network Security|SPA TOC - Host & Network Security
 
 ### Security Model
 
-- Zero trust security model assume:
+- Zero trust security model assumes:
 	- that **an attacker is present in the environment**
 	- that an enterprise-owned environment is no more trustworthy than any other public environment
 - an enterprise must:
@@ -58,7 +58,7 @@ A subject needs access to an enterprise resource:
 
 - All data sources and services are considered **resources**
 - All communication is secured (e.g. transport layer encryption)
-- Acccess to individual enterprise resources is granted on a per-session basis
+- Access to individual enterprise resources is granted on a per-session basis
 - Access to resources is determined by **dynamic policy**
 - The enterprise **monitors and measures** the integrity and security status of all assets
 - All resource **authentication and authorization are dynamic** and strictly enforced before access is allowed

@@ -42,8 +42,14 @@ links: [[605 SPA TOC - Host & Network Security|SPA TOC - Host & Network Security
 **Concepts**
 
 - **client verification**: before (pre-admission) or after (post-admission) granting access
+	- pre-admission: e.g. check for out-of-date antivirus signatures
+	- post-admission: continuous compliance checking after device is given access
 - **agent or argent less**: verification of the client with or without installed client
+	- agent-based: Clients need to have an agent installed to connect to the network, agent can verify security policies (antivirus signature, system updates, etc.)
+	- agent-less: No agent installed, not all security policies can be verified, relies on 802.1X to authenticate devices
 - **remediation**: using quarantine networks/vlans
+	- for devices that do not follow security policies
+	- allows the user to remediate the device (e.g. install updates, etc.)
 
 ---
 links: [[605 SPA TOC - Host & Network Security|SPA TOC - Host & Network Security]] - [[themes/000 Index|Index]]

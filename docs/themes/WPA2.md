@@ -55,7 +55,7 @@ links: [[617 SPA TOC - Wireless Security|SPA TOC - Wireless Security]] - [[theme
 
 ## WPA/WPA2-PSK Cracking
 
-- Available information from the handshake
+- Available information from the handshake:
 	- SSID
 	- ANonce and SNonce (transmitted in clear-text)
 	- MAC addresses (Client and AP)
@@ -68,6 +68,27 @@ links: [[617 SPA TOC - Wireless Security|SPA TOC - Wireless Security]] - [[theme
 	5. If computed MIC = MIC of the captured packet $\rightarrow$ passphrase found!
 	6. Otherwise, go back to step 1
 
+## Wi-Fi Attacks
+
+- **ARP Spoofing**: also known as ARP poisoning, can be used to perform MITM attacks
+- **Rouge DHCP**: allows attackers to set their device as the default router
+- **ICMP Redirects**: MITM attack, instruct the victim device to route all traffic through the attacker
+- **DNS Spoofing**: one of the easiest way to redirect victims to the system of their choice
+- **Fake Webauth**: most users are used seeing a webauth page when connecting to a Wi-Fi
+- **SSL MITM**: every SSL Reverse Proxy is actually an SSL MITM
+- **SSL Stripping**: instead of presenting a fake certificate, redirect to an HTTP page and rely on the user not noticing
+- **KARMA attack**: vulnerable client devices broadcast a "preferred network list" (PNL), which contains the SSIDs of APs to which they are willing to reconnect without user intervention. The KARMA attack consists of an access point receiving this list and then assigning itself an SSID from the PNL, thus becoming the evil twin of an AP already trusted by the client.
+
+## Securing Wireless Networks
+
+- **Network Segmentation**: Least privileges and segmentation through firewalls, routers, ...
+- **Encryption**: use WPA2 with CCMP, add additional layers such as IPsec, ...
+- **Authentication**: choose between Pre-Shared Key (PSK), Protected Extensible Authentication Protocol (PEAP) or the Extensible Authentication Protocol-TLS (EAP-TLS) with user certificates. The latter is considered the most secure variant.
+- **Faraday Cage**: limit physical propagation of signals
+- **MAC Filtering**: Questionable
+- **SSID Cloaking**: not broadcasting the SSID $\rightarrow$ SSID cloaking can obscure a network from the general public but is detectable by more sophisticated users and not more secure against attacks
+- **IDS or IPS**: see [[IDS & IPS]]
+- **Honeypot**: simulate a vulnerable target
 
 ---
 links: [[617 SPA TOC - Wireless Security|SPA TOC - Wireless Security]] - [[themes/000 Index|Index]]

@@ -2,16 +2,18 @@ tags: #web-security #injection
 
 # XML-Injection
 
-links: [[501 WS TOC - Injections]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[501 WS TOC - Injections|WS TOC - Injections]] - [[themes/000 Index|Index]]
 
 ---
 
 ## How it works
 
 The system somehow uses XML. This can be an XML database, an API accepting XML and so on. The idea of XML-Injection is to somehow poison such a communication by hijacking the XML document. Like this the system shall be forced to behave somehow different as expected.
+
 ## Risks
 
 The Risk of XML-Injection lies in API's not able to parse XML because they are not valid anymore.
+
 ## Technics to use vulnerabilities
 
 XML-Injection are caused by abusing metacharacters of XML. These include:
@@ -28,6 +30,7 @@ With this we can perform various attacks:
 - [[505 WS TOC - XSS|XSS (Cross Site Scripting)]]
 - [XXE (External Entity)](https://portswigger.net/web-security/xxe): with this we are for example able to read data from files (also from outside the servers network)
 - Tag Injection
+- 
 ## Protect
 
 Validate incoming XML. Deny XML documents containing unwanted or unknown content. Validate fields reading from the XML structure, escaping metacharacters. **Validate your inputs :)**
@@ -39,4 +42,4 @@ More on XML Security:
 - [XML Injection](https://www.synopsys.com/blogs/software-security/xml-external-entity-injection.html)
 
 ---
-links: [[501 WS TOC - Injections]] - [[500 WS MOC]] - [[themes/000 Index|Index]]
+links: [[501 WS TOC - Injections|WS TOC - Injections]] - [[themes/000 Index|Index]]

@@ -2,7 +2,7 @@ tags: #web-security #broken-access-control
 
 # Attacks on Broken Access Control
 
-links: [[502 WS TOC - Broken Access Control]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[502 WS TOC - Broken Access Control|WS TOC - Broken Access Control]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -39,4 +39,4 @@ If access control is broken on admin pages (e.g. only looked for active session 
 
 
 ---
-links: [[502 WS TOC - Broken Access Control]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[502 WS TOC - Broken Access Control|WS TOC - Broken Access Control]] - [[themes/000 Index|Index]]

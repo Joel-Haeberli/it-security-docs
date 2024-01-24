@@ -2,7 +2,7 @@ tags: #web-security #broken-access-control
 
 # Protection against Broken Access Control
 
-links: [[502 WS TOC - Broken Access Control]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[502 WS TOC - Broken Access Control|WS TOC - Broken Access Control]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -48,4 +48,4 @@ Additionally the application should not have firewall rules preventing outbound 
 	- Even harder in Client Side applications (JSON / AJAX).
 
 ---
-links: [[502 WS TOC - Broken Access Control]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[502 WS TOC - Broken Access Control|WS TOC - Broken Access Control]] - [[themes/000 Index|Index]]

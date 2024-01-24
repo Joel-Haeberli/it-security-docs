@@ -2,7 +2,7 @@ tags: #web-security #injection
 
 # Shell-Injection
 
-links: [[501 WS TOC - Injections]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[501 WS TOC - Injections|WS TOC - Injections]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -33,4 +33,4 @@ To protect from Shell-Injection try to not use any calls allowing to execute com
 **eval is evil**
 
 ---
-links: [[501 WS TOC - Injections]] - [[500 WS MOC]] - [[themes/000 Index|Index]]
+links: [[501 WS TOC - Injections|WS TOC - Injections]] - [[themes/000 Index|Index]]

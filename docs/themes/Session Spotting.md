@@ -2,7 +2,7 @@ tags: #web-security #broken-authentication
 
 # Session Spotting
 
-links: [[503 WS TOC - Broken Authentication]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[503 WS TOC - Broken Authentication|WS TOC - Broken Authentication]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -17,4 +17,4 @@ The attacker somehow manages to eavesdrop the traffic of the client to the serve
 To prevent the attack only secure cookies shall be used.
 
 ---
-links: [[503 WS TOC - Broken Authentication]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[503 WS TOC - Broken Authentication|WS TOC - Broken Authentication]] - [[themes/000 Index|Index]]

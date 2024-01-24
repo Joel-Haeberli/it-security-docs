@@ -49,7 +49,7 @@ A better **information system security** can be achieved with:
 - **limitations**
 	- cannot protect against **internal attackers**
 	- malware which came in through allowed applications
-	- secured or tunneling connections running through the firewall (IPSEC, SSH, TLS)
+	- secured or tunneling connections running through the firewall (IPsec, SSH, TLS)
 
 ## Network layer firewall
 
@@ -115,7 +115,7 @@ Definition in 2003 from *Gartner*
 - can apply **configuration modifications without interruptions**
 - has an **integrated intrusion preventions system (IPS)**
 - provide **application intelligence**: applications and protocols can be securely identified in addition to port based only rules
-- can **consider external sources in rules**: user information out of directory services or allow-/block-lists of IP addreses
+- can **consider external sources in rules**: user information out of directory services or allow-/block-lists of IP addresses
 - provide all features of traditional firewalls: packet filter, NAT, stateful inspection, VPN, ...
 - evolve into **Unified Threat Management (UTM)** firewalls
 
@@ -123,7 +123,7 @@ Definition in 2003 from *Gartner*
 
 Can perform multiple security functions within one single appliance:
 
-- network firewalling
+- network firewall
 - network intrusion prevention
 - gateway antivirus (AV)
 - gateway anti-spam

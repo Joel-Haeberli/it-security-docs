@@ -12,7 +12,6 @@ links: [[themes/000 Index|Index]]
 - **Topic 04**: [[themes/404 DSS TOC - Bitcoin|Bitcoin]]
 - **Topic 05**: [[themes/405 DSS TOC - Evolving the Protocol|Evolving the Protocol]]
 - **Topic 06**: [[themes/406 DSS TOC - Scaling|Scaling]]
-- ToDo: Exercises integrated into topics or own topic?
 
 ---
 links: [[themes/000 Index|Index]]

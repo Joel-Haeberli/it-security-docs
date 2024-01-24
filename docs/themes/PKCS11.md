@@ -27,13 +27,13 @@ Many applications support the standard:
 - Generally a driver is used for the low level communication (USB, NFC, Bluetooth, ...) to the token.
 - The token needs an app installed, that supports the commands of the PKCS#11 library. Normally app and PKCS#11 library is a matching pair.
 
-![[Pasted image 20240124112418.png]]
+![[pkcs11_stack.png]]
 
 ## APDU Commands
 
 APDU (Application Protocol Data Unit) commands are used in smart card technologies. They facilitate communication between a smart card and an external device, like a card reader. These commands are essential in applications such as EMV (Europay, MasterCard, and Visa) chip-based credit cards, SIM cards in mobile phones, identity verification systems, and secure access control.
 
-![[Pasted image 20240124124108.png]]
+![[apdu.png]]
 
 - **Yellow**: Header
 - **Green**: Body

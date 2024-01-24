@@ -31,6 +31,7 @@ links: [[617 SPA TOC - Wireless Security|SPA TOC - Wireless Security]] - [[theme
 - It allows an attacker to **recover the key in an RC4 encrypted stream from a large number of messages**.
 - basis lies in the **weak 24bit IVs** used with RC4
 - the number of required packet is about 400'000
+- See also [[WEP Insecurity]]
 
 ## PTW attack
 

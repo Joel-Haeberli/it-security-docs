@@ -6,18 +6,18 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 
 ---
 
-- [[Physical Layer|1 Physical Layer]]
-- [[Data Link Layer|2 Data Link Layer]]
-- [[Network Layer|3 Network Layer]]
-- [[Transport Layer|4 Transport Layer]]
-- [[Session Layer|5 Session Layer]]
-- [[Presentation Layer|6 Presentation Layer]]
-- [[Application Layer|7 Application Layer]]
-- [[Human Layer|8 Human Layer]]
+- 1. [[Physical Layer|Physical Layer]]
+- 2. [[Data Link Layer|Data Link Layer]]
+- 3. [[Network Layer|Network Layer]]
+- 4. [[Transport Layer|Transport Layer]]
+- 5. [[Session Layer|Session Layer]]
+- 6. [[Presentation Layer|Presentation Layer]]
+- 7. [[Application Layer|Application Layer]]
+- 8. [[Human Layer|Human Layer]]
 
 ## Overview ISO/OSI and TCP/IP 
  
-![[Pasted image 20240125155240.png]]
+![[OSI-TCP-IP.png]]
 
 ### How to remember
 

@@ -14,7 +14,7 @@ links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Ind
 ### Vulnerabilities
 
 - poor handling of unexpected input can lead to application crashes or surrender of control to execute arbitrary instructions
-	- Example: SQL injection
+	- Example: [[SQL-Injection]]
 - unintentional or ill-advised use of externally supplied input in control contexts may allow remote manipulation or information leakage
 	- Example: Attacker providing /etc/passwd in the URL
 - cryptographic flaws may be exploited to circumvent privacy protections
@@ -25,7 +25,7 @@ links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Ind
 - Unicode vulnerabilities
 	- Normally web servers only serve files from certain directories
 	- Older versions of IIS web server interpreted directory traversal sequences like "../" as illegal
-	- This rule didn't not trigger when the "/" was provided as unicode encoded version "%c0%af"
+	- This rule didn't not trigger when the "/" was provided as unicode encoded version `%c0%af`
 	- This allowed attackers to traverse directories
 	- [Apache UTF-8 directory traversal](https://www.cvedetails.com/cve-details.php?cve_id=CVE-2008-2938)
 	- [Windows Vista filename spoofing](https://heise.de/-178566)

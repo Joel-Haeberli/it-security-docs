@@ -29,22 +29,22 @@ links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Ind
 	- Example: Access to router based on IP address. Attacker can spoof IP address and get access to router
 - Misuse (spoofing/starvation/DoS) of automatic device configuration mechanisms (DHCPv4, [IPv6 SLAAC](https://datatracker.ietf.org/doc/html/rfc4862), DHCPv6)
 	- Attacker sets up rogue DHCP server to issue IP configuration
-		- Set attacker as router -> Man-in-the-middle attack
-		- Set wrong IP as router -> Network DoS
+		- Set attacker as router $\rightarrow$ Man-in-the-middle attack
+		- Set wrong IP as router $\rightarrow$ Network DoS
 	- Attacker creates virtual interfaces to generate large number of IPv6 address configuration requests
 		- Overload roxuter or DHCPv6 server capacity to track devices
-		- Legitimate devices can't obtain IP anymore -> starvation, DoS
+		- Legitimate devices can't obtain IP anymore $\rightarrow$ starvation, DoS
 
 ### Attacks
 
-- [[#Vulnerabilities|IP address spoofing]]
-- [[#Vulnerabilities|Routing attack]]
+- IP address spoofing
+- Routing attack
 - IPv6 neighbour discover attack / spoofing
 	- Similar to ARP-spoofing
 - ICMP Attack
 	- ICMP is used to send one-way informational messages to hosts (no authentication)
 	- Sending forged ICMP "Time exceeded" or "Destination unreachable" to a host
-		- Goal: Break communication between two hosts -> DoS
+		- Goal: Break communication between two hosts $\rightarrow$ DoS
 	- Sending ICMP "Redirect" 
 		- Goal: Attacked host sends certain packets through attackers host
 	- PING Flood (ICMP Flood)

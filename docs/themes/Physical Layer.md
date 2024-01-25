@@ -43,7 +43,7 @@ The physical layer sends and receives bits between adjacent stations on the link
 ### Controls
 
 - geographical separated datacenters and redundant connections
-- use of link and data storage cryptography -> TLS for transit, AES for data at rest
+- use of link and data storage cryptography $\rightarrow$ TLS for transit, AES for data at rest
 - uninterruptible power supplies (UPS) and emergency generators
 - monitored (thermal) environment, use of cooling systems
 - electromagnetic shielding

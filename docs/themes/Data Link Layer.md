@@ -16,7 +16,7 @@ links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Ind
 	- Error detection protocol: [Cyclic Redundancy Check (CRC)](https://en.wikipedia.org/wiki/Cyclic_redundancy_check)
 	- Flow control based on [IEEE 802.3x standard (pause frames)](https://en.wikipedia.org/wiki/Ethernet_flow_control)
 	- VLANs using Q-Tag in header
-	- Flow control is often delegated to higher layers -> TCP
+	- Flow control is often delegated to higher layers $\rightarrow$ TCP
 	- [Spanning Tree Protocol](https://en.wikipedia.org/wiki/Spanning_Tree_Protocol) to avoid loops
 - Mapping between network layer and data link layer
 	- [Address Resolution Protocol (ARP)](https://en.wikipedia.org/wiki/Address_Resolution_Protocol)
@@ -39,9 +39,9 @@ links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Ind
 ### Attacks
 
 - Content-Addressable Memory (CAM) table overflow
-	- CAM table contains MAC <-> Port Mapping and VLAN parameters
+	- CAM table contains MAC $\leftrightarrow$ Port Mapping and VLAN parameters
 	- Attacker floods the switch with invalid-source MAC addresses
-	- When the CAM table is full the switch starts behaving like a hub -> incoming packets are sent to all parts
+	- When the CAM table is full the switch starts behaving like a hub $\rightarrow$ incoming packets are sent to all parts
 - VLAN hopping
 	- Attacker in VLAN 1 sending packets to VLAN 2
 	- Tagging packets with different VLAN ID or behave like a switch and negotiate trunking
@@ -53,7 +53,7 @@ links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Ind
 	- Attacker will receive data destined for attacked host until the attacked host sends a packet to the switch to rewrite CAM table again
 - ARP attack
 	- Attacker sends unsolicited ARP reply packets to attacked device
-	- Attacked device updates ARP table which results in data being sent to the wrong device -> attacker
+	- Attacked device updates ARP table which results in data being sent to the wrong device $\rightarrow$ attacker
 - [Private VLAN](https://kb.netgear.com/de/21618/Was-sind-private-VLANs-und-wie-funktionieren-sie-mit-meinem-Managed-Switch?language=de)
 	- Promiscuous port: can communicate with all interfaces in VLAN
 	- Community port: can communicate with all interface in community VLAN

@@ -31,6 +31,7 @@ Get an overview [[X.509 CA Alternatives#DNSSEC|here]].
 ## Record types
 
 DNS record types
+
 - **RRSIG**: contains a cryptographic signature
 - **DNSKEY**: contains a public signing key
 - **DS**: contains the hash of a DNSKEY record

@@ -10,7 +10,9 @@ links: [[607 SPA TOC - DNS Security|SPA TOC - DNS Security]] - [[themes/000 Inde
 
 A Response Policy Zone (RPZ) is a DNS firewall feature that allows DNS server administrators to overlay custom information on top of the traditional DNS hierarchy, primarily to enforce security policies. By using RPZs, administrators can create rules that alter the responses provided by their DNS servers based on specific criteria.
 
-**How Does RPZ Work?** RPZ works by using specially crafted DNS zone files. These files contain policy rules that the DNS server checks against when resolving DNS queries. When a DNS request matches a rule in the RPZ, the DNS server can modify the response according to the policy defined. This modification can include blocking, redirecting, or altering the response in other ways.
+**How Does RPZ Work?**
+
+RPZ works by using specially crafted DNS zone files. These files contain policy rules that the DNS server checks against when resolving DNS queries. When a DNS request matches a rule in the RPZ, the DNS server can modify the response according to the policy defined. This modification can include blocking, redirecting, or altering the response in other ways.
 
 RPZs are primarily used for security and content filtering purposes. Common uses include:
 

@@ -54,7 +54,7 @@ iso.3.6.1.2.1.4.21.1.8.147.87.86.128 = INTEGER: 4
 iso.3.6.1.2.1.4.21.1.8.147.87.86.160 = INTEGER: 4
 iso.3.6.1.2.1.4.21.1.8.147.87.86.192 = INTEGER: 4
 iso.3.6.1.2.1.4.21.1.8.147.87.86.224 = INTEGER: 4
-....
+...
 ```
 
 In this case, the constant value 4 indicates that the routing protocol for these routes is likely "Indirect." The OID 1.3.6.1.2.1.4.21 corresponds to the ipRouteTable and 157.87.86.32 (etc.) is the destination address.
@@ -72,7 +72,7 @@ table: ``` snmpwalk -v2c -c public 147.87.80.252 1.3.6.1.2.1.4.22.1``` . The hex
 Example output:
 
 ```
-....
+...
 iso.3.6.1.2.1.4.22.1.2.9.147.87.80.2 = Hex-STRING: 00 50 56 BD 93 F0 
 iso.3.6.1.2.1.4.22.1.2.9.147.87.80.3 = Hex-STRING: C6 18 84 84 9E E2 
 iso.3.6.1.2.1.4.22.1.2.9.147.87.80.8 = Hex-STRING: 52 54 00 92 B3 F5 
@@ -121,7 +121,6 @@ following command:
 2024-01-20T17:31:16.941860+01:00 router arpwatch: ethernet mismatch 147.87.86.78 00:50:56:00:45:00 (00:50:56:00:45:01) ens224
 2024-01-20T17:31:18.989618+01:00 router arpwatch: ethernet mismatch 147.87.86.78 00:50:56:00:45:00 (00:50:56:00:45:01) ens224
 2024-01-20T17:31:21.037759+01:00 router arpwatch: ethernet mismatch 147.87.86.78 00:50:56:00:45:00 (00:50:56:00:45:01) ens224
-
 ```
 
 ## Exercise flow export using softflowd
@@ -132,7 +131,7 @@ following command:
 
 **You have to add a rule to accept flow data on `2055/udp` to `/etc/nftables.conf` an reload the ruleset.**
 
-#!/usr/sbin/nft -f
+`#!/usr/sbin/nft -f`
 
 ```sh
 table inet nslab {

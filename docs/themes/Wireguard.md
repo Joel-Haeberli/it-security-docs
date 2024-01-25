@@ -19,7 +19,7 @@ links: [[616 SPA TOC - VPN|SPA TOC - VPN]] - [[themes/000 Index|Index]]
 	- BLAKE2 for (keyed) hashing
 	- ECDH with Curve25519
 	- Key derivation with HKDF
-- Interoperable with lower level VPNs such as IPsec and PPTP
+- Interoperable with other VPNs such as IPsec and PPTP
 - Easy setup
 
 ## Configuration

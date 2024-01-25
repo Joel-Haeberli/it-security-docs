@@ -532,7 +532,7 @@ This command captures DNS traffic on port 53 while displaying minimal informatio
 	- Authenticated Encryption: TLS 1.3 mandates the use of AEAD ciphers for encrypting and authenticating all data, ensuring better security and efficiency.
 	- Authentication/Signature: TLS 1.3 improves the way certificates are authenticated and signed, requiring digital signatures even when a previous session is resumed. This enhances the overall security of the authentication process.
 
-###  ✅ Certificates and PKI
+### ✅ Certificates and PKI
 
 1. **What is defined in PKCS#1, PKCS#7, PKCS#10, PKCS#11, PKCS#12?**
    

@@ -45,6 +45,19 @@ links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Ind
 	- Sending a message to each port
 	- Evaluate responses to see what services are available
 
+### Protection against SYN flooding with SYN Cookies
+
+How It Works:
+
+- When a server receives a SYN packet, instead of allocating resources, it sends back a SYN-ACK packet with a specially crafted sequence number generated based on the client's IP, port number, and other elements.
+- The server doesn't save any information about the client at this stage.
+- If the client responds with the correct acknowledgment number (the crafted sequence number + 1), the server can recreate the initial state and establish the connection.
+
+Benefits:
+
+- Resource Efficient: It doesn't use a queue to store half-open connections, reducing the server’s memory usage.
+- Scalable: It can handle a large number of incoming SYN packets, making it effective during a SYN flood attack.
+
 ### Controls
 
 - Strict firewall rules limiting access to specific transmission protocols and subprotocol information such as TCP / UDP port number or ICMP type

@@ -32,6 +32,9 @@ Example: Partial files $\rightarrow$ A file is to big to be downloaded in one st
 
 A Hash Tree is the generalized concept of Hash Pointer and Hash List. Hash Trees have the property that each node holds the hash of the concatenation of its children. Only leafs are holding actual data.
 
+- Ordered: The order of children is defined and known (1, 2, 3)
+- Rooted: The root node is known
+
 ![Hash Pointer](hash_tree.png)
 
 ## Hash-Linked List

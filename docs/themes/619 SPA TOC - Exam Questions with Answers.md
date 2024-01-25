@@ -9,35 +9,35 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 
 ### ✅ Topic 1: Information Security
 
-1. What is meant with Information Security?
+1. **What is meant with Information Security?**
      -  Information Security refers to the protection of information and information systems from unauthorized access, use, disclosure, disruption, modification, or destruction, in order to ensure confidentiality, integrity, and availability.
    
-2. What are the goals of Information Security?
+2. **What are the goals of Information Security?**
      - Preservation of confidentiality, integrity, availability and in addition authenticity (non-repudiation), accountability and auditability
    
-3. What are older terms for Information Security?
+3. **What are older terms for Information Security?**
      - Computer security, data security and IT security
    
-4. Whats an information asset?
+4. **Whats an information asset?**
      - In a nutshell, an **information asset** is an atomic piece of information that has meaning/value to an organization or individual. Information assets have manageable and recognizable value, risk, content and life-cycles. Examples: Database with contacts of the organization, all financial records of a company
    
-5. Who is responsible to protect information assets?
+5. **Who is responsible to protect information assets?**
      - In many organizations one of these departments (depending on size): IT department, Information security department or Information risk management department.
      - Additionally in many bigger organizations the Chief Information Security Officer (CISO) is the main responsible.
    
-6. What is an ISMS?
+6. **What is an ISMS?**
     - The Information Security Management System (ISMS) is the basis for the development of the information security program. It involves the 4 Ps (People, Process, Products and technology, Partners and suppliers)
    
-7. Do you now Information Security Standards? Which?
+7. **Do you now Information Security Standards? Which?**
      - NIST 800 Series, ISO/IEC 27000 group of standards (ISO/IEC 27001 is the certification), BSI Grundschutz, CIS Controls
    
-8. What are Risks?
+8. **What are Risks?**
      - A risk is the potential for loss or damage when a threat exploits a vulnerability in information systems or processes, resulting in an impact on the confidentiality, integrity, or availability of Information and information systems. Risks can be calculated: risk = costs of potential damage * probability of this damage occurring
    
-9. What are Security Controls?
+9. **What are Security Controls?**
      - Security controls in information security are measures implemented to reduce risks to an organization's information assets. They encompass a mix of technical, administrative, and physical safeguards designed to protect against threats, prevent vulnerabilities, and ensure the confidentiality, integrity, and availability of data. These controls can be preventative, detective, or responsive in nature.
    
-10. Do you know some important Security Controls? Explain them.
+10. **Do you know some important Security Controls? Explain them.**
      - **Data Encryption**: Encrypting data at rest and in transit to protect its confidentiality and integrity. This prevents unauthorized access to sensitive information.
      - **Access Controls**: Implementing mechanisms like user authentication and authorization to restrict access to information based on user roles and privileges.
      - **Audit Logs**: Keeping detailed records of system activities, enabling the monitoring and analysis of security events and potential breaches.
@@ -49,19 +49,19 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 	 - **User Training and Awareness**: Educating employees about information security risks and best practices to foster a security-aware culture.
 	 - **Physical Security Measures**: Protecting physical access to information systems and data storage areas to prevent unauthorized access, damage, or theft.
 
-11. What's the job of a Security Professional?
+11. **What's the job of a Security Professional?**
 	 1. Understand the requirements of business (for information asset protection)
 	 2. Understand the risk for the particular information asset
 	 3. devise and understand the countermeasures for risks
 	 4. Protecting information assets by implementing security controls
 	   
-12. Which Security Controls should be implemented immediate if no other controls are in function (e.g., according to the NSA)? 
+12. **Which Security Controls should be implemented immediate if no other controls are in function (e.g., according to the NSA)?** 
      - Malware defenses, Data recovery capability, Security skills assessment and appropriate training to fill the gaps
     
-13. What do the acronyms CIA and AAA in connection with Information Security mean?
+13. **What do the acronyms CIA and AAA in connection with Information Security mean?**
      - **C**onfidentiality **I**ntegrity **A**vailability **A**uthenticity (non-repudiation) **A**ccountability **A**uditability
     
-14. Are you able to explain the meaning of the abbreviated words?
+14. **Are you able to explain the meaning of the abbreviated words?**
      - **Confidentiality** = Ensuring information is not disclosed to unauthorized individuals or systems.
      - **Integrity** = Maintaining and assuring the accuracy and completeness of data over its lifecycle.
      - **Availability** = Ensuring that information is accessible and usable upon demand by an authorized entity.
@@ -69,13 +69,13 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
      - **Accountability** = Holding individuals or systems responsible for their actions, typically enforced through traceable and auditable processes.
      - **Auditability** = The ability to track and document system activities and changes, crucial for detecting security violations or operational issues.
     
-15. What is an "information security incident"?
+15. **What is an "information security incident"?**
      - Is a information security event (breach of information security or failure of controls) that can harm an asset or compromise operations.
     
-16. What is the difference between an "information security event" and an "information security incident"?
+16. **What is the difference between an "information security event" and an "information security incident"?**
      - An information security event is a **possible** breach of information security or failure of controls. On the other hand an information security incident is an information security event that can harm an asset or compromise operations.
     
-17. What are the goals of "security incident management"?
+17. **What are the goals of "security incident management"?**
 	 1. Minimize damage of information security incidents
 	 2. Detection/dealing with information security vulnerabilities
 	 3. Detection/dealing with information security events
@@ -85,7 +85,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 
 ### ✅ Topic 2: Hacking Basics
 
-1. Recently, there were more and more cyber security attacks against critical infrastructures. What is a critical infrastructure? Provide some examples. What are the targets of such attacks?
+1. **Recently, there were more and more cyber security attacks against critical infrastructures. What is a critical infrastructure? Provide some examples. What are the targets of such attacks?**
      - Power grid
 	* Airport
 	* Harbour
@@ -95,34 +95,34 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 	* DNS root NS
 	* Cloud Provider
 	* Attacks against those often target industrial control systems (ICS) such as supervisory control and data acquisition (SCADA) systems.
-2. From where do external attackers (outside attackers, remote attackers) attack networks and computers?
+2. **From where do external attackers (outside attackers, remote attackers) attack networks and computers?**
      - Can attack from the internet, wireless network or via a physical break-in
-3. Do you know some intrusion techniques? Can you explain these techniques in detail?
+3. **Do you know some intrusion techniques? Can you explain these techniques in detail?**
      - Physical intrusion
      - Through Software bugs
      - Through configuration bugs
      - Through design flaws
      - Through weak passwords
-4. List known vulnerabilities of systems. Can you explain these vulnerabilities in more details.
+4. **List known vulnerabilities of systems. Can you explain these vulnerabilities in more details.**
      - Buffer Overflow
      - Unpatched Software
      - Insecure APIs
      - Misconfiguration
      - Weak Authentication
-5. What authentication methods do you know?
+5. **What authentication methods do you know?**
      - Password-based
      - Two-Factor
      - Biometric
      - Token-based
      - Certificate-based
      - Challenge and Response-based (FIDO)
-6. List and explain the five stages / phases of an intrusion into a system.
+6. **List and explain the five stages / phases of an intrusion into a system.**
 	1. **reconnaissance** (appearing as a normal user, hard to detect)
 	2. **scanning** (ICMP scan, Port scan, identify OS and software)
 	3. **running exploits** (exploit a vulnerability that was found, you cross the line here)
 	4. **establish a foothold** (hide evidence, rootkit installation, replace services, hack other systems from here)
 	5. **playing for profit**
-7. Do you know "shortcuts" to the five stages / phases of an intrusion?
+7. **Do you know "shortcuts" to the five stages / phases of an intrusion?**
      -  Use automated tools for scanning and break in
 	* Create fake websites to harvest credentials
 	* Infect vulnerable websites with malware
@@ -131,7 +131,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 
 ### ✅ Topic 3: Layered Security
 
-1. Do you know layer specific vulnerabilities (vulnerabilities, which occur on one of the seven layers of the ISO / OSI network reference model)?
+1. **Do you know layer specific vulnerabilities (vulnerabilities, which occur on one of the seven layers of the ISO / OSI network reference model)?**
      - Physical Layer: Power outages, theft of hardware and data, unauthorized physical data connection disruptions​​.
      - Data Link Layer: MAC address spoofing, VLAN circumvention, unauthorized network access due to weak authentication​​.
      - Network Layer: Route spoofing, denial of service, IP address spoofing​​.
@@ -139,7 +139,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
      - Session Layer: Weak authentication mechanisms, plaintext transmission of credentials, vulnerability to session hijacking​​.
      - Presentation Layer: Poor handling of unexpected input, cryptographic flaws​​.
      - Application Layer: Backdoors and design flaws bypassing security controls, inadequate or overly complex security mechanisms​​.
-2. Can you explain countermeasures?
+2. **Can you explain countermeasures?**
      - Physical Layer: Backup power systems, secure hardware storage, secure physical data connections.
      - Data Link Layer: MAC filtering, secure VLAN configurations, strong authentication for network access.
      - Network Layer: Anti-spoofing measures, secure routing protocols, IP address validation.
@@ -147,7 +147,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
      - Session Layer: Strong authentication, encrypted transmission of credentials, monitoring for unusual session activities.
      - Presentation Layer: Robust input validation, up-to-date cryptographic methods.
      - Application Layer: Secure software design, implementation of thorough security controls, regular checks for logic flaws.
-3. Which vulnerability is the most critical?
+3. **Which vulnerability is the most critical?**
      - The most critical vulnerability can depend on the specific context and environment. However, vulnerabilities in the Application Layer, such as backdoors and design flaws bypassing security controls or inadequate security mechanisms, can be particularly critical. They directly affect the software and services that users interact with and can lead to significant breaches of data and functionality. This layer is often the final defense and the point of interaction for end-users, making it security crucial​​.
 
 ### ✅ Topic 4: Host and Network Security
@@ -331,68 +331,68 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
      - An RRSet is a set of DNS records with the same name, class, and type. It's used in DNSSEC to group records for signing purposes.
 6. **What problem is caused by the NSEC RR? How can it be solved?**
      - NSEC records can inadvertently reveal all valid names in a zone, leading to zone walking, where an attacker discovers all subdomains. NSEC3 addresses this by hashing record names, obscuring them from attackers.
-7. What is the purpose of the Zone Signing Key ZSK?
+7. **What is the purpose of the Zone Signing Key ZSK?**
      - The ZSK is used to sign DNS record sets (RRSets) within a zone. It's a cryptographic key that generates a signature, which is verified against the DNSKEY record in the zone.
-8. What is the purpose of the Key Signing Key KSK?
+8. **What is the purpose of the Key Signing Key KSK?**
      - The KSK is used to sign the DNSKEY record itself, providing a layer of trust and security. It's generally used less frequently and is more heavily protected than the ZSK.
-9. How are DNS entries validated on a validating resolver?
+9. **How are DNS entries validated on a validating resolver?**
      - A validating resolver uses DNSSEC to validate DNS entries by checking the digital signature in the RRSIG record against the corresponding DNSKEY. If the signature is valid, the data is considered authentic.
-10. How does the Chain of Trust for DNSSEC work?
+10. **How does the Chain of Trust for DNSSEC work?**
       - The Chain of Trust starts from a trusted root (like the root DNS servers) and extends downwards. Each level of DNS hierarchy signs the keys of the level below it, creating a trust path from the root to the queried DNS record.
-11. What response does a client receive if the resolver used cannot validate a response?
+11. **What response does a client receive if the resolver used cannot validate a response?**
       - If a validating resolver cannot validate a DNS response, it generally returns a SERVFAIL error, indicating the validation failure.
-12. What is the purpose of the AD or the CD flag in the DNS protocol header?
+12. **What is the purpose of the AD or the CD flag in the DNS protocol header?**
       - An inquired name server can indicate the successful authentication of the DNS data using the AD-bit. The AD-bit is controlled by a name server.
       - The CD-bit is set in a query to indicate, that no DNS authentication should be made by the inquired name server i.e., the questioner is able, to do the authentication itself. The CD-bit is controlled by the resolver.
-13. Explain use cases for DNSSEC such as SSHFP or DANE?
+13. **Explain use cases for DNSSEC such as SSHFP or DANE?**
       - SSHFP: Securely publish SSH fingerprints in DNS, allowing clients to verify the identity of SSH servers.
       - DANE (DNS-Based Authentication of Named Entities): Uses DNSSEC to secure information about where to find secure services like TLS certificates.
-14. Do you know methods to improve the confidentiality and privacy of DNS communication?
+14. **Do you know methods to improve the confidentiality and privacy of DNS communication?**
       - DNS-over-HTTPS (DoH) and DNS-over-TLS (DoT) are methods to encrypt DNS queries, enhancing confidentiality and privacy.
-15. Explain mechanisms/protocols that ensure the confidentiality of DNS transactions.
+15. **Explain mechanisms/protocols that ensure the confidentiality of DNS transactions.**
       - TLS and HTTPS
-16. How can DoT be implemented on a DNS resolver (which does not support it natively)? 
+16. **How can DoT be implemented on a DNS resolver (which does not support it natively)?** 
       - For resolvers not natively supporting DoT, you can set up a proxy service that accepts DNS queries and forwards them over TLS to a DoT-supporting DNS server. This requires additional configuration and potentially third-party software.
 
 ### ✅ Topic 7: DNS RPZ
 
-1. What is a Response Policy Zone (RPZ) and how does it work?
+1. **What is a Response Policy Zone (RPZ) and how does it work?**
      - RPZ is a DNS feature that allows a DNS server to alter DNS responses based on policies. It functions by using specially crafted DNS zone files that define certain actions for given DNS queries. When the DNS resolver receives a query, it checks the RPZ: if there's a match, the response is modified according to the policy defined in the RPZ.
-2. What do you use RPZs for?
+2. **What do you use RPZs for?**
      - Blocking Malicious Sites, Content Filtering, Redirecting Traffic, Phishing Protection
-3. How do you get valuable RPZ information?
+3. **How do you get valuable RPZ information?**
      - Subscription Services, Community-Based lists or custom policies based on your own monitoring
-4. What responses can a resolving name server respond to a client out of a RPZ?
+4. **What responses can a resolving name server respond to a client out of a RPZ?**
      - **PASSTHRU:** Do nothing (allow-list).
      - **DROP:** No response (block-list).
      - **TCP-Only:** Please try again with TCP.
      - **NXDOMAIN:** Domain does not exist / block access.
      - **NODATA:** Empty response.
      - **Local Data:** An ordinary DNS record set that can be used to answer queries, often for redirections to a safer page or information site (walled garden).
-5. How can you block/redirect access to "badhost.baddom.com" using RPZ?
+5. **How can you block/redirect access to "badhost.baddom.com" using RPZ?**
      -  **Blocking:** Add a QNAME trigger in the RPZ zone file that specifies "badhost.baddom.com". Set the action to NXDOMAIN or DROP to block access.
      - **Redirecting:** Specify "badhost.baddom.com" in the RPZ zone file and associate it with the IP address of a safe server or a warning page. When a DNS query matches this rule, the DNS server will respond with the IP address of the redirect target instead of the actual IP address of "badhost.baddom.com".
 
 ### ✅ Topic 8: Tools
 
-1. Why is a centralized logging important? How can it be done?
+1. **Why is a centralized logging important? How can it be done?**
      - Centralized logging is important for consolidating log data from multiple systems into a single location, which simplifies management, analysis, and monitoring. This aids in detecting security incidents, troubleshooting issues, and ensuring compliance with various standards. Centralized logging can be achieved using protocols like syslog, which allow devices and servers to send their log files to a centralized log management system for aggregation and analysis.
    
-2. What is a syslog facility and a syslog severity?
+2. **What is a syslog facility and a syslog severity?**
      - **Facility**: Indicates the subsystem or application that generated the message (e.g., kernel, mail system).
      - **Severity**: Represents the priority level of the message, ranging from emergency (highest priority) to debug (lowest priority).
    
-3. Which tools can you use to capture traffic?
+3. **Which tools can you use to capture traffic?**
      - TCPDUMP, Wireshark (Tshark), WinPcap/Npcap, Microsoft Network Monitor, Azure Network Watcher
    
-4. How do vulnerability scanners work? Can they find every vulnerable system?
+4. **How do vulnerability scanners work? Can they find every vulnerable system?**
      - Vulnerability scanners are software tools that find security weaknesses in computer systems, networks, and applications. They work by scanning, probing, and checking for known vulnerabilities in target systems. However, they may not find every vulnerability and can sometimes produce false results. Scanners generate reports for analysis and prioritization, helping organizations address security issues.
    
-5. What is nmap for? What is a stealth scan?
+5. **What is nmap for? What is a stealth scan?**
      - Nmap is a versatile network scanning tool used for finding devices and assessing their security. It allows network-wide ping sweep, port, OS detection scans  
      - A "stealth scan" in Nmap is a method that attempts to scan a network discreetly to gather information without triggering security alarms or intrusion detection systems. It's useful for reconnaissance while avoiding detection.
    
-6. What is "netflow" or "IPFIX"? How does it work and why is it an important mean to rise host and network security?
+6. **What is "netflow" or "IPFIX"? How does it work and why is it an important mean to rise host and network security?**
      - "NetFlow" and "IPFIX" (IP Flow Information Export) are protocols used for monitoring and analyzing network traffic. They work by collecting metadata about the packets flowing through a network device like a router or a switch.
      - **How They Work:**
 	     - **NetFlow:** Developed by Cisco, it collects information about IP traffic entering and leaving network interfaces. Key elements include source/destination IP, source/destination ports, protocols, and class of service. NetFlow typically operates in three stages: flow data capture, flow data export, and data analysis.
@@ -404,19 +404,19 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 	     - **Forensic Analysis:** In the event of a security incident, historical NetFlow/IPFIX data can help in tracing the source and understanding the nature of the attack.
 	     - **Capacity Planning:** Helps in ensuring network resources are sufficient and not compromised by malicious activities.
   
-7. Explain an ARP MITM attack. What are countermeasures?
+7. **Explain an ARP MITM attack. What are countermeasures?**
      1. **Client E** sends to **Client A** "**Client B** can be found @ my MAC address"
      2. **Client E** sends to **Client B** "**Client A** can be found @ my MAC address"
      - All traffic between A and B are redirected to E. E is the MITM (man-in-the-middle)
      - Countermeasures: Static ARP entries, DHCP snooping and enforcement, passive sniffing/monitoring, reverse ARP (RARP)
     
-8. What is the purpose of "arpwatch"?
+8. **What is the purpose of "arpwatch"?**
      - Tracks ARP activity on a network. It helps detect and alert administrators about unexpected or potentially malicious changes in the mapping of IP addresses to MAC addresses, aiding in network security and troubleshooting.
    
-9. Why and when is SNMP dangerous?
+9. **Why and when is SNMP dangerous?**
      - Wrongly configured network devices can be queried and/or reconfigured using SNMP attacks. E.g snmpwalk can find out different attributes of the device. 
    
-10. How do you capture packets of a DNS request / response on Interface "eth0" using     "tcpdump"?
+10. **How do you capture packets of a DNS request / response on Interface "eth0" using     "tcpdump"?**
     
     Run this command:
 ```
@@ -534,7 +534,7 @@ This command captures DNS traffic on port 53 while displaying minimal informatio
 
 ###  ✅ Certificates and PKI
 
-1. What is defined in PKCS#1, PKCS#7, PKCS#10, PKCS#11, PKCS#12?
+1. **What is defined in PKCS#1, PKCS#7, PKCS#10, PKCS#11, PKCS#12?**
    
      - **PKCS#1: RSA Cryptography Specifications** Defines the mathematical properties and implementation for RSA public key cryptography. It includes specifications for encryption and signing, RSA keys, and other related cryptographic operations.
      - **PKCS#7: Cryptographic Message Syntax Standard** Specifies a general syntax for data encryption and digital signatures. It's widely used for digital certificates, in S/MIME for secure email, and in other applications requiring secure data exchange.
@@ -542,7 +542,7 @@ This command captures DNS traffic on port 53 while displaying minimal informatio
      - **PKCS#11: Cryptographic Token Interface Standard** Defines a platform-independent API, called Cryptoki, for cryptographic tokens like hardware security modules (HSMs) and smart cards. It allows for integration with various cryptographic hardware to perform operations like encryption and signing.
      - **PKCS#12: Personal Information Exchange Syntax Standard** Provides a format for storing and transporting a user's private keys, certificates, and miscellaneous secrets. It's commonly used for exporting and importing a user's digital identity across different systems.
      
-2. What is the life cycle of a X509 certificate?
+2. **What is the life cycle of a X509 certificate?**
    
      - **Creation and Request**
          - **Key Pair Generation:** The entity (person or organization) generates a public-private key pair.
@@ -561,7 +561,7 @@ This command captures DNS traffic on port 53 while displaying minimal informatio
      - **Renewal (if required)**
 	     - The entity must generate a new key pair and CSR, repeating the cycle if continued use is needed.
    
-3. What protocols do you know to check the status of a certificate (CRL-DP, OSCP)? Describe them.
+3. **What protocols do you know to check the status of a certificate (CRL-DP, OSCP)? Describe them.**
    
      - **CRL-DP (Certificate Revocation List Distribution Point):**
 	     - **Mechanism:** CRL-DP refers to the location (usually a URL) where a Certificate Revocation List (CRL) is published by the Certificate Authority (CA).
@@ -575,10 +575,10 @@ This command captures DNS traffic on port 53 while displaying minimal informatio
 	     - **Advantages:** OCSP is more efficient than CRLs, as it doesn't require downloading a complete list and is more up-to-date.
 	     - **Stapling:** To reduce OCSP lookup overhead and privacy concerns, a technique called OCSP stapling is used, where the server periodically queries the OCSP server and then "staples" the response to the TLS handshake.
 
-4. What is a Extended Validation SSL (EV SSL) certificate?
+4. **What is a Extended Validation SSL (EV SSL) certificate?**
      - An Extended Validation SSL (EV SSL) certificate is a type of SSL certificate offering the highest level of authentication. It involves a rigorous verification process where the issuing Certificate Authority checks the applicant's legal, operational, and physical existence. EV SSL certificates were known for providing distinct browser indicators (like a green address bar), but recent browser updates have minimized these visual distinctions. They are most suitable for entities handling sensitive transactions, offering enhanced trust and credibility.
    
-5. What problems are addressed with the «Certificate Transparency» (CT) standard?
+5. **What problems are addressed with the «Certificate Transparency» (CT) standard?**
    
      1. **Undetected Issuance of Fraudulent Certificates:** CT helps in detecting certificates that have been mistakenly or maliciously issued by a Certificate Authority (CA).
      2. **Lack of Public Oversight:** It enables public monitoring and auditing of certificates, increasing transparency in certificate issuance.
@@ -586,12 +586,12 @@ This command captures DNS traffic on port 53 while displaying minimal informatio
       
      - CT achieves this by requiring CAs to publicly log all issued certificates, allowing domain owners and the public to monitor and verify the certificates issued for their domains.
    
-6. How does CT works? Where is it implemented? Who is enforcing checks?
+6. **How does CT works? Where is it implemented? Who is enforcing checks?**
      -  Certificate Transparency (CT) works by requiring Certificate Authorities (CAs) to log every SSL/TLS certificate they issue in public, append-only logs. These logs can be independently monitored and audited.
      - **Implementation:** CT is implemented in web browsers and by CAs. Browsers like Google Chrome require CT compliance for new SSL/TLS certificates to be trusted.
      - **Enforcement:** The enforcement of CT checks is primarily done by web browsers. They validate if a new certificate is logged in CT logs and may distrust certificates that are not CT-compliant. Additionally, independent monitors and auditors play a role in ensuring log integrity and detecting anomalies.
    
-7. Which components and processes are required for a PKI?
+7. **Which components and processes are required for a PKI?**
    
 	 1. **Certificate Authority (CA):** Issues digital certificates to entities (individuals, organizations, devices).
 	 2. **Registration Authority (RA):** Validates the identity of entities before they receive a certificate from the CA.
@@ -601,7 +601,7 @@ This command captures DNS traffic on port 53 while displaying minimal informatio
 	 7. **Key Management:** Processes for generating, distributing, storing, and destroying cryptographic keys.
 	 8. **Certificate Lifecycle Management:** Processes for issuing, renewing, suspending, and revoking certificates.
    
-8. How to you generate a «Certificate Signing Request» (PKCS#10)? What attributes are checked by the RA?
+8. **How to you generate a «Certificate Signing Request» (PKCS#10)? What attributes are checked by the RA?**
    
      - To generate a Certificate Signing Request (CSR) as per PKCS#10:
 
@@ -616,7 +616,7 @@ This command captures DNS traffic on port 53 while displaying minimal informatio
          2. **Authorization:** Confirms that the entity requesting the certificate is authorized to use the domain or has the rights to the specified names.
          3. **Compliance with Policies:** Ensures that the CSR adheres to the policies of the CA, including key length, algorithm type, and usage.
    
-9. What are «Advanced Digital Signature» (AdES) and «Qualified Electronic Signatures» (QES). Who can issue such certificates in Switzerland?
+9. **What are «Advanced Digital Signature» (AdES) and «Qualified Electronic Signatures» (QES). Who can issue such certificates in Switzerland?**
      - **Advanced Digital Signatures** (AdES) are electronic signatures that offer higher security levels and are compliant with specific standards like PAdES, CAdES, and XAdES. They ensure the integrity and authenticity of the signed data.
      - **Qualified Electronic Signatures** (QES) are a subset of AdES. They are legally equivalent to handwritten signatures in many jurisdictions, including the EU. QES requires a secure signature creation device and a certificate from a Qualified Trust Service Provider (QTSP).
      - In Switzerland 4 entities can issue such certificates (Schweizerische Eidgenossenschaft, Digicert, Swisscom, SwissID)
@@ -880,7 +880,7 @@ This command captures DNS traffic on port 53 while displaying minimal informatio
 
 ### ✅ VPN
 
-1. At which OSI layer can VPN solutions be established? Provide examples.
+1. **At which OSI layer can VPN solutions be established? Provide examples.**
 
 | Layer | Example |
 | ---- | ---- |
@@ -890,7 +890,7 @@ This command captures DNS traffic on port 53 while displaying minimal informatio
 | Data Link Layer | PPTP, L2TP, IEEE 802.1(X, AE, i) |
 | Physical Layer | Quantom Cryptography |
 
-2. What advantages and disadvantages, or challenges, are associated with a low-level implementation?
+2. **What advantages and disadvantages, or challenges, are associated with a low-level implementation?**
    
      - **Advantages:**
 
@@ -903,7 +903,7 @@ This command captures DNS traffic on port 53 while displaying minimal informatio
          3. **Debugging Difficulty:** Debugging and maintenance can be more challenging due to the proximity to hardware and lack of abstraction.
          4. **Security Risks:** Lower-level code might be more prone to critical security vulnerabilities like buffer overflows.
    
-3. Explain the authentication process involved in IKEv2 (Internet Key Exchange Protocol Version 2).
+3. **Explain the authentication process involved in IKEv2 (Internet Key Exchange Protocol Version 2).**
    
      - **Key Generation**:
 	     - A master secret ($SK_d$) is generated along with several other keys ($SK_{ai}, SK_{ei}, SK_{ar}, SK_{er}, SK_{pi}, SK_{pr}$) using a pseudo-random function (prf).
@@ -917,22 +917,22 @@ This command captures DNS traffic on port 53 while displaying minimal informatio
          - HMAC (Hash-based Message Authentication Code) using a negotiated pseudo-random function.
          - The authentication (AUTH) is calculated as `prf(prf(Shared Secret «Key Pad for IKEv2») <InitiatorSignedOctets>).`
 
-4. What is the purpose of the Authentication Header (AH) and the Encapsulating Security Payload (ESP)? Elucidate the distinctions between these two components.
+4. **What is the purpose of the Authentication Header (AH) and the Encapsulating Security Payload (ESP)? Elucidate the distinctions between these two components.**
    
      - The Authentication Header (AH) and Encapsulating Security Payload (ESP) are two components of IPsec used for securing internet protocol communications.
 	 - **Authentication Header (AH)**: The primary purpose of AH is to provide integrity and authentication of the data. It ensures that the data has not been tampered with during transit and verifies the identity of the sender. However, AH does not provide encryption, so the data remains readable to anyone who intercepts it.
 	 - **Encapsulating Security Payload (ESP)**: ESP, on the other hand, provides confidentiality in addition to integrity and authentication. It encrypts the payload data, which means that the content is hidden from unauthorized viewers. ESP can also optionally provide authentication and integrity similar to AH.
 	 - **AH-ESP Combination**: When used together, AH provides authentication and integrity checking, while ESP adds encryption for data confidentiality. This combination ensures that the data is not only encrypted but also comes with strong integrity and authentication measures. It offers a higher level of security by combining the strengths of both AH and ESP.
    
-5. Explain the two IPsec modes: «tunnel mode» and «transport mode».
+5. **Explain the two IPsec modes: «tunnel mode» and «transport mode».**
      - **Tunnel Mode**: Encrypts both the payload and the header of the original IP packet. It's typically used in network-to-network communications, where the entire original IP packet is encapsulated and a new IP header is added. This mode is suitable for VPNs and gateway-to-gateway communications.
      - **Transport Mode**: Only encrypts the payload of the IP packet, not the header. It's mainly used for end-to-end communications between two devices, where the original IP packet header remains intact. This mode is suitable for direct communication between two hosts.
    
-6. What MTU (Maximum Transmission Unit) considerations should be taken into account when implementing IPsec?
+6. **What MTU (Maximum Transmission Unit) considerations should be taken into account when implementing IPsec?**
      - MTU is usually 1500 bytes IP header and TCP header are usually 20 bytes long so the payload can contain 1460 bytes.
 	 - But IPsec adds an Authentication and ESP header (around 50-60 bytes). So the tunneling Interface might be set to 1400 bytes
    
-7. Which credentials are required to initiate a WireGuard VPN connection?
+7. **Which credentials are required to initiate a WireGuard VPN connection?**
 	 1. Your Private Key
 	 2. Peer's Public Key
 	 3. Peer's Endpoint (IP address and port)
@@ -940,7 +940,7 @@ This command captures DNS traffic on port 53 while displaying minimal informatio
 	 5. Pre-Shared Key (optional)
 	 6. Configuration File (optional, but helpful)
    
-8. What is the fundamental concept behind the key exchange in «Noise Protocol Framework»? What is the RTT of the handshake?
+8. **What is the fundamental concept behind the key exchange in «Noise Protocol Framework»? What is the RTT of the handshake?**
    
      - **Handshake Mechanism**: Each session begins with a handshake that only takes 1 round-trip time (1-RTT)​
      - **Basic Concept**: The key exchange employs a triple Diffie-Hellman (DH) mechanism similar to the one used in Signal, with an additional step to enable the 1-RTT handshake​
@@ -956,22 +956,22 @@ This command captures DNS traffic on port 53 while displaying minimal informatio
          - **Distinct Keys for Each Direction**: $tk_i$ is derived for one direction, and $tk_r$ for the opposite direction.
          - **Encryption Method**: The transport encryption of network packets uses symmetric ChaCha20 encryption authenticated with Poly1305​
    
-9. Describe VPN network topologies.
+9. **Describe VPN network topologies.**
    
      - **Point-to-Point**:
          - This is the simplest form of VPN topology.
          - It involves a direct connection between two points (or nodes), typically a client and a server.
          - It's often used for individual remote access to a centralized network.
-2. **Site-to-Site**:
-     - Connects entire networks to each other.
-     - Commonly used to connect branch offices to a central corporate network.
-     - Each site has a VPN gateway, and traffic is routed between these gateways over the VPN.
-3. **Hub-and-Spoke** (Star): 
-     - Involves a central 'hub' (usually a main office or data center) and multiple 'spokes' (remote locations or branch offices).
-     - All traffic between the spokes usually goes through the hub.
-     - Efficient for networks where most communication occurs between the hub and the individual spokes, rather than directly between spokes.
+	 - **Site-to-Site**:
+	     - Connects entire networks to each other.
+	     - Commonly used to connect branch offices to a central corporate network.
+	     - Each site has a VPN gateway, and traffic is routed between these gateways over the VPN.
+	 - **Hub-and-Spoke** (Star): 
+	     - Involves a central 'hub' (usually a main office or data center) and multiple 'spokes' (remote locations or branch offices).
+	     - All traffic between the spokes usually goes through the hub.
+	     - Efficient for networks where most communication occurs between the hub and the individual spokes, rather than directly between spokes.
    
-10. What minimum configurations are needed to set up a point-to-point VPN with WireGuard.
+10. **What minimum configurations are needed to set up a point-to-point VPN with WireGuard.**
      -  **Network Interface Configuration**:
 	     - On the server, you will create a WireGuard interface, typically named `wg0`. This includes:
              - Private and public keys (generated using `wg genkey | tee privatekey | wg pubkey > publickey`).

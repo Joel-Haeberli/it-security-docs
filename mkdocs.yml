@@ -66,7 +66,7 @@ nav:
     - 'Broken Access Control': 'themes/502 WS TOC - Broken Access Control.md'
     - 'Broken Authentication': 'themes/503 WS TOC - Broken Authentication.md'
     - 'Crypto Failures': 'themes/504 WS TOC - Crypto Failures.md'
-    - 'Cross-Site Scripting (XSS)': 'themes/505 WS TOC - XSS.md'
+    - 'Cross-Site Scripting (XSS)': 'themes/505 WS TOC - Cross Site Scripting (XSS).md'
     - 'OWASP and CSRF': 'themes/506 WS TOC - OWASP & CSRF.md'
     - 'Testing': 'themes/507 WS TOC - Testing.md'
     - 'Exercises': 'themes/508 WS TOC - Exercises.md'
@@ -92,7 +92,7 @@ nav:
       - 'YubiKey': 'themes/615 SPA TOC - YubiKey.md'
       - 'VPN': 'themes/616 SPA TOC - VPN.md'
       - 'Wireless Security': 'themes/617 SPA TOC - Wireless Security.md'
-    - 'Exam Questions with Answers': 'themes/619 SPA TOC - Exam Questions with Answers'
+    - 'Exam Questions with Answers': 'themes/619 SPA TOC - Exam Questions with Answers.md'
 
 theme:
   name: 'material'

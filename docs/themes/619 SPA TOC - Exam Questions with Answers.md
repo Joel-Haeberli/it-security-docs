@@ -507,26 +507,34 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 2. **Explain the difference between a network card in «promiscuous mode» and «monitor mode».**
 	- *Promiscuous Mode*: captures all packets on a connected network, regardless of the intended destination MAC address. You will see only packet if you are connected to a station and only packets inside the same network.
 	- *Monitor Mode*: captures all wireless traffic within its range, including packets not addressed to it, allowing analysis of all Wi-Fi communications in the vicinity (including beacons and data form any wireless networks in the area).
-1. **Describe the WEP (Wired Equivalent Privacy) encryption. What are the weak points?**
+3. **Describe the WEP (Wired Equivalent Privacy) encryption. What are the weak points?**
 	- WEP uses the RC4 stream cipher for encryption with 64-bit and 128-bit encryption keys (which include a 24-bit IV)
 	- Weak Points:
 		- *Weak IVs*: only 24-bit
 		- *Flawed Integrity*: CRC-32 for checksum for data integrity, which is not cryptographically secure
-1. **What kind of authentication does WEP support (Shared Key Authentication, Open System Authentication)?**
+4. **What kind of authentication does WEP support (Shared Key Authentication, Open System Authentication)?**
 	- *Shared Key Authentication*: Pre-shared WEP key, During the authentication process, the access point sends a challenge text to the client, which encrypts it using the WEP key and sends it back. The access point decrypts it to verify if the client has the correct key $\rightarrow$ this method exposes part of the encryption mechanism, this is not secure!
 	- *Open System Authentication*: no credentials, any device can request authentication and will be granted access (but with encrypted traffic)
-2. **What is needed to crack a WEP key?**
+5. **What is needed to crack a WEP key?**
 	- sniffing of packets (FMS attack: about 400'000 packets, PTW: 60'000 - 100'000)
-3. **Describe a WPA2 authentication with PSK (pre-shared key)?**
-	- x
-4. **What is the purpose of PBKDF2 (Password-Based Key Derivation Function 2)?**
-	- x
-5. **Assume you want to analyze an WPA2 communication with Wireshark. What is needed to decrypt the packets of the CAP file (packet capture file)?**
-	- x
-6. **What Wi-Fi attacks do you know? Describe how they work.**
-	- x
-7. **What is «SSID Cloaking»? Does it protect a Wi-Fi access point?**
-	- x
+6. **Describe a WPA2 authentication with PSK (pre-shared key)?**
+	- 4-Way Handshake:
+		1. The AP sending a random number (ANonce) to the client
+		2. The client responding with its random number (SNonce)
+		3. The AP calculating the PTK (Pairwise Transient Key) from these numbers and sending an encrypted message to the client
+		4. The client decrypting this message with the PTK, confirming successful authentication
+7. **What is the purpose of PBKDF2 (Password-Based Key Derivation Function 2)?**
+	- In the context of WPA2, PBKDF2 takes the PSK (a passphrase) and generates a 256-bit key. It incorporates the SSID and the number of iterations (4096 in WPA2) to make brute-force and dictionary attacks more difficult.
+8. **Assume you want to analyze an WPA2 communication with Wireshark. What is needed to decrypt the packets of the CAP file (packet capture file)?**
+	- To decrypt WPA2 packets in a packet capture file (CAP file) using Wireshark, you need the network's PSK and the SSID.
+	- Additionally, capturing the four-way handshake process is essential, as it contains the nonce values used to derive the session keys for encryption.
+9. **What Wi-Fi attacks do you know? Describe how they work.**
+	- *WPA2-PSK Cracking*: dictionary attack against PSK with SSID and captured handshake (test a password and check until MIC matches)
+	- *Rouge DHCP*: allows attackers to set their device as the default router
+	- *Fake Webauth*: most users are used seeing a webauth page when connecting to a Wi-Fi
+10. **What is «SSID Cloaking»? Does it protect a Wi-Fi access point?**
+	- SSID cloaking involves hiding the network name (SSID) from broadcasting in beacon frames, making it less visible to casual scanning.
+	- While it can deter casual users, it does not provide significant protection as the SSID can still be discovered by determined attackers using packet sniffers or during the connection process. It is more of an obscurity measure than a robust security feature.
 
 ### VPN
 

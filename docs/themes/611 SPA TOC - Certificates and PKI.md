@@ -7,7 +7,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 ---
 
 - [[Intro Certificates]]
-- [[AC2 Trustmodel]]
+- [[Trustmodel]]
 - [[X.509v3]]
 - [[PKI]]
 - [[ZertES]]

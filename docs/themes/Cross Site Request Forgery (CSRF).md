@@ -12,7 +12,7 @@ links: [[506 WS TOC - OWASP & CSRF|WS TOC - OWASP & CSRF]] - [[themes/000 Index|
 
 ### How CSRF Works
 
-- The attack exploits the automatic inclusion of user credentials (like session cookies) in requests made by browsers. The success of CSRF depends on the victim being logged into the attacked system. Attackers typically use means like [[505 WS TOC - XSS|XSS]] to modify content on a page the victim visits, triggering unauthorised requests.
+- The attack exploits the automatic inclusion of user credentials (like session cookies) in requests made by browsers. The success of CSRF depends on the victim being logged into the attacked system. Attackers typically use means like [[505 WS TOC - Cross Site Scripting (XSS)|XSS]] to modify content on a page the victim visits, triggering unauthorised requests.
 
 ### Example of CSRF Attack
 

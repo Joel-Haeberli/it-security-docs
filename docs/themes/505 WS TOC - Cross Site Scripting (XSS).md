@@ -1,6 +1,6 @@
 tags: #web-security
 
-# 505 WS TOC - Cross Site Scripting (XSS)
+# WS TOC - Cross Site Scripting (XSS)
 
 links: [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
 

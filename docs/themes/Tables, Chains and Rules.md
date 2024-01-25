@@ -16,7 +16,7 @@ WHICH FUNCTIONALITY of the network stack is requested by in- or outgoing packet?
 
 A Table contains a list of Chains which concern one specific functionality of the networking stack. This means that if you process a package in favor of an application you want to enforce all Rules of all Chains of the Filter Table. But if you do NAT, you want to call the NAT Table which contains Chains containing Rules important to enforce during NAT.
 
-Following default Tables exist:
+Following default Tables exist (only in [[iptables]]):
 
 - Filter: Table used for packets being forwarded on the system
 - NAT: Table used during NAT

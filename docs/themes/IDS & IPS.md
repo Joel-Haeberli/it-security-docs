@@ -38,5 +38,4 @@ links: [[605 SPA TOC - Host & Network Security|SPA TOC - Host & Network Security
 	- **network based sensors**
 
 ---
-
 links: [[605 SPA TOC - Host & Network Security|SPA TOC - Host & Network Security]] - [[themes/000 Index|Index]]

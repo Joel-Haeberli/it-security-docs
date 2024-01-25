@@ -17,5 +17,4 @@ links: [[605 SPA TOC - Host & Network Security|SPA TOC - Host & Network Security
 - can be extended to do **behavioural analysis** on larger networks
 
 ---
-
 links: [[605 SPA TOC - Host & Network Security|SPA TOC - Host & Network Security]] - [[themes/000 Index|Index]]

@@ -73,5 +73,4 @@ A subject needs access to an enterprise resource:
 - **Policy enforcement point (PEP)**: enabling, monitoring and eventually terminating connections between a subject and an enterprise resource
 
 ---
-
 links: [[605 SPA TOC - Host & Network Security|SPA TOC - Host & Network Security]] - [[themes/000 Index|Index]]

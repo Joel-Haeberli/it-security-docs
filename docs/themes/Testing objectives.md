@@ -28,7 +28,7 @@ This topic is about testing a website for attack points and potential vulnerabil
 	- Can the application be manipulated?
 	- Spoofing(???)
 - Systematically check input validation / output encoding
-	- -> [[505 WS TOC - Cross Site Scripting (XSS)]]
+	- $\rightarrow$ [[505 WS TOC - Cross Site Scripting (XSS)|Cross Site Scripting (XSS)]]
 - Attack authentication / authorization mechanism
 - Test business logic
 

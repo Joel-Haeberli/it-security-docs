@@ -1,6 +1,7 @@
 tags: #web-security
 
 # Preparing for testing
+
 links: [[507 WS TOC - Testing|WS TOC - Testing]] - [[themes/000 Index|Index]]
 
 ---
@@ -27,14 +28,14 @@ links: [[507 WS TOC - Testing|WS TOC - Testing]] - [[themes/000 Index|Index]]
 	- Goal: change config so that an attacker can't easily find information about the server / configuration
 - Application discovery
 	- An attacker would look for over applications on the domain using standard names like webmail.domain.com or domain.com/admin to find other applications
-	- -> Change default paths
+	- $\rightarrow$ Change default paths
 - Analysis of error codes
-	- Error codes can indicate what OS, web server, db is used -> fingerprinting
+	- Error codes can indicate what OS, web server, db is used $\rightarrow$ fingerprinting
 - View the source
 	- Attacker can check the website source and figure out what CSS and javascript libs are used
 	- Comments can help understand the structure
 - Draw a site map
-	- Web spider can be used to map out the sites structure -> wget, OWASP ZAP
+	- Web spider can be used to map out the sites structure $\rightarrow$ wget, OWASP ZAP
 	- Or surf by yourself
 - List entry points
 	- URL, parameters, GET parameters, POST form paramters, Cookies

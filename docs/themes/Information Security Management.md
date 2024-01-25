@@ -9,15 +9,16 @@ links: [[601 SPA TOC - Information Security|SPA TOC - Information Security]] - [
 **Typical approach** to manage information security:
 
 - Analyze risks against information assets
-- **Mitigate these risks** by countermeasures (i.e security controls)
+- **Mitigate these risks** by countermeasures (i.e. security controls)
 - Reactive plans to minimize damage if a risks turns into a problem
 
 **Goals of the Information security management (ISM)**:
 
 - Align information security with business security
-- Ensure that information security is effectively managed (In all service (management) activities)
+- Ensure that information security is effectively managed $\rightarrow$ In all service (management) activities
 
 **Security Framework**
+
 A ISM process/framework generally consists of:
 
 - Information Security Policy
@@ -41,6 +42,7 @@ A simple approach can be the "traffic light" matrix:
 Each risk can be categorized using this matrix. Measures must be taken to at least mitigate the red risks.
 
 **Handling Risks**
+
 There exist four options to manage risks:
 
 - Risk avoidance
@@ -122,7 +124,8 @@ Example Access Control Family (AC):
 
 ![[NIST-Access-Control-Controls.png]]
 
-NSA recommendations:
+**NSA recommendations:**
+
 3 controls have a special value for immediate implementation for organizations that have not yet implemented complete defenses:
 
 - Malware Defenses
@@ -152,11 +155,10 @@ CIS Controls:
 
 ![[CIS-Controls.png]]
 
-
-
 ## Security Incident Management
 
 ### Terms and definitions (ISO/IEC)
+
 - Incident response team (IRT)
 	- Team that handles incidents
 - Information security event

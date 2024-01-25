@@ -41,6 +41,7 @@ Throughout history, there have been other terms that describe today's definition
 Today also the term **Cyber Security** is often used as marketing term for Information Security. But there is a distinct difference between these terms.
 
 **Information Security**: As written before, it protects information assets and therefore is not only about information stored on electronic devices, but all information within an organization (e.g., information in employees' heads, information on paper).
+
 **Cyber security**: Is a part of Information Security, describes the security of everything related to "Cyberspace". electronically processed information.
 
 ## Information Asset
@@ -59,7 +60,8 @@ Organizations should know, manage and also secure (in regard to its value) their
 
 All information assets should have an owner. 
 
-### Responsibility 
+### Responsibility
+
 The Responsibility of protecting information assets lays in many organization by one of these departments (depending on their size):
 
 - IT department

@@ -92,7 +92,9 @@ nav:
       - 'YubiKey': 'themes/615 SPA TOC - YubiKey.md'
       - 'VPN': 'themes/616 SPA TOC - VPN.md'
       - 'Wireless Security': 'themes/617 SPA TOC - Wireless Security.md'
-    - 'Exam Questions with Answers': 'themes/619 SPA TOC - Exam Questions with Answers.md'
+    - 'Exam Questions':
+      - 'Empty': 'themes/618 SPA TOC - Exam Questions.md'
+      - 'With Answers': 'themes/619 SPA TOC - Exam Questions with Answers.md'
 
 theme:
   name: 'material'

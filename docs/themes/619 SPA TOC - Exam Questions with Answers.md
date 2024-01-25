@@ -756,28 +756,67 @@ This command captures DNS traffic on port 53 while displaying minimal informatio
 25. **What are the options if the DMARC verification fails?**
 	- None (monitor), Quarantine (move mails in quarantine or spam folders), Reject (reject email)
 
-### Kerberos
+### ✅ Kerberos
 
-1. How does Kerberos works? Why does Kerberos need shared secrets? What are these shared secrets?
-2. The Key Distribution Center (KDC) is composed of the Authentication Server (AS) and the Ticket Granting Server (TGT). What is the function of AS and TGT?
-3. What is a Server Principal Name (SPN)? How is the name composed / structured?
-4. Explain the content and the function of Kerberos Tickets? What is a Ticket Granting Ticket (TGT) and what is a service ticket (ST)? Explain the differences.
-5. Explain the differences between «secret keys» and «session keys».
-6. How does the Kerberos Pre-authentication works?
-7. What is needed to decrypt all messages / tickets in Wireshark?
-8. What type of attacks are referred as «Golden Ticket» «Silver Ticket» attack? What can you do with a «Golden Ticket» or «Silver Ticket»?
-9. What has to be done if an attacker gained a «Golden Ticket»? 
-10. Describe Kerberos delegation. What does it mean. Where is it used?
-11. What is the difference between «unconstrained», «constrained» and «resource-based constrained» Delegation.
-12. Can the user prevent delegation?  
-13. Can you restrict delegation. Where does it makes sense to restrict delegation?  
-14. What are the security risks? Describe how «unconstrained» delegation could be misused.  
-15. How can you trick users to connect to your service configured for delegation? 
-16. How could a printer on a DC could be attacked?  
-17. What mitigation measurements do you know to secure Kerberos? 
-18. How does an attack against «constrained» delegation looks like?  
-19. What is meant with «protocol transition»? How does it work?  
-20. What can you do with the permission «Trusted to Auth for Delegation» S4U2Self & S4U2Proxy?
+1. **How does Kerberos works? Why does Kerberos need shared secrets? What are these shared secrets?**
+     - Kerberos is a network authentication protocol that works on the basis of tickets to allow nodes to prove their identity securely over a non-secure network. Kerberos needs shared secrets for secure communication between the client and the server. These are typically passwords or keys known both to the user's client and the Kerberos server.
+2. **The Key Distribution Center (KDC) is composed of the Authentication Server (AS) and the Ticket Granting Server (TGT). What is the function of AS and TGT?**
+     - - **Authentication Server (AS)**: Issues an initial ticket (TGT) after authenticating the user.
+     - **Ticket Granting Server (TGT)**: Uses the TGT to grant service tickets, which allow access to other network services.
+3. **What is a Server Principal Name (SPN)? How is the name composed / structured?**
+     - A unique identifier for a service instance on the network. Usually structured as `service/hostname:port`, indicating the service and the host providing it.
+4. **Explain the content and the function of Kerberos Tickets? What is a Ticket Granting Ticket (TGT) and what is a service ticket (ST)? Explain the differences.**
+     - **Ticket Granting Ticket (TGT)**: Issued by the AS, used to obtain service tickets from the TGT without re-authenticating.
+     - **Service Ticket (ST)**: Allows access to a specific service; issued by the TGT.
+     - **Differences**: TGT is for obtaining STs, while STs are for accessing specific services.
+5. **Explain the differences between «secret keys» and «session keys».**
+     - **Secret Keys**: Long-term keys derived from a user's password, used for initial authentication.
+     - **Session Keys**: Temporary, used for the duration of a session to encrypt communication between client and server.
+6. **How does the Kerberos Pre-authentication works?**
+     - Involves proving the user's identity before a TGT is issued, typically by encrypting a timestamp using the user's secret key (hash of the password).
+7. **What is needed to decrypt all messages / tickets in Wireshark?**
+     - Secret key and session key
+8. **What type of attacks are referred as «Golden Ticket» «Silver Ticket» attack? What can you do with a «Golden Ticket» or «Silver Ticket»?**
+      - Golden Ticket Attack: Involves creating a TGT with administrative rights. With this, an attacker can access any service on the network.
+      - Silver Ticket Attack: Involves creating a service ticket for specific services. It's more limited than a Golden Ticket but harder to detect.
+9. **What has to be done if an attacker gained a «Golden Ticket»?** 
+     - Resetting the krbtgt account's password twice (to invalidate old tickets) and resetting passwords for all accounts, as well as investigating the breach, are critical steps to mitigate a Golden Ticket attack.
+10. **Describe Kerberos delegation. What does it mean. Where is it used?**
+      -  Kerberos delegation allows a service to use the client's credentials to access other services on the client's behalf.
+      - Common in scenarios where a middle-tier service needs to access resources on behalf of a user, like a web application accessing a database.
+11. **What is the difference between «unconstrained», «constrained» and «resource-based constrained» Delegation.**
+      - Unconstrained Delegation: A service can request access to any other service on behalf of the user using the user's TGT.
+      - Constrained Delegation: Specific services are pre-defined for delegation. A service can request access only to these specified services on behalf of the user.
+      - Resource-Based Constrained Delegation: Services to which delegation is allowed are defined on the target service side, not on the user or delegating service's account.
+12. **Can the user prevent delegation?**  
+      - Users themselves typically cannot prevent delegation in Kerberos. It's controlled by domain administrators through service configurations and account properties.
+13. **Can you restrict delegation. Where does it makes sense to restrict delegation?**
+      - Delegation can be restricted at the domain level by configuring service accounts. It makes sense to restrict delegation in high-security environments or for services that handle sensitive data to limit the potential for privilege escalation or lateral movement.
+14. **What are the security risks? Describe how «unconstrained» delegation could be misused.**  
+      - Unconstrained delegation can be misused if an attacker compromises a service account with delegation privileges. They could potentially access any service impersonating any user, leading to a complete domain compromise.
+15. **How can you trick users to connect to your service configured for delegation?** 
+      - An attacker might set up a service configured for delegation and then use techniques like phishing or DNS spoofing to trick users into connecting to this service, allowing the attacker to impersonate these users.
+16. **How could a printer on a DC be attacked?**  
+      - Abuse of MS-RPRN: PrinterBug refers to the exploitation of Microsoft's Print System Remote Protocol (MS-RPRN), particularly the Print Spooler service, which is exposed to the network to manage print jobs and related tasks.
+      - Forced Connections via RPC Calls: By making Remote Procedure Call (RPC) requests to the Print Spooler service, an attacker can force a target system to establish connections to arbitrary hosts.
+      - Authentication Over SMB: The authentication resulting from this forced connection is performed over SMB (Server Message Block) and can use NTLM (NT LAN Manager) or Kerberos protocols​​.
+      - If that arbitrary host uses unconstrained delegation the TGT of the DC machine account can be abused for DCSync attack.
+17. **What mitigation measurements do you know to secure Kerberos?** 
+     - Regularly change and protect the krbtgt account password.
+     - Limit and monitor the use of service accounts with delegation rights.
+     - Employ strong, unique passwords for all accounts.
+     - Keep systems patched and up-to-date.
+     - Monitor and audit Kerberos authentication logs for suspicious activity.
+18. **How does an attack against «constrained» delegation looks like?**  
+      - An attacker would first need to compromise a service account with constrained delegation rights. Then, they could impersonate users but only to the services specified in the constrained delegation setup.
+19. **What is meant with «protocol transition»? How does it work?** 
+      - **Purpose**: Protocol transition is intended to bridge different authentication protocols to Kerberos. It allows a service to request a Kerberos service ticket on behalf of a user who has authenticated using a non-Kerberos method.
+      - **Functioning**: In this process, the delegation service (the service requesting a ticket on behalf of the user) can essentially create the proof of the user's presence itself. This means that the initial authentication of the user (which typically happens through Kerberos) is not actually required for the delegation service to obtain a Kerberos ticket in the user's name.
+      - **Implications**: This ability to impersonate users without their direct Kerberos authentication poses significant security considerations. For instance, enabling constrained delegation with protocol transition gives an account additional privileges, marked by the User Account Control (UAC) flag `TrustedToAuthForDelegation`. Accounts with this flag are trusted to perform impersonation of arbitrary users within the context of delegation​​.
+20. **What can you do with the permission «Trusted to Auth for Delegation» S4U2Self & S4U2Proxy?**
+      - **S4U2Self (Service for User to Self)**: This extension allows a service (which holds the "Trusted to Auth for Delegation" permission) to obtain a service ticket to itself on behalf of any user, even if that user has not previously authenticated to the service. Essentially, it allows the service to impersonate any user in the domain.
+      - **S4U2Proxy (Service for User to Proxy)**: Using this extension, the service can then use the service ticket obtained via S4U2Self to request service tickets to other services on behalf of the user. This means the service can act as a proxy, accessing other services as if it were the user.
+      - The combination of these extensions with the "Trusted to Auth for Delegation" permission effectively allows a service to impersonate any user in the domain and access resources on their behalf.
 
 ### ✅ PKCS\#11
 

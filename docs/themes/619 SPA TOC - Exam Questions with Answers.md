@@ -129,11 +129,26 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 	* Scam mails and messages for social engineering
 	* Or directly by phone, as a fake support agent
 
-### Topic 3: Layered Security
+### ✅ Topic 3: Layered Security
 
 1. Do you know layer specific vulnerabilities (vulnerabilities, which occur on one of the seven layers of the ISO / OSI network reference model)?
+     - Physical Layer: Power outages, theft of hardware and data, unauthorized physical data connection disruptions​​.
+     - Data Link Layer: MAC address spoofing, VLAN circumvention, unauthorized network access due to weak authentication​​.
+     - Network Layer: Route spoofing, denial of service, IP address spoofing​​.
+     - Transport Layer: Transport protocol fingerprinting, vulnerabilities to packet spoofing and hijacking​​.
+     - Session Layer: Weak authentication mechanisms, plaintext transmission of credentials, vulnerability to session hijacking​​.
+     - Presentation Layer: Poor handling of unexpected input, cryptographic flaws​​.
+     - Application Layer: Backdoors and design flaws bypassing security controls, inadequate or overly complex security mechanisms​​.
 2. Can you explain countermeasures?
+     - Physical Layer: Backup power systems, secure hardware storage, secure physical data connections.
+     - Data Link Layer: MAC filtering, secure VLAN configurations, strong authentication for network access.
+     - Network Layer: Anti-spoofing measures, secure routing protocols, IP address validation.
+     - Transport Layer: Secure transport protocol implementations, protection against packet spoofing.
+     - Session Layer: Strong authentication, encrypted transmission of credentials, monitoring for unusual session activities.
+     - Presentation Layer: Robust input validation, up-to-date cryptographic methods.
+     - Application Layer: Secure software design, implementation of thorough security controls, regular checks for logic flaws.
 3. Which vulnerability is the most critical?
+     - The most critical vulnerability can depend on the specific context and environment. However, vulnerabilities in the Application Layer, such as backdoors and design flaws bypassing security controls or inadequate security mechanisms, can be particularly critical. They directly affect the software and services that users interact with and can lead to significant breaches of data and functionality. This layer is often the final defense and the point of interaction for end-users, making it security crucial​​.
 
 ### ✅ Topic 4: Host and Network Security
 

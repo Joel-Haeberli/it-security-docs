@@ -839,6 +839,7 @@ This command captures DNS traffic on port 53 while displaying minimal informatio
          2. **Portability:** Often less portable between different hardware platforms, requiring significant modifications for each platform.
          3. **Debugging Difficulty:** Debugging and maintenance can be more challenging due to the proximity to hardware and lack of abstraction.
          4. **Security Risks:** Lower-level code might be more prone to critical security vulnerabilities like buffer overflows.
+
 3. **Explain the authentication process involved in IKEv2 (Internet Key Exchange Protocol Version 2).**
      - **Key Generation**:
 	     - A master secret ($SK_d$) is generated along with several other keys ($SK_{ai}, SK_{ei}, SK_{ar}, SK_{er}, SK_{pi}, SK_{pr}$) using a pseudo-random function (prf).
@@ -886,14 +887,14 @@ This command captures DNS traffic on port 53 while displaying minimal informatio
          - This is the simplest form of VPN topology.
          - It involves a direct connection between two points (or nodes), typically a client and a server.
          - It's often used for individual remote access to a centralized network.
-	-  **Site-to-Site**:
-	     - Connects entire networks to each other.
-	     - Commonly used to connect branch offices to a central corporate network.
-	     - Each site has a VPN gateway, and traffic is routed between these gateways over the VPN.
-	-  **Hub-and-Spoke** (Star): 
-	     - Involves a central 'hub' (usually a main office or data center) and multiple 'spokes' (remote locations or branch offices).
-	     - All traffic between the spokes usually goes through the hub.
-	     - Efficient for networks where most communication occurs between the hub and the individual spokes, rather than directly between spokes.
+     -  **Site-to-Site**:
+         - Connects entire networks to each other.
+         - Commonly used to connect branch offices to a central corporate network.
+         - Each site has a VPN gateway, and traffic is routed between these gateways over the VPN.
+     -  **Hub-and-Spoke** (Star): 
+         - Involves a central 'hub' (usually a main office or data center) and multiple 'spokes' (remote locations or branch offices).
+         - All traffic between the spokes usually goes through the hub.
+         - Efficient for networks where most communication occurs between the hub and the individual spokes, rather than directly between spokes.
 10. **What minimum configurations are needed to set up a point-to-point VPN with WireGuard.**
      -  **Network Interface Configuration**:
 	     - On the server, you will create a WireGuard interface, typically named `wg0`. This includes:

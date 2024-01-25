@@ -83,15 +83,51 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 	5. Escalation process is established
 	6. Lessons are learnt
 
-### Topic 2: Hacking Basics
+### ✅ Topic 2: Hacking Basics
 
 1. Recently, there were more and more cyber security attacks against critical infrastructures. What is a critical infrastructure? Provide some examples. What are the targets of such attacks?
+     - Power grid
+	* Airport
+	* Harbour
+	* Railway
+	* Hospital
+	* Core router
+	* DNS root NS
+	* Cloud Provider
+	* Attacks against those often target industrial control systems (ICS) such as supervisory control and data acquisition (SCADA) systems.
 2. From where do external attackers (outside attackers, remote attackers) attack networks and computers?
+     - Can attack from the internet, wireless network or via a physical break-in
 3. Do you know some intrusion techniques? Can you explain these techniques in detail?
+     - Physical intrusion
+     - Through Software bugs
+     - Through configuration bugs
+     - Through design flaws
+     - Through weak passwords
 4. List known vulnerabilities of systems. Can you explain these vulnerabilities in more details.
+     - Buffer Overflow
+     - Unpatched Software
+     - Insecure APIs
+     - Misconfiguration
+     - Weak Authentication
 5. What authentication methods do you know?
+     - Password-based
+     - Two-Factor
+     - Biometric
+     - Token-based
+     - Certificate-based
+     - Challenge and Response-based (FIDO)
 6. List and explain the five stages / phases of an intrusion into a system.
+	1. **reconnaissance** (appearing as a normal user, hard to detect)
+	2. **scanning** (ICMP scan, Port scan, identify OS and software)
+	3. **running exploits** (exploit a vulnerability that was found, you cross the line here)
+	4. **establish a foothold** (hide evidence, rootkit installation, replace services, hack other systems from here)
+	5. **playing for profit**
 7. Do you know "shortcuts" to the five stages / phases of an intrusion?
+     -  Use automated tools for scanning and break in
+	* Create fake websites to harvest credentials
+	* Infect vulnerable websites with malware
+	* Scam mails and messages for social engineering
+	* Or directly by phone, as a fake support agent
 
 ### Topic 3: Layered Security
 

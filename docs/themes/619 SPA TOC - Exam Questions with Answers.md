@@ -99,7 +99,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 15. **How do proxy servers work, what are non-/transparent proxy servers?**
 	- MITM for protocol specific traffic (HTTP, DNS, ...)
 	- *Non-Transparent proxy servers*: sender must send the packets directly to the proxy server, configuration inside the application/host system
-	-  Transparent proxy servers: transparent for client, no configuration needed
+	-  *Transparent proxy servers*: transparent for client, no configuration needed
 16. **What are "Web Application Firewalls" for?**
 	- special case of an application layer firewall
 	- protect web applications against attacks over HTTP/S (Injection, tampering, cookie poisoning, buffer overflow attack, unauthorized access)

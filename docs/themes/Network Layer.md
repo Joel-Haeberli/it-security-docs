@@ -32,7 +32,7 @@ links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Ind
 		- Set attacker as router $\rightarrow$ Man-in-the-middle attack
 		- Set wrong IP as router $\rightarrow$ Network DoS
 	- Attacker creates virtual interfaces to generate large number of IPv6 address configuration requests
-		- Overload roxuter or DHCPv6 server capacity to track devices
+		- Overload router or DHCPv6 server capacity to track devices
 		- Legitimate devices can't obtain IP anymore $\rightarrow$ starvation, DoS
 
 ### Attacks

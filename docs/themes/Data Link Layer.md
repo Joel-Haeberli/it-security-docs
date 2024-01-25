@@ -26,7 +26,7 @@ links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Ind
 ### Vulnerabilities
 
 - MAC address spoofing
-	- NIC configured to use AMC address of another device
+	- NIC configured to use MAC address of another device
 - VLAN circumvention
 	- Configure NIC to tag traffic with a different VLAN ID to access different VLAN
 - Spanning tree errors

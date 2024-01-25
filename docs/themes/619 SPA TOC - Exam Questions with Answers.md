@@ -246,32 +246,65 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 17. What happens with my "iptables"-rules if "nftables" is deployed?
 18. Explain what the presented "nftables" firewall does (e.g., lab sample solutions).
 
-### Topic 6: DNSSEC and DNS privacy
+### ✅ Topic 6: DNSSEC and DNS privacy
 
-1. Why is DNSSEC used? What problem does it solve?
-2. What is the purpose and function of a validating resolver?
-3. What are the new DNSSEC Resource Records? What are they for?
-4. What is the purpose of the RRSIG/DNSKEY/NSEC/DS RR? Explain how they work.
-5. What is a Resource Record Set (RRSet) and where is it used?
-6. What problem is caused by the NSEC RR? How can it be solved?
+1. **Why is DNSSEC used? What problem does it solve?**
+     - DNSSEC (Domain Name System Security Extensions) is used to protect against DNS spoofing or cache poisoning attacks. It ensures the integrity and authenticity of DNS responses, confirming they haven't been tampered with during transit.
+2. **What is the purpose and function of a validating resolver?**
+     - A Validating Resolver checks the authenticity of DNS responses using DNSSEC. It validates the digital signatures in DNSSEC-protected DNS data to ensure the data's integrity and authenticity.
+3. **What are the new DNSSEC Resource Records? What are they for?**
+     - **RRSIG**: Contains a digital signature that verifies a record set's authenticity.
+     - **DNSKEY**: Holds the public key used in the DNSSEC validation process.
+     - **DS (Delegation Signer)**: Holds the hash of a DNSKEY record, used in the chain of trust.
+     - **NSEC** and NSEC3: Lists the next record in the zone, used to prove non-existence of a record.
+     - **CDNSKEY** and CDS: For a child zone requesting updates to DS record(s) in the parent zone
+4. **What is the purpose of the RRSIG/DNSKEY/NSEC/DS RR? Explain how they work.**
+     - See above or [[DNSSEC]]
+5. **What is a Resource Record Set (RRSet) and where is it used?**
+     - An RRSet is a set of DNS records with the same name, class, and type. It's used in DNSSEC to group records for signing purposes.
+6. **What problem is caused by the NSEC RR? How can it be solved?**
+     - NSEC records can inadvertently reveal all valid names in a zone, leading to zone walking, where an attacker discovers all subdomains. NSEC3 addresses this by hashing record names, obscuring them from attackers.
 7. What is the purpose of the Zone Signing Key ZSK?
+     - The ZSK is used to sign DNS record sets (RRSets) within a zone. It's a cryptographic key that generates a signature, which is verified against the DNSKEY record in the zone.
 8. What is the purpose of the Key Signing Key KSK?
+     - The KSK is used to sign the DNSKEY record itself, providing a layer of trust and security. It's generally used less frequently and is more heavily protected than the ZSK.
 9. How are DNS entries validated on a validating resolver?
+     - A validating resolver uses DNSSEC to validate DNS entries by checking the digital signature in the RRSIG record against the corresponding DNSKEY. If the signature is valid, the data is considered authentic.
 10. How does the Chain of Trust for DNSSEC work?
+      - The Chain of Trust starts from a trusted root (like the root DNS servers) and extends downwards. Each level of DNS hierarchy signs the keys of the level below it, creating a trust path from the root to the queried DNS record.
 11. What response does a client receive if the resolver used cannot validate a response?
+      - If a validating resolver cannot validate a DNS response, it generally returns a SERVFAIL error, indicating the validation failure.
 12. What is the purpose of the AD or the CD flag in the DNS protocol header?
+      - An inquired name server can indicate the successful authentication of the DNS data using the AD-bit. The AD-bit is controlled by a name server.
+      - The CD-bit is set in a query to indicate, that no DNS authentication should be made by the inquired name server i.e., the questioner is able, to do the authentication itself. The CD-bit is controlled by the resolver.
 13. Explain use cases for DNSSEC such as SSHFP or DANE?
+      - SSHFP: Securely publish SSH fingerprints in DNS, allowing clients to verify the identity of SSH servers.
+      - DANE (DNS-Based Authentication of Named Entities): Uses DNSSEC to secure information about where to find secure services like TLS certificates.
 14. Do you know methods to improve the confidentiality and privacy of DNS communication?
+      - DNS-over-HTTPS (DoH) and DNS-over-TLS (DoT) are methods to encrypt DNS queries, enhancing confidentiality and privacy.
 15. Explain mechanisms/protocols that ensure the confidentiality of DNS transactions.
+      - TLS and HTTPS
 16. How can DoT be implemented on a DNS resolver (which does not support it natively)? 
+      - For resolvers not natively supporting DoT, you can set up a proxy service that accepts DNS queries and forwards them over TLS to a DoT-supporting DNS server. This requires additional configuration and potentially third-party software.
 
-### Topic 7: DNS RPZ
+### ✅ Topic 7: DNS RPZ
 
 1. What is a Response Policy Zone (RPZ) and how does it work?
+     - RPZ is a DNS feature that allows a DNS server to alter DNS responses based on policies. It functions by using specially crafted DNS zone files that define certain actions for given DNS queries. When the DNS resolver receives a query, it checks the RPZ: if there's a match, the response is modified according to the policy defined in the RPZ.
 2. What do you use RPZs for?
+     - Blocking Malicious Sites, Content Filtering, Redirecting Traffic, Phishing Protection
 3. How do you get valuable RPZ information?
+     - Subscription Services, Community-Based lists or custom policies based on your own monitoring
 4. What responses can a resolving name server respond to a client out of a RPZ?
+     - **PASSTHRU:** Do nothing (allow-list).
+     - **DROP:** No response (block-list).
+     - **TCP-Only:** Please try again with TCP.
+     - **NXDOMAIN:** Domain does not exist / block access.
+     - **NODATA:** Empty response.
+     - **Local Data:** An ordinary DNS record set that can be used to answer queries, often for redirections to a safer page or information site (walled garden).
 5. How can you block/redirect access to "badhost.baddom.com" using RPZ?
+     -  **Blocking:** Add a QNAME trigger in the RPZ zone file that specifies "badhost.baddom.com". Set the action to NXDOMAIN or DROP to block access.
+     - **Redirecting:** Specify "badhost.baddom.com" in the RPZ zone file and associate it with the IP address of a safe server or a warning page. When a DNS query matches this rule, the DNS server will respond with the IP address of the redirect target instead of the actual IP address of "badhost.baddom.com".
 
 ### ✅ Topic 8: Tools
 
@@ -648,15 +681,26 @@ The Registration Authority (RA) checks these aspects of the CSR:
 19. What is meant with «protocol transition»? How does it work?  
 20. What can you do with the permission «Trusted to Auth for Delegation» S4U2Self & S4U2Proxy?
 
-### PKCS\#11
+### ✅ PKCS\#11
 
-1. Describe a typical PKCS\#11 stack for accessing a security token.  
-2. Where are APDU (Application Protocol Data Unit) commands used?  
-3. Which protocol is common between SIM card, smart cards, credit cards, YubiKey etc.?
-4. What is the intention of the PKCS\#11 API?  
-5. How can you extract keys from a smart card or HSM?  
-6. What does attestation stands for?  
-7. What does the acronym U2F (Universal Second Factor) stands for? What is it based on?
+1. **Describe a typical PKCS\#11 stack for accessing a security token.**  
+     - Application with PKCS#11 support
+     - PKCS#11 library
+     - PC/SC (Personal Computer/Smart Card) communication via APDU (Application Protocol Data Unit)
+     - Driver (USB, NFC, Bluetooth)
+     - Token with an app installed that supports PKCS#11
+2. **Where are APDU (Application Protocol Data Unit) commands used?**
+     - APDU (Application Protocol Data Unit) commands are used in smart card technologies. They facilitate communication between a smart card and an external device, like a card reader. These commands are essential in applications such as EMV (Europay, MasterCard, and Visa) chip-based credit cards, SIM cards in mobile phones, identity verification systems, and secure access control.
+3. **Which protocol is common between SIM card, smart cards, credit cards, YubiKey etc.?**
+     - The ISO/IEC 7816 standard. This standard defines the physical characteristics, communication protocols, and APDU commands for interaction with smart cards
+4. **What is the intention of the PKCS\#11 API?**
+     - The primary intention of the PKCS#11 API is to provide a standard interface for applications to interact with cryptographic tokens.
+5. **How can you extract keys from a smart card or HSM?**
+     - This is designed to be difficult or impossible. Some HSMs or smart cards may allow the export of certain keys under specific conditions, often wrapped with another key and subject to stringent security policies
+6. **What does attestation stands for?**  
+     - Attestation refers to the process where a device or a system demonstrates (or attests to) its identity and integrity. Done via X509 certificates for example. Proof that something was done in specific hardware.
+7. **What does the acronym U2F (Universal Second Factor) stands for? What is it based on?**
+     - U2F is a standard for two-factor authentication (2FA). It allows users to augment traditional login methods with a physical device, like a USB security key, which provides an additional layer of security. U2F devices communicate with the host using standard protocols such as USB, NFC, or Bluetooth. The U2F standard is based on public-key cryptography. 
 
 ### Wi-Fi
 1. Under which conditions can you read all Wi-Fi network traffic?

@@ -1,6 +1,7 @@
 tags: #web-security
 
 # Detailed testing
+
 links: [[507 WS TOC - Testing|WS TOC - Testing]] - [[themes/000 Index|Index]]
 
 ---
@@ -9,7 +10,7 @@ links: [[507 WS TOC - Testing|WS TOC - Testing]] - [[themes/000 Index|Index]]
 
 - TLS
 	- Verify the usage of strong ciphers
-	- Use nmap for testing (nmap -F -sV localhost)
+	- Use nmap for testing (`nmap -F -sV localhost`)
 - DB listener testing
 	- Shouldn't be exposed to the internet without restrictions
 	- Shouldn't use default ports
@@ -23,7 +24,7 @@ links: [[507 WS TOC - Testing|WS TOC - Testing]] - [[themes/000 Index|Index]]
 		- Check access control (change default user / password, use strong cipher, etc.)
 - Application configuration management
 	- Ensure no default installations or sample files are left on the server
-	- Check application comments -> no information leaking
+	- Check application comments $\rightarrow$ no information leaking
 	- Verify that the server is only running necessary modules
 	- Customize error pages (no stack traces)
 	- Verify the server runs with minimized privileges
@@ -33,9 +34,9 @@ links: [[507 WS TOC - Testing|WS TOC - Testing]] - [[themes/000 Index|Index]]
 	- Determine the way the server handles requests corresponding to files having different extensions
 	- Determine what is returned as text and what is executed on the server
 		- For example, if a `.inc` file containing PHP code is served as text, it could leak sensitive information like database credentials.
-	- Examples of sensitive extensions: .asa,.inc,.zip,.tar,.tgz,(or other compressed files extensions) .java,.txt,.pdf,.doc,.rtf, . . .
+	- Examples of sensitive extensions: `.asa`,`.inc`,`.zip`,`.tar`,`.tgz`,(or other compressed files extensions) `.java`,`.txt`,`.pdf`,`.doc`,`.rtf`, . . .
 - Old backup and unreferenced files
-	- Files like index.php.back can be a security issue
+	- Files like `index.php.back` can be a security issue
 	- Forgotten app.zip could leak source code
 - Testing for HTTP Methods and Cross-Site Tracing (XST)
 	- Identifying which http methods the server supports and ensuring that unsafe methods are disabled
@@ -49,14 +50,14 @@ links: [[507 WS TOC - Testing|WS TOC - Testing]] - [[themes/000 Index|Index]]
 ### Authentication / Authorization
 
 - TLS is used where ever needed / possible
-- Check if it's possible to find valid users by interacting with authentication mechanism -> for brute force attack
+- Check if it's possible to find valid users by interacting with authentication mechanism $\rightarrow$ for brute force attack
 - Testing brute force (timeouts)
 - Check if authentication schema can by bypassed / skipped
 - Check for password reset vulnerability
-- Check if logout and browser cache management is implemented correctly -> delete session token etc.
-- Captcha testing -> avoid replay attack
+- Check if logout and browser cache management is implemented correctly $\rightarrow$ delete session token etc.
+- Captcha testing $\rightarrow$ avoid replay attack
 - Test MFA, correct usage
-- Test for race conditions -> Users logging in at the same time, etc.
+- Test for race conditions $\rightarrow$ Users logging in at the same time, etc.
 
 ### Session management
 
@@ -85,7 +86,7 @@ links: [[507 WS TOC - Testing|WS TOC - Testing]] - [[themes/000 Index|Index]]
 
 ### AJAX / JSON
 
-- Many endpoints -> increased number of places an attacker can exploit
+- Many endpoints $\rightarrow$ increased number of places an attacker can exploit
 - Check that API doesn't accidentally exposes functions that are supposed to be internal
 - Check APIs interaction with third party external services
 - Blurred lines between client-side and server-side code

@@ -391,13 +391,9 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
      - Tracks ARP activity on a network. It helps detect and alert administrators about unexpected or potentially malicious changes in the mapping of IP addresses to MAC addresses, aiding in network security and troubleshooting.
 9. **Why and when is SNMP dangerous?**
      - Wrongly configured network devices can be queried and/or reconfigured using SNMP attacks. E.g snmpwalk can find out different attributes of the device. 
-10. **How do you capture packets of a DNS request / response on Interface "eth0" using     "tcpdump"?**
-    Run this command:
-```bash
-sudo tcpdump -i eth0 port 53
-```
-
-This command captures DNS traffic on port 53 while displaying minimal information.
+10. **How do you capture packets of a DNS request / response on Interface "eth0" using "tcpdump"?**
+    - Run this command: `sudo tcpdump -i eth0 port 53
+	- This command captures DNS traffic on port 53 while displaying minimal information.
 
 ### Topic 9: Lab Exercises
 
@@ -426,7 +422,7 @@ This command captures DNS traffic on port 53 while displaying minimal informatio
 
 ## Part 2
 
-### TLS
+### Topic 10: TLS
 
 1. **Name 5 protocols based on TLS.**
 	- HTTPS, FTPS, SMTPS, LDAPS, DTLS
@@ -488,7 +484,7 @@ This command captures DNS traffic on port 53 while displaying minimal informatio
 	- Authenticated Encryption: TLS 1.3 mandates the use of AEAD ciphers for encrypting and authenticating all data, ensuring better security and efficiency.
 	- Authentication/Signature: TLS 1.3 improves the way certificates are authenticated and signed, requiring digital signatures even when a previous session is resumed. This enhances the overall security of the authentication process.
 
-###  Certificates and PKI
+###  Topic 11: Certificates and PKI
 
 1. **What is defined in PKCS#1, PKCS#7, PKCS#10, PKCS#11, PKCS#12?**
      - **PKCS#1: RSA Cryptography Specifications** Defines the mathematical properties and implementation for RSA public key cryptography. It includes specifications for encryption and signing, RSA keys, and other related cryptographic operations.
@@ -560,7 +556,7 @@ This command captures DNS traffic on port 53 while displaying minimal informatio
      - **Qualified Electronic Signatures** (QES) are a subset of AdES. They are legally equivalent to handwritten signatures in many jurisdictions, including the EU. QES requires a secure signature creation device and a certificate from a Qualified Trust Service Provider (QTSP).
      - In Switzerland 4 entities can issue such certificates (Schweizerische Eidgenossenschaft, Digicert, Swisscom, SwissID)
 
-### Identification Authentication Authorization
+### Topic 12: Identification Authentication Authorization
 
 1. **What is Identification, Authentication and Authorization?**
      - **Identification** is the process of claiming an identity (e.g., username).
@@ -623,7 +619,69 @@ This command captures DNS traffic on port 53 while displaying minimal informatio
 24. **On what security mechanism is OAuth relying on?**
       - OAuth relies on tokens for security. The tokens are used instead of credentials for accessing resources, thus providing a layer of abstraction that enhances security by not exposing user credentials to clients. OAuth also uses SSL/TLS for secure communication between all parties involved.
 
-### Secure Email
+### Topic 12.5: Kerberos
+
+1. **How does Kerberos works? Why does Kerberos need shared secrets? What are these shared secrets?**
+     - Kerberos is a network authentication protocol that works on the basis of tickets to allow nodes to prove their identity securely over a non-secure network. Kerberos needs shared secrets for secure communication between the client and the server. These are typically passwords or keys known both to the user's client and the Kerberos server.
+2. **The Key Distribution Center (KDC) is composed of the Authentication Server (AS) and the Ticket Granting Server (TGT). What is the function of AS and TGT?**
+     - - **Authentication Server (AS)**: Issues an initial ticket (TGT) after authenticating the user.
+     - **Ticket Granting Server (TGT)**: Uses the TGT to grant service tickets, which allow access to other network services.
+3. **What is a Server Principal Name (SPN)? How is the name composed / structured?**
+     - A unique identifier for a service instance on the network. Usually structured as `service/hostname:port`, indicating the service and the host providing it.
+4. **Explain the content and the function of Kerberos Tickets? What is a Ticket Granting Ticket (TGT) and what is a service ticket (ST)? Explain the differences.**
+     - **Ticket Granting Ticket (TGT)**: Issued by the AS, used to obtain service tickets from the TGT without re-authenticating.
+     - **Service Ticket (ST)**: Allows access to a specific service; issued by the TGT.
+     - **Differences**: TGT is for obtaining STs, while STs are for accessing specific services.
+5. **Explain the differences between «secret keys» and «session keys».**
+     - **Secret Keys**: Long-term keys derived from a user's password, used for initial authentication.
+     - **Session Keys**: Temporary, used for the duration of a session to encrypt communication between client and server.
+6. **How does the Kerberos Pre-authentication works?**
+     - Involves proving the user's identity before a TGT is issued, typically by encrypting a timestamp using the user's secret key (hash of the password).
+7. **What is needed to decrypt all messages / tickets in Wireshark?**
+     - Secret key and session key
+8. **What type of attacks are referred as «Golden Ticket» «Silver Ticket» attack? What can you do with a «Golden Ticket» or «Silver Ticket»?**
+      - Golden Ticket Attack: Involves creating a TGT with administrative rights. With this, an attacker can access any service on the network.
+      - Silver Ticket Attack: Involves creating a service ticket for specific services. It's more limited than a Golden Ticket but harder to detect.
+9. **What has to be done if an attacker gained a «Golden Ticket»?** 
+     - Resetting the krbtgt account's password twice (to invalidate old tickets) and resetting passwords for all accounts, as well as investigating the breach, are critical steps to mitigate a Golden Ticket attack.
+10. **Describe Kerberos delegation. What does it mean. Where is it used?**
+      -  Kerberos delegation allows a service to use the client's credentials to access other services on the client's behalf.
+      - Common in scenarios where a middle-tier service needs to access resources on behalf of a user, like a web application accessing a database.
+11. **What is the difference between «unconstrained», «constrained» and «resource-based constrained» Delegation.**
+      - Unconstrained Delegation: A service can request access to any other service on behalf of the user using the user's TGT.
+      - Constrained Delegation: Specific services are pre-defined for delegation. A service can request access only to these specified services on behalf of the user.
+      - Resource-Based Constrained Delegation: Services to which delegation is allowed are defined on the target service side, not on the user or delegating service's account.
+12. **Can the user prevent delegation?**  
+      - Users themselves typically cannot prevent delegation in Kerberos. It's controlled by domain administrators through service configurations and account properties.
+13. **Can you restrict delegation. Where does it makes sense to restrict delegation?**
+      - Delegation can be restricted at the domain level by configuring service accounts. It makes sense to restrict delegation in high-security environments or for services that handle sensitive data to limit the potential for privilege escalation or lateral movement.
+14. **What are the security risks? Describe how «unconstrained» delegation could be misused.**  
+      - Unconstrained delegation can be misused if an attacker compromises a service account with delegation privileges. They could potentially access any service impersonating any user, leading to a complete domain compromise.
+15. **How can you trick users to connect to your service configured for delegation?** 
+      - An attacker might set up a service configured for delegation and then use techniques like phishing or DNS spoofing to trick users into connecting to this service, allowing the attacker to impersonate these users.
+16. **How could a printer on a DC be attacked?**  
+      - Abuse of MS-RPRN: PrinterBug refers to the exploitation of Microsoft's Print System Remote Protocol (MS-RPRN), particularly the Print Spooler service, which is exposed to the network to manage print jobs and related tasks.
+      - Forced Connections via RPC Calls: By making Remote Procedure Call (RPC) requests to the Print Spooler service, an attacker can force a target system to establish connections to arbitrary hosts.
+      - Authentication Over SMB: The authentication resulting from this forced connection is performed over SMB (Server Message Block) and can use NTLM (NT LAN Manager) or Kerberos protocols​​.
+      - If that arbitrary host uses unconstrained delegation the TGT of the DC machine account can be abused for DCSync attack.
+17. **What mitigation measurements do you know to secure Kerberos?** 
+     - Regularly change and protect the krbtgt account password.
+     - Limit and monitor the use of service accounts with delegation rights.
+     - Employ strong, unique passwords for all accounts.
+     - Keep systems patched and up-to-date.
+     - Monitor and audit Kerberos authentication logs for suspicious activity.
+18. **How does an attack against «constrained» delegation looks like?**  
+      - An attacker would first need to compromise a service account with constrained delegation rights. Then, they could impersonate users but only to the services specified in the constrained delegation setup.
+19. **What is meant with «protocol transition»? How does it work?** 
+      - **Purpose**: Protocol transition is intended to bridge different authentication protocols to Kerberos. It allows a service to request a Kerberos service ticket on behalf of a user who has authenticated using a non-Kerberos method.
+      - **Functioning**: In this process, the delegation service (the service requesting a ticket on behalf of the user) can essentially create the proof of the user's presence itself. This means that the initial authentication of the user (which typically happens through Kerberos) is not actually required for the delegation service to obtain a Kerberos ticket in the user's name.
+      - **Implications**: This ability to impersonate users without their direct Kerberos authentication poses significant security considerations. For instance, enabling constrained delegation with protocol transition gives an account additional privileges, marked by the User Account Control (UAC) flag `TrustedToAuthForDelegation`. Accounts with this flag are trusted to perform impersonation of arbitrary users within the context of delegation​​.
+20. **What can you do with the permission «Trusted to Auth for Delegation» S4U2Self & S4U2Proxy?**
+      - **S4U2Self (Service for User to Self)**: This extension allows a service (which holds the "Trusted to Auth for Delegation" permission) to obtain a service ticket to itself on behalf of any user, even if that user has not previously authenticated to the service. Essentially, it allows the service to impersonate any user in the domain.
+      - **S4U2Proxy (Service for User to Proxy)**: Using this extension, the service can then use the service ticket obtained via S4U2Self to request service tickets to other services on behalf of the user. This means the service can act as a proxy, accessing other services as if it were the user.
+      - The combination of these extensions with the "Trusted to Auth for Delegation" permission effectively allows a service to impersonate any user in the domain and access resources on their behalf.
+
+### Topic 13: Secure Email
 
 1. **How does the email routing works?**
 	- Mails are sent via SMTP, the MX record specifies the mail server responsible for a domain name. By sending a mail, the MTA queries DNS for the MX record for the recipient's domain name (lowest-numbered records are the most preferred).
@@ -695,69 +753,7 @@ This command captures DNS traffic on port 53 while displaying minimal informatio
 25. **What are the options if the DMARC verification fails?**
 	- None (monitor), Quarantine (move mails in quarantine or spam folders), Reject (reject email)
 
-### Kerberos
-
-1. **How does Kerberos works? Why does Kerberos need shared secrets? What are these shared secrets?**
-     - Kerberos is a network authentication protocol that works on the basis of tickets to allow nodes to prove their identity securely over a non-secure network. Kerberos needs shared secrets for secure communication between the client and the server. These are typically passwords or keys known both to the user's client and the Kerberos server.
-2. **The Key Distribution Center (KDC) is composed of the Authentication Server (AS) and the Ticket Granting Server (TGT). What is the function of AS and TGT?**
-     - - **Authentication Server (AS)**: Issues an initial ticket (TGT) after authenticating the user.
-     - **Ticket Granting Server (TGT)**: Uses the TGT to grant service tickets, which allow access to other network services.
-3. **What is a Server Principal Name (SPN)? How is the name composed / structured?**
-     - A unique identifier for a service instance on the network. Usually structured as `service/hostname:port`, indicating the service and the host providing it.
-4. **Explain the content and the function of Kerberos Tickets? What is a Ticket Granting Ticket (TGT) and what is a service ticket (ST)? Explain the differences.**
-     - **Ticket Granting Ticket (TGT)**: Issued by the AS, used to obtain service tickets from the TGT without re-authenticating.
-     - **Service Ticket (ST)**: Allows access to a specific service; issued by the TGT.
-     - **Differences**: TGT is for obtaining STs, while STs are for accessing specific services.
-5. **Explain the differences between «secret keys» and «session keys».**
-     - **Secret Keys**: Long-term keys derived from a user's password, used for initial authentication.
-     - **Session Keys**: Temporary, used for the duration of a session to encrypt communication between client and server.
-6. **How does the Kerberos Pre-authentication works?**
-     - Involves proving the user's identity before a TGT is issued, typically by encrypting a timestamp using the user's secret key (hash of the password).
-7. **What is needed to decrypt all messages / tickets in Wireshark?**
-     - Secret key and session key
-8. **What type of attacks are referred as «Golden Ticket» «Silver Ticket» attack? What can you do with a «Golden Ticket» or «Silver Ticket»?**
-      - Golden Ticket Attack: Involves creating a TGT with administrative rights. With this, an attacker can access any service on the network.
-      - Silver Ticket Attack: Involves creating a service ticket for specific services. It's more limited than a Golden Ticket but harder to detect.
-9. **What has to be done if an attacker gained a «Golden Ticket»?** 
-     - Resetting the krbtgt account's password twice (to invalidate old tickets) and resetting passwords for all accounts, as well as investigating the breach, are critical steps to mitigate a Golden Ticket attack.
-10. **Describe Kerberos delegation. What does it mean. Where is it used?**
-      -  Kerberos delegation allows a service to use the client's credentials to access other services on the client's behalf.
-      - Common in scenarios where a middle-tier service needs to access resources on behalf of a user, like a web application accessing a database.
-11. **What is the difference between «unconstrained», «constrained» and «resource-based constrained» Delegation.**
-      - Unconstrained Delegation: A service can request access to any other service on behalf of the user using the user's TGT.
-      - Constrained Delegation: Specific services are pre-defined for delegation. A service can request access only to these specified services on behalf of the user.
-      - Resource-Based Constrained Delegation: Services to which delegation is allowed are defined on the target service side, not on the user or delegating service's account.
-12. **Can the user prevent delegation?**  
-      - Users themselves typically cannot prevent delegation in Kerberos. It's controlled by domain administrators through service configurations and account properties.
-13. **Can you restrict delegation. Where does it makes sense to restrict delegation?**
-      - Delegation can be restricted at the domain level by configuring service accounts. It makes sense to restrict delegation in high-security environments or for services that handle sensitive data to limit the potential for privilege escalation or lateral movement.
-14. **What are the security risks? Describe how «unconstrained» delegation could be misused.**  
-      - Unconstrained delegation can be misused if an attacker compromises a service account with delegation privileges. They could potentially access any service impersonating any user, leading to a complete domain compromise.
-15. **How can you trick users to connect to your service configured for delegation?** 
-      - An attacker might set up a service configured for delegation and then use techniques like phishing or DNS spoofing to trick users into connecting to this service, allowing the attacker to impersonate these users.
-16. **How could a printer on a DC be attacked?**  
-      - Abuse of MS-RPRN: PrinterBug refers to the exploitation of Microsoft's Print System Remote Protocol (MS-RPRN), particularly the Print Spooler service, which is exposed to the network to manage print jobs and related tasks.
-      - Forced Connections via RPC Calls: By making Remote Procedure Call (RPC) requests to the Print Spooler service, an attacker can force a target system to establish connections to arbitrary hosts.
-      - Authentication Over SMB: The authentication resulting from this forced connection is performed over SMB (Server Message Block) and can use NTLM (NT LAN Manager) or Kerberos protocols​​.
-      - If that arbitrary host uses unconstrained delegation the TGT of the DC machine account can be abused for DCSync attack.
-17. **What mitigation measurements do you know to secure Kerberos?** 
-     - Regularly change and protect the krbtgt account password.
-     - Limit and monitor the use of service accounts with delegation rights.
-     - Employ strong, unique passwords for all accounts.
-     - Keep systems patched and up-to-date.
-     - Monitor and audit Kerberos authentication logs for suspicious activity.
-18. **How does an attack against «constrained» delegation looks like?**  
-      - An attacker would first need to compromise a service account with constrained delegation rights. Then, they could impersonate users but only to the services specified in the constrained delegation setup.
-19. **What is meant with «protocol transition»? How does it work?** 
-      - **Purpose**: Protocol transition is intended to bridge different authentication protocols to Kerberos. It allows a service to request a Kerberos service ticket on behalf of a user who has authenticated using a non-Kerberos method.
-      - **Functioning**: In this process, the delegation service (the service requesting a ticket on behalf of the user) can essentially create the proof of the user's presence itself. This means that the initial authentication of the user (which typically happens through Kerberos) is not actually required for the delegation service to obtain a Kerberos ticket in the user's name.
-      - **Implications**: This ability to impersonate users without their direct Kerberos authentication poses significant security considerations. For instance, enabling constrained delegation with protocol transition gives an account additional privileges, marked by the User Account Control (UAC) flag `TrustedToAuthForDelegation`. Accounts with this flag are trusted to perform impersonation of arbitrary users within the context of delegation​​.
-20. **What can you do with the permission «Trusted to Auth for Delegation» S4U2Self & S4U2Proxy?**
-      - **S4U2Self (Service for User to Self)**: This extension allows a service (which holds the "Trusted to Auth for Delegation" permission) to obtain a service ticket to itself on behalf of any user, even if that user has not previously authenticated to the service. Essentially, it allows the service to impersonate any user in the domain.
-      - **S4U2Proxy (Service for User to Proxy)**: Using this extension, the service can then use the service ticket obtained via S4U2Self to request service tickets to other services on behalf of the user. This means the service can act as a proxy, accessing other services as if it were the user.
-      - The combination of these extensions with the "Trusted to Auth for Delegation" permission effectively allows a service to impersonate any user in the domain and access resources on their behalf.
-
-### PKCS\#11
+### Topic 15: PKCS\#11 (YubiKey)
 
 1. **Describe a typical PKCS\#11 stack for accessing a security token.**  
      - Application with PKCS#11 support
@@ -778,46 +774,7 @@ This command captures DNS traffic on port 53 while displaying minimal informatio
 7. **What does the acronym U2F (Universal Second Factor) stands for? What is it based on?**
      - U2F is a standard for two-factor authentication (2FA). It allows users to augment traditional login methods with a physical device, like a USB security key, which provides an additional layer of security. U2F devices communicate with the host using standard protocols such as USB, NFC, or Bluetooth. The U2F standard is based on public-key cryptography. 
 
-### Wi-Fi
-
-1. **Under which conditions can you read all Wi-Fi network traffic?**
-	- good antenna, being within range of the Wi-Fi
-	- Wi-Fi card supporting monitor mode and packet injection.
-	- root privileges for tools
-	- its useful to set the MAC and IP address statically
-2. **Explain the difference between a network card in «promiscuous mode» and «monitor mode».**
-	- *Promiscuous Mode*: captures all packets on a connected network, regardless of the intended destination MAC address. You will see only packet if you are connected to a station and only packets inside the same network.
-	- *Monitor Mode*: captures all wireless traffic within its range, including packets not addressed to it, allowing analysis of all Wi-Fi communications in the vicinity (including beacons and data form any wireless networks in the area).
-3. **Describe the WEP (Wired Equivalent Privacy) encryption. What are the weak points?**
-	- WEP uses the RC4 stream cipher for encryption with 64-bit and 128-bit encryption keys (which include a 24-bit IV)
-	- Weak Points:
-		- *Weak IVs*: only 24-bit
-		- *Flawed Integrity*: CRC-32 for checksum for data integrity, which is not cryptographically secure
-4. **What kind of authentication does WEP support (Shared Key Authentication, Open System Authentication)?**
-	- *Shared Key Authentication*: Pre-shared WEP key, During the authentication process, the access point sends a challenge text to the client, which encrypts it using the WEP key and sends it back. The access point decrypts it to verify if the client has the correct key $\rightarrow$ this method exposes part of the encryption mechanism, this is not secure!
-	- *Open System Authentication*: no credentials, any device can request authentication and will be granted access (but with encrypted traffic)
-5. **What is needed to crack a WEP key?**
-	- sniffing of packets (FMS attack: about 400'000 packets, PTW: 60'000 - 100'000)
-6. **Describe a WPA2 authentication with PSK (pre-shared key)?**
-	- 4-Way Handshake:
-		1. The AP sending a random number (ANonce) to the client
-		2. The client responding with its random number (SNonce)
-		3. The AP calculating the PTK (Pairwise Transient Key) from these numbers and sending an encrypted message to the client
-		4. The client decrypting this message with the PTK, confirming successful authentication
-7. **What is the purpose of PBKDF2 (Password-Based Key Derivation Function 2)?**
-	- In the context of WPA2, PBKDF2 takes the PSK (a passphrase) and generates a 256-bit key. It incorporates the SSID and the number of iterations (4096 in WPA2) to make brute-force and dictionary attacks more difficult.
-8. **Assume you want to analyze an WPA2 communication with Wireshark. What is needed to decrypt the packets of the CAP file (packet capture file)?**
-	- To decrypt WPA2 packets in a packet capture file (CAP file) using Wireshark, you need the network's PSK and the SSID.
-	- Additionally, capturing the four-way handshake process is essential, as it contains the nonce values used to derive the session keys for encryption.
-9. **What Wi-Fi attacks do you know? Describe how they work.**
-	- *WPA2-PSK Cracking*: dictionary attack against PSK with SSID and captured handshake (test a password and check until MIC matches)
-	- *Rouge DHCP*: allows attackers to set their device as the default router
-	- *Fake Webauth*: most users are used seeing a webauth page when connecting to a Wi-Fi
-10. **What is «SSID Cloaking»? Does it protect a Wi-Fi access point?**
-	- SSID cloaking involves hiding the network name (SSID) from broadcasting in beacon frames, making it less visible to casual scanning.
-	- While it can deter casual users, it does not provide significant protection as the SSID can still be discovered by determined attackers using packet sniffers or during the connection process. It is more of an obscurity measure than a robust security feature.
-
-### VPN
+### Topic 16: VPN
 
 1. **At which OSI layer can VPN solutions be established? Provide examples.**
 	
@@ -915,6 +872,45 @@ This command captures DNS traffic on port 53 while displaying minimal informatio
              - Server's public key.
              - Server's IP address and port.
              - Allowed IPs (can be `0.0.0.0/0` for routing all traffic through the VPN, or the server's subnet for a more restricted setup).
+
+### Topic 17: Wi-Fi
+
+1. **Under which conditions can you read all Wi-Fi network traffic?**
+	- good antenna, being within range of the Wi-Fi
+	- Wi-Fi card supporting monitor mode and packet injection.
+	- root privileges for tools
+	- its useful to set the MAC and IP address statically
+2. **Explain the difference between a network card in «promiscuous mode» and «monitor mode».**
+	- *Promiscuous Mode*: captures all packets on a connected network, regardless of the intended destination MAC address. You will see only packet if you are connected to a station and only packets inside the same network.
+	- *Monitor Mode*: captures all wireless traffic within its range, including packets not addressed to it, allowing analysis of all Wi-Fi communications in the vicinity (including beacons and data form any wireless networks in the area).
+3. **Describe the WEP (Wired Equivalent Privacy) encryption. What are the weak points?**
+	- WEP uses the RC4 stream cipher for encryption with 64-bit and 128-bit encryption keys (which include a 24-bit IV)
+	- Weak Points:
+		- *Weak IVs*: only 24-bit
+		- *Flawed Integrity*: CRC-32 for checksum for data integrity, which is not cryptographically secure
+4. **What kind of authentication does WEP support (Shared Key Authentication, Open System Authentication)?**
+	- *Shared Key Authentication*: Pre-shared WEP key, During the authentication process, the access point sends a challenge text to the client, which encrypts it using the WEP key and sends it back. The access point decrypts it to verify if the client has the correct key $\rightarrow$ this method exposes part of the encryption mechanism, this is not secure!
+	- *Open System Authentication*: no credentials, any device can request authentication and will be granted access (but with encrypted traffic)
+5. **What is needed to crack a WEP key?**
+	- sniffing of packets (FMS attack: about 400'000 packets, PTW: 60'000 - 100'000)
+6. **Describe a WPA2 authentication with PSK (pre-shared key)?**
+	- 4-Way Handshake:
+		1. The AP sending a random number (ANonce) to the client
+		2. The client responding with its random number (SNonce)
+		3. The AP calculating the PTK (Pairwise Transient Key) from these numbers and sending an encrypted message to the client
+		4. The client decrypting this message with the PTK, confirming successful authentication
+7. **What is the purpose of PBKDF2 (Password-Based Key Derivation Function 2)?**
+	- In the context of WPA2, PBKDF2 takes the PSK (a passphrase) and generates a 256-bit key. It incorporates the SSID and the number of iterations (4096 in WPA2) to make brute-force and dictionary attacks more difficult.
+8. **Assume you want to analyze an WPA2 communication with Wireshark. What is needed to decrypt the packets of the CAP file (packet capture file)?**
+	- To decrypt WPA2 packets in a packet capture file (CAP file) using Wireshark, you need the network's PSK and the SSID.
+	- Additionally, capturing the four-way handshake process is essential, as it contains the nonce values used to derive the session keys for encryption.
+9. **What Wi-Fi attacks do you know? Describe how they work.**
+	- *WPA2-PSK Cracking*: dictionary attack against PSK with SSID and captured handshake (test a password and check until MIC matches)
+	- *Rouge DHCP*: allows attackers to set their device as the default router
+	- *Fake Webauth*: most users are used seeing a webauth page when connecting to a Wi-Fi
+10. **What is «SSID Cloaking»? Does it protect a Wi-Fi access point?**
+	- SSID cloaking involves hiding the network name (SSID) from broadcasting in beacon frames, making it less visible to casual scanning.
+	- While it can deter casual users, it does not provide significant protection as the SSID can still be discovered by determined attackers using packet sniffers or during the connection process. It is more of an obscurity measure than a robust security feature.
 
 ---
 links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]

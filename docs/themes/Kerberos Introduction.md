@@ -71,11 +71,23 @@ links: [[620 SPA TOC - Kerberos|SPA TOC - Kerberos]] - [[themes/000 Index|Index]
 
 To request a TGT the user must pre-authenticate
 
-1.  User encrypts current timestamp using a key dervived from the password hash and send to KDC (AS-REQ)
+1. User encrypts current timestamp using a key derived from the password hash and send it to the KDC (AS-REQ)
 2. KDC decrypts and verifies the timestamp to confirm that the user has used the correct password and the message is not a replay attack
 3. KDC responds with a TGT + encrypted part with session keys and details to communicate with TGS
 
 Pre-authentication is enabled by default but can be disabled. This way an attacker could request a TGT from the TGS without first having to prove that he knows the password. This would allow an attacker to try to brute force the password ([[ASREP Roasting]])
+
+#### How can the AS verify the Pre-auth data
+
+In Kerberos pre-authentication, the Authentication Server (AS) does not directly have your password, but it does have a key derived from your password. Here's how it works:
+
+1. **Password Key Derivation**: When you set or change your password, a key is derived from this password (using a cryptographic hash function and possibly a salt). This key is stored securely on the Kerberos server, specifically within the Kerberos database on the Authentication Server.
+2. **Pre-Authentication Process**:
+    - When you attempt to authenticate, your client (usually your computer or another device you are logging in from) also generates this same key from the password you enter.
+    - The client then uses this key to encrypt a timestamp and sends this encrypted timestamp to the Authentication Server as part of the pre-authentication data.
+    - The Authentication Server then attempts to decrypt this timestamp using the key it has stored (derived from your password when it was set or changed).
+    - If the server can successfully decrypt the timestamp and the timestamp is within an allowed time skew, it confirms that the client knows the correct password, thus verifying your identity.
+3. **Security**: This process ensures that the actual password is never sent over the network. Only the derived key is used, and the actual password remains known only to you.
 
 ### Complete process in detail
 

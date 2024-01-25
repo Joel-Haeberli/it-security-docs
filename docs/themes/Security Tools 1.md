@@ -10,7 +10,7 @@ links: [[608 SPA TOC - Security Tools|SPA TOC - Security Tools]] - [[themes/000 
 
 - Invented in 1980's
 - Standard specification about forwarding "log messages" in an IP network
-- Syslog protocol is Client <--> Server 
+- Syslog protocol is Client $\leftrightarrow$ Server 
 - Default port: UDP 514
 
 ### Syslog Layers
@@ -24,18 +24,21 @@ links: [[608 SPA TOC - Security Tools|SPA TOC - Security Tools]] - [[themes/000 
 
 ### Syslog Components
 
-**Originator** = Client --> sends the message
-**Relay** = Receives the message --> processes it --> forwards it (All according to its configuration)
-**Collector** = Server --Z write the message to the file/DB/... 
+**Originator** = Client $\rightarrow$ sends the message
+**Relay** = Receives the message $\rightarrow$ processes it $\rightarrow$ forwards it (All according to its configuration)
+**Collector** = Server $\rightarrow$ write the message to the file/DB/... 
 
 ### Syslog Header
 
 **PRI** (for Priority) (must):
 
-PRI is a calculated value $$PRI=Facility \cdot 8 + Severity$$
+PRI is a calculated value 
+
+$$PRI=Facility \cdot 8 + Severity$$
+
 Example: MAIL.INFO = $2\cdot8+6$
 
-PRI - Facility
+**PRI - Facility**
 
 | Numerical Code | Facility |
 | ---- | ---- |
@@ -56,7 +59,8 @@ PRI - Facility
 | 14 | log alert |
 | 15 | clock daemon |
 | 16 - 23 | local use 0 - 7 (local0 - local7) |
-PRI - Severity
+
+**PRI - Severity**
 
 | Numerical Code | Severity |
 | ---- | ---- |
@@ -69,27 +73,16 @@ PRI - Severity
 | 6 | Informational: informational messages |
 | 7 | Debug: debug-level messages |
 
-**Version** (must)
-A IANA assigned version number. RFC5424 uses version 1
-
-**Timestamp** (must)
-Date followed by uppercase T followed by time and maybe time zone
-
-**Hostname** (must)
-
-- FQDN
-- IP Address
-- Hostname
-- NIL Value (NULL)
-
-**Application name** (should)
-Name of the application gathering the log message
-
-**Process ID** (should)
-Numerical value representing the PID (normally) of the application gathering the log message
-
-**Message ID** (should)
-Message type to identify the message
+- **Version** (must): A IANA assigned version number. RFC5424 uses version 1
+- **Timestamp** (must): Date followed by uppercase T followed by time and maybe time zone
+- **Hostname** (must):
+	- FQDN
+	- IP Address
+	- Hostname
+	- NIL Value (NULL)
+- **Application name** (should): Name of the application gathering the log message
+- **Process ID** (should): Numerical value representing the PID (normally) of the application gathering the log message
+- **Message ID** (should): Message type to identify the message
 
 ### Syslog MSG/Message
 
@@ -135,26 +128,26 @@ Syslog message up to 480 Octets must be accepted but 2048 should be accepted
 - Splunk
 - Grafana Loki
 
-
 ## TCPDUMP
 
 Command-line packet analyzer
+
 ``` bash
 tcpdump <options> <filter>
 ```
 
 options: <br>
--n no dns resolution<br>
--i interface to listen on<br>
--s snaplen<br>
--w write out to file<br>
--v verbose<br>
--Z drop privilages to user<br>
--D available network interfaces<br>
--e print link-level header<br>
--F use file as input to filter expression<br>
--p Dont put interface into "promiscous" mode<br>
--r Read packets from file
+- -n no dns resolution
+- -i interface to listen on
+- -s snaplen
+- -w write out to file
+- -v verbose
+- -Z drop privilages to user
+- -D available network interfaces
+- -e print link-level header
+- -F use file as input to filter expression
+- -p Dont put interface into "promiscous" mode
+- -r Read packets from file
 
 **filter** = pcap filtering language using<br>
 **filter expressions** = consists of one or more primitives<br>
@@ -216,7 +209,8 @@ TShark is the command-line interface of wireshark.
 Nmap is a free network security scanner. Allows network-wide ping sweep, port, OS detection scans
 
 Syntax:
-``` bash
+
+```bash
 nmap <options> <targets>
 
 Options:

@@ -66,7 +66,6 @@ Configuration of the router:
 TCP gives error messages if the server is not reachable, while UDP does not.
 
 ```
-
 # rules.conf
 # Be aware of the rules in the default configuration (rsyslog.conf)
 

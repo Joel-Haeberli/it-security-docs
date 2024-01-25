@@ -104,11 +104,11 @@ There are many Network Monitoring, Host-Monitoring and Graphing Tools out there.
 
 **Graphing Tools**
 
-- Multi Router Traffic Grapher (MRTG) --> UNIX/LINUX
+- Multi Router Traffic Grapher (MRTG) $\rightarrow$ UNIX/LINUX
 	- RRD (RoundRobinDatabase) grapher
 	- generates graphs of network traffic
 	- uses SNMP as data source
-- PRTG --> Windows
+- PRTG $\rightarrow$ Windows
 	- uses SNMP as data sources
 
 **Network monitoring and graphing tools**
@@ -175,7 +175,7 @@ Netflow version 5 uses UDP and SCTP to transport flows. It has the following fie
 - Number of bytes
 - source & destination IPv4 address
 - source & destination port number
-- If protocol is TCP --> flags
+- If protocol is TCP $\rightarrow$ flags
 - IP Tos/DiffServ values
 
 ### IPFIX

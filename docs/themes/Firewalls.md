@@ -150,7 +150,7 @@ Can perform multiple security functions within one single appliance:
 - are often referred to as:
 	- **application layer/level gateway (ALG)**
 	- **proxy server**
-	- **application firewall**: additionally take the header information from layer 2 up to layer 7 into account (what the both other terms above don't do)
+	- **application firewall**: additionally take the header information from layer 2 up to layer 7 into account (something both terms above don't do)
 
 ### ALG/ Proxy Server Types
 
@@ -178,7 +178,7 @@ Can perform multiple security functions within one single appliance:
 
 ## DNS Firewalls
 
-- also called **Response Policy Zones (RPZ)** firewalls
+- also called **[[DNS Response Policy Zones|Response Policy Zones (RPZ)]]** firewalls
 - able to allow, block or redirect connections based on DNS requests
 - prevent clients from accessing malicious sites $\rightarrow$ clients must use them as resolvers!
 - cannot prevent connections if the client uses DoT (DNS over TLS) or DoH (DNS over HTTPS) on foreign DNS servers

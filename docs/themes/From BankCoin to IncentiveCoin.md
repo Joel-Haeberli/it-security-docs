@@ -74,6 +74,18 @@ You could denote $x_0$ = "Alice owns 1 coin", which will then become $x_1$ = "Al
 
 ## PublicAnnouncementCoin
 
+### What is a public announcement
+
+I have the message `The exam is next friday.`
+Are the following ways of announcing it public announcements?
+
+- I send it to all of you as an email.
+	- No, not cryptographic security
+- I put it on a publicly accessible webserver known to all of you.
+	- No, the webserver can respond differently to the requests
+- I say it in class.
+	- Yes
+
 *Predecessor: TransactionCoin*
 
 The PublicAnnouncementCoin resolves the double spending attack by introducing a public announcement which means that each node only accepts transactions which were publicly announced. Like this Alice can no longer send the same transaction with different receivers to the network.

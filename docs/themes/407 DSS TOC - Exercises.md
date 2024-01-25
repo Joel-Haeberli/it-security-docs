@@ -6,6 +6,11 @@ links: [[400 DSS MOC|DSS MOC]] - [[themes/000 Index|Index]]
 
 ---
 
+## Two terms from the lectures
+
+- **Random Walk**: Drunken seaman going left and right on a straight line with 50% probability.
+- **Gambler’s Ruin**: In statistics, gambler's ruin is the fact that a gambler playing a game with negative expected value will eventually go broke, regardless of their betting system.
+
 ## Exercise 1 - Think about Bitcoin Clients
 
 ### What could happen to your bitcoins if you downloaded a trojan horse masquerading as the bitcoin client instead of the real bitcoin client? 

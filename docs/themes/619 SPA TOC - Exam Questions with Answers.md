@@ -554,32 +554,68 @@ This command captures DNS traffic on port 53 while displaying minimal informatio
      - **Qualified Electronic Signatures** (QES) are a subset of AdES. They are legally equivalent to handwritten signatures in many jurisdictions, including the EU. QES requires a secure signature creation device and a certificate from a Qualified Trust Service Provider (QTSP).
      - In Switzerland 4 entities can issue such certificates (Schweizerische Eidgenossenschaft, Digicert, Swisscom, SwissID)
 
-### Identification Authentication Authorization
+### ✅ Identification Authentication Authorization
 
-1. What is Identification, Authentication and Authorization?
-2. What factors are distinguished for authentication? What is required for 2FA / MFA?
-3. What is meant in the PSD2 regulation with «strong authentication with linking»?
-4. What hat to be met to get a high «Level of Assurance» (LoA)?
-5. What can go wrong with shared secrets? How should you store credentials used for password based authentication?
-6. Describe «online» and «offline» attacks against passwords.  
-7. How do you calculate the Entropy of a password?  
-8. How is the password transferred with «HTTP Basic Authentication»?  
-9. How does the OATH standard HOTP (HMAC-based One Time Password) works?  
-10. How does the OATH standard TOTP (Time-based One Time Password) works?  
-11. What is a Challenge-Response-Protocol and why do we need it?  
-12. FIDO2 consists of the standards WebAuthn and CTAP. Describe the function of the two standards.
-13. What is meant with attestation?
-14. What information / LoA do we get with a FIDO2 registration with a YubiKey? 
-15. What does the Relying Party (RP) need for verifying the attestation?
-16. What communication protocols are supported by CTAP? What options are displayed when resisting on a FIDO2 page with an Android device?
-17. What is needed to access resources over OAuth from a «Resource Server»?
-18. What is a «bearer token»?
-19. Describe the trust relations between the 4 parties: resource holder, client, authentication server and resource server.
-20. What kind of CSRF attack would be possible if the client would not check the session state? 
-21. How can a resource holder revoke his consent?
-22. Outline how you can use «OpenID Connect» as authentication layer. What is the benefit. How are the trust relations?
-23. Outline how you can leverage OAuth as Identity Provider interface. 
-24. On what security mechanism is OAuth relying on?
+1. **What is Identification, Authentication and Authorization?**
+     - **Identification** is the process of claiming an identity (e.g., username).
+     - **Authentication** is verifying the identity (e.g., password, biometric data).
+     - **Authorization** is granting or denying permissions based on the authenticated identity (e.g., access to resources).
+2. **What factors are distinguished for authentication? What is required for 2FA / MFA?**
+     - **Knowledge**: Something the user knows (e.g., password, PIN).
+     - **Possession**: Something the user has (e.g., token, smartphone).
+     - **Inherence**: Something the user is (e.g., fingerprint, facial recognition).
+     - **2FA/MFA** requires at least two different factors for authentication, enhancing security.
+3. **What is meant in the PSD2 regulation with «strong authentication with linking»?**
+    - In the PSD2 regulation, "strong authentication with linking" refers to the need for strong customer authentication (SCA) that dynamically links the authentication to specific transaction details, such as the amount and the payee, ensuring the security of electronic payments.
+4. **What has to be met to get a high «Level of Assurance» (LoA)?**
+     - To achieve a high LoA, multiple factors of authentication are typically required, along with strong mechanisms to verify identity (like government-issued IDs), secure registration and issuance processes, and robust protection against fraudulent use.
+5. **What can go wrong with shared secrets? How should you store credentials used for password based authentication?**
+     - They can be guessed, intercepted, or stolen. 
+     - Use secure, hashed storage for credentials. Hashing (with a salt) transforms the password into a unique, irreversible hash.
+6. **Describe «online» and «offline» attacks against passwords.** 
+     - **Online Attacks**: Attempt to access accounts through the network (e.g., brute-force login attempts).
+     - **Offline Attacks**: Access stolen data (like a database) and try to crack passwords without interacting with the system.
+7. **How do you calculate the Entropy of a password?**  
+     - It's calculated based on the number of possible symbols and password length. Formula: `Entropy = Log2(N^L)`, where N is the number of possible symbols, and L is the length of the password.
+8. **How is the password transferred with «HTTP Basic Authentication»?** 
+     - The username and password are concatenated with a colon, base64 encoded, and sent in the HTTP header. It's not encrypted, so it should always be used with HTTPS to ensure security.
+9. **How does the OATH standard HOTP (HMAC-based One Time Password) works?**  
+     - It's based on HMAC (Hash-based Message Authentication Code) and a counter value. Each time a password is used, the counter increments, ensuring that each OTP is unique.
+10. **How does the OATH standard TOTP (Time-based One Time Password) works?**  
+      - Similar to HOTP but uses the current time as the moving factor instead of a counter. The password changes at fixed time intervals (e.g., every 30 seconds), offering a constantly updating password.
+11. **What is a Challenge-Response-Protocol and why do we need it?** 
+      - A security mechanism where one party presents a question (challenge) and another party must provide a valid answer (response/signature) to be authenticated. It's used to verify the identity of a user or device, often in a way that prevents eavesdropping or replay attacks, since the challenge is typically random and changes each time. Based on public key cryptography. 
+12. **FIDO2 consists of the standards WebAuthn and CTAP. Describe the function of the two standards.**
+      - - **WebAuthn**: A web standard for authentication. It allows users to log in to web services using biometrics, mobile devices, or FIDO security keys, instead of a password.
+      - **CTAP (Client To Authenticator Protocol)**: Allows an external device (like a security key or a mobile phone) to act as an authenticator to a client device via USB, NFC, or Bluetooth.
+13. **What is meant with attestation?**
+      - Refers to the process where a device (like a security key) proves to a verifier (like a server) that it is what it claims to be, often by providing a certificate or signature from a trusted manufacturer or authority.
+14. **What information / LoA do we get with a FIDO2 registration with a YubiKey?** 
+      - The YubiKey, as a FIDO2 authenticator, provides high assurance of user identity by verifying user presence (and potentially user biometrics, depending on the model) during the registration and authentication processes.
+      - There are some YubiKey with the highest possible level of LoA.
+15. **What does the Relying Party (RP) need for verifying the attestation?**
+      - To verify attestation, the RP needs the attestation statement from the authenticator (YubiKey), which typically includes the authenticator's public key, a signed certificate, and other metadata for verification. And to do that it needs the corresponding public key.
+16. **What communication protocols are supported by CTAP? What options are displayed when resisting on a FIDO2 page with an Android device?**
+      - USB, NFC and Bluetooth. When registering on a FIDO2 page, Android devices may display options to use the phone itself as an authenticator (if it supports FIDO2) or to connect an external authenticator via USB, NFC, or Bluetooth.
+17. **What is needed to access resources over OAuth from a «Resource Server»?**
+      - The client needs an access token from the authentication server. This token is then presented to the resource server to access the resources on behalf of the resource owner (user).
+18. **What is a «bearer token»?**
+      - A bearer token is a type of access token that allows the holder of the token to access resources without additional proof of identity. It is assumed that whoever possesses the token has the right to use it.
+19. **Describe the trust relations between the 4 parties: resource holder, client, authentication server and resource server.**
+      - The **Client** trusts the **Auth Server** to authenticate users and issue tokens.
+      - The **Resource Holder** trusts the **Auth Server** to securely authenticate and not misuse credentials.
+      - The **Resource Server** trusts the **Auth Server** to correctly validate users and trusts the token for access control.
+      - The **Resource Holder** must also trust the **Client** to act on their behalf appropriately.
+20. **What kind of CSRF attack would be possible if the client would not check the session state?**
+      - If the client doesn't check the session state, a CSRF attack could trick a user into unknowingly executing an action on a different site where they are authenticated. For example, an attacker could forge a request to transfer money or change settings in the context of the user's session on a banking site. Checking the session state helps ensure that the request is made intentionally by the user and not by an attacker.
+21. **How can a resource holder revoke his consent?**
+      - A resource holder can revoke their consent, typically through the service that originally granted it. Most platforms have a security or privacy settings page where users can view and manage their consent to third-party applications. Here, they can revoke access rights previously granted to applications or services.
+22. **Outline how you can use «OpenID Connect» as authentication layer. What is the benefit. How are the trust relations?**
+      - Just read it [[OAuth#OpenID Connect|here]]
+23. **Outline how you can leverage OAuth as Identity Provider interface.**
+      - OAuth can be used to facilitate identity management by allowing a client to request access to resources controlled by the resource owner but hosted by a resource server. The identity provider, in this case, would authenticate the resource owner and issue tokens that the client can use to access the resources.
+24. **On what security mechanism is OAuth relying on?**
+      - OAuth relies on tokens for security. The tokens are used instead of credentials for accessing resources, thus providing a layer of abstraction that enhances security by not exposing user credentials to clients. OAuth also uses SSL/TLS for secure communication between all parties involved.
 
 ### ✅  Secure Email
 

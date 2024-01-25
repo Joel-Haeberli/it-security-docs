@@ -2,7 +2,7 @@ tags: #web-security #xss
 
 # Reflective XSS
 
-links: [[505 WS TOC - Cross Site Scripting (XSS)|WS TOC - Cross Site Scripting (XSS)]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[505 WS TOC - Cross Site Scripting (XSS)|WS TOC - Cross Site Scripting (XSS)]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -23,9 +23,10 @@ links: [[505 WS TOC - Cross Site Scripting (XSS)|WS TOC - Cross Site Scripting (
 - Link looks correct and the certificate is also correct
 
 Unencoded URL example
+
 ```
 http://vulnerable-website.com/search?query=<script>alert('XSS')</script>
 ```
 
 ---
-links: [[505 WS TOC - Cross Site Scripting (XSS)|WS TOC - Cross Site Scripting (XSS)]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[505 WS TOC - Cross Site Scripting (XSS)|WS TOC - Cross Site Scripting (XSS)]] - [[themes/000 Index|Index]]

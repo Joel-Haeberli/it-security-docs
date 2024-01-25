@@ -30,12 +30,12 @@ The physical layer sends and receives bits between adjacent stations on the link
 ### Vulnerabilities
 
 - loss of power
-- loss of environmental control -> air conditioning failure
+- loss of environmental control $\rightarrow$ air conditioning failure
 - physical theft of hw or data
 - physical damage or destruction of hw or data
-- unauthorized changes to the functional environment -> employee installing unapproved modem
+- unauthorized changes to the functional environment $\rightarrow$ employee installing unapproved modem
 - disconnection of physical data links
-- undetectable interception of data -> scanning electromagnetic radiation, [Van-Eck-Phreaking](https://de.wikipedia.org/wiki/Van-Eck-Phreaking)
+- undetectable interception of data $\rightarrow$ scanning electromagnetic radiation, [Van-Eck-Phreaking](https://de.wikipedia.org/wiki/Van-Eck-Phreaking)
 - key logging
 
 ![[physical-layer-vulnerability.png]]

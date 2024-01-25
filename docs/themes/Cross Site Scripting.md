@@ -2,7 +2,7 @@ tags: #web-security #xss
 
 # Cross Site Scripting
 
-links: [[505 WS TOC - Cross Site Scripting (XSS)|WS TOC - Cross Site Scripting (XSS)]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[505 WS TOC - Cross Site Scripting (XSS)|WS TOC - Cross Site Scripting (XSS)]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -68,4 +68,4 @@ The following scripts can be used to test if website is protected against XSS
 	- Brokers could potentially run any code on the website including the script
 
 ---
-links: [[505 WS TOC - Cross Site Scripting (XSS)|WS TOC - Cross Site Scripting (XSS)]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[505 WS TOC - Cross Site Scripting (XSS)|WS TOC - Cross Site Scripting (XSS)]] - [[themes/000 Index|Index]]

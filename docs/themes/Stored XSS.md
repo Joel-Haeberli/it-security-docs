@@ -2,7 +2,7 @@ tags: #web-security #xss
 
 # Stored XSS
 
-links: [[505 WS TOC - Cross Site Scripting (XSS)|WS TOC - Cross Site Scripting (XSS)]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[505 WS TOC - Cross Site Scripting (XSS)|WS TOC - Cross Site Scripting (XSS)]] - [[themes/000 Index|Index]]
 
 ---
 
@@ -13,6 +13,7 @@ links: [[505 WS TOC - Cross Site Scripting (XSS)|WS TOC - Cross Site Scripting (
 - Or, worse, sending personal information of users to attacker
 
 Attacker Comment
+
 ```javascript
 <script>
 // Change the first link on the page
@@ -36,7 +37,5 @@ if (sessionId) {
 </script>
 ```
 
-^7ac058
-
 ---
-links: [[505 WS TOC - Cross Site Scripting (XSS)|WS TOC - Cross Site Scripting (XSS)]] - [[500 WS MOC|WS MOC]] - [[themes/000 Index|Index]]
+links: [[505 WS TOC - Cross Site Scripting (XSS)|WS TOC - Cross Site Scripting (XSS)]] - [[themes/000 Index|Index]]

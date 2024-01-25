@@ -1,7 +1,7 @@
 # Index
 
 Welcome to the index. This is homebase.
-The Notes are based on the [[IMF Framework]] (get familiar with the concept first).
+The Notes are based on the [[IMF Framework]] (get familiar with the concept first). Also have a look at the [[Best practices]] for documentation.
 
 ### Index Categories
 

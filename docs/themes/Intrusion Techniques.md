@@ -16,15 +16,17 @@ Happens over the network. Starting with `nmap` or other tools. Using software bu
 
 ### Software Bugs (CWE)
 
+See also: [[500 WS MOC|Web Security]]
+
 1. Out-of-bounds Write
-2. Improper Neutralisation of Input During Web Page Generation (Cross-site Scripting)
-3. Improper Neutralisation of Special Elements used in an SQL Command (SQL Injection)
+2. Improper Neutralisation of Input During Web Page Generation ([[Cross Site Scripting|Cross-site Scripting]])
+3. Improper Neutralisation of Special Elements used in an SQL Command ([[SQL-Injection|SQL Injection]])
 4. Use After Free
 5. Improper Neutralisation of Special Elements used in an OS Command (OS Command Injection)
 6. Improper Input Validation
 7. Out-of-bounds Read
 8. Path Traversal
-9. Cross-Site Request Forgery (CSRF)
+9. [[Cross Site Request Forgery (CSRF)]]
 10. Unrestricted Upload of File with Dangerous Type
 11. Missing Authorisation
 12. NULL Pointer Dereference
@@ -46,7 +48,7 @@ Happens over the network. Starting with `nmap` or other tools. Using software bu
 
 * Leaving bad default configurations in place
 * Running unnecessary services (bigger attack surface)
-* Trust relationships between systems --> Weakest link
+* Trust relationships between systems $\rightarrow$ Weakest link
 
 ### Design flaws
 

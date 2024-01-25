@@ -26,7 +26,7 @@ links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Ind
 	- Users are given higher privileges than necessary just to ensure they can access the tools they need for their job
 - Program logic flaws may be accidentally or purposely used to crash programs or cause undesired behaviour
 	- Example: Chat application only handles message payloads smaller than a certain size
-	- If a user sends a larger message it might cause a buffer overflow that crashes the server -> DoS
+	- If a user sends a larger message it might cause a buffer overflow that crashes the server $\rightarrow$ DoS
 
 ### Attacks
 
@@ -52,7 +52,7 @@ links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Ind
 - Standards, testing, and review of application code and functionality
 	- Define a baseline (set of metrics) or standards / best practices
 	- Regularly compare the current implementation of the application to this baseline
-- Intrusion detection systems (IDS)
+- Intrusion detection systems ([[IDS & IPS|IDS]])
 	- Monitor network or system activities for malicious activities or policy violations
 - Traffic regulation by application
 	- Define firewall rules to regulate traffic by application / port

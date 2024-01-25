@@ -19,7 +19,7 @@ links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Ind
 	- Different OS implement TCP/IP, UDP slightly different
 	- Nmap can send various TCP/UDP packets and analyse the response to infer the OS
 - Overloading of transport-layer mechanisms such as port numbers to effectively filter and qualify traffic
-	- *GPT: If a server is running too many services a	- Sending ICMP Echo request packet that is larger than the maximum IP packet size accessible through different ports, it can become difficult to manage and secure all these ports. For instance, if a server is running HTTP on port 80, HTTPS on port 443, FTP on port 21, and several other services on other ports, it may not have the capacity to filter and monitor all the traffic effectively. An attacker might exploit a less secure service to gain unauthorized access to the server.*
+	- *GPT: If a server is running too many services a Sending ICMP Echo request packet that is larger than the maximum IP packet size accessible through different ports, it can become difficult to manage and secure all these ports. For instance, if a server is running HTTP on port 80, HTTPS on port 443, FTP on port 21, and several other services on other ports, it may not have the capacity to filter and monitor all the traffic effectively. An attacker might exploit a less secure service to gain unauthorized access to the server.*
 - Transmission mechanisms can be subject to spoofing and attacks based on crafted packets and the educated guessing of flow and transmission values, allowing the disruption or seizure of control of communications
 	- Example: SYN flooding
 	- Goal: DoS, making system unresponsive to legitimate traffic because it's handing all the SYN requests
@@ -33,14 +33,14 @@ links: [[604 SPA TOC - Layered Security|SPA TOC - Layered Security]] - [[000 Ind
 	- Host B adds partially opened connection in a "listen queue" (stored for 75 seconds)
 	- "listen queue" is normally very limited
 	- Host A sends lots of SYN requests but never replies to SYN&ACK from Host B
-	- When "listen queue" on Host B is full, it won't accept any connections from other Hosts -> DoS
+	- When "listen queue" on Host B is full, it won't accept any connections from other Hosts $\rightarrow$ DoS
 - Land Attack
 	- Attacker sends forged TCP SYN packets with the same source and destination IP address and TCP port numbers
 	- Victim system might crash or reboot
 	- Can be mitigated with packet filtering
 - UDP flood attack
 	- Simply sending lots of forged UDP packets to victim
-	- Victim will generate ICMP "destination unreachable" -> DoS
+	- Victim will generate ICMP "destination unreachable" $\rightarrow$ DoS
 - Port scan attack
 	- Sending a message to each port
 	- Evaluate responses to see what services are available

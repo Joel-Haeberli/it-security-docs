@@ -147,7 +147,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 
 ## Part 2
 
-### TLS
+### Topic 10: TLS
 
 1. Name 5 protocols based on TLS.
 2. What is meant with «Opportunistic TLS»? What is meant with «implicit TLS»? What kind of risks / attacks do you know?
@@ -175,7 +175,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 	* Authenticated Encryption 
 	* Authentication / Signature
 
-### Certificates and PKI
+### Topic 11: Certificates and PKI
 
 1. What is defined in PKCS#1, PKCS#7, PKCS#10, PKCS#11, PKCS#12?
 2. What is the life cycle of a X509 certificate?
@@ -187,7 +187,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 8. How to you generate a «Certificate Signing Request» (PKCS#10)? What attributes are checked by the RA?
 9. What are «Advanced Digital Signature» (AdES) and «Qualified Electronic Signatures» (QES). Who can issue such certificates in Switzerland?
 
-### Identification Authentication Authorization
+### Topic 12: Identification Authentication Authorization
 
 1. What is Identification, Authentication and Authorization?
 2. What factors are distinguished for authentication? What is required for 2FA / MFA?
@@ -214,7 +214,30 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 23. Outline how you can leverage OAuth as Identity Provider interface. 
 24. On what security mechanism is OAuth relying on?
 
-### Secure Email
+### Topic 12.5: Kerberos
+
+1. How does Kerberos works? Why does Kerberos need shared secrets? What are these shared secrets?
+2. The Key Distribution Center (KDC) is composed of the Authentication Server (AS) and the Ticket Granting Server (TGT). What is the function of AS and TGT?
+3. What is a Server Principal Name (SPN)? How is the name composed / structured?
+4. Explain the content and the function of Kerberos Tickets? What is a Ticket Granting Ticket (TGT) and what is a service ticket (ST)? Explain the differences.
+5. Explain the differences between «secret keys» and «session keys».
+6. How does the Kerberos Pre-authentication works?
+7. What is needed to decrypt all messages / tickets in Wireshark?
+8. What type of attacks are referred as «Golden Ticket» «Silver Ticket» attack? What can you do with a «Golden Ticket» or «Silver Ticket»?
+9. What has to be done if an attacker gained a «Golden Ticket»? 
+10. Describe Kerberos delegation. What does it mean. Where is it used?
+11. What is the difference between «unconstrained», «constrained» and «resource-based constrained» Delegation.
+12. Can the user prevent delegation?  
+13. Can you restrict delegation. Where does it makes sense to restrict delegation?  
+14. What are the security risks? Describe how «unconstrained» delegation could be misused.  
+15. How can you trick users to connect to your service configured for delegation? 
+16. How could a printer on a DC could be attacked?  
+17. What mitigation measurements do you know to secure Kerberos? 
+18. How does an attack against «constrained» delegation looks like?  
+19. What is meant with «protocol transition»? How does it work?  
+20. What can you do with the permission «Trusted to Auth for Delegation» S4U2Self & S4U2Proxy?
+
+### Topic 13: Secure Email
 
 1. How does the email routing works?  
 2. RFC 8314 introduces Transport Layer Security (TLS) for Email Submission and Access. What security concerns are addressed?  
@@ -242,30 +265,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 24. Where is DMARC policies verification enforced? How can you check the effect of your DMARC policies?
 25. What are the options if the DMARC verification fails?
 
-### Kerberos
-
-1. How does Kerberos works? Why does Kerberos need shared secrets? What are these shared secrets?
-2. The Key Distribution Center (KDC) is composed of the Authentication Server (AS) and the Ticket Granting Server (TGT). What is the function of AS and TGT?
-3. What is a Server Principal Name (SPN)? How is the name composed / structured?
-4. Explain the content and the function of Kerberos Tickets? What is a Ticket Granting Ticket (TGT) and what is a service ticket (ST)? Explain the differences.
-5. Explain the differences between «secret keys» and «session keys».
-6. How does the Kerberos Pre-authentication works?
-7. What is needed to decrypt all messages / tickets in Wireshark?
-8. What type of attacks are referred as «Golden Ticket» «Silver Ticket» attack? What can you do with a «Golden Ticket» or «Silver Ticket»?
-9. What has to be done if an attacker gained a «Golden Ticket»? 
-10. Describe Kerberos delegation. What does it mean. Where is it used?
-11. What is the difference between «unconstrained», «constrained» and «resource-based constrained» Delegation.
-12. Can the user prevent delegation?  
-13. Can you restrict delegation. Where does it makes sense to restrict delegation?  
-14. What are the security risks? Describe how «unconstrained» delegation could be misused.  
-15. How can you trick users to connect to your service configured for delegation? 
-16. How could a printer on a DC could be attacked?  
-17. What mitigation measurements do you know to secure Kerberos? 
-18. How does an attack against «constrained» delegation looks like?  
-19. What is meant with «protocol transition»? How does it work?  
-20. What can you do with the permission «Trusted to Auth for Delegation» S4U2Self & S4U2Proxy?
-
-### PKCS\#11
+### Topic 15: PKCS\#11 (YubiKey)
 
 1. Describe a typical PKCS\#11 stack for accessing a security token.  
 2. Where are APDU (Application Protocol Data Unit) commands used?  
@@ -275,19 +275,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 6. What does attestation stands for?  
 7. What does the acronym U2F (Universal Second Factor) stands for? What is it based on?
 
-### Wi-Fi
-1. Under which conditions can you read all Wi-Fi network traffic?
-2. Explain the difference between a network card in «promiscuous mode» and «monitor mode».
-3. Describe the WEP (Wired Equivalent Privacy) encryption. What are the weak points?
-4. What kind of authentication does WEP support (Shared Key Authentication, Open System Authentication)?
-5. What is needed to crack a WEP key?
-6. Describe a WPA2 authentication with PSK (pre-shared key)?
-7. What is the purpose of PBKDF2 (Password-Based Key Derivation Function 2)?
-8. Assume you want to analyze an WPA2 communication with Wireshark. What is needed to decrypt the packets of the CAP file (packet capture file)?
-9. What Wi-Fi attacks do you know? Describe how they work. 
-10. What is «SSID Cloaking»? Does it protect a Wi-Fi access point?
-
-### VPN
+### Topic 16: VPN
 
 1. At which OSI layer can VPN solutions be established? Provide examples.
 2. What advantages and disadvantages, or challenges, are associated with a low-level implementation?
@@ -299,6 +287,19 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 8. What is the fundamental concept behind the key exchange in «Noise Protocol Framework»? What is the RTT of the handshake?
 9. Describe VPN network topologies.  
 10. What minimum configurations are needed to set up a point-to-point VPN with WireGuard.
+
+### Topic 17: Wi-Fi
+
+1. Under which conditions can you read all Wi-Fi network traffic?
+2. Explain the difference between a network card in «promiscuous mode» and «monitor mode».
+3. Describe the WEP (Wired Equivalent Privacy) encryption. What are the weak points?
+4. What kind of authentication does WEP support (Shared Key Authentication, Open System Authentication)?
+5. What is needed to crack a WEP key?
+6. Describe a WPA2 authentication with PSK (pre-shared key)?
+7. What is the purpose of PBKDF2 (Password-Based Key Derivation Function 2)?
+8. Assume you want to analyze an WPA2 communication with Wireshark. What is needed to decrypt the packets of the CAP file (packet capture file)?
+9. What Wi-Fi attacks do you know? Describe how they work. 
+10. What is «SSID Cloaking»? Does it protect a Wi-Fi access point?
 
 ---
 links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]

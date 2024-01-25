@@ -392,7 +392,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 9. **Why and when is SNMP dangerous?**
      - Wrongly configured network devices can be queried and/or reconfigured using SNMP attacks. E.g snmpwalk can find out different attributes of the device. 
 10. **How do you capture packets of a DNS request / response on Interface "eth0" using "tcpdump"?**
-    - Run this command: `sudo tcpdump -i eth0 port 53
+    - Run this command: `sudo tcpdump -i eth0 port 53`
 	- This command captures DNS traffic on port 53 while displaying minimal information.
 
 ### Topic 9: Lab Exercises

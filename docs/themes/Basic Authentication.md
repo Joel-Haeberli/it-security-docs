@@ -8,14 +8,16 @@ links: [[612 SPA TOC - Identification Authentication|SPA TOC - Identification Au
 
 ## Basic Authentication
 
-- A way for a web browser to send username and password to a server
-- Transmits passwords in cleartext, needs TLS
+- It's a simple authentication scheme built into the HTTP protocol to transfer username and password with each HTTP request
+- Transmits the string 'username:password' in cleartext (Base 64 encoded) -> needs to use TLS
 - Rarely used anymore, mostly replaced by form-based authentication
-- APIs often provide server generated tokens which replace the base64 encoded "username:pw"
+- Most APIs that use Basic Auth provide server generated tokens / passwords which replace the base64 encoded 'username:pw'
 	- higher entropy
 	- possible to create separate access token for separate applications
 	- revokable
 	- scope-able
+
+### How it works
 
 1. Server sends status 401 Unauthorized with a challenge: `WWW-Authenticate: Basic realm="Wallys World"`
 2. The client concats username and pw: "username:pw"

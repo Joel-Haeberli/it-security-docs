@@ -156,7 +156,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 7. **Which protocol header fields are usually evaluated by a packet filter?**
 	- L2 (MAC): source/destination, ethertype (`0x0800` IPv4, `0x0806` ARP, `0x086DD` IPv6, `0x8100` VLAN), tag protocol identifier (VLAN 802.1Q) 
 	- L3 (IP): source/destination, protocol/next header (`1` ICMP, `6` TCP, `17` UDP)
-	- L4 (ICMP): control messages (`0/0` Echo Reply, `3/X` Destination unreachable, `8/0` Echo Request, `11/X` Time Exceeded)
+	- L3 (ICMP): control messages (`0/0` Echo Reply, `3/X` Destination unreachable, `8/0` Echo Request, `11/X` Time Exceeded)
 	- L4 (TCP): source/destination port, sequence number, connection establishment (`SYN`, `SYN-ACK`, `ACK`, `FIN`, `RST`, ...)
 	- L4 (UDP): source port/destination
 8. **What is a stateful inspection firewall?**

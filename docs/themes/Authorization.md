@@ -18,8 +18,11 @@ links: [[612 SPA TOC - Identification Authentication|SPA TOC - Identification Au
 **Authentication assurance / Level of Assurance (LoA)**: amount of certainty with which a claim to an identity can be trusted to be accurate
 
 **Identity assurance**: level of identity assurance at initial verification process to ensure that the user is actually this person (email, address, ID, passport, ...)
+
 ![[LoA.png]]
+
 ![[assurance-matrix.png]]
+
 ![[quality-of-authentication.png]]
 
 ---

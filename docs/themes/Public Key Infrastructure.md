@@ -6,9 +6,7 @@ links: [[208 AC2 TOC - Centralized public-key infrastructures|AC2 TOC - Centrali
 
 ---
 
-## Public Key Infrastructure
-
-**Core 
+**Core**
 
 - How can a user verify that a public key actually belongs to the person that claims to own this public key?
 - How does an application find the correct public key of a certificate issuer?
@@ -61,6 +59,7 @@ Denotes end-users, devices (e.g., server, routers), or any other entity that can
 ### Certification Authority (CA)
 
 RCA = Root CA
+
 ICA = SubCA (Subordinate CA) = Intermediate CA
 
 Issuance of certificates and (usually) [[Key Revocation#Certificate Revocation Lists (X.509)|CRLs]]. In practice, often integrates administrative functions of RAs and VAs.

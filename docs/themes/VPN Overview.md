@@ -11,6 +11,7 @@ A Virtual Private Network (VPN) is a technology that establishes a secure, encry
 ![[VPN-tunnel-overview.png]]
 
 ## Communication Layer (ISO/OSI)
+
  ![[vpn-communication-layers.png]]
 
 ## Quantum Key Distribution

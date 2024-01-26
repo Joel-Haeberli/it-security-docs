@@ -24,7 +24,7 @@ links: [[612 SPA TOC - Identification Authentication|SPA TOC - Identification Au
 ### Measurements against offline attacks
 
 - Enforce password policy
-- Only use passwords in protected channels -> TLS
+- Only use passwords in protected channels $\rightarrow$ TLS
 - Salting with minimum  32 bits random data
 - Protect password hashes against read access
 - Use good hash functions

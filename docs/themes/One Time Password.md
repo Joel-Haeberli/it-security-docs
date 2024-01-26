@@ -14,7 +14,9 @@ links: [[612 SPA TOC - Identification Authentication|SPA TOC - Identification Au
 
 - Client and server need a constant shared secret
 - Synchronized counter on client and server which increments with each authentication attempt
+
 ![[HOTP.png]]
+
 ![[HOTP2.png]]
 
 ### Time-based one-time password (TOTP)
@@ -33,7 +35,7 @@ Same as HOTP but $C_T$ is used instead of a counter
 
 ### Caveats of OTP
 
-- Beware of replay attacks -> counter
+- Beware of replay attacks $\rightarrow$ counter
 - Static OTP (e.g. SMS) aren't time or challenge based and have longer window of vulnerability
 - Does not prevent MITM
 - Susceptible against phishing attacks

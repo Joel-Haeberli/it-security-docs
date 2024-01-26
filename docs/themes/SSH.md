@@ -32,7 +32,7 @@ links: [[614 SPA TOC - Secure Shell|SPA TOC - Secure Shell]] - [[themes/000 Inde
 
 ## X509v3 To SSH Public Key
 
-``` bash
+```bash
 #Extracting public key
 openssl x509 -pubkey -in fsb2.pem -noout >  fsb2.pub
 
@@ -44,7 +44,7 @@ ssh-keygen -i -m pkcs8 -f fsb2.pub > SSH-pub-key.pub
 
 - When a client connects to the server for the first time it asks to verify the server key:
 
-``` bash
+```bash
 ssh -I /usr/local/lib/libykcs11.dylib
 user@client01.n025.nslab.ch
 The authenticity of host ’client01.n025.nslab.ch (147.87.84.14)’ cannot be established.
@@ -77,7 +77,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 
 ## SSH Forward/Reverse
 
-``` bash
+```bash
 #Forward
 ssh -L8080:10.0.0.1:80 user@147.87.242.199
 

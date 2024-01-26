@@ -63,8 +63,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 16. What are "Web Application Firewalls" for?
 17. Which basic firewall architectures do you know?
 18. What are scurity zones?
-19. You enable the access to an internal web server through your home router / firewall via port forwarding.
-20. Which firewall architecture corresponds to this setup? What dangers does it offer?
+19. You enable the access to an internal web server through your home router / firewall via port forwarding. Which firewall architecture corresponds to this setup? What dangers does it offer?
 21. What are advantages/disadvantages of a IDS/IPS?
 22. Explain the term "endpoint security"
 23. What's the function of an SIEM?
@@ -177,15 +176,27 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 
 ### Topic 11: Certificates and PKI
 
-1. What is defined in PKCS#1, PKCS#7, PKCS#10, PKCS#11, PKCS#12?
-2. What is the life cycle of a X509 certificate?
-3. What protocols do you know to check the status of a certificate (CRL-DP, OSCP)? Describe them.
-4. What is a Extended Validation SSL (EV SSL) certificate?
-5. What problems are addressed with the «Certificate Transparency» (CT) standard?
-6. How does CT works? Where is it implemented? Who is enforcing checks?
-7. Which components and processes are required for a PKI?
-8. How to you generate a «Certificate Signing Request» (PKCS#10)? What attributes are checked by the RA?
-9. What are «Advanced Digital Signature» (AdES) and «Qualified Electronic Signatures» (QES). Who can issue such certificates in Switzerland?
+1. How can you choose a public RSA key?
+2. In which areas are asymmetric keys used?
+3. How scales the key distribution process for (a) symmetric keys and (b) for asymmetric keys?
+4. Describe the 3 types of trust model: (a) Direct trust, (b) Web of Trust and (c) Hierarchical trust.
+5. Describe the 3 types of certificates: (a) Root certificate, (b) Intermediate certificate, (c) End-entity certificate.
+6. What information contains a X509v3 certificate?
+7. What is the difference between a certificate fingerprint and TBS certificate fingerprint?
+8. Provide some samples of trusted root certificates and where they are used.
+9. How are X509v3 certificates encoded?
+10. Provide an example of a «critical certificate extension». How should «critical certificate extension» be dealt with?
+11. Issuers and subjects are represented as «Distinguished Names». What is a «Distinguished Name» (DN)?
+12. What is the certificate extension subjectAltName used for?
+13. What is defined in PKCS#1, PKCS#7, PKCS#10, PKCS#11, PKCS#12?
+14. What is the life cycle of a X509 certificate?
+15. What protocols do you know to check the status of a certificate (CRL-DP, OSCP)? Describe them.
+16. What is a Extended Validation SSL (EV SSL) certificate?
+17. What problems are addressed with the «Certificate Transparency» (CT) standard?
+18. How does CT works? Where is it implemented? Who is enforcing checks?
+19. Which components and processes are required for a PKI?
+20. How to you generate a «Certificate Signing Request» (PKCS#10)? What attributes are checked by the RA?
+21. What are «Advanced Digital Signature» (AdES) and «Qualified Electronic Signatures» (QES). Who can issue such certificates in Switzerland?
 
 ### Topic 12: Identification Authentication Authorization
 

@@ -294,7 +294,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 17. **What happens with my "iptables"-rules if "nftables" is deployed?**
 	- there is a compatibility layer, allowing iptables command to be translated into nftables rules
 	- iptables rules can be converted to the nftables syntax
-1. **Explain what the presented "nftables" firewall does (e.g., lab sample solutions).**
+18. **Explain what the presented "nftables" firewall does (e.g., lab sample solutions).**
 	- see [[nftables utility#Examples|nftables examples]] and [[Lab 3 - Firewalls, Proxies, IDS]]
 
 ### Topic 6: DNSSEC and DNS privacy
@@ -486,13 +486,25 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 
 ###  Topic 11: Certificates and PKI
 
-1. **What is defined in PKCS#1, PKCS#7, PKCS#10, PKCS#11, PKCS#12?**
+1. How can you choose a public RSA key?
+2. In which areas are asymmetric keys used?
+3. How scales the key distribution process for (a) symmetric keys and (b) for asymmetric keys?
+4. Describe the 3 types of trust model: (a) Direct trust, (b) Web of Trust and (c) Hierarchical trust.
+5. Describe the 3 types of certificates: (a) Root certificate, (b) Intermediate certificate, (c) End-entity certificate.
+6. What information contains a X509v3 certificate?
+7. What is the difference between a certificate fingerprint and TBS certificate fingerprint?
+8. Provide some samples of trusted root certificates and where they are used.
+9. How are X509v3 certificates encoded?
+10. Provide an example of a «critical certificate extension». How should «critical certificate extension» be dealt with?
+11. Issuers and subjects are represented as «Distinguished Names». What is a «Distinguished Name» (DN)?
+12. What is the certificate extension subjectAltName used for?
+13. **What is defined in PKCS#1, PKCS#7, PKCS#10, PKCS#11, PKCS#12?**
      - **PKCS#1: RSA Cryptography Specifications** Defines the mathematical properties and implementation for RSA public key cryptography. It includes specifications for encryption and signing, RSA keys, and other related cryptographic operations.
      - **PKCS#7: Cryptographic Message Syntax Standard** Specifies a general syntax for data encryption and digital signatures. It's widely used for digital certificates, in S/MIME for secure email, and in other applications requiring secure data exchange.
      - **PKCS#10: Certification Request Standard** Describes a syntax for certification requests. It is used when an entity (like a person or organization) requests a digital certificate from a Certificate Authority (CA).
      - **PKCS#11: Cryptographic Token Interface Standard** Defines a platform-independent API, called Cryptoki, for cryptographic tokens like hardware security modules (HSMs) and smart cards. It allows for integration with various cryptographic hardware to perform operations like encryption and signing.
      - **PKCS#12: Personal Information Exchange Syntax Standard** Provides a format for storing and transporting a user's private keys, certificates, and miscellaneous secrets. It's commonly used for exporting and importing a user's digital identity across different systems.
-2. **What is the life cycle of a X509 certificate?**
+14. **What is the life cycle of a X509 certificate?**
      - **Creation and Request**
          - **Key Pair Generation:** The entity (person or organization) generates a public-private key pair.
 	     - **Certificate Signing Request (CSR):** The entity creates a CSR, which includes the public key and identifying information.
@@ -509,7 +521,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 	     - X.509 certificates have a predetermined validity period. After expiration, they are no longer trusted and must be renewed.
      - **Renewal (if required)**
 	     - The entity must generate a new key pair and CSR, repeating the cycle if continued use is needed.
-3. **What protocols do you know to check the status of a certificate (CRL-DP, OSCP)? Describe them.**
+15. **What protocols do you know to check the status of a certificate (CRL-DP, OSCP)? Describe them.**
      - **CRL-DP (Certificate Revocation List Distribution Point):**
 	     - **Mechanism:** CRL-DP refers to the location (usually a URL) where a Certificate Revocation List (CRL) is published by the Certificate Authority (CA).
 	     - **CRL:** This list contains serial numbers of certificates that have been revoked before their scheduled expiration date.
@@ -521,18 +533,18 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 	     - **OCSP Response:** The OCSP server checks  the status and responds with the certificate's status: valid, revoked, or unknown.
 	     - **Advantages:** OCSP is more efficient than CRLs, as it doesn't require downloading a complete list and is more up-to-date.
 	     - **Stapling:** To reduce OCSP lookup overhead and privacy concerns, a technique called OCSP stapling is used, where the server periodically queries the OCSP server and then "staples" the response to the TLS handshake.
-4. **What is a Extended Validation SSL (EV SSL) certificate?**
+16. **What is a Extended Validation SSL (EV SSL) certificate?**
      - An Extended Validation SSL (EV SSL) certificate is a type of SSL certificate offering the highest level of authentication. It involves a rigorous verification process where the issuing Certificate Authority checks the applicant's legal, operational, and physical existence. EV SSL certificates were known for providing distinct browser indicators (like a green address bar), but recent browser updates have minimized these visual distinctions. They are most suitable for entities handling sensitive transactions, offering enhanced trust and credibility.
-5. **What problems are addressed with the «Certificate Transparency» (CT) standard?**
+17. **What problems are addressed with the «Certificate Transparency» (CT) standard?**
      1. **Undetected Issuance of Fraudulent Certificates:** CT helps in detecting certificates that have been mistakenly or maliciously issued by a Certificate Authority (CA).
      2. **Lack of Public Oversight:** It enables public monitoring and auditing of certificates, increasing transparency in certificate issuance.
      3. **Mitigating CA Compromise:** By making certificate issuance public, CT makes it harder for attackers to misuse a compromised CA without detection.
      - CT achieves this by requiring CAs to publicly log all issued certificates, allowing domain owners and the public to monitor and verify the certificates issued for their domains.
-6. **How does CT works? Where is it implemented? Who is enforcing checks?**
+18. **How does CT works? Where is it implemented? Who is enforcing checks?**
      -  Certificate Transparency (CT) works by requiring Certificate Authorities (CAs) to log every SSL/TLS certificate they issue in public, append-only logs. These logs can be independently monitored and audited.
      - **Implementation:** CT is implemented in web browsers and by CAs. Browsers like Google Chrome require CT compliance for new SSL/TLS certificates to be trusted.
      - **Enforcement:** The enforcement of CT checks is primarily done by web browsers. They validate if a new certificate is logged in CT logs and may distrust certificates that are not CT-compliant. Additionally, independent monitors and auditors play a role in ensuring log integrity and detecting anomalies.
-7. **Which components and processes are required for a PKI?**
+19. **Which components and processes are required for a PKI?**
 	 1. **Certificate Authority (CA):** Issues digital certificates to entities (individuals, organizations, devices).
 	 2. **Registration Authority (RA):** Validates the identity of entities before they receive a certificate from the CA.
 	 3. **Validation Authority (VA):** The VA handles the validation of certificates, often through protocols like OCSP, serving as an intermediary between the CA and entities verifying certificate status.
@@ -540,7 +552,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 	 6. **Certificate Repositories:** Secure storage locations where issued certificates and Certificate Revocation Lists (CRLs) are kept.
 	 7. **Key Management:** Processes for generating, distributing, storing, and destroying cryptographic keys.
 	 8. **Certificate Lifecycle Management:** Processes for issuing, renewing, suspending, and revoking certificates.
-8. **How to you generate a «Certificate Signing Request» (PKCS#10)? What attributes are checked by the RA?**
+20. **How to you generate a «Certificate Signing Request» (PKCS#10)? What attributes are checked by the RA?**
      - To generate a Certificate Signing Request (CSR) as per PKCS#10:
 	 1. **Key Pair Generation:** Generate a public-private key pair using a cryptographic algorithm, typically RSA or ECC.
 	 2. **Create CSR:** Using tools like OpenSSL, create the CSR. This includes:
@@ -551,7 +563,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
          1. **Authenticity of Information:** Verifies the accuracy of the subject name and other details against official documents or databases.
          2. **Authorization:** Confirms that the entity requesting the certificate is authorized to use the domain or has the rights to the specified names.
          3. **Compliance with Policies:** Ensures that the CSR adheres to the policies of the CA, including key length, algorithm type, and usage.
-9. **What are «Advanced Digital Signature» (AdES) and «Qualified Electronic Signatures» (QES). Who can issue such certificates in Switzerland?**
+21. **What are «Advanced Digital Signature» (AdES) and «Qualified Electronic Signatures» (QES). Who can issue such certificates in Switzerland?**
      - **Advanced Digital Signatures** (AdES) are electronic signatures that offer higher security levels and are compliant with specific standards like PAdES, CAdES, and XAdES. They ensure the integrity and authenticity of the signed data.
      - **Qualified Electronic Signatures** (QES) are a subset of AdES. They are legally equivalent to handwritten signatures in many jurisdictions, including the EU. QES requires a secure signature creation device and a certificate from a Qualified Trust Service Provider (QTSP).
      - In Switzerland 4 entities can issue such certificates (Schweizerische Eidgenossenschaft, Digicert, Swisscom, SwissID)

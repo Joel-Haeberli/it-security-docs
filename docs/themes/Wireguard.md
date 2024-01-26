@@ -55,7 +55,7 @@ AllowedIPs = 0.0.0.0/0
 
 ## Setup example
 
-``` bash
+```bash
 #Setup virtual Wiregurard interface
 ip link add dev wg0 type wireguard
 wg genkey >pkey
@@ -95,10 +95,10 @@ Triple DH like the Signal Protocol + one for the 1-RTT
 - Long term static EC key pair ($s_i$ , $g^{s_i}$)
 - Ephemeral EC key pair ($e_i$ , $g^{e_i}$)
 - 4 derived key pairs
-	- k1 <-- $g^{e_i s_r}$
-	- k2 <-- $g^{s_i e_r}$
-	- k3 <-- $g^{e_i e_r}$
-	- k4 <-- $g^{s_i s_r}$
+	- k1 $\leftarrow$ $g^{e_i s_r}$
+	- k2 $\leftarrow$ $g^{s_i e_r}$
+	- k3 $\leftarrow$ $g^{e_i e_r}$
+	- k4 $\leftarrow$ $g^{s_i s_r}$
 	- The keys for this symmetric transport encryption are generated using HMAC-based Extract-and-Expand Key Derivation Function (HKDF)
 		- $tk_i$ ← HKDF(C9 , 0x01)
 		- $tk_r$← HKDF(C9 , $tk_i$ ||0x02)
@@ -116,10 +116,10 @@ The initiator sends to the responder:
 - Long term static EC key pair ($s_r$ , $g^{s_r}$)
 - Ephemeral EC key pair ($e_r$ , $g^{e_r}$)
 - 4 derived key pairs
-	- k1 <-- $g^{e_i s_r}$
-	- k2 <-- $g^{s_i e_r}$
-	- k3 <-- $g^{e_i e_r}$
-	- k4 <-- $g^{s_i s_r}$
+	- k1 $\leftarrow$ $g^{e_i s_r}$
+	- k2 $\leftarrow$ $g^{s_i e_r}$
+	- k3 $\leftarrow$ $g^{e_i e_r}$
+	- k4 $\leftarrow$ $g^{s_i s_r}$
 	- The keys for this symmetric transport encryption are generated using HMAC-based Extract-and-Expand Key Derivation Function (HKDF)
 
 The responder sends back to the initiator:

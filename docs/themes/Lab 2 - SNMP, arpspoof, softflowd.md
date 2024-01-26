@@ -19,7 +19,7 @@ Systems found with an open SNMP port:
 
 ## Exercise snmpwalk
 
-Results for ``` snmpwalk -v2c -c public 147.87.80.252```
+Results for `snmpwalk -v2c -c public 147.87.80.252`
 
 **What type of device is used?**
 
@@ -35,12 +35,12 @@ Version 12.4(23), RELEASE SOFTWARE (fc1)
 
 **How many physical ports does the device have?**
 
-9 (```snmpwalk -v2c -c public 147.87.80.252 1.3.6.1.2.1.2.1.0```)
+9 (`snmpwalk -v2c -c public 147.87.80.252 1.3.6.1.2.1.2.1.0`)
 
 **What routes does the device propagate?**
 
 This OID provides information about the IPv4 routing table:
-```snmpwalk -v2c -c public 147.87.80.252 1.3.6.1.2.1.4.21 ```
+`snmpwalk -v2c -c public 147.87.80.252 1.3.6.1.2.1.4.21`
 
 Example Output:
 
@@ -61,13 +61,13 @@ In this case, the constant value 4 indicates that the routing protocol for these
 **What routing protocols are in use?**
 
 To determine which routing protocols are in use on a Cisco router using SNMP, you can query the iso.3.6.1.2.1.4.21.1.8
-OID: ```snmpwalk -v2c -c public 147.87.80.252 1.3.6.1.2.1.4.21.1.8```. The output shows that prellaem Netmgmt (value 3)
+OID: `snmpwalk -v2c -c public 147.87.80.252 1.3.6.1.2.1.4.21.1.8. The output shows that prellaem Netmgmt (value 3)
 and Indirect (Dynamic routing protocols such as OSPF, EIGRP (value 4)) are used as routing protocols.
 
 **What are the MAC/IP pairs the device has cached?**
 
 To retrieve the MAC/IP pairs that a device has cached using SNMP, you can query the ARP (Address Resolution Protocol)
-table: ``` snmpwalk -v2c -c public 147.87.80.252 1.3.6.1.2.1.4.22.1``` . The hex string stands for the MAC address and is preceded by the corresponding IP address.
+table: `snmpwalk -v2c -c public 147.87.80.252 1.3.6.1.2.1.4.22.1` . The hex string stands for the MAC address and is preceded by the corresponding IP address.
 Example output:
 
 ```
@@ -83,8 +83,8 @@ iso.3.6.1.2.1.4.22.1.2.9.147.87.80.145 = Hex-STRING: 00 50 56 00 45 0B
 
 ## Exercise arpspoof
 
-IP forwarding: ```echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward```
-Then use ```sudo arpspoof -i ens160 -t 147.87.86.78 -r 147.87.86.65 ```
+IP forwarding: `echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward`
+Then use `sudo arpspoof -i ens160 -t 147.87.86.78 -r 147.87.86.65`
 
 **Check if you see the traffic on the attacking machine**
 
@@ -132,7 +132,7 @@ following command:
 
 `#!/usr/sbin/nft -f`
 
-```sh
+```
 table inet nslab {
         chain INPUT {
                 type filter hook input priority 0; policy drop;
@@ -142,7 +142,7 @@ table inet nslab {
 
 Then:
 
-```sh
+```bash
 sudo nft -f /etc/nftables.conf
 ```
 

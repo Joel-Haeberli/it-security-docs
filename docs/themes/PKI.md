@@ -25,7 +25,7 @@ This topic was already handled in [[Public Key Infrastructure|AC2 - Public Key I
 
 ![[certificate-request.png]]
 
-``` bash
+```bash
 openssl req -in newreq.pem -text
 ```
 

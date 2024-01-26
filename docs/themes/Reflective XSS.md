@@ -13,7 +13,7 @@ links: [[505 WS TOC - Cross Site Scripting (XSS)|WS TOC - Cross Site Scripting (
 	- The browser renders the text
 	- If it contains a script, the script is executed
 
-``` javascript
+```javascript
 "You searched: "<script>alert("Hello World")</script>"
 ```
 

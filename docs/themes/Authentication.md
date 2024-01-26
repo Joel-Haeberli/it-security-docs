@@ -13,11 +13,13 @@ links: [[612 SPA TOC - Identification Authentication|SPA TOC - Identification Au
 - Can rely on third part
 
 ### Authentication factors
+
 - Knowledge factor: Something the user knows (password, PIN, ...)
 - Ownership factor: Something the user has (Security token, smart card, ...)
 - Inherence factor: Something the user is or does (fingerprint, retinal pattern, ...)
 
 ### Types of authentication
+
 - Single-factor auth: Weakest level, only single factor is used
 - Two-factor auth(2FA): Using 2 factors
 - Multi-factor auth: Using two or more authentication factors
@@ -28,6 +30,7 @@ links: [[612 SPA TOC - Identification Authentication|SPA TOC - Identification Au
 	- Can't be stolen off the internet
 
 ### Dynamic Linking
+
 Security requirement under EU law for electronic payments that ties the authentication code to the transaction amount and the payee's identity to prevent replay attack
 
 ---

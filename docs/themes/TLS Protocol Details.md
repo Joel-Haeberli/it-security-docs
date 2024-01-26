@@ -132,7 +132,6 @@ The `ChangeCipherSpec` messages is the last plain text message of the client. Th
 | Simple cipher suites | AES_256_GCM_SHA384 | ECDHE-ECDSA-AES128-GCM-SHA256 |
 | Stronger signature | Sign the entire handshake | Only cover part of the handshake |
 | Better EC algorithm | EdDSA (Ed25519, Ed448) | ECDSA (P-256, P-384) |
-|  |  |  |
 
 See some images [[TLS#TLS 1.3|here]].
 

@@ -16,6 +16,7 @@ links: [[612 SPA TOC - Identification Authentication|SPA TOC - Identification Au
 **OpenID Connect** is the authentication layer on top of OAuth 2.0. It allows computing clients to verify the identity of an end user based on the authentication performed by an authorization server.
 
 In the following chapters `Auth Server` is used for the Authentication or Authorisation Server.
+
 ## Roles
 
 - **Resource Server**: hosts the resources. Typically an API provider that hosts the user’s information.

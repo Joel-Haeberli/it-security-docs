@@ -100,7 +100,6 @@ Going with the "Rsyslog Windows Agent" option:
 root@mail:/etc/rsyslog.d# tail -f /var/log/remote/client02.log
 2024-01-18T10:20:18+01:00 client02 RSyslog Windows Agent: This is a SyslogTest
 2024-01-18T10:20:52+01:00 client02 RSyslog Windows Agent: This is a SyslogTest
-
 ```
 
 The syslog agent needs to map the Windows event log to the syslog specification.
@@ -157,7 +156,7 @@ usermod -a -G adm www-data
 systemctl restart apache2
 ```
 
-Access the web interface at http://147.87.86.67/log
+Access the web interface at `http://147.87.86.67/log`
 
 ## Exercise systemd-journald
 
@@ -208,7 +207,7 @@ ftp 147.87.86.67
 
 ## Exercise nmap
 
-```
+```bash
 nmap -sn 147.87.80.0/21
 # Nmap done: 2048 IP addresses (119 hosts up) scanned in 17.41 seconds
 
@@ -225,24 +224,24 @@ nmap -sT --open # TCP connect scan
 nmap -sU --open --top-ports=100 # UDP scan
 ```
 
-More commands: https://www.stationx.net/nmap-cheat-sheet/
+More commands: [https://www.stationx.net/nmap-cheat-sheet/](https://www.stationx.net/nmap-cheat-sheet/)
 
 ## Exercise nmap and IPv6
 
-```
+```bash
 nmap -6 -sn
 nmap -6 -p 1-1000 -A 2001:620:500:ffad::30
 ```
 
 The vast address space of IPv6 introduces challenges that require a more targeted and selective approach to scanning, as opposed to the blanket scanning often seen in IPv4.
 
-* ZMap is another open-source network scanner that can be used for IPv6 scanning. It's known for its speed and efficiency in scanning large IPv6 address spaces.
-* Masscan is a high-speed scanner that can be used for both IPv4 and IPv6 scanning. It's particularly useful for scanning large networks quickly.
-* Scapy is a Python-based packet manipulation tool that can be used for crafting custom IPv6 packets and scanning networks. It provides a lot of flexibility for network exploration.
+* **ZMap** is another open-source network scanner that can be used for IPv6 scanning. It's known for its speed and efficiency in scanning large IPv6 address spaces.
+* **Masscan** is a high-speed scanner that can be used for both IPv4 and IPv6 scanning. It's particularly useful for scanning large networks quickly.
+* **Scapy** is a Python-based packet manipulation tool that can be used for crafting custom IPv6 packets and scanning networks. It provides a lot of flexibility for network exploration.
 
 ## Exercise Greenbone OpenVAS
 
-```
+```bash
 systemctl enable --now gsad.service
 systemctl enable --now gvmd.service
 systemctl enable --now ospd-openvas.service

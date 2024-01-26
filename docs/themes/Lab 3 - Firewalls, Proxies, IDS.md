@@ -295,11 +295,11 @@ nft add rule ip nat POSTROUTING oifname "ens224" ip saddr 192.168.70.0/24 masque
 
 1. Configuration
 	* For Snort:
-	    * Configure snort.conf: Edit the Snort configuration file to set up network variables, preprocessor settings, and output options.
+	    * Configure `snort.conf`: Edit the Snort configuration file to set up network variables, preprocessor settings, and output options.
 	    * Rule Management: Download and manage Snort rules. You can use pulledpork or similar tools to automate rule management.
 	    * Testing Configuration: Run Snort in test mode to ensure it's correctly configured.
 	* For Suricata:
-	    * Configure suricata.yaml: Edit the main configuration file for Suricata, setting up network, logging, and processing options.
+	    * Configure `suricata.yaml`: Edit the main configuration file for Suricata, setting up network, logging, and processing options.
 	    * Rule Management: Obtain and manage Suricata rulesets. Suricata supports ET Open rules and other formats.
 	    * Testing Configuration: Run Suricata to verify the setup.
 2. Running the IDS/IPS

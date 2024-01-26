@@ -61,13 +61,13 @@ A better **information system security** can be achieved with:
 		- source/destination address: `00:D0:20:34:4F:55`
 		- ethertype: `0x800, 0x806, ...`
 		- tag protocol identifier: `0x8100` followed by priority code point & VLAN ID
-	- L3 [[Important Header Fields#IP header|IP Header]]:
+	- L3 [[Important Header Fields#IP header|IP Header]]/[[Important Header Fields#ICMP Header|ICMP]]:
 		- source/destination address: `192.168.1.10, 2001:620:500::1`
 		- protocol/ next header: `1, 6, 17`
-	- L4 [[Important Header Fields#ICMP Header|ICMP]]/[[Important Header Fields#TCP Header|TCP]]/[[Important Header Fields#UDP Header|UDP]]:
+		- ICMP message types & code: `0, 3/0, 8, 11/1, ...`
+	- L4 [[Important Header Fields#TCP Header|TCP]]/[[Important Header Fields#UDP Header|UDP]]:
 		- source/destination port: `22, 20, ...`
 		- TCP control bits: `SYN, ACK, FIN, ...`
-		- ICMP message types & code: `0, 3/0, 8, 11/1, ...`
 - packet fragmentation/reassembling
 	- fragments of IP-packets must be reassembled before a reason check of the layer 4 headers can be done
 	- reassembling uses additional resources which is a target for **DoS attacks**

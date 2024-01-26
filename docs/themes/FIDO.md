@@ -35,10 +35,10 @@ Attestation is used to credibly demonstrate the origin or type of authenticator 
 ### FIDO2
 
 - **WebAuthn**
-	- Web Authentication is the protocol between the client (browser) and the relying party (server)
+	- Web Authentication is the protocol that is used for the mentioned challenge-response mechanism between
 	- Backwards compatible with legacy FIDO Universal 2nd Factor (U2F)
-- CTAP
-	- Client to Authenticator Protocol is based on U2F
+- Client to Authenticator Protocol (CTAP)
+	- This protocol is used to securely pass the WebAuthn request from the client (e.g. Browser) to the authenticator (e.g. Yubikey) and the other way around
 	- Supports USB, NFC, Bluetooth
 	- Using Bluetooth you can use your Smartphone to store the private keys on it's secure hardware. 
 

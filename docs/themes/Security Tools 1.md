@@ -24,9 +24,9 @@ links: [[608 SPA TOC - Security Tools|SPA TOC - Security Tools]] - [[themes/000 
 
 ### Syslog Components
 
-**Originator** = Client $\rightarrow$ sends the message
-**Relay** = Receives the message $\rightarrow$ processes it $\rightarrow$ forwards it (All according to its configuration)
-**Collector** = Server $\rightarrow$ write the message to the file/DB/... 
+- **Originator** = Client $\rightarrow$ sends the message
+- **Relay** = Receives the message $\rightarrow$ processes it $\rightarrow$ forwards it (All according to its configuration)
+- **Collector** = Server $\rightarrow$ write the message to the file/DB/... 
 
 ### Syslog Header
 
@@ -132,22 +132,22 @@ Syslog message up to 480 Octets must be accepted but 2048 should be accepted
 
 Command-line packet analyzer
 
-``` bash
+```bash
 tcpdump <options> <filter>
 ```
 
 options: <br>
-- -n no dns resolution
-- -i interface to listen on
-- -s snaplen
-- -w write out to file
-- -v verbose
-- -Z drop privilages to user
-- -D available network interfaces
-- -e print link-level header
-- -F use file as input to filter expression
-- -p Dont put interface into "promiscous" mode
-- -r Read packets from file
+- `-n` no dns resolution
+- `-i` interface to listen on
+- `-s` snaplen
+- `-w` write out to file
+- `-v` verbose
+- `-Z` drop privilages to user
+- `-D` available network interfaces
+- `-e` print link-level header
+- `-F` use file as input to filter expression
+- `-p` Dont put interface into "promiscous" mode
+- `-r` Read packets from file
 
 **filter** = pcap filtering language using<br>
 **filter expressions** = consists of one or more primitives<br>
@@ -231,7 +231,7 @@ Options:
 
 **Nessus**
 
-- Pluginbased
+- Plugin based
 - Client server structured
 - network assessment and discovery
 - patch, configuration and content auditing

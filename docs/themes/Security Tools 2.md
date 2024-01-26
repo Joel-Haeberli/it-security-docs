@@ -16,7 +16,7 @@ ARP, or Address Resolution Protocol, is a network communication protocol used fo
 
 1. **Client A** sends an ARP query (layer 2, ethernet broadcast, FF:FF:FF:FF:FF:FF)
 
-``` arp
+```arp
 arp who-has 147.87.232.112 tell 147.87.232.37
 ```
 
@@ -145,23 +145,12 @@ Initially developed by Cisco as "NetFlow" but now adapted and implemented by man
 
 ![[Network-Flow-Architecture.png]]
 
-**Flow**
-Unidirectional sequence of packets as described above
-
-**Flow interface**
-Interface on network devices where the flows are captured. These flows can be captured on multiple interfaces.
-
-**NetFlow Exporter**
-Network device that exports captured flow data to one or many NetFlow collectors.
-
-**NetFlow Collector**
-System that collects flow data.
-
-**Flow DB**
-Can be a files or a real database where flow data will be saved.
-
-**NetFlow Analyzer/Reporter**
-Software able to visualize and analyze the stored flow data
+- **Flow**: Unidirectional sequence of packets as described above
+- **Flow interface**: Interface on network devices where the flows are captured. These flows can be captured on multiple interfaces.
+- **NetFlow Exporter**: Network device that exports captured flow data to one or many NetFlow collectors.
+- **NetFlow Collector**: System that collects flow data.
+- **Flow DB**: Can be a files or a real database where flow data will be saved.
+- **NetFlow Analyzer/Reporter**: Software able to visualize and analyze the stored flow data
 
 ### Netflow version 5
 

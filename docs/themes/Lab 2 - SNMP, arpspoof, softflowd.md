@@ -8,7 +8,7 @@ links: [[609 SPA TOC - Lab|SPA TOC - Lab]] - [[themes/000 Index|Index]]
 
 ## Exercise find open SNMP ports
 
-```sh
+```bash
 nmap -sU --script snmp-brute 147.87.80.0/24 --script-args snmp-brute.communitiesdb=public
 ```
 
@@ -23,8 +23,7 @@ Results for ``` snmpwalk -v2c -c public 147.87.80.252```
 
 **What type of device is used?**
 
-Cisco IOS Software, 1841 Software (C1841-ADVSECURITYK9-M) --> Cisco 1800 Series Integrated Services Routers: Cisco 1841
-Router
+Cisco IOS Software, 1841 Software (C1841-ADVSECURITYK9-M) $\rightarrow$ Cisco 1800 Series Integrated Services Routers: Cisco 1841 Router
 
 **What's the internal system name?**
 

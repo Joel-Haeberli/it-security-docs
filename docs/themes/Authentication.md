@@ -26,7 +26,7 @@ links: [[612 SPA TOC - Identification Authentication|SPA TOC - Identification Au
 - **Strong auth**:
 	- Multi-factor auth
 	- Factors must be mutually independent (compromise of one factor does not lead to compromise of other factors)
-	- At least one factor must be "non-reusable and non-replicable" (exception: inherence factor -> fingerprint etc.)
+	- At least one factor must be "non-reusable and non-replicable" (exception: inherence factor $\rightarrow$ fingerprint etc.)
 	- Can't be stolen off the internet
 
 ### Dynamic Linking

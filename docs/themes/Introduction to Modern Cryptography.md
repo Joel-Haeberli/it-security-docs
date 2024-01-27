@@ -15,7 +15,7 @@ Cryptography has gone from a **heuristic set of techniques** for ensuring secret
 **Principles of Modern Cryptography**
 
 - cryptography was historically more of an art than a science, based on their perceived complexity or cleverness
-- in modern cryptography, the ultimate goal being to give a rigorous proof that a given construction is secure -> based on *formal definitions* and _hardness assumptions_ about the algorithmic hardness of certain mathematical problem
+- in modern cryptography, the ultimate goal being to give a rigorous proof that a given construction is secure $\rightarrow$ based on *formal definitions* and _hardness assumptions_ about the algorithmic hardness of certain mathematical problem
 
 
 ## Setting of Private-Key Encryption
@@ -50,7 +50,7 @@ $\rightarrow$ can be broken with enough obtained ciphertexts (and/or if the key 
 ## Security goals
 
 - **Ciphertext-only attack (COA)**: adversary just observes a ciphertext (or multiple) to determine information about the plaintext
-- **Known-plaintext attack (KPA)**: the adversary is able to learn one or more plaintext/ciphertext pairs generated using some key -> determine information about some *other* ciphertext (using the same key)
+- **Known-plaintext attack (KPA)**: the adversary is able to learn one or more plaintext/ciphertext pairs generated using some key $\rightarrow$ determine information about some *other* ciphertext (using the same key)
 - **Chosen-plaintext attack (CPA)**: the adversary can obtain plaintext/ciphertext pairs for plaintexts *of its choice*
 - **Chosen-ciphertext attack (CCA)**: the adversary can decrypt ciphertexts of its choice
 

@@ -18,7 +18,7 @@ links: [[620 SPA TOC - Kerberos|SPA TOC - Kerberos]] - [[themes/000 Index|Index]
 - Kerberos implementation name: MS-KILE
 - Kerberos is default authentication
 - Replaces [NTLM](https://en.wikipedia.org/wiki/NTLM), however NTLM is still widely used
-- Used for single sign on (SSO) -> show credentials to kerberos once and receive TGT to prove identity
+- Used for single sign on (SSO) $\rightarrow$ show credentials to kerberos once and receive TGT to prove identity
 - Services need to register a SPN (Service Principal Name)
 - Only works with FQDN / NetBIOS names, not with IPs
 - Uses port 88
@@ -115,7 +115,7 @@ Corresponding Wireshark screenshots are in the slides
 
 ### Authorization Data
 
-- TGT and ST contain authorization information about the user -> Privileged Attribute Certificate (PAC)
+- TGT and ST contain authorization information about the user $\rightarrow$ Privileged Attribute Certificate (PAC)
 - PAC contains
 	- User information (name, profile, home dir, etc.)
 	- Account information ( bad password count, last logo, last password change, etc)
@@ -133,10 +133,10 @@ Corresponding Wireshark screenshots are in the slides
 - **Compromise of krbtgt account**
 	- Normally happens with DCSync where an attacker with domain admin privileges acts as a domain controller and requests data from other domain controllers including the NTLM hash of krbtgt
 	- Grants full control over the domain
-	- Attacker can craft their own TGTs for any service and user using the NTLM hash of krbtgt -> Golden Ticket Attack
+	- Attacker can craft their own TGTs for any service and user using the NTLM hash of krbtgt $\rightarrow$ Golden Ticket Attack
 	- Tickets can have arbitrary lifetime since the attacker can set the lifetime himself
 - **Compromise of a service account**
-	- Allows attacker to forge service tickets to any user for this specific service only -> Silver Ticket Attack
+	- Allows attacker to forge service tickets to any user for this specific service only $\rightarrow$ Silver Ticket Attack
 - ktbtgt account password should be changed regularly
 
 ---

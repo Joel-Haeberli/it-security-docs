@@ -154,7 +154,7 @@ Mining takes up a lot of energy. The spent energy can be considered as wasted. I
 
 **Rate**
 
-The bitcoin network supports around 7 transactions per second which is very little. This leads to high transactions fees. Other solutions like the lightning network or central exchanges help with this problem but they lead to less security (lightning network) or less decentralization / more trust (central exchanges) -> blockchain trilemma
+The bitcoin network supports around 7 transactions per second which is very little. This leads to high transactions fees. Other solutions like the lightning network or central exchanges help with this problem but they lead to less security (lightning network) or less decentralization / more trust (central exchanges) $\rightarrow$ blockchain trilemma
 
 **Accountability**
 

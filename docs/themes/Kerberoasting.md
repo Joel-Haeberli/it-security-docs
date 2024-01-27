@@ -20,12 +20,12 @@ links: [[620 SPA TOC - Kerberos|SPA TOC - Kerberos]] - [[themes/000 Index|Index]
 	- SPN of target services (Attacker can query AD to find SPNs of services)
 - Possible encryption algorithms used for ticket encryption
 	- DES (not supported since 2008 R2 / Windows 7)
-	- RC4 (MD4 for key derivation) <- best option for brute force
+	- RC4 (MD4 for key derivation) $\leftarrow$ best option for brute force
 	- AES128 (PBKDF2 for key derivation)
 	- AES256 (PBKDF2 for key derivation)
 - Used algorithm depends on domain level, config, account type etc.
 - KDC will always choose the highest mutually supported algorithm
-- When requesting a ticket, the client specifies which algorithms it supports -> **Downgrade attack is possible** (DC older than WinServer 2019)
+- When requesting a ticket, the client specifies which algorithms it supports $\rightarrow$ **Downgrade attack is possible** (DC older than WinServer 2019)
 	- Downgrade attack even works, if the target account is configured to use AES only
 	- With WinServer 2019, DCs ignore the clients cipher proposals
 

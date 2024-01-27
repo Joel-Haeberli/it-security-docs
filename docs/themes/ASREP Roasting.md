@@ -11,7 +11,7 @@ links: [[620 SPA TOC - Kerberos|SPA TOC - Kerberos]] - [[themes/000 Index|Index]
 - Attack to extract account credential hashes from AD for offline cracking
 - Attacker only interacts with KDC (DC)
 - Attack: With Pre-Authentication disabled for a user, anyone can request a TGT for this user
-	- The TGT is encrypted with the users password hash -> brute force, same situation as [[Kerberoasting]]
+	- The TGT is encrypted with the users password hash $\rightarrow$ brute force, same situation as [[Kerberoasting]]
 - Requirements
 	- Pre-authentication is disabled for the target account
 	- Connection to KDC

@@ -41,9 +41,9 @@ e1:65:f2:e3:7c:e5:d0:8e:42:8f:c1:4c:91:79:8b:
 
 As you can see in the image, an attacker (Eve) may distribute forged public keys to do a man-in-the-middle attack.
 
-- Eve manipulates Alice's Key --> It is important to preserve the integrity of the key
-- Eve swaps Alice's key with her own key --> It is important to tag identity information
-- The identity information can be faked --> It must be possible to attest the signed information
+- Eve manipulates Alice's Key $\rightarrow$ It is important to preserve the integrity of the key
+- Eve swaps Alice's key with her own key $\rightarrow$ It is important to tag identity information
+- The identity information can be faked $\rightarrow$ It must be possible to attest the signed information
 
 ## Digital Identity
 

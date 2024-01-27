@@ -7,8 +7,8 @@ links: [[505 WS TOC - Cross Site Scripting (XSS)|WS TOC - Cross Site Scripting (
 ---
 
 - Problem on websites that allow uncontrolled content uploads by users
-	- Forum, guest-book, etc. -> [[Stored XSS]]
-- XSS is generally a problem if a website allows uncontrolled / unsanitized content provided by users / attackers -> [[DOM-based XSS]], [[Reflective XSS]]
+	- Forum, guest-book, etc. $\rightarrow$ [[Stored XSS]]
+- XSS is generally a problem if a website allows uncontrolled / unsanitized content provided by users / attackers $\rightarrow$ [[DOM-based XSS]], [[Reflective XSS]]
 - Javascript can be hidden in <\script> tags, external js files, eventhandlers and URLs
 
 [Good explanation of Same Origin Policy](https://security.stackexchange.com/questions/8264/why-is-the-same-origin-policy-so-important)

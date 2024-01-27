@@ -37,7 +37,7 @@ In order to use programs vulnerability for SQL injection, we could use following
 - Make a condition to resolve to true all the time
 	-  `1 = 1` or `null = null` and so on
 - Change a condition in the `WHERE` part of the query
-	- `SELECT * FROM table WHERE id = ID` -> change ID
+	- `SELECT * FROM table WHERE id = ID` $\rightarrow$ change ID
 - Use `UNION ALL` to concatenate data of a second query
 - Use `INTO OUTFILE` to write a file on the filesystem
 

@@ -737,7 +737,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 	- *Digital Signatures*: the email gateway sign all outgoing emails with a private key
 	- *Public Key in DNS*: the public key is published as an DNS TXT record
 15. **Describe a typical DKIM entry found in the mail header. What information does it contain?**
-	- Version (v=1), Algorithm (rsa-sha256), Domain (d=example.com), Selector (s=selector1, specific public key), Signature Data (b=signature), Signed Headers (h=from:to:date)
+	- Version (v=1), Algorithm (rsa-sha256), Domain (d=example.com), Selector (s=selector1, specific public key), Signature Data (b=signature), Signed Headers (`h=from:to:date`)
 16. **Where do we find the DKIM key? What types / formats of keys are used?**
 	- The key is in the sender's domain DNS record. RSA is mostly used ed25519 is supported too.
 17. **Describe the relationships of DKIM key location (domain), RFC5322.From, RFC5321.MailFrom to DKIM.**

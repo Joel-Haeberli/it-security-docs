@@ -41,7 +41,7 @@ DNS record types
 ## Procedure
 
 1. group all the records with the same type into a resource record set (**RRset**)
-2. the full RRset gets digitally signed with the *zone-signing-key pair* (**ZSK**) -> this means that you must request and validate all of the "type of records" from a zone instead of validating only one of them
+2. the full RRset gets digitally signed with the *zone-signing-key pair* (**ZSK**) $\rightarrow$ this means that you must request and validate all of the "type of records" from a zone instead of validating only one of them
 3. The RRset is signed using the private ZSK and stores them in a **RRSIG** record
 4. The public ZSK is published in a **DNSKEY** record
 5. a resolver can use the RRset, RRSIG and public ZSK to validate a response
@@ -50,7 +50,7 @@ DNS record types
 
 ## Key-Signing-Key
 
-- a key-signing key (KSK) validates the DNSKEY record -> it signs the public ZSK (which is stored in a DNSKEY record), creating an RRSIG for the DNSKEY
+- a key-signing key (KSK) validates the DNSKEY record $\rightarrow$ it signs the public ZSK (which is stored in a DNSKEY record), creating an RRSIG for the DNSKEY
 - it is difficult to swap out an old or compromised KSK, changing the ZSK is much easier on the other hand
 
 ![[KSK_ZSK.png]]
@@ -64,14 +64,14 @@ DNS record types
 ## Delegation Signer Records
 
 - a delegation signer (DS) record allow the transfer of trust from a parent zone to a child zone.
-- a zone operator hashes the DNSKEY record containing the public KSK and gives it to the parent zone to publish a DS record -> a change in the KSK also requires a change in the parent zone's DS record
+- a zone operator hashes the DNSKEY record containing the public KSK and gives it to the parent zone to publish a DS record $\rightarrow$ a change in the KSK also requires a change in the parent zone's DS record
 
 ![[DS.png]]
 
 ## Explicit Denial of Existence
 
-- If you ask DNS for the IP address of a domain that doesn't exist, it returns an empty answer -> this is a problem if you want to authenticate the response.
-- NSEC and NSEC3 record types works by returning the "next secure" record (e.g. if alphabetically sorted, respond with the next record in the zone) -> this solution allows anybody to walk through the zone and gather every single record without knowing which ones they're looking for. 
+- If you ask DNS for the IP address of a domain that doesn't exist, it returns an empty answer $\rightarrow$ this is a problem if you want to authenticate the response.
+- NSEC and NSEC3 record types works by returning the "next secure" record (e.g. if alphabetically sorted, respond with the next record in the zone) $\rightarrow$ this solution allows anybody to walk through the zone and gather every single record without knowing which ones they're looking for. 
 - NSEC3 uses hashed names to reduce zone walking. But because hashing is cheap, zone privacy is only slightly improved when using NSEC3 as designed; the amount of protection a name gets is proportional to its unguessability. In short, NSEC is like revealing plaintext passwords, and NSEC3 is like revealing a Unix-style passwords file. Neither technique is very secure. With NSEC3 a subdomain is only as private as it is hard to guess. There is even a [script](https://nmap.org/nsedoc/scripts/dns-nsec3-enum.html) for nmap.
 
 ## Authentication Chain
@@ -90,9 +90,9 @@ Building the chain of trust involves sending a DS or DNSKEY record of the Key Si
 
 Later this was extended to allow automatic management:
 
-- inserting a DS Record for the first time --> enabling DNSSEC via CDS/CDNSKEY
-- updating a DS Record --> roll over of the KSK or CSK (add, delete or replace DS records at parent)
-- removing a DS record --> turn off DNSSEC validation (delete all the DS records at parent) 
+- inserting a DS Record for the first time $\rightarrow$ enabling DNSSEC via CDS/CDNSKEY
+- updating a DS Record $\rightarrow$ roll over of the KSK or CSK (add, delete or replace DS records at parent)
+- removing a DS record $\rightarrow$ turn off DNSSEC validation (delete all the DS records at parent) 
 ### Changes to the DNS Protocol
 
 **Checking Disabled CD**

@@ -14,7 +14,7 @@ This mainly concerns in- and outputs. Fields not in in- or outputs are never rem
 
 SIGHASH Types:
 
-- SIGHASH_ALL (default): Sings all inputs and outputs -> this will lead to the behavior we had without the SIGHASH types -> This is also the reason this is the default (remember [[Forks#Soft Forks|Soft Forks]]?)
+- SIGHASH_ALL (default): Sings all inputs and outputs $\rightarrow$ this will lead to the behavior we had without the SIGHASH types $\rightarrow$ This is also the reason this is the default (remember [[Forks#Soft Forks|Soft Forks]]?)
 - SIGHASH_NONE: Signs all inputs
 - SIGHASH_SINGLE: Signs all inputs and the output of the current input
 - SIGHASH_ANYONECANPAY: This means that only the current input will be signed.

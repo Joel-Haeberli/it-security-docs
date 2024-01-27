@@ -9,7 +9,7 @@ links: [[620 SPA TOC - Kerberos|SPA TOC - Kerberos]] - [[themes/000 Index|Index]
 ## Kerberos Delegation
 
 - Delegation is a standard built-in mechanism of kerberos
-- Allows a service to act on behalf of a user when talking to other services -> "user impersonation"
+- Allows a service to act on behalf of a user when talking to other services $\rightarrow$ "user impersonation"
 - Delegation is transparent
 	- Users can't control wether delegation will occur or not
 	- Users can't detect wether delegation happened or not
@@ -30,7 +30,7 @@ links: [[620 SPA TOC - Kerberos|SPA TOC - Kerberos]] - [[themes/000 Index|Index]
 
 - Configured on the domain object (delegating service user or machine)
 - **Risks**
-	- "Unconstrained" -> insecure by definition
+	- "Unconstrained" $\rightarrow$ insecure by definition
 	- Unconstrained services are high-value targets for attackers
 	- Impact depends on the permissions of the delegated account
 	- Attacker can abuse delegated TGTs when he has control over the local admin, the target machine or the service user account
@@ -57,7 +57,7 @@ links: [[620 SPA TOC - Kerberos|SPA TOC - Kerberos]] - [[themes/000 Index|Index]
 - S4U2Proxy replaces the TGT forwarding mechanism of unconstrained delegation
 - The service can obtain a service ticket on behalf of a user for another service
 - S4U2Proxy
-	- Delegation should only happen, if the user is present (if the user has effectively connected to the delegation service) -> "proof" of a user's presence
+	- Delegation should only happen, if the user is present (if the user has effectively connected to the delegation service) $\rightarrow$ "proof" of a user's presence
 	- This proof comes in the form of a regular ST
 	- ST needs to be flagged FORWARDABLE (default for regular ST unless the user is in the Protected Users group or flagged as sensitive)
 
@@ -86,7 +86,7 @@ links: [[620 SPA TOC - Kerberos|SPA TOC - Kerberos]] - [[themes/000 Index|Index]
 
 ![[kerberos-17.png]]
 
-- S4U2Self does not require specific permission -> anyone can request an ST from some user to itself
+- S4U2Self does not require specific permission $\rightarrow$ anyone can request an ST from some user to itself
 - The ticket is only tagged as FORWARDABLE (usable for S4U2Proxy) if:
 	- The requesting account is configured for constrained delegation with protocol transition (TrustedToAuthForDelegation UAC flag is set)
 	- The target is not flagged as sensitive

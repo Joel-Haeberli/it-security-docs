@@ -486,18 +486,47 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 
 ###  Topic 11: Certificates and PKI
 
-1. How can you choose a public RSA key?
-2. In which areas are asymmetric keys used?
-3. How scales the key distribution process for (a) symmetric keys and (b) for asymmetric keys?
-4. Describe the 3 types of trust model: (a) Direct trust, (b) Web of Trust and (c) Hierarchical trust.
-5. Describe the 3 types of certificates: (a) Root certificate, (b) Intermediate certificate, (c) End-entity certificate.
-6. What information contains a X509v3 certificate?
-7. What is the difference between a certificate fingerprint and TBS certificate fingerprint?
-8. Provide some samples of trusted root certificates and where they are used.
-9. How are X509v3 certificates encoded?
-10. Provide an example of a «critical certificate extension». How should «critical certificate extension» be dealt with?
-11. Issuers and subjects are represented as «Distinguished Names». What is a «Distinguished Name» (DN)?
-12. What is the certificate extension subjectAltName used for?
+1. **How can you choose a public RSA key?**
+     - Public RSA keys are chosen based on a pair of large prime numbers and a modulus operation. A key generation algorithm is used, ensuring that the keys are large enough to prevent brute force attacks. The size of the key (like 2048-bit or 4096-bit) is crucial for security.
+2. **In which areas are asymmetric keys used?**
+     - Encryption and decryption of data
+     - Digital signatures for authenticity and integrity
+     - Secure key exchange (e.g., in TLS protocols)
+     - Identity verification in various authentication systems
+3. **How scales the key distribution process for (a) symmetric keys and (b) for asymmetric keys?**
+     - (a) **Symmetric Keys**: Scaling is challenging because each pair of users needs a unique key, leading to a quadratic growth of keys with the number of users. 
+     - (b) **Asymmetric Keys**: Scales better as each user needs only a public/private key pair, regardless of the number of other users they communicate with.
+4. **Describe the 3 types of trust model: (a) Direct trust, (b) Web of Trust and (c) Hierarchical trust.**
+     - (a) **Direct Trust**: Trust established directly between users, without intermediaries. 
+     - (b) **Web of Trust**: Trust is established in a decentralized manner, users vouch for the authenticity of others' keys. 
+     - (c) **Hierarchical Trust**: Involves a central authority (like a Certificate Authority in PKI) that validates identities and issues certificates.
+5. **Describe the 3 types of certificates: (a) Root certificate, (b) Intermediate certificate, (c) End-entity certificate.**
+     - (a) **Root Certificate**: Issued by a top-level Certificate Authority (CA); it's self-signed. 
+     - (b) **Intermediate Certificate**: Issued by an intermediate CA, creating a chain of trust to the root CA. 
+     - (c) **End-entity Certificate**: Issued to the final user or entity (like a website).
+6. **What information contains a X509v3 certificate?**
+     - Subject's name
+     - Issuer's name
+     - Serial number
+     - Validity period
+     - Public key information
+     - Signature algorithm
+     - Optional extensions for additional functionality
+7. **What is the difference between a certificate fingerprint and TBS certificate fingerprint?**
+     - The certificate fingerprint is a hash of the entire certificate, whereas the TBS (To Be Signed) certificate fingerprint is a hash of the portion of the certificate that is actually signed, excluding the signature itself.
+8. **Provide some samples of trusted root certificates and where they are used.**
+     - VeriSign
+     - DigiCert
+     - Let’s Encrypt
+     - They are used in web browsers and operating systems as a trust anchor.
+9. **How are X509v3 certificates encoded?**
+     - They are typically encoded in DER (Distinguished Encoding Rules) format, a binary format, or sometimes in PEM (Privacy Enhanced Mail) format, which is base64 encoded DER with header and footer lines.
+10. **Provide an example of a «critical certificate extension». How should «critical certificate extension» be dealt with?**
+      - An example is the Basic Constraints extension in CA certificates. It indicates whether the certificate is for a CA or not. "Critical" means the extension must be understood and processed, or the certificate should be rejected.
+11. **Issuers and subjects are represented as «Distinguished Names». What is a «Distinguished Name» (DN)?**
+      - A DN is a string in an X.509 certificate that uniquely identifies an entity (like a person or organization) in the certificate. It includes elements like common name, organization, and country.
+12. **What is the certificate extension subjectAltName used for?**
+      - The subjectAltName extension is used to specify additional identities (like email addresses, IP addresses, or other domain names) associated with the entity to which the certificate is issued, beyond the common name (CN) in the DN.
 13. **What is defined in PKCS#1, PKCS#7, PKCS#10, PKCS#11, PKCS#12?**
      - **PKCS#1: RSA Cryptography Specifications** Defines the mathematical properties and implementation for RSA public key cryptography. It includes specifications for encryption and signing, RSA keys, and other related cryptographic operations.
      - **PKCS#7: Cryptographic Message Syntax Standard** Specifies a general syntax for data encryption and digital signatures. It's widely used for digital certificates, in S/MIME for secure email, and in other applications requiring secure data exchange.

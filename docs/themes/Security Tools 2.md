@@ -118,7 +118,7 @@ There are many Network Monitoring, Host-Monitoring and Graphing Tools out there.
 	- Expandable with plug-ins
 - Monitorix
 	- Free and open source
-	- Lightweight can be used on UNIX/
+	- Lightweight can be used on UNIX/LINUX
 - Netdata
 	- Real-time performance and health monitoring of system/hosts
 	- Fast and efficienct designed to run on all systems (physical & virtual servers, containers, IoT devices)
@@ -187,7 +187,7 @@ There are 3 variants of Flow capturing:
 	- directed attacks possible (less damage than full)
 - **in-line** 
 	- only link flows recordable
-	- TAP or SPAN port not visable
+	- TAP or SPAN port not visible
 
 ### Software
 

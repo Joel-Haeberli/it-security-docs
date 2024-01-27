@@ -19,7 +19,7 @@ Happens over the network. Starting with `nmap` or other tools. Using software bu
 See also: [[500 WS MOC|Web Security]]
 
 1. Out-of-bounds Write
-2. Improper Neutralisation of Input During Web Page Generation ([[Cross Site Scripting|Cross-site Scripting]])
+2. Improper Neutralisation of Input during Web Page Generation ([[Cross Site Scripting|Cross-site Scripting]])
 3. Improper Neutralisation of Special Elements used in an SQL Command ([[SQL-Injection|SQL Injection]])
 4. Use After Free
 5. Improper Neutralisation of Special Elements used in an OS Command (OS Command Injection)

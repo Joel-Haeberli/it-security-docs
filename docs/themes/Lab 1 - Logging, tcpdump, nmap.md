@@ -27,9 +27,9 @@ links: [[609 SPA TOC - Lab|SPA TOC - Lab]] - [[themes/000 Index|Index]]
 
 Ports are open on the mail server:
 
-> nft list table inet nslab
-> tcp dport 514 ct state new counter packets 0 bytes 0 accept comment "syslog - TCP"
-> udp dport 514 ct state new counter packets 0 bytes 0 accept comment "syslog - UDP"
+> - nft list table inet nslab
+> - tcp dport 514 ct state new counter packets 0 bytes 0 accept comment "syslog - TCP"
+> - udp dport 514 ct state new counter packets 0 bytes 0 accept comment "syslog - UDP"
 
 Config file mail server:  
 

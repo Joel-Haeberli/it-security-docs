@@ -10,7 +10,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 ### Topic 1: Information Security
 
 1. **What is meant with Information Security?**
-     -  Information Security refers to the protection of information and information systems from unauthorized access, use, disclosure, disruption, modification, or destruction, in order to ensure confidentiality, integrity, and availability.
+     - Information Security refers to the protection of information and information systems from unauthorized access, use, disclosure, disruption, modification, or destruction, in order to ensure confidentiality, integrity, and availability.
 2. **What are the goals of Information Security?**
      - Preservation of confidentiality, integrity, availability and in addition authenticity (non-repudiation), accountability and auditability
 3. **What are older terms for Information Security?**
@@ -107,11 +107,11 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 	4. **establish a foothold** (hide evidence, rootkit installation, replace services, hack other systems from here)
 	5. **playing for profit**
 7. **Do you know "shortcuts" to the five stages / phases of an intrusion?**
-     -  Use automated tools for scanning and break in
-	* Create fake websites to harvest credentials
-	* Infect vulnerable websites with malware
-	* Scam mails and messages for social engineering
-	* Or directly by phone, as a fake support agent
+	- Use automated tools for scanning and break in
+	- Create fake websites to harvest credentials
+	- Infect vulnerable websites with malware
+	- Scam mails and messages for social engineering
+	- Or directly by phone, as a fake support agent
 
 ### Topic 3: Layered Security
 
@@ -823,7 +823,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 | ---- | ---- |
 | Application Layer | ssh, PGP |
 | Transport Layer | TLS (SSL), OpenVPN |
-| Network Layer | IPSec, Wireguard |
+| Network Layer | IPSec, WireGuard |
 | Data Link Layer | PPTP, L2TP, IEEE 802.1(X, AE, i) |
 | Physical Layer | Quantom Cryptography |
 

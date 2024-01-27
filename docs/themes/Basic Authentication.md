@@ -9,7 +9,7 @@ links: [[612 SPA TOC - Identification Authentication|SPA TOC - Identification Au
 ## Basic Authentication
 
 - It's a simple authentication scheme built into the HTTP protocol to transfer username and password with each HTTP request
-- Transmits the string 'username:password' in cleartext (Base 64 encoded) -> needs to use TLS
+- Transmits the string 'username:password' in cleartext (Base 64 encoded) $\rightarrow$ needs to use TLS
 - Rarely used anymore, mostly replaced by form-based authentication
 - Most APIs that use Basic Auth provide server generated tokens / passwords which replace the base64 encoded 'username:pw'
 	- higher entropy

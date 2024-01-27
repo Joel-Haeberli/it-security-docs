@@ -36,7 +36,7 @@ links: [[617 SPA TOC - Wireless Security|SPA TOC - Wireless Security]] - [[theme
 - **SSID (Service Set Identifier)**: human readable name for wireless network, also called *network name*
 - **BSSID (Basic Service Set Identifier)**: Unique identifier for a specific access point, same format as a MAC address (commonly set to the MAC address)
 - **ESSID (Extended Service Set Identifier)**: group of BSSIDs that share the same Layer 2 network and the same SSID
-- **Bacons**: Broadcasts that advertise the wireless settings (SSID, encryption method, ...) for a specific BSSID
+- **Beacons**: Broadcasts that advertise the wireless settings (SSID, encryption method, ...) for a specific BSSID
 - **Associating**: an access point and a client have agreed on parameters for communication
 
 ## Sniffing Communication

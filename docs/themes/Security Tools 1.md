@@ -136,7 +136,8 @@ Command-line packet analyzer
 tcpdump <options> <filter>
 ```
 
-options: <br>
+options:
+
 - `-n` no dns resolution
 - `-i` interface to listen on
 - `-s` snaplen
@@ -149,18 +150,13 @@ options: <br>
 - `-p` Dont put interface into "promiscous" mode
 - `-r` Read packets from file
 
-**filter** = pcap filtering language using<br>
-**filter expressions** = consists of one or more primitives<br>
-**primitives** = consists of an id (name or number) and one or more qualifiers. Special primitives = gateway, broadcast, less, greater<br>
-**qualifiers**: <br>
-one of... 
-
-- type
-	- qualifiers say what kind the id refers to (host, net, port, portrange)
-- dir(direction) 
-	- qualifier specify a transfer direction (src, dst, src | dst, src, dst)
-- or proto(protocol)
-	- qualifier restrict the match to a protocol (ether, wlan, ip, ip6, arp, rarp, tcp and udp, ...)
+- **filter** = pcap filtering language using
+- **filter expressions** = consists of one or more primitives
+- **primitives** = consists of an id (name or number) and one or more qualifiers. Special primitives = gateway, broadcast, less, greate
+- **qualifiers**: one of... 
+	- type: qualifiers say what kind the id refers to (host, net, port, portrange)
+	- dir(direction): qualifier specify a transfer direction (src, dst, src | dst, src, dst)
+	- or proto(protocol): qualifier restrict the match to a protocol (ether, wlan, ip, ip6, arp, rarp, tcp and udp, ...)
 
 ## Wireshark
 

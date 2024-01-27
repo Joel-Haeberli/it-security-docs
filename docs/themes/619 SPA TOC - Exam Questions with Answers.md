@@ -794,7 +794,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 | ---- | ---- |
 | Application Layer | ssh, PGP |
 | Transport Layer | TLS (SSL), OpenVPN |
-| Network Layer | IPSec, Wireguard |
+| Network Layer | IPSec, WireGuard |
 | Data Link Layer | PPTP, L2TP, IEEE 802.1(X, AE, i) |
 | Physical Layer | Quantom Cryptography |
 

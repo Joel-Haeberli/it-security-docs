@@ -55,7 +55,7 @@ There are like in the SHA family several versions of the hash function:
 - **BLAKE2**: hash function based on BLAKE (2012), *BLAKE2b* is faster than MD5, SHA-1, SHA-2 & SHA-3
 - **BLAKE3**: hash function based on BLAKE2 (2020), single algorithm with many desirable features (parallelism, XOF, [[Key Derivation Function (KDF)|KDF]], [[CPA-Security#Pseudorandom Functions and Permutations|PRF]] and [[MAC]]), faster than BLAKE2
 
-- Users of BLAKE2: [[Password Based Key Derivation Function (PBKDF)#PBKDF using Argon2|Argon2]], Wireguard, ...
+- Users of BLAKE2: [[Password Based Key Derivation Function (PBKDF)#PBKDF using Argon2|Argon2]], [[WireGuard]], ...
 
 Source [en: Wikpedia](https://en.wikipedia.org/wiki/BLAKE_(hash_function))
 

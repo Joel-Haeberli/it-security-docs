@@ -1,6 +1,6 @@
 tags: #SPA #VPN 
  
-# OpenVPN
+# WireGuard
 
 links: [[616 SPA TOC - VPN|SPA TOC - VPN]] - [[themes/000 Index|Index]]
 
@@ -15,11 +15,11 @@ links: [[616 SPA TOC - VPN|SPA TOC - VPN]] - [[themes/000 Index|Index]]
 - Encapsulates IP packets within UDP
 - Multi platform support for all current desktop and mobile OS (Windows, macOS, Linux, Android, IOS)
 - Operates with a fixed suite of cryptographic primitives:
-	- Symmetric encryption: ChaCha20-Poly1305 using RFC7539 AEAD construction
-	- BLAKE2 for (keyed) hashing
+	- Symmetric encryption: [[Authenticated Encryption#ChaCha20-Poly1305|ChaCha20-Poly1305]] using RFC7539 [[Authenticated Encryption#Authenticated encryption with associated data|AEAD]] construction
+	- [[Cryptographic Hash Functions#BLAKE|BLAKE2]] for (keyed) hashing
 	- ECDH with Curve25519
-	- Key derivation with HKDF
-- Interoperable with other VPNs such as IPsec and PPTP
+	- Key derivation with [[Key Derivation Function (KDF)#KDF using HMAC (HKDF)|HKDF]]
+- Interoperable with other VPNs such as [[IPsec]] and PPTP
 - Easy setup
 
 ## Configuration
@@ -135,7 +135,7 @@ The symmetric session keys are constantly rotated:
 
 ## Containerization
 
-Wireguard integrates into the network namespace infrastructure so Namespacing tricks can be used:
+WireGuard integrates into the network namespace infrastructure so Namespacing tricks can be used:
 
 - Assign only the WireGuard interface to a container
 - Let DHCP touch only phisical interfaces
@@ -144,7 +144,7 @@ Wireguard integrates into the network namespace infrastructure so Namespacing tr
 
 ![[vpn-wireguard-containerization.png]]
 
-## Wireguard/VPN Topologies
+## WireGuard/VPN Topologies
 
 ### Point to Point
 

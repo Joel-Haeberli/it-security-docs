@@ -96,7 +96,7 @@ links: [[609 SPA TOC - Lab|SPA TOC - Lab]] - [[themes/000 Index|Index]]
 **softflowd**
 
 - Softflowd is a flow-based network traffic analyzer and exporter. It tracks network traffic and exports flow data in formats compatible with tools like SiLK and flow-tools, often used for network traffic accounting and monitoring.
-- *Use*: configure softflowd-config to send packages to a specific ip: `options='-v 9 -n 147.87.86.67:2055'`
+- *Use*: configure softflowd-config to send packages to a specific ip: `options='-v 9 -n 192.168.1.220:2055'`
 
 **nfcapd/nfdump**
 
@@ -130,7 +130,7 @@ links: [[609 SPA TOC - Lab|SPA TOC - Lab]] - [[themes/000 Index|Index]]
 		- `tcp sport 80 socket transparent 1 socket wildcard 0 meta mark set 1 counter accept`: mark and accept response packet
 		- `ip saddr 192.168.1.0/24 tcp dport 80 tproxy ip to :3129 meta mark set 1 counter`: redirect matching packets to local Squid port
 	- create rules in filter table/ INPUT chain
-		- `ip saddr 147.87.86.112/28 tcp dport { 80, 3128, 3129 } ct state new counter accept`: allow incoming access to Squid proxy
+		- `ip saddr 192.168.1.0/24 tcp dport { 80, 3128, 3129 } ct state new counter accept`: allow incoming access to Squid proxy
 	- create rule in filter table/ OUTPUT chain
 		- default policy accept
 - **Exercise Firewall forward**

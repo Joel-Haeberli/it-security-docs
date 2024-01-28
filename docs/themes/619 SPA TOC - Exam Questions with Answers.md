@@ -695,9 +695,10 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 12. **Can the user prevent delegation?**  
       - Users themselves typically cannot prevent delegation in Kerberos. It's controlled by domain administrators through service configurations and account properties.
 13. **Can you restrict delegation. Where does it makes sense to restrict delegation?**
-      - Delegation can be restricted at the domain level by configuring service accounts. It makes sense to restrict delegation in high-security environments or for services that handle sensitive data to limit the potential for privilege escalation or lateral movement.
+      -  Delegation can be restricted at the domain level by configuring service accounts -> Add users to protected group or flag as sensitive
+      - It makes sense to restrict delegation in high-security environments or for services that handle sensitive data to limit the potential for privilege escalation or lateral movement.
 14. **What are the security risks? Describe how «unconstrained» delegation could be misused.**  
-      - Unconstrained delegation can be misused if an attacker compromises a service account with delegation privileges. They could potentially access any service impersonating any user, leading to a complete domain compromise.
+      - Unconstrained delegation can be misused if an attacker compromises a service account with delegation privileges. An attacker can impersonate users to any service for which the service account holds TGTs
 15. **How can you trick users to connect to your service configured for delegation?** 
       - An attacker might set up a service configured for delegation and then use techniques like phishing or DNS spoofing to trick users into connecting to this service, allowing the attacker to impersonate these users.
 16. **How could a printer on a DC be attacked?**  

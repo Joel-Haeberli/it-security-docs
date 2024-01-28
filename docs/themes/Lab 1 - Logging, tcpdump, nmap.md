@@ -79,7 +79,6 @@ if $fromhost-ip != '127.0.0.1' then -?RemoteLogs
 
 auth,authpriv.* /var/log/auth_log
 *.warn /var/log/warn_log
-
 ```
 
 ```
@@ -142,7 +141,7 @@ logwatch --service syslog-manual --detail High
 
 ## Exercise LogAnalyzer
 
-```
+```bash
 apt-get install apache2 php php-cli
 curl https://download.adiscon.com/loganalyzer/loganalyzer-4.1.13.tar.gz --output log.tar.gz
 tar -xvzf log.tar.gz
@@ -161,6 +160,12 @@ Access the web interface at `http://147.87.86.67/log`
 ## Exercise systemd-journald
 
 See here: [centralize logs with journald](https://www.digitalocean.com/community/tutorial-collections/how-to-centralize-logs-with-journald)
+
+- install package `systemd-journal-remote` on client and server
+- create necessary firewall rules on hosts
+- create certificates on client and server (e.g. with certbot)
+- *server*: configure journal-remote system daemon to use correct certificates
+- *client*: create user for daemon with rights to the certificates, configure journal-remote system daemon with 
 
 ## Exercise tcpdump
 

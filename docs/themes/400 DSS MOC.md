@@ -14,5 +14,7 @@ links: [[themes/000 Index|Index]]
 - **Topic 06**: [[themes/406 DSS TOC - Scaling|Scaling]]
 - **Topic 07**: [[407 DSS TOC - Exercises|Exercises]]
 
+- [[Bitcoin Terms]]
+
 ---
 links: [[themes/000 Index|Index]]

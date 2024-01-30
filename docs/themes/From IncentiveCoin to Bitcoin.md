@@ -26,7 +26,7 @@ This properties build the rules for the DifficultyAdjustmentCoin. These say that
 1. Block-Timestamp > *Median-Time-Past*
 2. Block-Timestamp < *Network-Adjusted-Time + 2 hours*
 
-Only if a block timestamp holds on to these rules, it is considered for the calculation of the networks power.
+Only if a block timestamp holds on to these rules, it is considered for the calculation of the networks power. Nodes only need to ensure that the timestamp is accurate enough to allow measuring computational power (sometimes block $n + 1$ has smaller timestamp than block $n$).
 
 Now we could try to adjust the [[Proof-of-Work (PoW)#Hashcash|Hashcash]] difficulty but the problem is, that this cannot be done smoothly. So we change the puzzle. Now not the amount of zeros prefixing the hash is the problem but the value of the hash itself. **We now ask the solvers to find a number which is smaller than a given number in $[0,..,2^{256}]$**. We can now adjust the difficulty more fine-grained. 
 
@@ -40,7 +40,7 @@ The **retarget** flow works like this:
 
 **DifficultyAdjustmentCoin solves**: 
 
-- Computing power increase of [[From BankCoin to IncentiveCoin#IncentiveCoin|IncentiveCoin]]
+- Computing power increase of [[From BankCoin to IncentiveCoin#IncentiveCoin|IncentiveCoin]] can be addressed with changing the difficulty
 
 **Problems** with the DifficultyAdjustmentCoin:
 
@@ -62,15 +62,15 @@ For this we look what a transaction is built of: Inputs and Outputs. The output 
 
 whereas the input consists of:
 
-- the reference to the respective output
-- the signature of the sender (?matching public key of recipient?) (TO DO: I dont understand how the public key of the recipient shall match the signature with the secret key of the sender???) 
+- a reference to an output of a previous transaction
+- a signature of the sender (matching the public key in the referenced output) $\rightarrow$ this is the proof that the coin we reference and use for our new transaction is owned by us
 
 With this we are able to validate transactions following this process:
 
-1. Check that each output is referenced with an input, and that the input is not already spent
-2. Check that sum of inputs is not greater than output
+1. For each input, check that the referenced output exists and is not already spent
+2. Check that sum of output values is not greater than sum of input values
 3. For each input do the following input validation:
-	1. Verify signature with the signature of the input, public key from the referenced output and the message (which is the current transaction without the signatures contained)
+	- Verify signature with the signature of the input, public key from the referenced output and the message (which is the current transaction without the signatures contained)
 
 **InputOutputCoin solves**: 
 
@@ -91,9 +91,9 @@ Currently we are able to send money to one public key at a time. This is good bu
 - in general: $m$ of $n$ keys are *required* to sign
 - Before a time $x$ Alice's signature is required, after time $x$ Bob's signature is required
 
-To implement this functionality the Bitcoin Script is introduced. It is a stack-based assembly language. It is simplified and only supports a small set of operations. The outcome of each Bitcoin Script is either *Error* or *No Error*.
+To implement this functionality the Bitcoin Script is introduced. It is a stack-based assembly language. It is simplified and only supports a small set of operations (arithmetic operations, handling the stack, conditionals, hashing, signature, verification, no loops/jumps). The outcome of each Bitcoin Script is either *Error* or *No Error*.
 
-The scripts are now placed in into the inputs and outputs of the [[From IncentiveCoin to Bitcoin#InputOutputCoin|InputOutputCoin]]. The outputs are holding the [[Scripts#Lock|Lock Scripts]] while the inputs are holding the [[Scripts#Unlock|Unlock Scripts]]. For more information about [[Scripts]] and how they work, read the respective [[Scripts|page]].
+The scripts are now placed in into the inputs and outputs of the [[From IncentiveCoin to Bitcoin#InputOutputCoin|InputOutputCoin]]. The outputs are holding the [[Bitcoin Scripts#Lock|Lock Scripts]] while the inputs are holding the [[Bitcoin Scripts#Unlock|Unlock Scripts]]. For more information about [[Bitcoin Scripts]] and how they work, read the respective [[Bitcoin Scripts|page]].
 
 A transaction in ScriptCoin is validated by doing the same process as in [[From IncentiveCoin to Bitcoin#InputOutputCoin|InputOutputCoin]], but the input validation step is removed in favor of the script validation step:
 
@@ -111,13 +111,28 @@ Remark: **do not chain the scripts all together**
 
 **Problems** with the ScriptCoin:
 
-- The problem that remains is that the verification of the payment is hard.
+- The problem that remains is that the verification of the payment is hard (download entire blockchain to verify a transaction > 500GB)
 
 ## SimplifiedPaymentVerificationCoin / SPVCoin
 
 *Predecessor: [[From IncentiveCoin to Bitcoin#ScriptCoin|ScriptCoin]]*
 
-The SimplifiedPaymentVerificationCoin (also SPVCoin) solves the problem that verification of payments is hard in [[From IncentiveCoin to Bitcoin#ScriptCoin|ScriptCoin]] (due to the fact, that each node must have the entire chain, which is bigger than 500GB, to validate a payment). Therefore it introduces *SPV nodes* who do not store the entire chain but instead only the headers of the blocks containing metadata needed to still verify payments but stripped of the transactions, which are not needed for this purpose. Therefore a block is split into *block header* and *block body*. Nodes who carry the entire chain are now called *full nodes*. A *block header* is only 80 bytes which leads to a size around 60MB (2022). The *block headers* store the root hash of the transaction if they were put into a [[Authenticated Data Structures#Merkle Tree|Merkle Tree]]. The *SPV nodes* then call *full nodes* for [[Authenticated Data Structures#Merkle Proof|Merkle Proofs]] to verify payments. *SPV nodes* rely on trustworthy *full nodes*. If *full nodes* do not good at their job of validating transactions properly, the construct breaks. *SPV nodes* accept Security and Privacy Tradeoffs.
+The SimplifiedPaymentVerificationCoin (also SPVCoin) solves the problem that verification of payments is hard in [[From IncentiveCoin to Bitcoin#ScriptCoin|ScriptCoin]] (due to the fact, that each node must have the entire chain, which is bigger than 500GB, to validate a payment). Therefore it introduces *SPV nodes* who do not store the entire chain but instead only the headers of the blocks containing metadata needed to still verify payments but stripped of the transactions, which are not needed for this purpose.
+
+Therefore a block is split into *block header* and *block body*.
+
+- **Block header**: contains previous hash, nonce, timestamp and the root hash (the root of a merkle tree containing all the transactions in the block)
+- **Block body**: contains the transactions
+
+Nodes who carry the entire chain are now called *full nodes*. A *block header* is only 80 bytes which leads to a size around 60MB (2022). The *block headers* store the root hash of the transaction if they were put into a [[Authenticated Data Structures#Merkle Tree|Merkle Tree]]. The *SPV nodes* then call *full nodes* for [[Authenticated Data Structures#Merkle Proof|Merkle Proofs]] to verify payments. *SPV nodes* rely on trustworthy *full nodes*. If *full nodes* do not good at their job of validating transactions properly, the construct breaks. *SPV nodes* accept Security and Privacy Tradeoffs.
+
+**Security and Privacy Tradeoff**
+
+- An SPV node is vulnerable to miners: the miner majority can easily make your SPV client believe that it just received 1000 BTC when in fact it did not $\rightarrow$ a verifier cannot be sure if a transaction is in this block, if it is a valid block and if that the outputs that are referenced actually exist
+- SPV nodes typically ask multiple full nodes for verification (does not solve the issue above)
+- You would only use SPV for amounts that are small compared to the block reward
+- By requesting the merkle proof, we expose the connection between our IP address and the incoming transaction
+- *You would not use SPV if your privacy is important*
 
 **SimplifiedPaymentVerificationCoin solves**: 
 
@@ -138,11 +153,30 @@ The Bitcoin builds on top of the [[From IncentiveCoin to Bitcoin#SimplifiedPayme
 - Difficulty Target (4 bytes)
 - Nonce (solution to puzzle) (4 bytes)
 
-Each Bitcoin Block Header is therefore 80 bytes.
+Each Bitcoin Block Header is therefore **80 bytes**.
 
-The first transaction in a block is always the coinbase transaction (as described in [[From BankCoin to IncentiveCoin#IncentiveCoin|IncentiveCoin]]). It has only one input which references no transaction (zero hash) and an arbitrary coinbase parameter up to 100 bytes (instead of an [[Scripts#Unlock|unlock script]]).
+A block can be identified by:
 
-The first block of the chain is called the *genesis* block and is statically encoded in the bitcoin client. It contains the message "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks." which is the heading of the newspaper ["The Times"](https://www.thetimes.co.uk). This proves, that the chain did not exist before the third of january 2009 and therefore proves, that Nakamoto was not able to pre-mine blocks for himself.
+- the **block hash** (256bit): is unique since the hash is collision resistant
+- the **block height**: such as block number 12345, is not unique in case of a fork
+- **stale blocks**: a valid block that is not in the longest chain
+- **orphan block**: block that has no parent
+
+The first transaction in a block is always the **coinbase transaction** (as described in [[From BankCoin to IncentiveCoin#IncentiveCoin|IncentiveCoin]]). It has only *one input* which references no transaction (zero hash) and an arbitrary coinbase parameter up to 100 bytes (instead of an [[Bitcoin Scripts#Unlock|unlock script]]). It has. *any number of outputs*, spending the block reward and the transaction fees.
+
+The first block of the chain is called the **genesis block** and is statically encoded in the bitcoin client. It contains the message "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks." which is the heading of the newspaper ["The Times"](https://www.thetimes.co.uk/article/chancellor-alistair-darling-on-brink-of-second-bailout-for-banks-n9l382mn62h). This proves, that the chain did not exist before the third of january 2009 and therefore proves, that Nakamoto was not able to pre-mine blocks for himself.
+
+**Block Validation Simplified**
+
+Every node validates every block it receives (simplified):
+
+1. Validate the block data structure and size
+2. Validate the proof-of-work
+3. Validate the hash of the previous block
+4. Validate the block timestamp
+5. Validate the merkle root
+6. Validate the coinbase transaction
+7. Validate all other transaction
 
 **Bitcoin solves**: 
 

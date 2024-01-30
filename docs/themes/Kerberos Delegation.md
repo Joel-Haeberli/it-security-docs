@@ -40,6 +40,8 @@ links: [[620 SPA TOC - Kerberos|SPA TOC - Kerberos]] - [[themes/000 Index|Index]
 
 ![[kerberos-13.png]]
 
+- **DCSync attack**: Once the attacker has obtained domain admin-level access through the PrinterBug exploit, they can then execute a DCSync attack. This involves using tools like Mimikatz to impersonate a Domain Controller and request user credential data from a legitimate Domain Controller. The attacker get sensitive information like hashed user credentials back.
+
 ### Constrained Delegation
 
 - Services can impersonate users against specific services (target restrictions)

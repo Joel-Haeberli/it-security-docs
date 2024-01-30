@@ -126,7 +126,7 @@ The `ChangeCipherSpec` messages is the last plain text message of the client. Th
 
 | What's new | TLS 1.3 | TLS 1.2 |
 | ---- | ---- | ---- |
-| Safer key exchange | (EC)DHE → forward security | RSA, (EC)DH, (EC)DHE |
+| Safer key exchange | (EC)DHE → forward secrecy | RSA, (EC)DH, (EC)DHE |
 | Faster handshake | 1-RTT, 0-RTT (resumption) | 2-RTT |
 | More secure symmetric encryption | Must be AEAD | AEAD, CBC, RC4, 3DES |
 | Simple cipher suites | AES_256_GCM_SHA384 | ECDHE-ECDSA-AES128-GCM-SHA256 |

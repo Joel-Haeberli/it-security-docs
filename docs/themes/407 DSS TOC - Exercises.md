@@ -13,18 +13,19 @@ links: [[400 DSS MOC|DSS MOC]] - [[themes/000 Index|Index]]
 
 ## Exercise 1 - Think about Bitcoin Clients
 
-### What could happen to your bitcoins if you downloaded a trojan horse masquerading as the bitcoin client instead of the real bitcoin client? 
+**What could happen to your bitcoins if you downloaded a trojan horse masquerading as the bitcoin client instead of the real bitcoin client?** 
 
 If you mistakenly download a Trojan horse masquerading as the Bitcoin client, several adverse outcomes could occur. The Trojan could act as a keylogger to capture your cryptographic keys, allowing unauthorized access to your Bitcoin wallet. It could also directly steal Bitcoin from your wallet if it gains access to your wallet's private keys. Additionally, it might install other malicious software that could compromise your computer's security in various ways.
 
-### How do you know that you downloaded the real bitcoin client? 
+**How do you know that you downloaded the real bitcoin client?** 
 
 - Download from the official website: Always download the client from the official Bitcoin website or a trusted source.
 - Verify signatures: The official Bitcoin client releases are usually signed by the developers. You can verify these signatures using tools like GnuPG.
 - Check the checksum: A checksum is provided for the official client. Compare the checksum of the file you downloaded with the official one to ensure integrity.
 - Research: Read up on the latest releases from trusted community sources and forums.
 - Use trusted networks: Avoid downloading the client when connected to unsecured or public Wi-Fi networks.
-### What would you do if you had 10n+1 dollars in bitcoin? What would you do to ensure that you are using the real bitcoin client?
+
+**What would you do if you had 10n+1 dollars in bitcoin? What would you do to ensure that you are using the real bitcoin client?**
 
 - Diversify: It's prudent to diversify investments to mitigate risk. Consider spreading the investment across different asset classes.
 - Secure Storage: Use hardware wallets for the bulk of your holdings. These are offline and provide a high level of security.
@@ -32,15 +33,11 @@ If you mistakenly download a Trojan horse masquerading as the Bitcoin client, se
 - Professional Advice: Consult with cybersecurity and financial experts to ensure both the security of your Bitcoin and the optimization of your investment strategy.
 - Monitor Transactions: Regularly monitor your Bitcoin transactions and wallet for any unusual activity.
 
-
-
 ## Exercise 2 - Hashing
 
 [[ex2-solution.pdf]]
 
 ![[ex2-solution.pdf]]
-
-
 
 ## Exercise 3 - Proof of Work
 
@@ -48,22 +45,17 @@ If you mistakenly download a Trojan horse masquerading as the Bitcoin client, se
 
 ![[ex3-solution.pdf]]
 
-
-
-
 ## Exercise 4 - Merkle Trees
 
 [[ex4-solution.pdf]]
 
 ![[ex4-solution.pdf]]
 
-
 ## Exercise 5 - Merkle Trees Part 2
 
 [[ex5-solution.pdf]]
 
 ![[ex5-solution.pdf]]
-
 
 ## Exercise 6 - Bitcoin Whitepaper (Summary)
 
@@ -82,7 +74,7 @@ If you mistakenly download a Trojan horse masquerading as the Bitcoin client, se
 
 ## Exercise 7 - Double spending
 
-### You are a bitcoin user and you are running the bitcoin client. Your internet provider completely controls your network. Which of the following attacks can they carry out against you successfully, and why/why not?
+**You are a bitcoin user and you are running the bitcoin client. Your internet provider completely controls your network. Which of the following attacks can they carry out against you successfully, and why/why not?**
 
 1. **Steal Your Coins**:
     - **Feasibility**: Unlikely, unless additional security breaches occur.
@@ -104,22 +96,17 @@ If you mistakenly download a Trojan horse masquerading as the Bitcoin client, se
 
 ![[ex7-solution.pdf]]
 
-
-
 ## Exercise 8 - InputOutputCoin
 
 [[ex8-solution.pdf]]
 
 ![[ex8-solution.pdf]]
 
-
 ## Exercise 9 - Script
 
 [[ex9-solution.pdf]]
 
 ![[ex9-solution.pdf]]
-
-
 
 ## Exercise 10 - Bitcoin Script
 

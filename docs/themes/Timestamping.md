@@ -20,7 +20,7 @@ Problem: requires **Trust**, once the secret key of the TTP is compromised, all 
 
 ## Linked Timestamping
 
-The TSS issues a series of timestamps. These timestamps include not only the timestamp itself but also the hash of the timestamp issued before the current timestamp. This links timestamps together and gives us trust agility. This means that I can verify a timestamp based on a timestamp signed by someone I trust.
+The TSS issues a series of timestamps. These timestamps include not only the timestamp itself but also the hash of the timestamp issued before the current timestamp. This links timestamps together and gives us trust agility. This means that I can verify a timestamp based on a timestamp signed by someone I trust $\rightarrow$ hash function must be **pre-image resistant**
 
 ![Linked Timestamping](linked_timestamping.png)
 

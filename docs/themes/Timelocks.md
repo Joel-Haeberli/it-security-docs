@@ -13,7 +13,7 @@ Remember: lock times of [[Transaction Replacement]]
 The locktime field of a transaction is interpreted differently depending on the value. This means that a locktime value is seen as...
 
 - block number, if $locktime < 500$ million
-- unix timestamp, if $locktime \geq 500$
+- unix timestamp, if $locktime \geq 500$ million
 
 In most transactions, the locktime is zero, which means the transactions can be confirmed immediately. A consensus rule says that if all inputs have a sequence number of MAXINT ($2^{32}$), the locktime is ignored.
 
@@ -31,7 +31,7 @@ The operations works as follows (simplified):
 
 ### Relative Lock Time
 
-The Sequence Number of [[Transaction Replacement]] was repurposed allowing Relative Lock Times. This means that a transaction with sequence number value of $n$ can only be confirmed $n$ blocks after the referenced output was confirmed. Since the sequence number has 32 bits and the value of the relative lock time only uses 16bits, the first bits of the two first bytes (MSB) have special pruposes. The first bit of the first byte (MSB) is the Activation Flag. It allows disabling the relative lock time. The first bit of the second byte, represents the type flag. It defines wether the value means $n$ blocks or $n \times 512$ seconds.
+The Sequence Number of [[Transaction Replacement]] was repurposed allowing Relative Lock Times. This means that a transaction with sequence number value of $n$ can only be confirmed $n$ blocks after the referenced output was confirmed. Since the sequence number has 32 bits and the value of the relative lock time only uses 16bits, the first bits of the two first bytes (MSB) have special purposes. The first bit of the first byte (MSB) is the Activation Flag. It allows disabling the relative lock time. The first bit of the second byte, represents the type flag. It defines wether the value means $n$ blocks or $n \times 512$ seconds.
 
 ![sequence-number-repurpose](sequence_number_abuse.png)
 

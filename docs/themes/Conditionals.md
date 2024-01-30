@@ -6,7 +6,7 @@ links: [[406 DSS TOC - Scaling|DSS TOC - Scaling]] - [[themes/000 Index|Index]]
 
 ---
 
-[[Scripts#Bitcoin Script|Bitcoin Script]] allows to define conditionals. These conditionals are built like:
+[[Bitcoin Scripts#Bitcoin Script|Bitcoin Script]] allows to define conditionals. These conditionals are built like:
 
 ```
 IF

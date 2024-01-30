@@ -629,7 +629,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 11. **What is a Challenge-Response-Protocol and why do we need it?** 
       - A security mechanism where one party presents a question (challenge) and another party must provide a valid answer (response/signature) to be authenticated. It's used to verify the identity of a user or device, often in a way that prevents eavesdropping or replay attacks, since the challenge is typically random and changes each time. Based on public key cryptography. 
 12. **FIDO2 consists of the standards WebAuthn and CTAP. Describe the function of the two standards.**
-      - - **WebAuthn**: A web standard for authentication. It allows users to log in to web services using biometrics, mobile devices, or FIDO security keys, instead of a password.
+      - **WebAuthn**: A web standard for authentication. It allows users to log in to web services using biometrics, mobile devices, or FIDO security keys, instead of a password.
       - **CTAP (Client To Authenticator Protocol)**: Allows an external device (like a security key or a mobile phone) to act as an authenticator to a client device via USB, NFC, or Bluetooth.
 13. **What is meant with attestation?**
       - Refers to the process where a device (like a security key) proves to a verifier (like a server) that it is what it claims to be, often by providing a certificate or signature from a trusted manufacturer or authority.
@@ -664,9 +664,9 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 
 1. **How does Kerberos works? Why does Kerberos need shared secrets? What are these shared secrets?**
      - Kerberos is a network authentication protocol that works on the basis of tickets to allow nodes to prove their identity securely over a non-secure network. Kerberos needs shared secrets for secure communication between the client and the server. These are typically passwords or keys known both to the user's client and the Kerberos server.
-2. **The Key Distribution Center (KDC) is composed of the Authentication Server (AS) and the Ticket Granting Server (TGT). What is the function of AS and TGT?**
-     - - **Authentication Server (AS)**: Issues an initial ticket (TGT) after authenticating the user.
-     - **Ticket Granting Server (TGT)**: Uses the TGT to grant service tickets, which allow access to other network services.
+2. **The Key Distribution Center (KDC) is composed of the Authentication Server (AS) and the Ticket Granting Server (TGS). What is the function of AS and TGS?**
+     - **Authentication Server (AS)**: Issues an initial ticket (TGT) after authenticating the user.
+     - **Ticket Granting Server (TGS)**: Uses the TGT to grant service tickets, which allow access to other network services.
 3. **What is a Server Principal Name (SPN)? How is the name composed / structured?**
      - A unique identifier for a service instance on the network. Usually structured as `service/hostname:port`, indicating the service and the host providing it.
 4. **Explain the content and the function of Kerberos Tickets? What is a Ticket Granting Ticket (TGT) and what is a service ticket (ST)? Explain the differences.**
@@ -744,7 +744,7 @@ links: [[600 SPA MOC|SPA MOC]] - [[themes/000 Index|Index]]
 	- Use MIME type `application/pkcs7-mime` and sign or encrypt mail with certificates (pk infrastructure)
 7. **What is the difference between a «Detached Signatures» (application/pkcs7-signature) and a regular PKCS#7 signature (application/pkcs7-mime)?**
 	- *Detached Signature*: The signature is stored separately from the original data. This allows recipients to verify the signature without altering the original message format $\rightarrow$ if a mailing list modify email parts, the signature isn't valid anymore.
-	- *Regular PKCS#7 Signature: The signature and the original data are bundled together in a single file. This is more convenient for ensuring both the data and its integrity are preserved together, but it alters the original message format.
+	- *Regular PKCS#7 Signature*: The signature and the original data are bundled together in a single file. This is more convenient for ensuring both the data and its integrity are preserved together, but it alters the original message format.
 8. **Describe how a PKCS#7 message is encrypted for a group of recipients. How is the PKCS#7 encrypted data (pkcs7-envelopedData) structured?**
 	- The message is encrypted once using a symmetric key.
 	- Each recipient's public key encrypts the symmetric key.

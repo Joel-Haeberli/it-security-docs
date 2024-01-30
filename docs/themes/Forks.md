@@ -29,6 +29,8 @@ A soft fork is an update  of the consensus rules that all blocks according to th
 
 Example: If I decrease the block size limit from 4 bytes to 2 bytes, a newly created block of 2 bytes is also valid under the old rule of max. 4 bytes per block (backward compatibility).
 
+![[example-soft-fork.png]]
+
 ### Hard Forks
  
 A hard fork is an update of the consensus rules such that new blocks are valid under the new rules but perhaps not anymore under the old rules. Hard forks are considered too risky for protocol updates, because they cause permanent network forks. Hard forks might include:
@@ -38,6 +40,8 @@ A hard fork is an update of the consensus rules such that new blocks are valid u
 - Changing the format of a block
 
 Example: An old block was allowed a maximal reward of 0.5 Bitcoin. The new rule states, that a maximal reward of 1 Bitcoin can be given to the solver of the puzzle. This means that a block with more than 0.5 Bitcoin rewards is not valid under old rules but valid under the new rules.
+
+![[example-hard-fork.png]]
 
 ---
 links: [[405 DSS TOC - Evolving the Protocol|DSS TOC - Evolving the Protocol]] - [[themes/000 Index|Index]]

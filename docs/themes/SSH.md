@@ -25,7 +25,7 @@ links: [[614 SPA TOC - Secure Shell|SPA TOC - Secure Shell]] - [[themes/000 Inde
 
 - Defined in RFC 4253
 - The transport layer provides algorithm negotiation, key exchange and server authentication and sets up a secured connection that provides integrity, confidentiality and optional compression
-- For key exchange Diffie-Hellman is used (ensures forward security)
+- For key exchange Diffie-Hellman is used (ensures forward secrecy)
 - The server authentication is based on RSA or DSS signatures
 
 ![[ssh-transport-layer.png]]

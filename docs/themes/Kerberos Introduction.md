@@ -118,7 +118,7 @@ Corresponding Wireshark screenshots are in the slides
 - TGT and ST contain authorization information about the user $\rightarrow$ Privileged Attribute Certificate (PAC)
 - PAC contains
 	- User information (name, profile, home dir, etc.)
-	- Account information ( bad password count, last logo, last password change, etc)
+	- Account information (bad password count, last logo, last password change, etc)
 	- Group information (membership of AD groups)
 - Services use the PAC information to perform authorization without having to contact the domain controller
 - PAC is signed by the KDC

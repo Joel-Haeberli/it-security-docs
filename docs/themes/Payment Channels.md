@@ -8,13 +8,28 @@ links: [[406 DSS TOC - Scaling|DSS TOC - Scaling]] - [[themes/000 Index|Index]]
 
 ## Payment Channels
 
-As described in [[Transaction Replacement]] Nakamoto's introduced mechanism is insecure. That's why other methods have been introduced to allow trustless off-chain payments: payment channels. They rely on [[Conditionals]] and [[Timelocks]]. 
+As described in [[Transaction Replacement]] Nakamoto's introduced mechanism is insecure. That's why other methods have been introduced to allow untrustworthy off-chain payments: payment channels. They rely on [[Conditionals]] and [[Timelocks]]. 
 
 Two of such payment channels are [[Timelocks#OP_CHECKLOCKTIMEVERIFY (CLTV)|CLTV]]-style payment channels and Lightning channels
 
 ### [[Timelocks#OP_CHECKLOCKTIMEVERIFY (CLTV)|CLTV]] Payment Channels (Unidirectional)
 
-Since Alice expects to pay Bob multiple times, she wants to put everything in one transaction which helps her to safe fees. She ***prepares*** a transaction (2-of-2 multisig transaction, like this Bob is sure that she cannot spam him) which she does **not broadcast** but instead sends the draft to Bob. Alice repeats this procedure everytime she wants to pay Bob again (this creates a *commitment transaction* which is already signed by Alice). According to the consensus rules in [[Timelocks#OP_CHECKLOCKTIMEVERIFY (CLTV)|CLTV]] this will update Bob's transaction inside mempool if the transaction meets the requirements. Bob can, if Alice will not pay anymore coins, broadcast the highest paying transaction. This transaction closes the payment channel and pay the highest specified amount of coins to Bob.
+Since Alice expects to pay Bob multiple times, she wants to put everything in one transaction which helps her to safe fees. She ***prepares*** a transaction (2-of-2 multisig transaction, like this Bob is sure that she cannot spam him) which she does **not broadcast** but instead sends the draft to Bob. Alice repeats this procedure every time she wants to pay Bob again (this creates a *commitment transaction* which is already signed by Alice). According to the consensus rules in [[Timelocks#OP_CHECKLOCKTIMEVERIFY (CLTV)|CLTV]] this will update Bob's transaction inside mempool if the transaction meets the requirements. Bob can, if Alice will not pay anymore coins, broadcast the highest paying transaction. This transaction closes the payment channel and pay the highest specified amount of coins to Bob.
+
+**Operations**
+
+1. *Open the Channel*: Alice broadcasts a special transaction that locks coins using 2-of-2 multisig
+2. *Make a payment*: Alice sends unconfirmed transactions to Bob which spend from those locked coins to Bob
+3. *Close the Channel*:
+	1. *Normal Closure*: Bob signs and broadcasts the highest value transaction he received from Alice
+	2. *Expiry*: If Bob stops to cooperate, after the expiry time passes, Alice broadcasts a transaction taking her money back
+
+**Properties**
+
+- the channel does not depend on miners $\rightarrow$ bob can be sure that the output of the opening transaction is spendable if he acts within the expire date
+- Alice can not cheat Bob by broadcasting an old transaction, she does not have Bob's signature
+- these channels have limited lifetime and are one-way
+
 ### Lightning Payment Channels (Bidirectional)
 
 The main problem we have is that currently we are not able to invalidate an old commitment transaction (they are also called *channel state*). The Lightning Channel is capable of invalidating commitment transactions, by introducing some cryptographic secrets to the communication:
@@ -53,7 +68,7 @@ On the other hand we have the same situation, that Bob has the balance of Alice 
 
 ##### 4. They repeat step 2 and 3
 
-As long as the balance is high enough and they want to pay each other, they repeat step two and three. This means for each commitment transaction new secrets are generated. Important is that after creating the new commitment transaction with new secrets, they share the old secret with each other [preventing the other party broadcasting older transaction which favors them more](https://bitcoinmagazine.com/technical/understanding-the-lightning-network-part-building-a-bidirectional-payment-channel-1464710791)
+As long as the balance is high enough and they want to pay each other, they repeat step two and three. This means for each commitment transaction new secrets are generated. Important is that after creating the new commitment transaction with new secrets, they share the old secret with each other [preventing the other party broadcasting older transaction which favours them more](https://bitcoinmagazine.com/technical/understanding-the-lightning-network-part-building-a-bidirectional-payment-channel-1464710791).
 
 The lightning payment channel can be leveraged to create a [[Lightning Network]].
 

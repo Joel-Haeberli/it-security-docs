@@ -20,5 +20,7 @@ The rules that determine the validity of a transaction and blocks are called *co
 - Issuance Schedule (coin limit)
 - Adjustment of puzzle difficulty
 
+Not consensus relevant: User interface, disk storage of blocks and keys, P2P network handling, Mempool handling, ...
+
 ---
 links: [[405 DSS TOC - Evolving the Protocol|DSS TOC - Evolving the Protocol]] - [[themes/000 Index|Index]]

@@ -19,6 +19,7 @@ The BankCoin represents the current situation where a bank has a ledger (central
 - Create money
 
 ![BankCoin](bankcoin.png)
+
 ## NaiveCoin
 
 *Predecessor:  [[From BankCoin to IncentiveCoin#BankCoin|BankCoin]]*
@@ -27,16 +28,18 @@ The NaiveCoin works as follows:
 
 - Issuer of the transaction sends it to everyone in the network.
 - Everyone receiving the transaction, updates their copy of the ledger.
+- Having the own ledger up to date is important to validate incoming transactions
 
 **NaiveCoin solves**: 
 
-- No banks involved anymore
+- No banks involved anymore (no censure, no money creation)
 
 **Problems** with the NaiveCoin:
 
 - Replay Attacks
 
 ![BankCoin](naivecoin.png)
+
 ## SerialNumberCoin
 
 *Predecessor:  [[From BankCoin to IncentiveCoin#NaiveCoin|NaiveCoin]]*
@@ -52,6 +55,7 @@ In order to prevent replay attacks, we add a serial number to each coin. A seria
 - Replay Attack (Assume, somehow the initially spent coin reaches the wallet of Alice again. Bob can now replay the initial transaction, which will give him the coin of Alice again)
 
 ![SerialNumberCoin](serialnumbercoin.png)
+
 ## TransactionCoin
 
 *Predecessor:  [[From BankCoin to IncentiveCoin#SerialNumberCoin|SerialNumberCoin]]*
@@ -67,9 +71,11 @@ Now the ledger does not store the serial number of the coin anymore, but instead
 - Double Spending Attack
 
 ![TransactionCoin send](transactioncoin_1.png)
+
 This image only illustrates the process of the transaction being emitted on the network to all participants. The next image shows how the ledgers look after the transaction was processed.
 
 ![TransactionCoin send](transactioncoin_2.png)
+
 You could denote $x_0$ = "Alice owns 1 coin", which will then become $x_1$ = "Alice sends $x_0$ to Bob" = "Alice sends (Alice owns 1 coin) to Bob" through the transaction. Chaining arbitrary amount of transactions like this makes it obvious, that even if a coin gets back to its originator, the representation (value) will not be the same and therefore the replay attack cannot be done anymore.
 
 ## PublicAnnouncementCoin
@@ -81,12 +87,14 @@ Are the following ways of announcing it public announcements?
 
 - I send it to all of you as an email.
 	- No, not cryptographic security
-- I put it on a publicly accessible webserver known to all of you.
+- I put it on a public web server that you all know about.
 	- No, the webserver can respond differently to the requests
-- I say it in class.
+- I say it in class (everyone hears the announcement and knows that everyone else has heard it too)
 	- Yes
 
-*Predecessor: TransactionCoin*
+### PublicAnnouncementCoin
+
+*Predecessor: [[From BankCoin to IncentiveCoin#TransactionCoin|TransactionCoin]]*
 
 The PublicAnnouncementCoin resolves the double spending attack by introducing a public announcement which means that each node only accepts transactions which were publicly announced. Like this Alice can no longer send the same transaction with different receivers to the network.
 
@@ -102,7 +110,7 @@ The PublicAnnouncementCoin resolves the double spending attack by introducing a 
 
 *Predecessor: [[From BankCoin to IncentiveCoin#TransactionCoin|TransactionCoin]]*
 
-The election coin does not write transaction immediately if they arrive but creates a transaction pool of so called *unconfirmed* transactions. Participants of the network periodically randomly *elect* a leader among themselves. The leader then broadcasts his transaction pool which is then taken as new transaction pool by all other participants.
+The election coin does not write transaction immediately if they arrive but creates a **transaction pool of** so called **unconfirmed transactions**. Participants of the network periodically **randomly elect a leader** among themselves. The leader then broadcasts his transaction pool which is then taken as new transaction pool by all other participants.
 
 **ElectionCoin solves**:
 
@@ -151,10 +159,10 @@ $$difficulty = hash(prevhash | txp | nonce)$$
 
 The difficulty consists in the number of leading zeros in the result of the hash calculation, which takes the hash of the previous block, the transaction and a nonce as input. The nonce is the solution of the puzzle.
 
-**BlockchainCoin solves**: 
+**BlockchainCoin solves**:
 
 - Two nodes finding solution to puzzle at the same time $\rightarrow$ Consistency through [[Eventual Consistency]]
-- Double Spending attacks are highly unlikely
+- Double Spending attacks are highly unlikely (broadcast of a transaction in a block, send same coin to ourself and find new blocks with the new transaction and be the new longest chain and thus invalidate the first transaction)
 
 **Problems** with the BlockchainCoin:
 
@@ -166,7 +174,8 @@ The difficulty consists in the number of leading zeros in the result of the hash
 
 *Predecessor:  [[From BankCoin to IncentiveCoin#BlockchainCoin|BlockchainCoin]]*
 
-The IncentiveCoin adds incentivation to the blockchain, by adding a **coinbase transaction** which creates new coins. These coins are also called **block reward**. It's the only way of creating new money in the system. The block reward decreases over time which means that in 2140, the last bitcoin will be rewarded. Now we have the problem, that the reserve of coins is limited. Therefore a **transaction fee** *can* be attached to a transaction. In addition to the block reward, the coinbase transaction is allowed to pay out also the coins contained in the transaction fees.
+The IncentiveCoin adds incentivation to the blockchain, by adding a **coinbase transaction** which creates new coins. These coins are also called **block reward**. It's the only way of creating new money in the system. The block reward decreases over time which means that in 2140, the last bitcoin will be rewarded. Now we have the problem, that the reserve of coins is limited (limit is 21 million). Therefore a **transaction fee** *can* be attached to a transaction. In addition to the block reward, the coinbase transaction is allowed to pay out also the coins contained in the transaction fees.
+The block reward halves every 210'000 blocks (every four years). The block size limit of 1 MB
 
 **IncentiveCoin solves**: 
 
@@ -175,7 +184,7 @@ The IncentiveCoin adds incentivation to the blockchain, by adding a **coinbase t
 
 **Problems** with the IncentiveCoin:
 
-- Computational power of the network changes
+- Computational power of the network changes (typically increases) $\rightarrow$ shorter *Inter-block Time* = higher probability for forks
 
 ---
 links: [[403 DSS TOC - Decentralization|DSS TOC - Decentralization]] - [[themes/000 Index|Index]]

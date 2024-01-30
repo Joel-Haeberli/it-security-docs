@@ -7,7 +7,7 @@ links: [[400 DSS MOC|DSS MOC]] - [[themes/000 Index|Index]]
 ---
 
 - [[From IncentiveCoin to Bitcoin]]
-- [[Scripts]]
+- [[Bitcoin Scripts]]
 
 ---
 links: [[400 DSS MOC|DSS MOC]] - [[themes/000 Index|Index]]

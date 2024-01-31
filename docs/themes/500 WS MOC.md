@@ -17,5 +17,7 @@ links: [[themes/000 Index|Index]]
 - **Topic 07**: [[themes/507 WS TOC - Testing|Testing]]
 - **Topic 08**: [[508 WS TOC - Exercises|Exercises]]
 
+See many interesting things here: [Angular Security](https://angular.io/guide/security)
+
 ---
 links: [[themes/000 Index|Index]]

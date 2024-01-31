@@ -22,7 +22,7 @@ A software fork can be a cause for a network fork. Such a fork is called a *hard
 
 ### Soft Forks
 
-A soft fork is an update  of the consensus rules that all blocks according to the new rules are also valid according to the old rules. Soft forks are the generally accepted way to make protocol updates to Bitcoin, because it will not cause permanent network forks if the majority of the hash power switches to the new rules. A soft fork might include:
+A soft fork is an update of the consensus rules that all blocks according to the new rules are also valid according to the old rules. Soft forks are the generally accepted way to make protocol updates to Bitcoin, because it will not cause permanent network forks if the majority of the hash power switches to the new rules. A soft fork might include:
 
 - Decrease block size limit
 - Decrease block reward

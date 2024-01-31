@@ -6,7 +6,7 @@ links: [[406 DSS TOC - Scaling|DSS TOC - Scaling]] - [[themes/000 Index|Index]]
 
 ---
 
-# Locktime details
+## Locktime details
 
 Remember: lock times of [[Transaction Replacement]]
 
@@ -31,7 +31,7 @@ The operations works as follows (simplified):
 
 ### Relative Lock Time
 
-The Sequence Number of [[Transaction Replacement]] was repurposed allowing Relative Lock Times. This means that a transaction with sequence number value of $n$ can only be confirmed $n$ blocks after the referenced output was confirmed. Since the sequence number has 32 bits and the value of the relative lock time only uses 16bits, the first bits of the two first bytes (MSB) have special purposes. The first bit of the first byte (MSB) is the Activation Flag. It allows disabling the relative lock time. The first bit of the second byte, represents the type flag. It defines wether the value means $n$ blocks or $n \times 512$ seconds.
+The Sequence Number of [[Transaction Replacement]] was repurposed allowing Relative Lock Times. This means that a transaction with sequence number value of $n$ can only be confirmed $n$ blocks after the referenced output was confirmed. Since the sequence number has 32 bits and the value of the relative lock time only uses 16bits, the first bits of the two first bytes (MSB) have special purposes. The first bit of the first byte (MSB) is the Activation Flag. It allows disabling the relative lock time. The first bit of the second byte, represents the type flag. It defines whether the value means $n$ blocks or $n \times 512$ seconds.
 
 ![sequence-number-repurpose](sequence_number_abuse.png)
 

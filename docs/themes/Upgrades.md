@@ -10,11 +10,11 @@ This section explains three significant upgrades to the Bitcoin protocol.
 
 ## How Bitcoin Upgrades
 
-- **Early Upgrades (BIP34)**
+- **Early Upgrades (BIP-34)**
 	- the version field in the block header was used
 	- miners signal readiness by producing block with a higher version number
 	- if 95% of the previous 1000 blocks have the higher number, the new rules are activated
-- **Upgrades Today (BIP9)**
+- **Upgrades Today (BIP-9)**
 	- today, the version field is interpreted as a bitfield
 	- multiple protocol updates can happen in parallel, with each assigned one bit
 	- Miners signal readiness by setting the bits for the protocol features they support

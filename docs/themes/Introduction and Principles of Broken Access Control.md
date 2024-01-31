@@ -18,13 +18,14 @@ Access control is intended to force users to act inside intended permissions. If
 
 Broken Access Control can lead to two kinds of privilege escalation:
 
-- Vertical Escalation (escalate to privileges of higher power):
+- **Vertical Escalation** (escalate to privileges of higher power):
 	- Anonymous users access private functionality
 	- Regular users access administrators functionality
-- Horizontal Escalation (privileges of other users are gained):
+- **Horizontal Escalation** (privileges of other users are gained):
 	- A user can access data of other users
 
 Broken Access Control is the **top vulnerability** according to the [OWASP Top 10 (2021)](https://owasp.org/www-project-top-ten/)
+
 ### Insecure Direct Object Reference
 
 Insecure Direct Object Reference appears when an exposed API directly links to artefacts which shall be protected by access control. So if an attacker can bypass the access control, he is capable of *directly referencing* the (un)protected artefact. This is also important when using identifiers as parameters. One should on each request check if the user has the right to read the object referenced by the given identifier. Otherwise horizontal escalation might be possible, if the user is able to change the identifier in the request.
@@ -55,7 +56,6 @@ Participants who could leverage broken access control are:
 	- Vertical Escalation
 - A regular user can access data of other regular users
 	- Horizontal Escalation
-
 
 ---
 links: [[502 WS TOC - Broken Access Control|WS TOC - Broken Access Control]] - [[themes/000 Index|Index]]

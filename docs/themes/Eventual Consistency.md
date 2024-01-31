@@ -10,6 +10,8 @@ links: [[403 DSS TOC - Decentralization|DSS TOC - Decentralization]] - [[themes/
 
 Consistency is a key indicator in data storage. An inconsistent data storage is useless because we can not trust that data we are reading is the data we must rely on for our purpose. Therefore consistency is an inevitable property of a system which stores data in some way for later usage. In a peer-to-peer network like Bitcoin we have the problem, that we cannot guarantee consistency because maybe our version of the ledger is out of date at the time we are reading and writing to it. Suppose we have acquired a lock on a row that is being updated by an incoming transaction that we have not yet processed. We will then work with data which is not up-to-date. But the [[From BankCoin to IncentiveCoin#BlockchainCoin|BlockchainCoin]] introduces *eventual consistency* which guarantees that the system will be in a consistent state not immediately but after some time. The [[From BankCoin to IncentiveCoin#BlockchainCoin|BlockchainCoin]] focuses on availability and partition tolerance, addressing the lack of consistency by guaranteeing that it will eventually become consistent. (see [[Anonymity - Trilemmas#CAP Theorem|CAP Theorem]]).
 
+Read also: [How bitcoin Loses to the CAP Theorem](https://paulkernfeld.com/2016/01/15/bitcoin-cap-theorem.html)
+
 ## How is Eventual Consistency achieved in Bitcoin?
 
 The [[From BankCoin to IncentiveCoin#BlockchainCoin|BlockchainCoin]] is the first coin which is capable of establishing an eventual consistent state within the distributed peer network. But how is this achieved?

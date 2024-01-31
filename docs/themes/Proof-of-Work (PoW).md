@@ -30,7 +30,7 @@ The PoW therefore lies in finding a solution $s$ which as parameter of the funct
 
 Hashcash was the first implementation of a PoW which works as follows:
 
-$f$ = SHA-256($p$ | $s$), (| is the concatenation operation)
+$f$ = SHA256($p$ || $s$), (|| is the concatenation operation)
 $p$ = bit string
 $d$ = number of leading zero bits in solution
 
@@ -41,11 +41,11 @@ $p = 01001100011$
 
 we would try to find a solution $s$, so that:
 
-001... = SHA-256(01001100011 | $s$)
+001... = SHA256(01001100011 | $s$)
 
 ## Puzzle-Friendliness
 
-The PoW is predestinated to use hash functions. Especially if the hash function is puzzle-friendly. A hash function is puzzle-friendly if there is **no better way of solving the puzzle** $d = hash(p | s)$, **than just randomly trying**. This comes because a hash is easy to calculate but hard (or impossible) to invert. This makes verification easy but solving the puzzle hard.
+The PoW is predestinated to use hash functions. Especially if the hash function is puzzle-friendly. A hash function is puzzle-friendly if there is **no better way of solving the puzzle** $d = hash(p || s)$, **than just randomly trying**. This comes because a hash is easy to calculate but hard (or impossible) to invert. This makes verification easy but solving the puzzle hard.
 
 ---
 links: [[402 DSS TOC - Preliminaries|DSS TOC - Preliminaries]] - [[themes/000 Index|Index]]

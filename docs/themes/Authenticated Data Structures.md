@@ -26,7 +26,7 @@ Example: File $\rightarrow$ I as verifier make a hash of the file and store the 
 
 ## Hash List 
 
-Leveraging Hash Pointers we can know create Hash Lists. These are put together from multiple hash pointers, hashed together: $v = hash(p = p_1 | p_2 | p_3)$ where $p_1, p_2, p_3$ are defined by $v_i = hash(p_i)$. Here again $v$ tokens are controlled by the verifier, while the $p$ tokens are held by the prover.
+Leveraging Hash Pointers we can know create Hash Lists. These are put together from multiple hash pointers, hashed together: $v = hash(p = p_1 || p_2 || p_3)$ where $p_1, p_2, p_3$ are defined by $v_i = hash(p_i)$. Here again $v$ tokens are controlled by the verifier, while the $p$ tokens are held by the prover.
 
 ![Hash Pointer](hash_list.png)
 
@@ -49,7 +49,7 @@ A Hash Linked List is a Binary Hash Tree where the right side of each node is a 
 
 ![Hash Pointer](hash_linked_list.png)
 
-*Example*: **Tamper-Evident Log**: Let's say that I store data ($d_i$) on an external file share. I want to make sure that the files are uploaded in the order I said them to be. I'm first uploading $d_0$ and keep it's hash $h_0$. Then I'm uploading $d_1$ and create a hash $h_1 = hash(h_0 | d_1)$. I proceed like this for all files I want to upload. If I now get the log of the upload order ($h_0$, $h_1$, etc.) I can reconstruct the last hash $h_n$ which lets me verify that the order of uploading was respected $\rightarrow$ it is sufficient for Alice to only have $h_3$.
+*Example*: **Tamper-Evident Log**: Let's say that I store data ($d_i$) on an external file share. I want to make sure that the files are uploaded in the order I said them to be. I'm first uploading $d_0$ and keep it's hash $h_0$. Then I'm uploading $d_1$ and create a hash $h_1 = hash(h_0 || d_1)$. I proceed like this for all files I want to upload. If I now get the log of the upload order ($h_0$, $h_1$, etc.) I can reconstruct the last hash $h_n$ which lets me verify that the order of uploading was respected $\rightarrow$ it is sufficient for Alice to only have $h_3$.
 
 ### Blockchain
 

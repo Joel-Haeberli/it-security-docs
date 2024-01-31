@@ -12,7 +12,7 @@ The attacker is able to **create a session and keeping the session alive**. If a
 
 ## How the attack works
 
-Attacker first sets up and keeps alive a session. He then poisons a URL which takes the session in the URL and uses this URL for e.g. pishing and sending it to victims who use the web page. If the victim opens the web page, it will be authenticated using the session given by the attacker.
+Attacker first sets up and keeps alive a session. He then poisons a URL which takes the session in the URL and uses this URL for e.g. phishing and sending it to victims who use the web page. If the victim opens the web page, it will be authenticated using the session given by the attacker.
 
 Don't use session identifiers in URL. Reset the session on each login.
 

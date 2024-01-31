@@ -12,11 +12,11 @@ SQL-Injection uses SQL statements to smuggle SQL into the interpreter which is n
 
 Assume we have following query:
 
-```
+```sql
 SELECT * FROM users WHERE username = REPLACEME1 and password = REPLACEME2;
 ```
 
-If now an attacker somehow finds out how to replace the content of REPLACEME1 or REPLACEME2 in his favor, he can execute his own SQL on the system of the victim.
+If now an attacker somehow finds out how to replace the content of REPLACEME1 or REPLACEME2 in his favour, he can execute his own SQL on the system of the victim.
 
 For example the attacker could gain control over parameter REPLACEME1 and replace it with `"hans"; #`. This would search for all users named 'hans' and not check the password in parameter REPLACEME2, because after giving the name the statement is terminated and the rest of the statement is commented out with the SQL comment char '#'.
 
@@ -65,13 +65,13 @@ Be sure to escape string parameters using quotes. Otherwise an attacker might sm
 
 Assume our prepared statement is:
 
-```
+```sql
 UPDATE users SET name = :name WHERE id = :id;
 ```
 
 This allows the attacke to inject anything in the `:name`-parameter, because it's a string param and it is not escaped using quotes. The better prepared statement is:
 
-```
+```sql
 UPDATE users SET name = ':name' WHERE id = :id
 ```
 

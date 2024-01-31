@@ -12,7 +12,7 @@ First authorize each request to each single page. For this a user must be logged
 
 ## Avoiding Direct Object Referencing
 
-If using identifiers on API don't match them directly to objects inside the system. This means that it should not be possible to gain access to data directly through an exposed parameter. So don't use database primary keys or filenames directly as parameters. Instead us a mapping or hashing functionality. Also remember to check authorization on each request to an object. This should check if the user has the correct privileges to read the respective object.
+If using identifiers on API don't match them directly to objects inside the system. This means that it should not be possible to gain access to data directly through an exposed parameter. So don't use database primary keys or filenames directly as parameters. Instead use a mapping or hashing functionality. Also remember to check authorization on each request to an object. This should check if the user has the correct privileges to read the respective object.
 
 ## Disallow Malicious File Execution
 
@@ -26,8 +26,6 @@ In order to prevent the application from running files on behalf of the attacker
 Additionally the application should have firewall rules preventing outbound requests. **Validate your input**. This means for filenames to have a certain format or to be placed in a certain location. Prevent path traversal by checking that the file does lie within a defined boundary. Implement some sandbox functionality to run the application, which forces it to stay within the boundaries of the sandbox.
 
 ## Conclusion
-
-(directly copied from slides)
 
 - OWASP Top 10 - A1:2021
 	- Broken Access Control

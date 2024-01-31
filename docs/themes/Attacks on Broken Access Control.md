@@ -37,6 +37,5 @@ You could now try to access interesting files like the `/etc/passwd/` listing al
 
 If access control is broken on admin pages (e.g. only looked for active session but not who's session it is, or similar), this can lead to that users with normal privilege gain access to the administrator functionality of the server.
 
-
 ---
 links: [[502 WS TOC - Broken Access Control|WS TOC - Broken Access Control]] - [[themes/000 Index|Index]]

@@ -95,6 +95,12 @@ nav:
     - 'Exam Questions':
       - 'Empty': 'themes/618 SPA TOC - Exam Questions.md'
       - 'With Answers': 'themes/619 SPA TOC - Exam Questions with Answers.md'
+  - 'Digital Forensics':
+    - 'Index': 'themes/700 DF MOC.md'
+  - 'Malware analysis and intelligence':
+    - 'Index': 'themes/800 MAI MOC.md'
+  - 'Exploiting and Defense':
+    - 'Index': 'themes/900 ED MOC.md'
 
 theme:
   name: 'material'

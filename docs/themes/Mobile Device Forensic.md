@@ -35,8 +35,6 @@ Data storage on SIM cards is limited, with capacity typically measured in kiloby
 
 ## Smartphone Challanges
 
-### Challenges with Smartphones
-
 Smartphone forensics presents distinct challenges compared to computer forensics. Key issues include:
 
 - **Device Unlocking:** User authentication methods such as PINs, passwords, biometrics.

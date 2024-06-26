@@ -89,7 +89,6 @@ Forensic variations of `dd` have been developed to include additional features s
 
 **Tip**: GPT partitions save a backup copy at the end of the drive.
 
-
 ## Acquisition Cheat Sheet
 
 **Identify Attached Drive and Hardware Details**

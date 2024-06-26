@@ -7,6 +7,8 @@ links: [[702 DF TOC - Storage & Acquisition|DF TOC - Storage & Acquisition]] - [
 ---
 ## Forensically Sound Acquisition
 
+> Exam question: What means "Forensically Sound"?
+
 "**Forensically Sound** Acquisition" refers to the process of creating a digital copy of evidence that adheres to certain standards to ensure its integrity and admissibility in court. According to the NIST Computer Forensic Tool Testing (CFTT) standard, a forensically sound acquisition involves:
 
 - **Completeness**: Ensuring that every accessible sector of a drive is copied.
@@ -22,10 +24,10 @@ These standards, although originating in the US, are internationally accepted, e
 - **Forensically Sound**: Refers to evidence handled in a manner that ensures its integrity and admissibility in court.
 - **Forensic Completeness**: Ensuring all relevant data is captured and preserved.
 - **Forensic Acquisition**: The process of copying data from a digital device while maintaining its integrity.
-- **Forensic Imaging**: Creating an exact bit-by-bit copy of digital media for analysis.
+- **Forensic Imaging**: Creating an exact bit-by-bit copy of digital media for analysis (same as Forensic Acquisition)
 - **Digital Evidence**: Information stored or transmitted in binary form that may be relied upon in court.
-- **Digital Traces**: Residual data left behind after digital activities, which can be analyzed.
-- **Evidence Preservation**: Maintaining the integrity and availability of digital evidence over time.
+- **Digital Traces**: Residual data left behind after digital activities, which can be analyzed (same as Digital Evidence)
+- **Evidence Preservation**: Maintaining the integrity and availability of digital evidence over time (cryptography, e.g. hash)
 - **Evidence Integrity**: Ensuring that the digital evidence remains unaltered and untampered.
 - **Chain of Custody**: Documentation that details the handling, transfer, and storage of evidence to prevent contamination or tampering.
 
@@ -54,7 +56,6 @@ These standards, although originating in the US, are internationally accepted, e
 
 Write blockers are used in various forensic tools, including portable kits, drive bays, and imaging appliances, to maintain the integrity of digital evidence during analysis and acquisition.
 
-
 ## Digital Evidence Preservation
 
 Preserving the integrity of digital evidence is important in forensic investigations to ensure that the data remains unchanged and admissible in court.
@@ -70,10 +71,11 @@ Preserving the integrity of digital evidence is important in forensic investigat
 
 - **Cryptographic Techniques**
     
-    - **Hashing**: Applying cryptographic hashing algorithms (such as MD5, SHA) to generate a unique hash value for the data.
+    - **Hashing**: Applying cryptographic hashing algorithms (such as SHA) to generate a unique hash value for the data.
     - **Signatures**: Using cryptographic signatures (like PGP, S/MIME) to sign the data.
     - These methods can be implemented as a separate step or integrated into forensic tools.
     - Cryptographic methods allow validation at a later time to confirm the data remains unchanged.
+
 - **Validation**:
     
     - Recalculate the hash of the evidence at any point to verify it matches the original hash, thus confirming no changes have occurred.
@@ -115,7 +117,7 @@ Squashfs is a compressed, read-only file system used in forensics for storing an
 - **Mounting Convenience**: Can be easily mounted as a filesystem, simplifying access to data.
 - **Efficient Storage**: Employs block-level compression to handle large files efficiently, saving storage space.
 
-Using Squashfs in forensics helps manage the typically large sizes of forensic images more effectively, making it easier and faster to handle and analyze data during investigations. For Linux users, the `sfsimage` tool can be utilized to work with Squashfs images, providing a practical solution for forensic analysis. More information is available at http://digitalforensics.ch/sfsimage/.
+Using Squashfs in forensics helps manage the typically large sizes of forensic images more effectively, making it easier and faster to handle and analyze data during investigations. For Linux users, the `sfsimage` tool can be utilized to work with Squashfs images, providing a practical solution for forensic analysis. More information is available at [https://digitalforensics.ch/sfsimage/](https://digitalforensics.ch/sfsimage/).
 
 ## Forensic Formats
 

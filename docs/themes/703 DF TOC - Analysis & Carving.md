@@ -1,4 +1,4 @@
-tags: 
+tags: #DF #partition #filesystem #carving 
 
 # DF TOC - Analysis & Carving
 

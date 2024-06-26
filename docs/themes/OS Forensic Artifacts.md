@@ -1,4 +1,4 @@
-tags: #forensics #artifact
+tags: #DF #artifact
 
 # OS Forensic Artifacts
 
@@ -40,7 +40,7 @@ OS forensic analysis examines the base OS components, looking for evidence of ta
 - **Logins, logouts:** Records of user sessions help establish timelines and access patterns.
 - **Home directories, user files:** User-specific data and file modifications indicate user actions and preferences.
 - **User permissions and security:** Access controls and security settings provide insights into user capabilities and potential security breaches.
-- **Human proximity indicators:** Data that suggests the physical presence or actions of users, like key presses, mouse movements, opening laptop.
+- **Human proximity indicators:** Data that suggests the physical presence or actions of users, like key presses, mouse movements, opening laptop, fingerprint, face-login, celphone tower logs, lid closed, usb stick attached
 
 **Note:** Distinguishing between human and system activity can be challenging but is crucial for accurate forensic analysis.
 
@@ -59,10 +59,10 @@ OS forensic analysis examines the base OS components, looking for evidence of ta
 - **Network configuration:** Includes settings for DNS, proxy, and VPN, which can show network behavior and connections.
 - **Disk configuration:** Information about RAID, encryption, and attached devices, which help understand data storage and security measures.
 - **Automounted local and remote drives/shares:** Details about automatically mounted drives and network shares provide insights into accessible resources and potential data sources.
-- 
+
 **OS files interesting for forensics**
 
-- **Temporary files and directories:** Locations like `/tmp` and `/var/tmp` contain temporary data that can provide clues about recent activities.
+- **Temporary files and directories:** Locations like `/tmp` (clear at reboot) and `/var/tmp` (survive reboot) contain temporary data that can provide clues about recent activities.
 - **Cache files, prefetch files:** These files store recently accessed data and application usage patterns.
 - **Crash dumps, error report files:** Generated during system or application crashes, these files can help identify issues and their causes.
 - **Hibernation files:** Contain the state of the system when it hibernates, useful for understanding system state at a particular time.
@@ -72,14 +72,14 @@ OS forensic analysis examines the base OS components, looking for evidence of ta
 - **Clipboard data/history:** Records of copied content, which can reveal user actions.
 - **Last used documents:** Tracks recently accessed files, providing insight into user activity.
 - **Recycle bin, trash cans:** These store deleted files temporarily, allowing recovery of recently removed data.
-- **OS search queries, index, thumbnails:** These logs show what users searched for, as well as indexed and previewed files.
+- **OS search queries, index, thumbnails:** These logs show what users searched for, as well as indexed and previewed files $\rightarrow$ deleted files can stay in the index!
 
 **Note:** The distinction between OS and application data can be blurry, but both are need for forensic analysis.
 
 **OS specialty items**
 
 - **Personal assistants (Cortana, Siri):** These assistants log voice commands and interactions, which can provide insights into user activity and preferences.
-- **Proprietary file transfer (Apple Airdrop):** Tracks files transferred via Airdrop, including timestamps and recipient information.
+- **Proprietary file transfer (Apple AirDrop):** Tracks files transferred via AirDrop, including timestamps and recipient information.
 - **Attached synced devices, backup (Time Machine):** Logs related to devices synced with the system and backups can show data transfers and backup routines.
 - **Closely integrated OS applications:** Applications tightly integrated with the OS, like certain mail clients or calendars, leave extensive logs and usage data.
 - **Fingerprints, face recognition:** Biometric data used for authentication can indicate user presence and access patterns.

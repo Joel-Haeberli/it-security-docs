@@ -1,4 +1,4 @@
-tags: #forensics #storage
+tags: #DF #storage
 
 # Storage Media
 
@@ -120,7 +120,6 @@ In forensics, understanding these protocols and bridges is crucial because they 
     - **Apple FileVault:** Mac OS encryption solution.
     - **Linux LUKS:** Linux-based encryption standard.
 - **Forensic imaging of OS-based FDE:** Even though these tools encrypt the entire disk, forensic investigators can create a bit-for-bit copy (forensic image) of the encrypted data. However, this image will remain encrypted. To analyze the data, investigators need the decryption keys or passwords. The difference here is that imaging is possible, but understanding and using the data requires decryption keys $\rightarrow$ forensically accessible
-
 
 ## Other Relevant Topics
 

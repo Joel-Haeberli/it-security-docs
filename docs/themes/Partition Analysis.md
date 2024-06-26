@@ -1,4 +1,4 @@
-tags: #DF
+tags: #DF #partition
  
 # Partition Analysis
 
@@ -54,7 +54,7 @@ Partitions help organize a storage device into sections, each containing its own
 The following commands can be used for devices and images
 
 - `fdisk -l /dev/sda`
-- `disktype image.dd
+- `disktype image.dd`
 - `mmls /dev/sda`
 - `hexedit -s /dev/sda` (for real adventures)
 
@@ -82,6 +82,18 @@ The following commands can be used for devices and images
     - List Partitions
         - Command: `testdisk /list /dev/sdb`
         - This command lists partitions and can help in recovering deleted partitions.
+
+**Filesystem identification**
+
+- `disktype /dev/sda`
+- `fsstat /dev/sda`
+- `fsstat -o 2048 /dev/sda`: with offset of 2048
+
+- **Note**
+	- Filesystems start at some offset from the start drive
+	- corrupt or partially overwritten filesystems may need [[Carving]]
+	- a filesystem can exist without a partition table
+	- stacked systems may exist (LVM, encryption, RAID)
 
 ---
 

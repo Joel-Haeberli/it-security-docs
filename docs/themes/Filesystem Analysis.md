@@ -1,4 +1,4 @@
-tags: #DF
+tags: #DF #filesystem
  
 # Filesystem Analysis
 
@@ -58,51 +58,20 @@ Filesystems create a hierarchical abstraction layer, making it easier for users 
 > Exam question: What concepts are important for filesystem forensics
 #### Areas of Forensic Interest on a Storage Drive
 
-**Sector**
-
-A sector is the smallest accessible unit on a drive or device.
-
-**Block**
-
-A block consists of consecutive sectors and represents the smallest accessible unit on a filesystem.
-
-**Allocated Blocks**
-
-Allocated blocks are filesystem blocks that are currently assigned to files.
-
-**Unallocated Blocks**
-
-Unallocated blocks are filesystem blocks that are not currently assigned to files. However, these blocks may still contain residual data from previously allocated files.
-
-**Inodes**
-
-Inodes are metadata structures that describe files and directories. In NTFS, this structure is known as the Master File Table (MFT).
-
-**Interpartition Gaps**
-
-Interpartition gaps are the areas between partitions. These gaps can potentially contain remnants of previously existing filesystems.
+- **Sector**: A sector is the smallest accessible unit on a drive or device.
+- **Block**: A block consists of consecutive sectors and represents the smallest accessible unit on a filesystem.
+- **Allocated Blocks**: Allocated blocks are filesystem blocks that are currently assigned to files.
+- **Unallocated Blocks**: Unallocated blocks are filesystem blocks that are not currently assigned to files. However, these blocks may still contain residual data from previously allocated files.
+- **Inodes**: Inodes are metadata structures that describe files and directories. In NTFS, this structure is known as the Master File Table (MFT).
+- **Interpartition Gaps**: Interpartition gaps are the areas between partitions. These gaps can potentially contain remnants of previously existing filesystems.
 
 #### Forensic Term: "Slack"
 
-**Partition Slack**
-
-Partition slack is the space between the end of a partition and the end of the disk.
-
-**Volume Slack**
-
-Volume slack refers to the space between the end of the filesystem and the end of the partition.
-
-**File Slack**
-
-File slack is the space between the end of a file and the end of the block.
-
-**RAM Slack**
-
-RAM slack is the space between the end of a file and the end of the sector.
-
-**Note**
-
-The significance of slack space has decreased in modern systems due to the use of 4k sectors, operating systems' data wiping mechanisms, and the TRIM command, which optimizes storage by managing deleted data on SSDs.
+- **Partition Slack**: Partition slack is the space between the end of a partition and the end of the disk.
+- **Volume Slack**: Volume slack refers to the space between the end of the filesystem and the end of the partition.
+- **File Slack**: File slack is the space between the end of a file and the end of the block.
+- **RAM Slack**: RAM slack is the space between the end of a file and the end of the sector.
+- **Note**: The significance of slack space has decreased in modern systems due to the use of 4k sectors, operating systems' data wiping mechanisms, and the TRIM command, which optimizes storage by managing deleted data on SSDs.
 
 ### Filesystem identification
 
@@ -136,13 +105,13 @@ The significance of slack space has decreased in modern systems due to the use o
 
 1. Create Loop Device:
    
-``` sh
+```bash
 sudo losetup --find --partscan --read-only image.dd
 ```
 
 2. Remove Loop Device:
 
-```sh
+```bash
 sudo losetup -D loop0
 ```
 
@@ -161,7 +130,7 @@ Offsets must be carefully calculated, ensuring the correct units are used.
 
 Using shell math:
 
-```sh
+```bash
 echo $((1024000/512))
 ```
 
@@ -176,37 +145,37 @@ echo $((1024000/512))
 
 1. **I know the drive sector, what is the filesystem block?**
 
-```sh 
+```bash 
 echo $(((sectornumber - partitionoffset) * sectorsize / blocksize))
 ```
 
 2. **Is the filesystem block allocated?**
 
-```sh
+```bash
 blkstat /dev/sdb1 1025
 ```
 
 3. **I know the block, what is the allocated inode?**
 
-```sh
+```bash
 ifind -d 1025 /dev/sdb1
 ```
 
 4. **I know the inode, what is the filename?**
 
-```sh
+```bash
 ffind /dev/sdb1 14
 ```
 
 5. **I know the filename, what is the inode?**
 
-```sh
+```bash
 ifind -n "hello.txt" /dev/sdb1
 ```
 
 6. **I want more info about an inode:**
 
-```sh
+```bash
 istat /dev/sdb1 14
 ```
 
@@ -222,31 +191,32 @@ Always double-check units and offsets!
 - **Sleuthkit’s `blkls`** focuses on filesystem awareness.
 
 **Extract drive sectors using `dd` with offset:**
-```sh
+```bash
 dd if=/dev/sda of=data.dd skip=8000 count=25
 ```
 
 **Extract blocks 1000-1009 from a partition image:**
-```sh
+```bash
 blkcat partition.dd 1000 10
 ```
 
 **Extract all unallocated blocks from a filesystem:**
-```sh
+```bash
 blkls -A partition.dd > unalloc.blkls
 ```
 
 **Extract all file slack space from a filesystem:**
-```sh
+```bash
 blkls -s partition.dd > slack.blkls
 ```
 
 **Extract specific block from an image:**
-```sh
+```bash
 blkcat -h image.dd 5436
 ```
 
 **For `blkls` readable output:**
+
 - `-a` for ASCII
 - `-h` for hex
 - `-w` for HTML
@@ -258,26 +228,27 @@ blkcat -h image.dd 5436
 **Find an Interesting Filename or Inode and Extract It**
 
 List files and directories with `fls`:
+
 - `?/?` indicates a directory/inode entry
 - `*` indicates a deleted file
 
-```sh
+```bash
 fls -r -l -p /dev/sdb1
 fls -r -d /dev/sdb1
 ```
 
 **List inodes with `ils`:**
-```sh
+```bash
 ils /dev/sdb1
 ```
 
 **Extract file contents of inode with `icat`:**
-```sh
+```bash
 icat /dev/sdb1 14
 ```
 
 **Extract file contents of filename with `fcat` (-s for slack):**
-```sh
+```bash
 fcat hello.txt /dev/sdb1 > hello.txt
 fcat -s hello.txt /dev/sdb1 | xxd
 ```
@@ -319,7 +290,6 @@ Data recovery, repair, conversion, and troubleshooting programs can also be usef
 - `jpeg_extract`, `sigfind`, `sorter`, `srch`, `strings`, `tsk_comparedir`, `hfind`, `tsk_loaddb`
 
 **Note:** All commands have man pages or provide help with the `-h` option.
-
 
 ---
 

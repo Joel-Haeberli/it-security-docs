@@ -19,11 +19,13 @@ The Locard's exchange principle was a idea from french criminologist Edmon Locar
 - digital evidence on the client: cookies, cache, data, etc.
 - digital evidence on the server: logs, IP adresses other IOCs (Indicator of compromise)
 
-**Adaption to OSINT and Intalligence gathering:**
+**Adaption to OSINT and Intelligence gathering:**
 
 - when you search for or get information, the provider learns who you are and what you are looking for
 
 ## Technical Overview
+
+> Forensics is for Criminals and Victims
 
 There are multiple areas of digital forensics...
 
@@ -43,9 +45,9 @@ There are multiple areas of digital forensics...
 
 **Future areas:**
 
-- medical devices and implants
+- medical devices and implants (smart watch, e.g. exact time of death)
 - telemetry data analysis and correlation
-- industrial control systems, smart buildings
+- industrial control systems, smart buildings (robots, e.g. hack insulin pump remotely)
 
 ## Concepts and Terms
 
@@ -59,11 +61,11 @@ There are multiple areas of digital forensics...
 
 **Concepts:**
 
-- **Acquisition vs Analysis**: Acquisition collects and preserves digital evidence; analysis examines and interprets it.
-- **Evidence vs Intelligence**: Evidence is data for legal proof; intelligence is information for decision-making. 
-- **Private vs Public Sectors**: Private sector uses digital forensics for internal investigations; public sector for law enforcement and national security.
-- **Victims vs Perpetrators (eBanking, CP)**: Victims suffer from cybercrimes like e-banking fraud or child exploitation; perpetrators commit these crimes.
-- **Limitations vs Requirements (technical, policy, legal, ethical)**: Limitations are challenges in digital forensics; requirements are standards for technical, policy, legal, and ethical compliance.
+- **Acquisition vs Analysis**: Acquisition collects and preserves digital evidence; analysis examines and interprets it
+- **Evidence vs Intelligence**: Evidence is data for legal proof; intelligence is information for decision-making (no reliability)
+- **Private vs Public Sectors**: Private sector uses digital forensics for internal investigations; public sector for law enforcement and national security
+- **Victims vs Perpetrators (eBanking, CP)**: Victims suffer from cybercrimes like e-banking fraud or child exploitation; perpetrators commit these crimes
+- **Limitations vs Requirements (technical, policy, legal, ethical)**: Limitations are challenges in digital forensics or laws (GDPR: General Data Protection Regulation); requirements are standards for technical, policy, legal, and ethical compliance (FINMA, ...)
 
 ## Digital Evidence
 
@@ -104,10 +106,10 @@ Digital Evidence is...
 
 ## Tools and Platforms
 
-- The Sleuth Kit and Autopsy - https://sleuthkit.org/
-- Forensic Focus - https://forensicfocus.com
+- The Sleuth Kit and Autopsy - [https://sleuthkit.org/](https://sleuthkit.org/)
+- Forensic Focus - [https://forensicfocus.com](https://forensicfocus.com)
 - Kali Linux - OS with tons of forensic tools
-- r/computerforensics and r/digitalforensic
+- [r/computerforensics](https://www.reddit.com/r/computerforensics/) and [r/digitalforensic](https://www.reddit.com/r/digitalforensics/)
 
 ---
 

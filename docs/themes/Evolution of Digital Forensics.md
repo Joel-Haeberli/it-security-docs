@@ -18,6 +18,7 @@ The term "forensics" originates from the ancient Roman Latin word "forensis" whi
 Over the time science became important and more and more scientific methods were used. E.g fingerprints, toxicology, body measurements, etc.)
 
 Technological advancements introduced new tools and techniques such as microscopes, DNA, traces, computer aided reconstruction/simulation, etc.
+New technologies have always taken time to be accepted as evidence!
 
 ## The 80s
 
@@ -25,7 +26,7 @@ In the 1980s, home computers became popular, and large central computers were co
 
 ## The 90s
 
-In the 1990s, the internet gained international popularity. Law enforcement showed increased interest in computer crime and evidence, with the FBI hosting international conferences on the subject. The UK Association of Chief Police Officers (ACPO) released a guide on computer evidence, and the International Organization of Computer Evidence (IOCE) was established. The Scientific Working Group on Digital Evidence (SWGDE) was also formed. The first open-source forensic software, The Coroner’s Toolkit (TCT), was developed.
+In the 1990s, the internet gained international popularity. Law enforcement showed increased interest in computer crime and evidence, with the FBI hosting international conferences on the subject. The UK Association of Chief Police Officers (ACPO) released a guide on computer evidence, and the International Organization of Computer Evidence (IOCE) was established. The Scientific Working Group on Digital Evidence (SWGDE) was also formed. The first open-source forensic software, The Coroner’s Toolkit (TCT), was developed in 1999. This opens up forensics to the non-police sector.
 
 ## The 2000s
 

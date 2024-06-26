@@ -77,6 +77,8 @@ The Sleuthkit provides an enhanced version called `srch_strings`.
 
 ## Hash Databases and Hashsets
 
+> Exam question: Why are hashsets important for forensics
+
 Hash databases are vital in digital forensics for identifying known files by their hash values. The National Software Reference Library (NSRL) provides a comprehensive set of known file hashes.
 
 Creating and using hashsets:

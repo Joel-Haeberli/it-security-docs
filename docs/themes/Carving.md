@@ -12,7 +12,7 @@ Carving tools are used as a last-resort, best-effort method to extract files fro
 
 ## Tools
 
-> Exam question: Which tools are used for carving?
+> Exam question: Which tools can be used for carving
 
 There are some dedicated forensic carving tools. The most popular are:
 

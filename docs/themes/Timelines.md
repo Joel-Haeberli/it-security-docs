@@ -10,6 +10,8 @@ links: [[705 DF TOC - Encryption & Timelines & Find|DF TOC -Encryption & Timelin
 
 ### Why Timelines?
 
+> Exam question: Why are timelines important
+
 Creating timelines is essential in digital forensics for several reasons:
 
 - **Historical Analysis:** Timelines allow forensic analysts to go back in time and perform digital archaeology.

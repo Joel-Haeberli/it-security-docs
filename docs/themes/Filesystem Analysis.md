@@ -55,6 +55,7 @@ Filesystems create a hierarchical abstraction layer, making it easier for users 
 
 ### Concepts
 
+> Exam question: What concepts are important for filesystem forensics
 #### Areas of Forensic Interest on a Storage Drive
 
 **Sector**

@@ -12,6 +12,7 @@ Encryption and forensics is a hot topic in the forensics community. On one hand,
 
 ## Data Encryption
 
+> Exam question: What are typical data encryption tools for the different storage layers
 ### Typical Data Encryption - Storage
 
 Forensic examiners often encounter various types of encryption when analyzing storage media. These include:
@@ -39,6 +40,8 @@ Decrypting network traffic involves capturing network traffic through passive wi
 ## Finding Passwords and Decryption Keys
 
 ### Methods for Password and Key Recovery
+
+> Exam question: Which methods exist to find password/keys
 
 Forensic analysts use various methods to recover passwords and decryption keys:
 

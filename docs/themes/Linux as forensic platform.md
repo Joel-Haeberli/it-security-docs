@@ -10,6 +10,8 @@ This chapter is mostly about common Linux stuff. I put all the forensic-related 
 
 ## Forensics and FOSS
 
+> Exam question: What are advantages and disadvantages of FOSS forensic tools
+
 There are advantages and disadvantages when using (Free) and Open Source Software (FOSS) in the forensic field:
 
 **Advantages:**

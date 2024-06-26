@@ -2,7 +2,7 @@ tags: #forensics #acquisition
 
 # Forensic Acquisition Tools
 
-links: [[702 DF TOC - Storage & Acquisition|DF TOC - Storage & Acquisition]] - [[themes/000 Index|Index]]
+links: [[702 DF TOC - Storage & Acquisition|DF TOC - Storage & Acquisition]] and [[707 DF TOC - Labs & Tools|DF TOC - Labs & Tools]] - [[themes/000 Index|Index]]
 
 ---
 ## [[Forensic Acquisition#Write Blocker|Write Blocker]]
@@ -112,4 +112,4 @@ Forensic variations of `dd` have been developed to include additional features s
 - Tools: `fsstat`, `disktype`.
 
 ---
-links: [[702 DF TOC - Storage & Acquisition|DF TOC - Storage & Acquisition]] - [[themes/000 Index|Index]]
+links: [[702 DF TOC - Storage & Acquisition|DF TOC - Storage & Acquisition]] and [[707 DF TOC - Labs & Tools|DF TOC - Labs & Tools]]- [[themes/000 Index|Index]]

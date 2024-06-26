@@ -1,11 +1,13 @@
-tags: #forensics #artifact
+tags: #DF #artifact
 
 # Application Forensic Artifacts
 
 links: [[themes/704 DF TOC - Forensic Artifacts|DF TOC - Forensic Artifacts]] - [[themes/000 Index|Index]]
 
 ---
-This section explores the forensic analysis of various applications, focusing on uncovering user activities, application behavior, and potential security risks.s
+
+This section explores the forensic analysis of various applications, focusing on uncovering user activities, application behavior, and potential security risks.
+
 ## Applications
 
 **Common user applications**
@@ -53,6 +55,11 @@ These applications can contain critical forensic artifacts that help understand 
 
 This examination helps in constructing a detailed picture of user interactions, application usage, and potential forensic evidence related to the application.
 
+**Examples**
+- Anomalie: Except an Android but have continuous mouse moving
+- Have a printer with A4 configured $\rightarrow$ not in US
+- every person has unique set of apps $\rightarrow$ produces a unique telemetry/fingerprint
+
 ## Application data files
 
 - **Use open standards or proprietary formats:** Files may follow widely accepted standards or be in unique, application-specific formats.
@@ -60,7 +67,7 @@ This examination helps in constructing a detailed picture of user interactions, 
 - **Linux "file" command to identify file formats:** A useful tool for determining the format and type of a file.
 - **Typical office, pictures, music, etc., can use standard viewers:** Standard applications can open common file types, but use a write-blocker or read-only image to prevent alteration.
 - **Some file containers may be compressed or encrypted:** Requires special handling to access the content.
-- **"Compound" files have nested files (email attachments):** Files that contain other files within them, such as emails with attachments, which need extraction and separate analysis.
+- **"Compound" files have nested files (email attachments):** Files that contain other files within them, such as emails with attachments, which need extraction and separate analysis $\rightarrow$  Filesystem timestamps only exist for files on the operating system (e.g. not in email attachments)
 
 **Proprietary formats**
 
@@ -126,7 +133,7 @@ Most color laser printers include a watermark:
 
 MIC provides a way to trace printed documents back to the specific printer, offering valuable forensic information in various investigations.
 
-![[it-security-bfh/docs/themes/_media/slides/forensic-artifacts/mic.png]]
+![[themes/_media/slides/forensic-artifacts/mic.png]]
 
 ## Analyzing executable code
 
@@ -137,7 +144,7 @@ Deeper analysis of executable files involves:
 - **Binaries as malware samples from attacks:** Executables can be examined to identify and understand malware behavior and origins.
 - **Meta information in binaries (segments, sections):** All executable files contain metadata that provides clues about their structure and purpose.
 - **Reverse engineering binaries:** Techniques to deconstruct the executable to analyze its components and functionality, especially useful for malware.
-- Static / Dynamic Analysis: Link to TOC 800
+- Static / [[themes/807 MAI TOC - Dynamic Analysis|Dynamic Analysis]]
 
 **Commercial forensic tools:**
 

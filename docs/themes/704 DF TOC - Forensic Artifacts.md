@@ -1,4 +1,4 @@
-tags: #forensics #artifacts
+tags: #DF #artifact
 
 # DF TOC - Forensic Artifacts
 

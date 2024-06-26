@@ -1,4 +1,4 @@
-tags: #forensics #acquisition
+tags: #DF #acquisition
 
 # Forensic Acquisition
 

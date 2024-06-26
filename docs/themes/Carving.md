@@ -1,4 +1,4 @@
-tags: #DF
+tags: #DF #carving
  
 # Carving
 
@@ -12,18 +12,20 @@ Carving tools are used as a last-resort, best-effort method to extract files fro
 
 ## Tools
 
+> Exam question: Which tools are used for carving?
+
 There are some dedicated forensic carving tools. The most popular are:
 
-- **Scalpel** (Today part of Sleuthkit) https://github.com/sleuthkit/scalpel
-- **foremost** and several forks of it on github
+- **Scalpel** (Today part of Sleuthkit) [https://github.com/sleuthkit/scalpel](https://github.com/sleuthkit/scalpel)
+- **foremost** and several forks of it on github: extract files from disk/unstructured data
 
-Data recovery tools are also good for carving the most popular is **photorec** (https://www.cgsecurity.org/wiki/PhotoRec):
+Data recovery tools are also good for carving the most popular is **photorec** ([https://www.cgsecurity.org/wiki/PhotoRec](https://www.cgsecurity.org/wiki/PhotoRec)):
 
 - Supports over 400 file formats
 - Tries to use filesystem structure if possible
 - Does additional checks and validation
 
-There are also network traffic carver like **tcpxtract**
+There are also network traffic carver like **tcpxtract**: extract files from PCAP (only unencrypted)
 
 ## Pros and Cons
 
@@ -45,15 +47,16 @@ There are also network traffic carver like **tcpxtract**
 - Lots of manual processing
 - Original file names missing
 
-## Carving for strings
+**lost + found**: if `fsck` finds a file (finds it without name)
 
-### Carving for Strings
+## Carving for strings
 
 **Tool: Bulk Extractor**
 
 **Function**: Scans files, images, or data blobs to extract interesting information.
 
 **Extracts**:
+
 - Credit card numbers and track 2 info
 - Domain names
 - Email addresses
@@ -64,7 +67,7 @@ There are also network traffic carver like **tcpxtract**
 - EXIF data from media files (pictures and videos)
 - Custom specified regex strings
 
-**More Info**: [Bulk Extractor on Forensics Wiki](http://forensicswiki.org/wiki/Bulk_extractor)
+**More Info**: [Bulk Extractor on Forensics Wiki](https://forensics.wiki/bulk_extractor/)
 
 **Sleuthkit Tool: srch_strings**
 
@@ -87,6 +90,7 @@ There are also network traffic carver like **tcpxtract**
 	- **More Info**: [Truecrypt-file-carve on GitHub](https://github.com/gdbelvin/truecrypt-file-carve)
 
 **Crypto Keys**
+
 - **Tools**:
 	- **aeskeyfind**: Searches for AES keys in memory dumps.
 	- **rsakeyfind**: Searches for RSA keys in memory dumps.

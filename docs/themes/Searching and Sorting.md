@@ -1,4 +1,4 @@
-tags: #DF
+tags: #DF #search-and-sort
  
 # Searching and Sorting
 
@@ -28,14 +28,17 @@ Forensic searches can be complex due to several challenges:
 `grep` is a powerful command-line tool for searching plain-text data sets for lines that match a regular expression.
 
 Basic examples:
+
 - Search for a pattern in a file: `grep evil files.txt`
 - Search in log files: `journalctl | grep failed`
 
 Using regular expressions with `egrep`:
+
 - Match JPEG files: `egrep [jm]peg files.txt`
 - Match multiple extensions: `egrep .+\.[mM][pP][34] files.txt`
 
 Other useful options:
+
 - Use a pattern file: `grep -f patterns.txt files.txt`
 - Exclude a pattern: `grep -v tmp files.txt`
 - Ignore case: `grep -i mp3 files.txt`
@@ -47,12 +50,14 @@ Other useful options:
 `find` is used to search for files in a directory hierarchy based on various criteria.
 
 Examples:
+
 - Find files by name: `find / -name "*.mp3"`
 - Find files by size: `find / -size +50M`
 - Find files by owner or group: `find / -user freddy` or `find / -group bfh`
 - Execute a command on matched files: `find / -exec stat {} \;`
 
 Custom formatting and sorting:
+
 - Sort by last accessed: `find /home -printf '%As %Ac %p\n' | sort -n`
 - Sort by inode change: `find /home -printf '%Cs %Cc %p\n' | sort -n`
 - Sort by timestamp: `find / -printf '%As A %Ac %p\n%Ts C %Tc %p\n%Cs M %Cc %p\n' | sort -n`
@@ -63,6 +68,7 @@ Custom formatting and sorting:
 The `strings` command is useful for extracting printable strings from binary files, often used in digital forensics to identify readable text within disk images.
 
 Examples:
+
 - Extract strings with offsets: `strings -td image.dd`
 - Extract strings with locale: `strings -td -e l image.dd`
 - Extract and filter strings: `strings -td partition.dd | grep keyword`
@@ -74,6 +80,7 @@ The Sleuthkit provides an enhanced version called `srch_strings`.
 Hash databases are vital in digital forensics for identifying known files by their hash values. The National Software Reference Library (NSRL) provides a comprehensive set of known file hashes.
 
 Creating and using hashsets:
+
 - Generate a hashset: `md5deep -r * > hash.txt`
 - Create an index: `hfind -i md5sum hash.txt`
 - Lookup a hash: `hfind hash.txt 64d088ee1ffd86ef591de77f8bb34d8b`

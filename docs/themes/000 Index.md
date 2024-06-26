@@ -24,7 +24,7 @@ The Notes are based on the [[IMF Framework]] (get familiar with the concept firs
 - 400s - #cryptocurrency
 - 500s - #web
 - 600s - #network #security-tool #security-protocol
-- 700s - #DF 
+- 700s - #DF
 - 800s -
 - 900s -
 - Computability and Complexity - #computability-complexity 

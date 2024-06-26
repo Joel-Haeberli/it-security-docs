@@ -1,4 +1,4 @@
-tags: #DF
+tags: #DF #encryption
  
 # Encryption
 
@@ -19,9 +19,9 @@ Forensic examiners often encounter various types of encryption when analyzing st
 - **Application File Encryption:** Encrypted documents such as protected PDFs and office files.
 - **Individual File Containers:** Encryption tools like GPG and encrypted ZIP files.
 - **Directories:** File systems with encryption features, such as ecryptfs and ext4 encryption.
-- **Volumes:** Encrypted volumes using software like TrueCrypt and Veracrypt.
+- **Volumes:** Encrypted volumes using software like [[Carving#Special File Carving|TrueCrypt]] and Veracrypt.
 - **Block Devices:** Full disk encryption technologies like Linux LUKS, Microsoft Bitlocker, and Apple FileVault.
-- **Drive Hardware:** Self-encrypting drives (SEDs) following the OPAL standard.
+- **Drive Hardware:** [[Storage Media#Drive Encryption|Self-encrypting drives (SEDs)]] following the OPAL standard.
 
 Decrypting these requires various methods, including passwords or passphrases, cryptographic key strings or key files, and hardware tokens such as smartcards. The primary forensic challenge is to locate the necessary decryption keys.
 
@@ -29,9 +29,9 @@ Decrypting these requires various methods, including passwords or passphrases, c
 
 In network forensics, analysts encounter several types of encryption across different network layers:
 
-- **Application Layer Encryption:** Proprietary protocols and encrypted data fields.
-- **Transport Layer Encryption:** Protocols such as HTTPS, TLS (including starttls and implicit TLS), and SSH.
-- **IP Layer Encryption:** Virtual Private Networks (VPNs) using IPSec, Wireguard, or OpenVPN.
+- **Application Layer Encryption:** Proprietary protocols and encrypted data fields (e.g. TSIG in DNS)
+- **Transport Layer Encryption:** Protocols such as HTTPS, [[TLS]] (including starttls and implicit TLS), and [[SSH]].
+- **IP Layer Encryption:** Virtual Private Networks (VPNs) using [[IPSec]], [[Wireguard]], or [[OpenVPN]].
 - **Link-Layer Encryption:** Hardware-based encryption in point-to-point connections, such as modem encryptors.
 
 Decrypting network traffic involves capturing network traffic through passive wiretaps, executing man-in-the-middle (MITM) attacks to manipulate traffic, compromising at least one endpoint, or obtaining secret or session keys. These tasks are further complicated by the use of Perfect Forward Secrecy (PFS), which ensures session keys are not compromised even if long-term keys are.
@@ -40,11 +40,13 @@ Decrypting network traffic involves capturing network traffic through passive wi
 
 ### Methods for Password and Key Recovery
 
+> Exam question: Know methods for password/key recovery.
+
 Forensic analysts use various methods to recover passwords and decryption keys:
 
 1. **Brute Force and Dictionary Attacks:** Exhaustively trying all possible passwords or using common password lists.
 2. **Cryptanalysis:** Identifying weaknesses in cryptographic algorithms to reduce keyspace.
-3. **Locating Stored Passwords:** Finding passwords saved, written down, or transferred.
+3. **Locating Stored Passwords:** Finding passwords saved, written down, or transferred (e.g. file was sent per mail, go to other party)
 4. **Password Reuse:** Trying known passwords reused across multiple accounts or devices.
 5. **Legal Compulsion:** Court orders to produce passwords.
 6. **Cooperative Assistance:** Owners or accomplices providing passwords.
@@ -60,10 +62,14 @@ Brute force attacks systematically guess passwords until the correct one is foun
 - **Reducing Search Space:** Using smart wordlists or dictionaries.
 - **Using GPU Clusters:** Leveraging graphics card processing power.
 - **Rainbow Tables:** Utilizing precomputed cryptographic hash tables.
-- **Memory Extraction:** Extracting keys from memory via PCI-bus DMA attacks.
+- **Memory Extraction:** Extracting keys from memory via PCI-bus DMA (direct memory access) attacks.
 - **Network Attacks:** Performing man-in-the-middle or endpoint attacks.
 
 Caution is required with systems that block access or wipe data after failed attempts.
+
+**Examples**
+
+- [[Password Based Key Derivation Function (PBKDF)|PBKDF2]] allows storing passwords in a format that is hard to brute force
 
 ### Recovery Tools
 
@@ -71,17 +77,17 @@ There are numerous tools for password and key recovery:
 
 - **Commercial Tools:** Effective but often expensive; some repackage open source tools.
 - **Open Source Tools:** Reliable and customizable, such as:
-  - **John the Ripper:** Customizable password cracking.
-  - **HashCat:** GPU-accelerated password recovery.
-  - **bulk_extractor:** Forensic tool creating wordlists from disk images.
-  - **Inception:** PCI-based DMA memory dumper.
+	- **John the Ripper:** Customizable password cracking.
+	- **HashCat:** GPU-accelerated password recovery.
+	- **[[Carving#Carving for strings|bulk_extractor]]:** Forensic tool creating wordlists from disk images.
+	- **Inception:** PCI-based DMA memory dumper.
 
 ### Hardware Attacks
 
 Hardware attacks reveal private keys via side-channel analysis or fault injection:
 
-- **Side-Channel Attacks:** Analyzing voltage/current differences or electromagnetic radiation.
-- **Fault Injection:** Using over-voltage, under-voltage, electromagnetic pulses, or clock manipulation to alter device behavior.
+- **Side-Channel Attacks (passive):** Analyzing voltage/current differences or electromagnetic radiation.
+- **Fault Injection (active):** Using over-voltage, under-voltage, electromagnetic pulses, or clock manipulation to alter device behavior.
 
 Targets include TPMs, smartcards, bitcoin wallets, and car electronics.
 

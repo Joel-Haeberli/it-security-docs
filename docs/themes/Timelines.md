@@ -23,7 +23,7 @@ Creating timelines is essential in digital forensics for several reasons:
 ### Time Representation
 
 - **UNIX Epoch:** Represents time as the number of seconds since January 1, 1970, 00:00:00 UTC.
-	- Example: `$ date +%s`
+	- Example: `date +%s`
 - **Global Formats:** Different regions use different date formats, which can lead to confusion.
 	- Example: "1/2/21" can mean February 1 or January 2.
 	- Common Swiss format: `dd.mm.year`
@@ -33,8 +33,8 @@ Creating timelines is essential in digital forensics for several reasons:
 	- **Greenwich Mean Time (GMT):** A time zone.
 	- **Linux Resources:** Use `man tzfile`, `man zdump`, or check `/usr/share/zoneinfo` for information on time zones.
 - **Internet Time:**
-- **Swatch ".beats":** Invented by Swatch, representing time in metric units with 1000 "beats" per day, formatted as "@123".
-- **No Time Zones:** This system eliminates time zones and daylight saving adjustments.
+	- **Swatch ".beats":** Invented by Swatch, representing time in metric units with 1000 "beats" per day, formatted as "@123".
+	- **No Time Zones:** This system eliminates time zones and daylight saving adjustments.
 
 ## Filesystem Timestamps
 
@@ -74,6 +74,7 @@ Timestamps can be problematic due to:
 - **Malicious Changes:** Anti-forensic techniques like timestomp.
 
 Sleuthkit offers flags to adjust timestamps:
+
 - **Adjusting Seconds:** `-s seconds` to add/subtract seconds.
 - **Specifying Timezone:** `-z zone` to set the timezone (e.g., CET).
 
